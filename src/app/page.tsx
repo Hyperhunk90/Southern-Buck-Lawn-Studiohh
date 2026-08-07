@@ -22,7 +22,7 @@ const gallery = [
   { src: '/images/commercial-wildflowers-rkm-headquarters-clinton-la.webp', alt: 'Wildflowers and manicured grounds at RKM headquarters in Clinton, Louisiana, kept up by Southern Buck Lawn', w: 1600, h: 900 },
   { src: '/images/black-mulch-install-before-after.webp', alt: 'Before and after black mulch install on a Louisiana front bed by Southern Buck Lawn', w: 1344, h: 768 },
   { src: '/images/flower-bed-mulch-transformation-before-after-louisiana.webp', alt: 'Three-stage flower bed transformation with black mulch and stone border by Southern Buck Lawn in Louisiana', w: 900, h: 1600 },
-  { src: '/images/hedge-trimming-bed-cleanup-baton-rouge.webp', alt: 'Overgrown bed before a Baton Rouge hedge trimming and cleanup', w: 800, h: 1422 },
+  { src: '/images/hedge-trimming-after.jpg', alt: 'Cleaned up hedge trimming and bed in Baton Rouge', w: 800, h: 1422 },
 ];
 
 const buckPoints = [
@@ -227,11 +227,11 @@ export default function Home() {
           <div className="flex-none">
             <div className="flex h-60 w-60 items-center justify-center rounded-3xl bg-forest-dark shadow-2xl sm:h-72 sm:w-72">
               <Image
-                src="/images/southern-buck-lawn-buck-mascot.webp"
-                alt="Southern Buck Lawn deer mascot in overalls"
+                src="/images/owner.png"
+                alt="Southern Buck Lawn owner"
                 width={300}
                 height={300}
-                className="h-52 w-52 object-contain sm:h-60 sm:w-60"
+                className="h-full w-full object-cover rounded-3xl"
               />
             </div>
           </div>
