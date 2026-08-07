@@ -4,14 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3000 -H 0.0.0.0",
-    "build": "NODE_ENV=production next build --webpack",
+    "build": "NODE_ENV=production next build",
     "start": "next start",
     "lint": "tsc --noEmit"
   },
   "dependencies": {
     "@google/genai": "^2.16.0",
     "@modelcontextprotocol/sdk": "^1.30.0",
-    "@next/swc-wasm-nodejs": "^16.3.0",
     "@next/third-parties": "^16.2.10",
     "@types/pg": "^8.20.3",
     "clsx": "^2.1.1",
