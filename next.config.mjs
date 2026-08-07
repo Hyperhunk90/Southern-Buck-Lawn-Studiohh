@@ -1,8 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    turbopack: false,
-  },
   output: 'standalone',
   allowedDevOrigins: [
     'ais-dev-fz77gh4modldyu6xmsbmjj-224007547644.us-west1.run.app',
