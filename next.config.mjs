@@ -11,6 +11,12 @@ const nextConfig = {
   // Google only ever indexes one canonical version of each URL.
   trailingSlash: false,
   images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+    ],
     formats: ['image/avif', 'image/webp'],
     // Quality values the optimizer may serve; photos of turf/mulch compress
     // poorly at the default 75, so big atmospheric shots use 50-60. Every

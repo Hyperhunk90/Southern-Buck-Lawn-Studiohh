@@ -37,6 +37,7 @@ export const SERVICE_NAV = [
   { label: 'Lawn Mowing & Edging', href: '/services/lawn-mowing' },
   { label: 'Weed Control & Fertilization', href: '/services/weed-control' },
   { label: 'Landscape Design & Mulch', href: '/services/landscape-design' },
+  { label: 'Property Preservation & REO', href: '/property-preservation-reo-services' },
   { label: 'Commercial Grounds', href: '/services/commercial-grounds' },
 ];
 
