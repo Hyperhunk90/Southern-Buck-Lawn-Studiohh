@@ -12,7 +12,7 @@ const LAST_CONTENT_UPDATE = new Date('2026-06-17');
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = SITE.url;
-  const staticPages = ['', '/services', '/service-areas', '/blog', '/landscape-lighting', '/quote', '/contact'].map((p) => ({
+  const staticPages = ['', '/services', '/service-areas', '/blog', '/landscape-lighting', '/property-preservation-reo-services', '/gallery', '/quote', '/contact'].map((p) => ({
     url: `${base}${p}`,
     lastModified: LAST_CONTENT_UPDATE,
     changeFrequency: 'weekly' as const,
