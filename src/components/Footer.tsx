@@ -80,6 +80,7 @@ export default function Footer() {
             <Link href="/blog" className="hover:text-safety-orange">Blog</Link>
             <Link href="/quote" className="hover:text-safety-orange">Free Quote</Link>
             <Link href="/contact" className="hover:text-safety-orange">Contact</Link>
+            <Link href="/admin/emails" className="hover:text-safety-orange">Staff Login</Link>
           </div>
         </div>
       </div>

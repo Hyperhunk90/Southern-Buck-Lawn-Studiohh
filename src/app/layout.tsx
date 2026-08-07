@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Anton, Archivo, Caveat } from 'next/font/google';
 import './globals.css';
 import SiteChrome from '@/components/SiteChrome';
+import ChatWidget from '@/components/ChatWidget';
 import GaTracker from '@/components/GaTracker';
 import { SITE } from '@/data/site';
 import { GOOGLE_RATING, REVIEWS } from '@/data/reviews';
@@ -160,6 +161,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify([businessJsonLd, websiteJsonLd]) }}
         />
         <SiteChrome>{children}</SiteChrome>
+        <ChatWidget />
         <GaTracker />
       </body>
     </html>

@@ -14,7 +14,7 @@ import {
   ArrowRight,
   PhoneCall,
   Star,
-  Facebook,
+  
 } from 'lucide-react';
 import { SITE } from '@/data/site';
 import { REVIEWS } from '@/data/reviews';
@@ -249,7 +249,7 @@ export default function LandscapeLightingPage() {
           </div>
           <div className="flex items-center gap-4">
             <a href={SITE.social.facebook} aria-label="Facebook" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-safety-orange">
-              <Facebook className="h-5 w-5" />
+              <span className="text-white text-xs font-bold">FB</span>
             </a>
             <Link href="/" className="flex h-10 items-center rounded-full bg-white/10 px-5 font-barlow text-sm font-bold uppercase tracking-wide transition-colors hover:bg-safety-orange">
               Main Site

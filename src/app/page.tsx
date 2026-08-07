@@ -52,7 +52,10 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-deep-forest/80 via-deep-forest/50 to-transparent pointer-events-none" />
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+        <div 
+          className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-cover bg-center"
+          style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/images/southern-buck-hero-banner.svg')" }}
+        >
           <div className="max-w-2xl space-y-6">
             <span className="inline-flex items-center gap-2 rounded-full border border-sage/50 bg-safety-orange/20 px-4 py-1.5 font-archivo text-xs font-bold uppercase tracking-widest text-sage">
               <MapPin className="h-4 w-4" /> New customers &middot; Walker &middot; Denham Springs &middot; Baton Rouge

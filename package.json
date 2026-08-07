@@ -9,21 +9,25 @@
     "lint": "tsc --noEmit"
   },
   "dependencies": {
+    "@google/genai": "^2.16.0",
     "@modelcontextprotocol/sdk": "^1.30.0",
     "@next/third-parties": "^16.2.10",
     "@types/pg": "^8.20.3",
+    "clsx": "^2.1.1",
     "dotenv": "^17.4.2",
     "drizzle-kit": "^0.31.10",
     "drizzle-orm": "^0.45.2",
     "firebase": "^12.17.0",
     "firebase-admin": "^14.2.0",
-    "lucide-react": "^0.546.0",
+    "lucide-react": "^1.30.0",
     "motion": "^12.23.24",
     "next": "^16.2.10",
     "pg": "^8.22.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
-    "resend": "^6.1.2"
+    "react-markdown": "^10.1.0",
+    "resend": "^6.1.2",
+    "tailwind-merge": "^3.6.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.14",

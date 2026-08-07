@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { ShieldCheck, Camera, Trash2 } from 'lucide-react';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 import ReoForm from './ReoForm';
 import ReoHeroContent from './ReoHeroContent';
 
@@ -18,8 +16,6 @@ export const metadata: Metadata = {
 export default function PropertyPreservationPage() {
   return (
     <div className="flex min-h-screen flex-col bg-light-tan">
-      <Navbar />
-
       <main className="flex-grow pt-20 sm:pt-24">
         {/* HERO SECTION */}
         <section className="relative overflow-hidden bg-midnight-moss px-4 py-20 sm:px-6 sm:py-32 lg:px-8">
@@ -150,8 +146,6 @@ export default function PropertyPreservationPage() {
         </section>
 
       </main>
-
-      <Footer />
     </div>
   );
 }
