@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand palette — Southern Buck Lawn landing-page design
+     (cream canvas + hunter green + safety orange). */
+  --color-primary: #23491a;        /* hunter green (Meet-the-Buck panel, accents) */
+  --color-deep-forest: #16280f;    /* dark hero green */
+  --color-forest-dark: #0f1f0a;    /* darkest green */
+  --color-safety-orange: #e2701f;  /* primary CTA orange */
+  /* Darkened orange for text on light backgrounds — #e2701f only hits ~2.9:1 there; this passes WCAG AA (>=4.5:1) on surface/mist-green/white. */
+  --color-safety-orange-deep: #b0500f;
+  --color-orange-hot: #f2913e;     /* lighter orange accent */
+  --color-midnight-moss: #16280f;  /* darkest green — dark sections + body text */
+  --color-mist-green: #fbf8ef;     /* warm cream section background */
+  --color-surface: #ffffff;        /* white section background */
+  --color-sage: #f4b070;           /* peach script/accent on dark greens */
+
+  /* Extra design tokens */
+  --color-canvas: #e7e5df;         /* warm outer canvas */
+  --color-cream: #fbf8ef;          /* card / soft section cream */
+  --color-cream-line: #ebe3cf;     /* cream hairline border */
+  --color-bark: #5a5f52;           /* warm body-copy gray */
+  --color-leaf-tile: #e8f0e0;      /* light-green icon tile */
+
+  /* Fonts wired from next/font (see layout.tsx) with safe fallbacks.
+     --font-barlow is kept as a legacy alias pointing at Archivo so existing
+     `font-barlow` utilities across the site pick up the new body face. */
+  --font-anton: var(--font-anton-src), "Anton", sans-serif;
+  --font-archivo: var(--font-archivo-src), "Archivo", system-ui, sans-serif;
+  --font-barlow: var(--font-archivo-src), "Archivo", system-ui, sans-serif;
+  --font-caveat: var(--font-caveat-src), "Caveat", "Comic Sans MS", cursive;
+
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-midnight-moss);
+    font-family: var(--font-archivo);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-anton);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+  }
+}
+
+/* Reduced-motion respect */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
