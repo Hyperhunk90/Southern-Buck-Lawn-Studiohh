@@ -7,6 +7,13 @@ const nextConfig = {
   ],
   reactStrictMode: true,
   trailingSlash: false,
+  webpack: (config, { isServer }) => {
+    // Disable module concatenation to resolve Webpack ESM export resolution bug in Next 16 internals
+    if (config.optimization) {
+      config.optimization.concatenateModules = false;
+    }
+    return config;
+  },
   images: {
     remotePatterns: [
       {
