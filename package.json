@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next 
+    "dev": "next 7 dev -p 3000 -H 0.0.0.0 --webpack"
     "build": "build": "NODE_ENV=production next build --webpack"
     "start": "next start",
     "lint": "tsc --noEmit"
