@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "standalone",
-  webpack: true,
   allowedDevOrigins: [
     'ais-dev-fz77gh4modldyu6xmsbmjj-224007547644.us-west1.run.app',
     'ais-pre-fz77gh4modldyu6xmsbmjj-224007547644.us-west1.run.app'
