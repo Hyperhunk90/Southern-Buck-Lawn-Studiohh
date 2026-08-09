@@ -121,7 +121,6 @@ const websiteJsonLd = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
@@ -135,7 +134,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             --font-caveat-src: 'Caveat', 'Comic Sans MS', cursive;
           }
         `}} />
-      </head>
       <body>
         <script
           key="ld-json-root"
