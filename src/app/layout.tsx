@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { Anton, Archivo, Caveat } from 'next/font/google';
 import './globals.css';
 import SiteChrome from '@/components/SiteChrome';
 import ChatWidget from '@/components/ChatWidget';
@@ -15,37 +14,6 @@ const OG_IMAGE = {
   height: 1080,
   alt: 'Fresh mulch bed, stone border, and healthy green lawn by Southern Buck Lawn in Louisiana',
 };
-
-const anton = Anton({
-  weight: '400',
-  subsets: ['latin'],
-  variable: '--font-anton-src',
-  display: 'optional',
-  preload: true,
-  adjustFontFallback: true,
-  fallback: ['Arial Narrow', 'Arial', 'sans-serif'],
-});
-
-// Archivo is the body/UI face from the Southern Buck Lawn landing-page design.
-const archivo = Archivo({
-  weight: ['400', '500', '600', '700', '800'],
-  subsets: ['latin'],
-  variable: '--font-archivo-src',
-  display: 'swap',
-  preload: true,
-  adjustFontFallback: true,
-  fallback: ['Arial', 'sans-serif'],
-});
-
-// Caveat is the friendly script used for the small "eyebrow" accent lines.
-const caveat = Caveat({
-  weight: ['600', '700'],
-  subsets: ['latin'],
-  variable: '--font-caveat-src',
-  display: 'swap',
-  preload: false,
-  fallback: ['Comic Sans MS', 'cursive'],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -152,7 +120,22 @@ const websiteJsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${anton.variable} ${archivo.variable} ${caveat.variable}`}>
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap"
+          rel="stylesheet"
+        />
+        <style dangerouslySetInnerHTML={{__html: `
+          :root {
+            --font-anton-src: 'Anton', 'Arial Narrow', 'Arial', sans-serif;
+            --font-archivo-src: 'Archivo', 'Arial', sans-serif;
+            --font-caveat-src: 'Caveat', 'Comic Sans MS', cursive;
+          }
+        `}} />
+      </head>
       <body>
         <script
           key="ld-json-root"
