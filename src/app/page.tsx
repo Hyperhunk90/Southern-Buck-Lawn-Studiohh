@@ -45,6 +45,7 @@ export default function Home() {
             priority
             sizes="100vw"
             quality={90}
+            referrerPolicy="no-referrer"
             style={{ objectFit: 'cover', objectPosition: 'center' }}
           />
           {/* Black overlay tint set to 40% opacity over the background to darken it */}
@@ -78,6 +79,7 @@ export default function Home() {
                 width={56}
                 height={56}
                 loading="eager"
+                referrerPolicy="no-referrer"
                 className="h-14 w-14 rounded-full border-2 border-safety-orange object-cover object-top"
               />
               <div className="leading-tight">
@@ -167,6 +169,7 @@ export default function Home() {
           fill
           sizes="100vw"
           quality={60}
+          referrerPolicy="no-referrer"
           style={{ objectFit: 'cover', objectPosition: '50% 56%' }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-deep-forest/95 via-deep-forest/65 to-deep-forest/5" />
@@ -204,6 +207,7 @@ export default function Home() {
                   height={g.h}
                   sizes="(max-width: 640px) 92vw, 46vw"
                   quality={60}
+                  referrerPolicy="no-referrer"
                   className="h-72 w-full rounded-xl"
                   style={{ objectFit: 'cover' }}
                 />
@@ -227,10 +231,11 @@ export default function Home() {
           <div className="flex-none">
             <div className="flex h-60 w-60 items-center justify-center rounded-3xl bg-forest-dark shadow-2xl sm:h-72 sm:w-72">
               <Image
-                src="/images/owner.png"
+                src="/images/owner.webp"
                 alt="Southern Buck Lawn owner"
                 width={300}
                 height={300}
+                referrerPolicy="no-referrer"
                 className="h-full w-full object-cover rounded-3xl"
               />
             </div>

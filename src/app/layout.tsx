@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Suspense } from 'react';
 import './globals.css';
 import SiteChrome from '@/components/SiteChrome';
 import ChatWidget from '@/components/ChatWidget';
@@ -145,7 +146,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         <SiteChrome>{children}</SiteChrome>
         <ChatWidget />
-        <GaTracker />
+        <Suspense fallback={null}>
+          <GaTracker />
+        </Suspense>
       </body>
     </html>
   );
