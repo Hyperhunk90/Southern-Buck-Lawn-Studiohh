@@ -31,23 +31,5 @@ function ContentWithChrome({ children }: { children: React.ReactNode }) {
 }
 
 export default function SiteChrome({ children }: { children: React.ReactNode }) {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return (
-      <>
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-        <div className="h-14 sm:hidden" aria-hidden />
-        <TextBubble />
-      </>
-    );
-  }
-
   return <ContentWithChrome>{children}</ContentWithChrome>;
 }
