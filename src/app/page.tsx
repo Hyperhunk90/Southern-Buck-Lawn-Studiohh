@@ -164,7 +164,7 @@ export default function Home() {
       {/* PROOF BAND — real results */}
       <section className="relative overflow-hidden bg-deep-forest">
         <Image
-          src="/images/residential-backyard-lawn-mowing-stripes-louisiana.webp"
+          src="/images/lawn-mowing-stripes-backyard-walker-la.webp"
           alt="Freshly striped backyard lawn mowed by Southern Buck Lawn in Louisiana"
           fill
           sizes="100vw"
@@ -229,14 +229,14 @@ export default function Home() {
       <section id="about" className="bg-primary py-20">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-12 px-4 sm:px-6 lg:flex-row lg:px-8">
           <div className="flex-none">
-            <div className="flex h-60 w-60 items-center justify-center rounded-3xl bg-forest-dark shadow-2xl sm:h-72 sm:w-72">
+            <div className="relative flex h-60 w-60 items-center justify-center overflow-hidden rounded-3xl bg-forest-dark shadow-2xl sm:h-72 sm:w-72">
               <Image
-                src="/images/owner.webp"
+                src="/images/michael-dantone-owner-waving.webp"
                 alt="Southern Buck Lawn owner"
                 width={300}
                 height={300}
                 referrerPolicy="no-referrer"
-                className="h-full w-full object-cover rounded-3xl"
+                className="h-full w-full object-cover"
               />
             </div>
           </div>
