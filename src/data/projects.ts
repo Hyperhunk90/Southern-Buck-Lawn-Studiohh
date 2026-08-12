@@ -245,7 +245,7 @@ export const PROJECTS: Project[] = [
       'Applied pre-emergent to eliminate crabgrass and clover',
       'Spot-treated stubborn Virginia buttonweed',
       'Enriched soil with slow-release nitrogen formulation',
-      'Pet and child safe after 90 minutes of spray drying'
+      'Provided post-treatment instructions for people and pets'
     ],
     completedDate: '2026-04-20',
     serviceSlug: 'weed-control'

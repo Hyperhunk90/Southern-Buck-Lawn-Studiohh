@@ -25,7 +25,7 @@ export default function Breadcrumbs({ trail }: { trail: Crumb[] }) {
 
   return (
     <nav aria-label="Breadcrumb" className="w-full">
-      <script key="ld-json-breadcrumbs" id="ld-json-breadcrumbs" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <ol className="flex flex-wrap items-center gap-1 font-barlow text-sm text-white/70">
         {full.map((c, i) => {
           const last = i === full.length - 1;

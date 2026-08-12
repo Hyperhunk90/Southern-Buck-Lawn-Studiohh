@@ -1,6 +1,6 @@
-// GA4 helper. Initializes gtag once and queues events so none are
-// lost while the Google script is still loading.
-const GA_ID = 'G-HYJ6QH6Y1D';
+// GA4 event helper. Events queue in dataLayer until Google's script is ready.
+const configuredGaId = process.env.NEXT_PUBLIC_GA_ID || 'G-HYJ6QH6Y1D';
+export const GA_ID = /^G-[A-Z0-9]+$/.test(configuredGaId) ? configuredGaId : 'G-HYJ6QH6Y1D';
 
 type GtagWindow = Window & {
   dataLayer?: unknown[];
@@ -15,8 +15,6 @@ function ensureGtag(): ((...args: unknown[]) => void) | undefined {
     w.gtag = function gtag() {
       w.dataLayer!.push(arguments);
     };
-    w.gtag('js', new Date());
-    w.gtag('config', GA_ID, { send_page_view: false });
   }
   return w.gtag;
 }

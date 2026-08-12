@@ -9,8 +9,6 @@ import { AREA_NAV, SITE } from '@/data/site';
 import QuoteForm from '@/components/QuoteForm';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
-export const dynamicParams = false;
-
 export function generateStaticParams() {
   return SERVICES.map((s) => ({ slug: s.slug }));
 }
@@ -22,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: s.metaTitle,
     description: s.metaDescription,
-    keywords: s.keywords.join(', '),
+    keywords: s.keywords,
     alternates: { canonical: `/services/${s.slug}` },
     openGraph: {
       title: s.metaTitle,
@@ -64,7 +62,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
   return (
     <>
-      <script key="ld-json-service" id="ld-json-service" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([faqJsonLd, serviceJsonLd]) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
 
       {/* Hero */}
       <header className="relative overflow-hidden bg-midnight-moss pt-28 text-white">

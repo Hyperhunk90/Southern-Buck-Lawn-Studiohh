@@ -4,6 +4,7 @@ export const SITE = {
   owner: 'Michael Dantone',
   tagline: 'Southern Care. The Landscape Mayor.',
   phone: '(225) 369-4434',
+  phoneInternational: '+12253694434',
   phoneHref: 'tel:+12253694434',
   email: 'SBL@Southernbucklawn.com',
   emailHref: 'mailto:SBL@Southernbucklawn.com',

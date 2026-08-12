@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { ShieldCheck, Camera, Trash2 } from 'lucide-react';
 import ReoForm from './ReoForm';
 import ReoHeroContent from './ReoHeroContent';
+import { SITE } from '@/data/site';
 
 export const metadata: Metadata = {
   title: 'Property Preservation & REO Trash-Outs in Walker, LA | Southern Buck Lawn',
@@ -128,8 +129,8 @@ export default function PropertyPreservationPage() {
                   </h3>
                   <p className="font-barlow text-base text-gray-700">
                     Stop wasting time chasing down unreliable contractors. Drop your details in the form, or if you already have a scope of work ready to rock, email it directly to{' '}
-                    <a href="mailto:sbl@southernbucklawn.com" className="font-bold text-safety-orange hover:underline">
-                      sbl@southernbucklawn.com
+                    <a href={SITE.emailHref} className="font-bold text-safety-orange hover:underline">
+                      {SITE.email}
                     </a>{' '}
                     and we’ll get you on the schedule.
                   </p>

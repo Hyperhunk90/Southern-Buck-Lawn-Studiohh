@@ -5,12 +5,18 @@ import { MessageCircle, X, Send, Loader2, User } from 'lucide-react';
 import Markdown from 'react-markdown';
 import { motion, AnimatePresence } from 'motion/react';
 import Image from 'next/image';
+import { trackEvent } from '@/lib/ga';
 
 type Message = {
   id: string;
   role: 'user' | 'model';
   text: string;
-  chunks?: any[];
+  chunks?: GroundingChunk[];
+};
+
+type GroundingChunk = {
+  web?: { uri?: string; title?: string };
+  maps?: { uri?: string; title?: string };
 };
 
 export default function ChatWidget() {
@@ -56,9 +62,8 @@ export default function ChatWidget() {
         body: JSON.stringify({ message: userMsg.text, history }),
       });
 
-      if (!res.ok) throw new Error('Network error');
-
       const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Chat is temporarily unavailable.');
       
       const botMsg: Message = { 
         id: (Date.now() + 1).toString(), 
@@ -68,14 +73,16 @@ export default function ChatWidget() {
       };
       
       setMessages((prev) => [...prev, botMsg]);
+      trackEvent('chat_response', { assistant: 'buckie' });
     } catch (err) {
       console.error(err);
       const errorMsg: Message = {
         id: (Date.now() + 1).toString(),
         role: 'model',
-        text: 'Sorry, I encountered an error connecting to the server. Please try again.',
+        text: err instanceof Error ? err.message : 'Chat is temporarily unavailable. Please call or request a quote.',
       };
       setMessages((prev) => [...prev, errorMsg]);
+      trackEvent('chat_error', { assistant: 'buckie' });
     } finally {
       setIsLoading(false);
     }
@@ -89,7 +96,10 @@ export default function ChatWidget() {
         animate={{ scale: 1 }}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        onClick={() => setIsOpen(true)}
+        onClick={() => {
+          setIsOpen(true);
+          trackEvent('chat_open', { assistant: 'buckie' });
+        }}
         className={`fixed bottom-24 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-safety-orange text-midnight-moss shadow-2xl transition-colors hover:bg-orange-hot ${isOpen ? 'hidden' : ''}`}
         aria-label="Open chat assistant"
       >
@@ -201,6 +211,7 @@ export default function ChatWidget() {
                   type="text"
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
+                  maxLength={800}
                   placeholder="Ask a question..."
                   className="flex-1 rounded-xl border border-primary/20 bg-light-tan px-4 py-3 font-barlow text-sm outline-none transition-colors focus:border-safety-orange"
                 />

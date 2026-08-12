@@ -1,6 +1,0 @@
-{
-  "name": "Southern Buck Lawn",
-  "description": "Lawn care, weed control, landscaping, and outdoor maintenance services in Walker, Denham Springs, and Baton Rouge, Louisiana.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}

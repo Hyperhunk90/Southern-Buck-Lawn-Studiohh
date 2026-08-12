@@ -8,7 +8,7 @@ import { SITE } from '@/data/site';
 // Bump this when page content meaningfully changes. Using a stable date
 // (instead of `new Date()` on every build) keeps lastmod honest so crawlers
 // don't see every URL as "modified" on each deploy.
-const LAST_CONTENT_UPDATE = new Date('2026-06-17');
+const LAST_CONTENT_UPDATE = new Date('2026-08-11');
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = SITE.url;

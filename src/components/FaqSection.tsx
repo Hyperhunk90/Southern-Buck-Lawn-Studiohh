@@ -24,7 +24,7 @@ export default function FaqSection({
 
   return (
     <div>
-      <script key="ld-json-faq" id="ld-json-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <h2 className="pt-2 font-anton text-2xl uppercase text-primary">{heading}</h2>
       <div className="mt-4 space-y-4">
         {faqs.map((f) => (

@@ -1,105 +1,80 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Send, CheckCircle2, Loader2 } from 'lucide-react';
 import { trackEvent } from '@/lib/ga';
 
 export default function ContactForm() {
-  const [form, setForm] = useState({ name: '', phone: '', email: '', message: '', company: '' });
+  const [form, setForm] = useState({ name: '', phone: '', email: '', message: '', company: '', sourcePage: '', landingPage: '', referrer: '', campaign: '' });
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const update = (k: string, v: string) => setForm((p) => ({ ...p, [k]: v }));
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const campaign = ['utm_source', 'utm_medium', 'utm_campaign'].map((key) => params.get(key) ? `${key}=${params.get(key)}` : '').filter(Boolean).join('&');
+    const landingPage = sessionStorage.getItem('sbl_landing_page') || `${window.location.pathname}${window.location.search}`;
+    const firstCampaign = sessionStorage.getItem('sbl_campaign') || campaign;
+    const firstReferrer = sessionStorage.getItem('sbl_referrer') || document.referrer;
+    sessionStorage.setItem('sbl_landing_page', landingPage);
+    if (firstCampaign) sessionStorage.setItem('sbl_campaign', firstCampaign);
+    if (firstReferrer) sessionStorage.setItem('sbl_referrer', firstReferrer);
+    setForm((previous) => ({ ...previous, sourcePage: window.location.href, landingPage, referrer: firstReferrer, campaign: firstCampaign }));
+  }, []);
 
-  const submit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const update = (key: string, value: string) => setForm((previous) => ({ ...previous, [key]: value }));
+
+  const submit = async (event: React.FormEvent) => {
+    event.preventDefault();
     setStatus('sending');
+    setErrorMessage('');
+    trackEvent('form_submit_attempt', { form_name: 'contact' });
     try {
-      const res = await fetch('/api/lead', {
+      const response = await fetch('/api/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ type: 'Contact Message', ...form }),
       });
-      if (!res.ok) throw new Error('failed');
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(result.error || 'We could not send your message.');
       setStatus('sent');
-      trackEvent('generate_lead', { form: 'contact' });
-    } catch {
+      trackEvent('generate_lead', { form_name: 'contact' });
+    } catch (error) {
       setStatus('error');
+      setErrorMessage(error instanceof Error ? error.message : 'We could not send your message.');
+      trackEvent('form_submit_error', { form_name: 'contact' });
     }
   };
 
   if (status === 'sent') {
     return (
-      <div className="flex flex-col items-center justify-center rounded-2xl bg-white p-10 text-center shadow-lg">
-        <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
-          <CheckCircle2 className="h-9 w-9" />
-        </div>
+      <div className="flex flex-col items-center justify-center rounded-2xl bg-white p-10 text-center shadow-lg" role="status">
+        <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100 text-emerald-600"><CheckCircle2 className="h-9 w-9" /></div>
         <h3 className="mb-2 font-anton text-2xl uppercase text-midnight-moss">Message sent</h3>
-        <p className="max-w-md font-barlow text-lg text-gray-600">
-          Thanks for reaching out. We will get back to you shortly.
-        </p>
+        <p className="max-w-md font-barlow text-lg text-gray-600">Thanks for reaching out. Michael will get back to you within one business day.</p>
       </div>
     );
   }
 
-  const inputClass =
-    'w-full rounded-lg border-2 border-primary/10 p-3 font-barlow text-base outline-none transition-all focus:border-safety-orange';
-
   return (
-    <form onSubmit={submit} className="space-y-5">
-      {/* Honeypot — hidden from people, irresistible to bots. Leave empty. */}
+    <form onSubmit={submit} className="space-y-5" aria-busy={status === 'sending'}>
       <div aria-hidden="true" className="absolute left-[-9999px] top-[-9999px] h-0 w-0 overflow-hidden">
-        <label>
-          Company
-          <input
-            type="text"
-            name="company"
-            tabIndex={-1}
-            autoComplete="off"
-            value={form.company}
-            onChange={(e) => update('company', e.target.value)}
-          />
-        </label>
+        <label>Company<input type="text" name="company" tabIndex={-1} autoComplete="off" value={form.company} onChange={(e) => update('company', e.target.value)} /></label>
       </div>
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-        <label className="flex flex-col gap-1.5">
-          <span className="font-barlow text-sm font-bold uppercase tracking-wide text-midnight-moss">Name *</span>
-          <input required autoComplete="name" value={form.name} onChange={(e) => update('name', e.target.value)} placeholder="Your name" className={inputClass} />
-        </label>
-        <label className="flex flex-col gap-1.5">
-          <span className="font-barlow text-sm font-bold uppercase tracking-wide text-midnight-moss">Phone *</span>
-          <input required type="tel" inputMode="tel" autoComplete="tel" value={form.phone} onChange={(e) => update('phone', e.target.value)} placeholder="(225) 555-0123" className={inputClass} />
-        </label>
+        <Field label="Name" required><input required minLength={2} name="name" autoComplete="name" value={form.name} onChange={(e) => update('name', e.target.value)} placeholder="Your name" className={inputClass} /></Field>
+        <Field label="Phone" required><input required type="tel" name="phone" pattern="[0-9()+. -]{10,}" autoComplete="tel" value={form.phone} onChange={(e) => update('phone', e.target.value)} placeholder="(225) 555-0123" className={inputClass} /></Field>
       </div>
-      <label className="flex flex-col gap-1.5">
-        <span className="font-barlow text-sm font-bold uppercase tracking-wide text-midnight-moss">Email</span>
-        <input type="email" inputMode="email" autoComplete="email" value={form.email} onChange={(e) => update('email', e.target.value)} placeholder="you@email.com" className={inputClass} />
-      </label>
-      <label className="flex flex-col gap-1.5">
-        <span className="font-barlow text-sm font-bold uppercase tracking-wide text-midnight-moss">Message *</span>
-        <textarea required rows={5} value={form.message} onChange={(e) => update('message', e.target.value)} placeholder="How can we help?" className={inputClass} />
-      </label>
-
-      {status === 'error' && (
-        <p className="font-barlow text-base font-semibold text-red-600">
-          Something went wrong. Please give us a call instead.
-        </p>
-      )}
-
-      <button
-        type="submit"
-        disabled={status === 'sending'}
-        className="flex w-full items-center justify-center gap-2 rounded-lg bg-safety-orange py-4 font-anton text-lg uppercase tracking-wider text-midnight-moss shadow-lg transition-colors hover:bg-orange-hot disabled:opacity-70"
-      >
-        {status === 'sending' ? (
-          <>
-            <Loader2 className="h-5 w-5 animate-spin" /> Sending...
-          </>
-        ) : (
-          <>
-            Send Message <Send className="h-5 w-5" />
-          </>
-        )}
+      <Field label="Email"><input type="email" name="email" autoComplete="email" value={form.email} onChange={(e) => update('email', e.target.value)} placeholder="you@email.com" className={inputClass} /></Field>
+      <Field label="Message" required><textarea required name="message" rows={5} maxLength={2000} value={form.message} onChange={(e) => update('message', e.target.value)} placeholder="How can we help?" className={inputClass} /></Field>
+      {status === 'error' && <p className="font-barlow text-base font-semibold text-red-700" role="alert">{errorMessage} You can also call (225) 369-4434.</p>}
+      <button type="submit" disabled={status === 'sending'} className="flex w-full items-center justify-center gap-2 rounded-lg bg-safety-orange py-4 font-anton text-lg uppercase tracking-wider text-midnight-moss shadow-lg transition-colors hover:bg-orange-hot disabled:cursor-wait disabled:opacity-70">
+        {status === 'sending' ? <><Loader2 className="h-5 w-5 animate-spin" /> Sending...</> : <>Send Message <Send className="h-5 w-5" /></>}
       </button>
     </form>
   );
+}
+
+const inputClass = 'w-full rounded-lg border-2 border-primary/15 bg-white p-3 font-barlow text-base text-midnight-moss outline-none transition-all placeholder:text-gray-400 focus:border-safety-orange focus:ring-2 focus:ring-safety-orange/20';
+function Field({ label, required, children }: { label: string; required?: boolean; children: React.ReactNode }) {
+  return <label className="flex flex-col gap-1.5"><span className="font-barlow text-sm font-bold uppercase tracking-wide text-midnight-moss">{label} {required && <span className="text-safety-orange-deep">*</span>}</span>{children}</label>;
 }

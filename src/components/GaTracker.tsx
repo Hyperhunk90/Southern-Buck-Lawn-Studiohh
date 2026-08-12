@@ -1,11 +1,11 @@
 'use client';
 
-import { useEffect, useState, Suspense } from 'react';
-import { usePathname, useSearchParams } from 'next/navigation';
+import { useEffect, Suspense } from 'react';
 import Script from 'next/script';
-import { trackEvent } from '@/lib/ga';
+import { usePathname, useSearchParams } from 'next/navigation';
+import { GA_ID, trackEvent } from '@/lib/ga';
 
-function PageViewsInner() {
+function PageViews() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
@@ -22,28 +22,28 @@ function PageViewsInner() {
   return null;
 }
 
-function PageViews() {
-  return (
-    <Suspense fallback={null}>
-      <PageViewsInner />
-    </Suspense>
-  );
-}
-
-// Logs taps on any tel: or sms: link, sitewide.
-function TapTracking() {
+function ConversionTracking() {
   useEffect(() => {
-    const onClick = (e: MouseEvent) => {
-      const el = e.target as HTMLElement | null;
-      const link = el?.closest('a');
+    const onClick = (event: MouseEvent) => {
+      const target = event.target as HTMLElement | null;
+      const link = target?.closest<HTMLAnchorElement>('a');
       if (!link) return;
+
       const href = link.getAttribute('href') || '';
+      const context = link.dataset.track || link.textContent?.trim().slice(0, 80) || 'link';
+      const common = { link_url: href, link_context: context, page_path: window.location.pathname };
+
       if (href.startsWith('tel:')) {
-        trackEvent('phone_call', { link_url: href, page_path: window.location.pathname });
+        trackEvent('click_to_call', common);
       } else if (href.startsWith('sms:')) {
-        trackEvent('text_click', { link_url: href, page_path: window.location.pathname });
+        trackEvent('click_to_text', common);
+      } else if (href === '/quote' || href.startsWith('/quote?')) {
+        trackEvent('quote_cta_click', common);
+      } else if (/share\.google|google\.com\/maps/.test(href)) {
+        trackEvent('google_business_click', common);
       }
     };
+
     document.addEventListener('click', onClick, true);
     return () => document.removeEventListener('click', onClick, true);
   }, []);
@@ -55,11 +55,26 @@ export default function GaTracker() {
   return (
     <>
       <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
         strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-HYJ6QH6Y1D"
       />
-      <PageViews />
-      <TapTracking />
+      <Script id="ga4-config" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          window.gtag = window.gtag || gtag;
+          gtag('js', new Date());
+          gtag('config', '${GA_ID}', {
+            send_page_view: false,
+            anonymize_ip: true,
+            allow_google_signals: false
+          });
+        `}
+      </Script>
+      <Suspense fallback={null}>
+        <PageViews />
+        <ConversionTracking />
+      </Suspense>
     </>
   );
 }

@@ -10,8 +10,6 @@ import QuoteForm from '@/components/QuoteForm';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import FaqSection from '@/components/FaqSection';
 
-export const dynamicParams = false;
-
 export function generateStaticParams() {
   return LOCATIONS.map((l) => ({ slug: l.slug }));
 }
@@ -23,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: l.metaTitle,
     description: l.metaDescription,
-    keywords: l.keywords.join(', '),
+    keywords: l.keywords,
     alternates: { canonical: `/service-areas/${l.slug}` },
     openGraph: {
       title: l.metaTitle,
@@ -51,7 +49,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
 
   return (
     <>
-      <script key="ld-json-area" id="ld-json-area" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       {/* Hero */}
       <header className="relative overflow-hidden bg-midnight-moss pt-28 text-white">

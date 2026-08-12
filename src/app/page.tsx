@@ -6,8 +6,9 @@ import {
 import { SITE, AREA_NAV } from '@/data/site';
 import { SERVICES } from '@/data/services';
 import { REVIEWS } from '@/data/reviews';
-import ServiceAreaMap from '@/components/ServiceAreaMap';
-import ReviewBadgeBar from '@/components/ReviewBadgeBar';
+import dynamic from 'next/dynamic';
+const ServiceAreaMap = dynamic(() => import('@/components/ServiceAreaMap'));
+const ReviewBadgeBar = dynamic(() => import('@/components/ReviewBadgeBar'));
 
 const serviceIcons: Record<string, React.ReactNode> = {
   'lawn-mowing': <Scissors className="h-7 w-7" />,
@@ -22,7 +23,7 @@ const gallery = [
   { src: '/images/commercial-wildflowers-rkm-headquarters-clinton-la.webp', alt: 'Wildflowers and manicured grounds at RKM headquarters in Clinton, Louisiana, kept up by Southern Buck Lawn', w: 1600, h: 900 },
   { src: '/images/black-mulch-install-before-after.webp', alt: 'Before and after black mulch install on a Louisiana front bed by Southern Buck Lawn', w: 1344, h: 768 },
   { src: '/images/flower-bed-mulch-transformation-before-after-louisiana.webp', alt: 'Three-stage flower bed transformation with black mulch and stone border by Southern Buck Lawn in Louisiana', w: 900, h: 1600 },
-  { src: '/images/hedge-trimming-after.jpg', alt: 'Cleaned up hedge trimming and bed in Baton Rouge', w: 800, h: 1422 },
+  { src: '/images/hedge-trimming-bed-cleanup-baton-rouge.webp', alt: 'Overgrown bed before a Baton Rouge hedge trimming and cleanup', w: 800, h: 1422 },
 ];
 
 const buckPoints = [
@@ -39,24 +40,20 @@ export default function Home() {
       <header className="relative overflow-hidden bg-deep-forest pt-20">
         <div className="absolute inset-0">
           <Image
-            src="/images/southern-buck-hero-banner.svg"
-            alt="Southern Buck Lawn graphic banner featuring SouthernCare mascot and lawn care services"
+            src="/images/hero-background-lawn-care-louisiana.webp"
+            alt="Fresh mulch bed, stone border, and healthy green lawn by Southern Buck Lawn in Denham Springs, Louisiana"
             fill
             priority
             sizes="100vw"
-            quality={90}
-            referrerPolicy="no-referrer"
-            style={{ objectFit: 'cover', objectPosition: 'center' }}
+            quality={60}
+            style={{ objectFit: 'cover', objectPosition: '28% center' }}
           />
-          {/* Black overlay tint set to 40% opacity over the background to darken it */}
-          <div className="absolute inset-0 bg-black/40 pointer-events-none" />
-          <div className="absolute inset-0 bg-gradient-to-r from-deep-forest/80 via-deep-forest/50 to-transparent pointer-events-none" />
+          {/* Left-to-right dark green wash keeps the headline bold and readable. */}
+          <div className="absolute inset-0 bg-gradient-to-r from-deep-forest/90 via-deep-forest/65 to-deep-forest/10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-deep-forest/85 via-transparent to-deep-forest/30" />
         </div>
 
-        <div 
-          className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-cover bg-center"
-          style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/images/southern-buck-hero-banner.svg')" }}
-        >
+        <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
           <div className="max-w-2xl space-y-6">
             <span className="inline-flex items-center gap-2 rounded-full border border-sage/50 bg-safety-orange/20 px-4 py-1.5 font-archivo text-xs font-bold uppercase tracking-widest text-sage">
               <MapPin className="h-4 w-4" /> New customers &middot; Walker &middot; Denham Springs &middot; Baton Rouge
@@ -79,7 +76,6 @@ export default function Home() {
                 width={56}
                 height={56}
                 loading="eager"
-                referrerPolicy="no-referrer"
                 className="h-14 w-14 rounded-full border-2 border-safety-orange object-cover object-top"
               />
               <div className="leading-tight">
@@ -147,16 +143,43 @@ export default function Home() {
               <Link
                 key={s.slug}
                 href={`/services/${s.slug}`}
-                className="group flex flex-col rounded-2xl border border-cream-line bg-cream p-7 shadow-sm transition-all hover:-translate-y-2 hover:shadow-lg"
+                className="group flex flex-col overflow-hidden rounded-2xl border border-cream-line bg-cream shadow-sm transition-all hover:-translate-y-2 hover:shadow-xl"
               >
-                <div className="mb-5 inline-flex w-fit rounded-2xl bg-leaf-tile p-3.5 text-primary">{serviceIcons[s.slug]}</div>
-                <h3 className="font-anton text-xl uppercase leading-tight text-midnight-moss">{s.title}</h3>
-                <p className="mt-2 grow font-archivo text-base text-bark">{s.quickSummary}</p>
-                <span className="mt-5 inline-flex items-center gap-2 font-archivo text-sm font-extrabold uppercase tracking-wide text-safety-orange-deep transition-all group-hover:gap-3">
-                  Learn more <ArrowRight className="h-4 w-4" />
-                </span>
+                <div className="relative h-44 overflow-hidden">
+                  <Image src={s.image} alt={s.imageAlt} fill sizes="(max-width: 768px) 92vw, (max-width: 1024px) 45vw, 23vw" quality={60} className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-midnight-moss/55 to-transparent" />
+                  <div className="absolute bottom-3 left-4 inline-flex rounded-xl bg-cream/95 p-3 text-primary shadow">{serviceIcons[s.slug]}</div>
+                </div>
+                <div className="flex grow flex-col p-6">
+                  <h3 className="font-anton text-xl uppercase leading-tight text-midnight-moss">{s.title}</h3>
+                  <p className="mt-2 grow font-archivo text-base text-bark">{s.quickSummary}</p>
+                  <span className="mt-5 inline-flex items-center gap-2 font-archivo text-sm font-extrabold uppercase tracking-wide text-safety-orange-deep transition-all group-hover:gap-3">
+                    See service details <ArrowRight className="h-4 w-4" />
+                  </span>
+                </div>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* COMMERCIAL / HOA */}
+      <section className="bg-midnight-moss py-16 text-white">
+        <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_auto] lg:px-8">
+          <div>
+            <p className="font-caveat text-3xl font-bold text-sage">For property managers and HOA boards</p>
+            <h2 className="mt-1 font-anton text-4xl uppercase leading-tight tracking-wide sm:text-5xl">One Crew. One Schedule. No Chasing Contractors.</h2>
+            <p className="mt-4 max-w-3xl font-archivo text-lg leading-relaxed text-white/80">
+              We maintain office grounds, retail frontage, entrances, common areas, and larger properties across Greater Baton Rouge and Livingston Parish. Bid packages include a clear scope, service schedule, insurance documentation, and one point of contact.
+            </p>
+          </div>
+          <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
+            <Link href="/quote?property=Commercial&utm_source=website&utm_medium=internal&utm_campaign=commercial_bid" className="inline-flex items-center justify-center gap-2 rounded-xl bg-safety-orange px-7 py-4 font-anton text-lg uppercase tracking-wide text-midnight-moss shadow-lg transition-transform hover:scale-105">
+              Request a Site Walk <ArrowRight className="h-5 w-5" />
+            </Link>
+            <Link href="/services/commercial-grounds" className="inline-flex items-center justify-center rounded-xl border border-white/30 px-7 py-3.5 font-archivo font-bold text-white hover:bg-white/10">
+              Commercial capabilities
+            </Link>
           </div>
         </div>
       </section>
@@ -164,12 +187,11 @@ export default function Home() {
       {/* PROOF BAND — real results */}
       <section className="relative overflow-hidden bg-deep-forest">
         <Image
-          src="/images/lawn-mowing-stripes-backyard-walker-la.webp"
+          src="/images/residential-backyard-lawn-mowing-stripes-louisiana.webp"
           alt="Freshly striped backyard lawn mowed by Southern Buck Lawn in Louisiana"
           fill
           sizes="100vw"
           quality={60}
-          referrerPolicy="no-referrer"
           style={{ objectFit: 'cover', objectPosition: '50% 56%' }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-deep-forest/95 via-deep-forest/65 to-deep-forest/5" />
@@ -207,20 +229,11 @@ export default function Home() {
                   height={g.h}
                   sizes="(max-width: 640px) 92vw, 46vw"
                   quality={60}
-                  referrerPolicy="no-referrer"
                   className="h-72 w-full rounded-xl"
                   style={{ objectFit: 'cover' }}
                 />
               </div>
             ))}
-          </div>
-          <div className="mt-10 text-center">
-            <Link
-              href="/gallery"
-              className="inline-flex items-center gap-2 rounded-xl bg-midnight-moss px-8 py-4 font-archivo text-base font-extrabold uppercase tracking-wide text-white shadow-lg transition-all hover:bg-safety-orange hover:text-midnight-moss hover:scale-105"
-            >
-              Explore Full Interactive Project Gallery &rarr;
-            </Link>
           </div>
         </div>
       </section>
@@ -229,14 +242,13 @@ export default function Home() {
       <section id="about" className="bg-primary py-20">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-12 px-4 sm:px-6 lg:flex-row lg:px-8">
           <div className="flex-none">
-            <div className="relative flex h-60 w-60 items-center justify-center overflow-hidden rounded-3xl bg-forest-dark shadow-2xl sm:h-72 sm:w-72">
+            <div className="flex h-60 w-60 items-center justify-center rounded-3xl bg-forest-dark shadow-2xl sm:h-72 sm:w-72">
               <Image
-                src="/images/michael-dantone-owner-waving.webp"
-                alt="Southern Buck Lawn owner"
+                src="/images/southern-buck-lawn-buck-mascot.webp"
+                alt="Southern Buck Lawn deer mascot in overalls"
                 width={300}
                 height={300}
-                referrerPolicy="no-referrer"
-                className="h-full w-full object-cover"
+                className="h-52 w-52 object-contain sm:h-60 sm:w-60"
               />
             </div>
           </div>

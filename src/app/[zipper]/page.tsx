@@ -75,7 +75,8 @@ export default async function ZipperPage({ params }: { params: Promise<{ zipper:
 
   return (
     <>
-      <script key="ld-json-zipper" id="ld-json-zipper" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([faqJsonLd, serviceJsonLd]) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
 
       {/* Hero */}
       <header className="relative overflow-hidden bg-midnight-moss pt-28 text-white">

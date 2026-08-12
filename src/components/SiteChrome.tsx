@@ -1,6 +1,5 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -10,9 +9,9 @@ import TextBubble from '@/components/TextBubble';
 // Used for advertising landing pages like /landscape-lighting.
 const BARE_ROUTES = ['/landscape-lighting'];
 
-function ContentWithChrome({ children }: { children: React.ReactNode }) {
-  const pathname = usePathname();
-  const bare = pathname ? BARE_ROUTES.some((r) => pathname === r || pathname.startsWith(`${r}/`)) : false;
+export default function SiteChrome({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname() || '/';
+  const bare = BARE_ROUTES.some((r) => pathname === r || pathname.startsWith(`${r}/`));
 
   if (bare) {
     return <>{children}</>;
@@ -28,8 +27,4 @@ function ContentWithChrome({ children }: { children: React.ReactNode }) {
       <TextBubble />
     </>
   );
-}
-
-export default function SiteChrome({ children }: { children: React.ReactNode }) {
-  return <ContentWithChrome>{children}</ContentWithChrome>;
 }

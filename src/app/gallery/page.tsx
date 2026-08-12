@@ -17,7 +17,9 @@ export const metadata: Metadata = {
     'commercial lawn care photos Livingston Parish',
     'Southern Buck Lawn work gallery',
   ],
+  alternates: { canonical: '/gallery' },
   openGraph: {
+    url: '/gallery',
     title: 'Project Gallery | Southern Buck Lawn Work in Walker & Baton Rouge',
     description:
       'Real photos from real yards in Walker, Denham Springs, and Baton Rouge. Lawn mowing, edging, mulch installation, and landscape design.',
@@ -84,7 +86,7 @@ export default function GalleryPage() {
             <div className="grid grid-cols-2 gap-3 sm:flex sm:items-center sm:gap-6 font-barlow text-sm font-semibold text-white/90">
               <div className="flex items-center gap-2 rounded-xl bg-white/10 px-3.5 py-2 backdrop-blur-sm">
                 <ShieldCheck className="h-4 w-4 text-safety-orange" />
-                <span>500+ Local Projects</span>
+                <span>Real Local Project Photos</span>
               </div>
               <div className="flex items-center gap-2 rounded-xl bg-white/10 px-3.5 py-2 backdrop-blur-sm">
                 <Star className="h-4 w-4 text-safety-orange fill-safety-orange" />
@@ -92,7 +94,7 @@ export default function GalleryPage() {
               </div>
               <div className="flex items-center gap-2 rounded-xl bg-white/10 px-3.5 py-2 backdrop-blur-sm col-span-2 sm:col-span-1">
                 <CheckCircle2 className="h-4 w-4 text-sage" />
-                <span>Same Crew, Same Day</span>
+                <span>Owner-Led Local Service</span>
               </div>
             </div>
           </div>
@@ -111,7 +113,7 @@ export default function GalleryPage() {
                 Ready for Your Own <span className="text-safety-orange">Yard Transformation</span>?
               </h2>
               <p className="font-barlow text-lg text-white/80 leading-relaxed">
-                Whether you need weekly precision mowing, fresh mulch installation, or a complete flowerbed cleanup, Michael Dantone and the Southern Buck crew are ready to deliver. Get a free quote in under 24 hours.
+                Whether you need weekly precision mowing, fresh mulch installation, or a complete flowerbed cleanup, Michael Dantone and the Southern Buck crew are ready to learn about your property. Request a free quote online.
               </p>
             </div>
 

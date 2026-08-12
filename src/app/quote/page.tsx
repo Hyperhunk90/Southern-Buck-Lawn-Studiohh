@@ -23,7 +23,7 @@ export default function QuotePage() {
                 Get a Fast, <span className="text-sage">Free</span> Quote
               </h1>
               <p className="mt-4 font-barlow text-lg text-white/85">
-                Ready to have the best yard on the street? Tell us what you need and we will get back to you within 24 hours with a free estimate. No obligation, no pressure.
+                Tell us what you need and where the property is. Michael reviews every request and follows up within one business day to schedule a walk-through or confirm the next step.
               </p>
             </div>
 

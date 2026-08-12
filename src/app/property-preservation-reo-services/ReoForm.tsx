@@ -1,8 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import { Send, CheckCircle2, Loader2, UploadCloud } from 'lucide-react';
+import { Send, CheckCircle2, Loader2, Mail } from 'lucide-react';
 import { trackEvent } from '@/lib/ga';
+import { SITE } from '@/data/site';
 
 export default function ReoForm() {
   const [form, setForm] = useState({
@@ -14,7 +15,7 @@ export default function ReoForm() {
     company: '', // Honeypot
   });
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
-  const [file, setFile] = useState<File | null>(null);
+
 
   const update = (k: string, v: string) => setForm((p) => ({ ...p, [k]: v }));
 
@@ -23,7 +24,7 @@ export default function ReoForm() {
     setStatus('sending');
 
     // Combine custom fields into the message payload for the backend
-    const messagePayload = `Asset Management Firm: ${form.firmName}\nName & Title: ${form.nameTitle}\nHas Attachment: ${file ? 'Yes (Emailed separately)' : 'No'}`;
+    const messagePayload = `Asset Management Firm: ${form.firmName}\nName & Title: ${form.nameTitle}`;
 
     try {
       const res = await fetch('/api/lead', {
@@ -31,6 +32,8 @@ export default function ReoForm() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           type: 'REO / Property Preservation Lead',
+          propertyType: 'Commercial',
+          companyName: form.firmName,
           name: form.nameTitle || form.firmName || 'Unknown',
           phone: form.phone,
           address: form.address,
@@ -42,7 +45,7 @@ export default function ReoForm() {
 
       if (!res.ok) throw new Error('failed');
       setStatus('sent');
-      trackEvent('generate_lead', { form: 'reo_form' });
+      trackEvent('generate_lead', { form_name: 'reo_form', property_type: 'Commercial', service: form.service });
     } catch {
       setStatus('error');
     }
@@ -56,7 +59,7 @@ export default function ReoForm() {
         </div>
         <h3 className="mb-2 font-anton text-3xl uppercase tracking-wide text-midnight-moss">Work Order Received</h3>
         <p className="max-w-md font-barlow text-lg text-gray-700">
-          We have received your details. {file && "Since you indicated you have files, please email them directly to sbl@southernbucklawn.com if you haven't already."} We will be in touch shortly to confirm scheduling.
+          We have received your details. We will be in touch shortly to confirm scheduling.
         </p>
       </div>
     );
@@ -157,39 +160,12 @@ export default function ReoForm() {
         />
       </label>
 
-      <div className="flex flex-col gap-2">
-        <span className="font-barlow text-sm font-bold uppercase tracking-wide text-midnight-moss">
-          Upload Scope of Work / Photos
-        </span>
-        <label className="group flex cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-dashed border-primary/20 bg-white p-8 transition-colors hover:border-safety-orange hover:bg-orange-50">
-          <div className="flex flex-col items-center gap-3 text-center">
-            <UploadCloud className="h-10 w-10 text-primary/40 group-hover:text-safety-orange transition-colors" />
-            <div className="font-barlow text-base text-midnight-moss">
-              {file ? (
-                <span className="font-bold text-safety-orange">{file.name}</span>
-              ) : (
-                <>
-                  <span className="font-bold">Click to upload</span> or drag and drop
-                </>
-              )}
-            </div>
-            {!file && <p className="font-barlow text-sm text-gray-500">PDF, JPG, PNG up to 10MB</p>}
-          </div>
-          <input
-            type="file"
-            className="hidden"
-            onChange={(e) => {
-              if (e.target.files && e.target.files[0]) {
-                setFile(e.target.files[0]);
-              }
-            }}
-          />
-        </label>
-        {file && (
-          <p className="mt-1 font-barlow text-sm text-gray-600">
-            * Note: For very large files or multiple photos, please email them directly to <a href="mailto:sbl@southernbucklawn.com" className="font-bold text-safety-orange hover:underline">sbl@southernbucklawn.com</a> after submitting.
-          </p>
-        )}
+      <div className="flex items-start gap-3 rounded-xl border border-primary/10 bg-white p-4">
+        <Mail className="mt-0.5 h-5 w-5 shrink-0 text-safety-orange" />
+        <p className="font-barlow text-sm text-gray-700">
+          Have a scope of work, PDF, or property photos? Submit this form, then email the attachments to{' '}
+          <a href={SITE.emailHref} className="font-bold text-safety-orange-deep hover:underline">{SITE.email}</a>.
+        </p>
       </div>
 
       {status === 'error' && (

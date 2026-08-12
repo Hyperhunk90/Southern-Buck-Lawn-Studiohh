@@ -77,7 +77,7 @@ export interface Project {
   title: string;
   serviceType: ProjectServiceType;
   serviceLabel: string;
-  location: string; // e.g. 'Walker, LA'
+  location: string;
   image: string;
   imageAlt: string;
   isBeforeAfter?: boolean;

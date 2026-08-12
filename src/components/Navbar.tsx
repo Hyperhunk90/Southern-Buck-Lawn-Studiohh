@@ -63,7 +63,7 @@ export default function Navbar() {
               <ChevronDown className={`h-4 w-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
             </button>
             {servicesOpen && (
-              <div className="absolute right-0 mt-1 w-64 rounded-xl border border-cream-line bg-white py-2 shadow-2xl transition-all">
+              <div className="absolute right-0 mt-1 w-64 rounded-xl border border-cream-line bg-white py-2 shadow-2xl">
                 {SERVICE_NAV.map((s) => (
                   <Link
                     key={s.href}
@@ -90,7 +90,7 @@ export default function Navbar() {
               <ChevronDown className={`h-4 w-4 transition-transform ${areasOpen ? 'rotate-180' : ''}`} />
             </button>
             {areasOpen && (
-              <div className="absolute right-0 mt-1 w-60 rounded-xl border border-cream-line bg-white py-2 shadow-2xl transition-all">
+              <div className="absolute right-0 mt-1 w-60 rounded-xl border border-cream-line bg-white py-2 shadow-2xl">
                 {AREA_NAV.map((a) => (
                   <Link
                     key={a.href}
