@@ -147,15 +147,16 @@ export const SERVICES: Service[] = [
     h1: 'Commercial Lawn and Grounds Maintenance in Baton Rouge',
     quickSummary: 'Dependable, insured grounds care that keeps your property looking open for business.',
     detailedContent: [
-      'Your parking lot is the first handshake a customer gets. Our commercial grounds maintenance keeps retail centers, offices, churches, and HOA common areas trimmed, edged, and clean, so the front of your business says you have your act together before anyone walks in the door.',
-      'We work around your hours, not ours. Early mornings, weekends, whatever keeps mowers out of your customers\u2019 way and clippings off their cars. You get one point of contact, a set schedule, and clean digital invoices, with nobody to chase down for a status update.',
-      'We carry full commercial liability and workers comp, and we will hand your property manager a certificate of insurance the same day you ask. When a Gulf storm rolls through Baton Rouge or Livingston Parish, we are out clearing limbs and debris so your property opens on time and looks like nothing happened.',
+      'Your commercial curb appeal is the first impression a customer or tenant gets. Southern Buck Lawn provides reliable, high-standard grounds maintenance for retail centers, office parks, industrial facilities, churches, and HOA common areas across Walker, Denham Springs, Baton Rouge, and Livingston Parish.',
+      'We run commercial-grade zero-turn equipment (Bad Boy Magnum MZ) and pro-grade string trimmers and blowers to handle multi-acre properties quickly, cleanly, and consistently. We work around your business hours—early mornings, evenings, or weekends—to keep equipment out of your customers’ way and clippings off parked vehicles.',
+      'We carry full commercial general liability insurance and can issue a customized Certificate of Insurance (COI) made out to your property management firm or ownership group within 24 hours. When severe Gulf weather or storms roll through, we prioritize our commercial accounts with fast storm cleanup and limb clearing so your business stays open and safe.',
     ],
     localBenefits: [
-      'Quiet-hour scheduling for offices, churches, and medical.',
-      'One point of contact, set schedule, clean digital billing.',
-      'Full commercial liability and workers comp on file.',
-      'Storm debris cleared fast so you stay open.',
+      'Commercial zero-turn capacity for multi-acre properties and retail centers.',
+      'Quiet-hour and off-peak scheduling for offices, retail, and churches.',
+      'Full commercial general liability insurance with 24-hr COI turnaround.',
+      'Single direct point of contact, set weekly schedule, and digital invoicing.',
+      'Rapid storm debris clearance to keep your property open and safe.',
     ],
     pricingRange: 'Custom contract, most start around $250 a month',
     faqs: [

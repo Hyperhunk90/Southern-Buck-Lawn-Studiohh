@@ -17,14 +17,14 @@ export const REVIEWS: Review[] = [
     area: 'Google review',
     rating: 5,
     source: 'Google',
-    text: 'We had horrible front flower beds. They look great now after Shane cleared it all out, laid weed barrier and planted new shrubs and roses. I love the rocks around the border too. Definitely recommend.',
+    text: 'We had horrible front flower beds. They look great now after Southern Buck Lawn cleared it all out, laid weed barrier and planted new shrubs and roses. I love the rocks around the border too. Definitely recommend.',
   },
   {
     author: 'Aubrey Dycus',
     area: 'Google review',
     rating: 5,
     source: 'Google',
-    text: "I couldn't be happier with the yard maintenance services that Southern Buck Lawn provides! Shane is very professional, reasonably priced, and the service he and his team provide is next level! They leave my yard looking stunning each time. I highly recommend them!!",
+    text: "I couldn't be happier with the yard maintenance services that Southern Buck Lawn provides! Michael is very professional, reasonably priced, and the service he and his team provide is next level! They leave my yard looking stunning each time. I highly recommend them!!",
   },
   {
     author: 'Marty Dantone',

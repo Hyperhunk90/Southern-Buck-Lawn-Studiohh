@@ -6,8 +6,7 @@ import Footer from '@/components/Footer';
 import TextBubble from '@/components/TextBubble';
 
 // Routes that render as standalone pages (no main-site nav/footer/text bubble).
-// Used for advertising landing pages like /landscape-lighting.
-const BARE_ROUTES = ['/landscape-lighting'];
+const BARE_ROUTES: string[] = [];
 
 export default function SiteChrome({ children }: { children: React.ReactNode }) {
   const pathname = usePathname() || '/';
