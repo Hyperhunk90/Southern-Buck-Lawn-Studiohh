@@ -41,7 +41,7 @@ export const SERVICES: Service[] = [
           'We mulch by default, since chopped clippings feed the soil for free. When the grass gets ahead of us after a wet stretch, we bag or blow it out so you are not left with clumps baking in the sun.',
       },
     ],
-    image: '/images/lawn-mowing-edging-walker-louisiana.webp',
+    image: '/images/sbl-project-photo-02.webp',
     imageAlt: 'Freshly mowed green lawn with a sharp edge along a flagstone walkway in Walker, Louisiana',
   },
   {
@@ -84,7 +84,7 @@ export const SERVICES: Service[] = [
           'We start feeding in mid-spring once it greens up and growth kicks in, then shift to a potassium-heavy feed in late summer to toughen the grass for winter.',
       },
     ],
-    image: '/images/weed-control-green-lawn-denham-springs.webp',
+    image: '/images/sbl-project-photo-03.webp',
     imageAlt: 'Healthy weed-free green lawn next to a mulched bed at a Denham Springs home',
   },
   {
@@ -127,7 +127,7 @@ export const SERVICES: Service[] = [
           'Pine straw is light, affordable, and great on slopes and around azaleas since it acidifies the soil. Hardwood holds longer and looks crisper out front. We will tell you straight which one fits your beds.',
       },
     ],
-    image: '/images/landscape-design-before-after-denham-springs.webp',
+    image: '/images/sbl-project-photo-04.webp',
     imageAlt: 'Before and after of a Denham Springs flowerbed transformation with fresh mulch by Southern Buck Lawn',
   },
   {
@@ -171,7 +171,7 @@ export const SERVICES: Service[] = [
           'We do. Common-area mowing, fence lines, entrance beds, and monument flowerbeds, all on one schedule with one invoice and one person to call.',
       },
     ],
-    image: '/images/commercial-front-entrance-mulch-roses-livingston-la.webp',
+    image: '/images/sbl-project-photo-05.webp',
     imageAlt: 'Commercial front entrance with fresh black mulch, roses, and flagpoles maintained by Southern Buck Lawn in Livingston, LA',
   },
 ];

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: 'Project Gallery | Southern Buck Lawn Work in Walker & Baton Rouge',
     description:
       'Real photos from real yards in Walker, Denham Springs, and Baton Rouge. Lawn mowing, edging, mulch installation, and landscape design.',
-    images: [{ url: '/images/landscape-design-before-after-denham-springs.webp' }],
+    images: [{ url: '/images/sbl-project-photo-02.webp' }],
   },
 };
 

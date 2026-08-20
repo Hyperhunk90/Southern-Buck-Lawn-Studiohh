@@ -11,7 +11,7 @@ import { GOOGLE_RATING, REVIEWS } from '@/data/reviews';
 // Landscape image used as the default social-share preview. 1920x1080 (16:9)
 // renders cleanly as a large summary card on Facebook, X, and LinkedIn.
 const OG_IMAGE = {
-  url: '/images/hero-background-lawn-care-louisiana.webp',
+  url: '/images/sbl-project-photo-01.webp',
   width: 1920,
   height: 1080,
   alt: 'Fresh mulch bed, stone border, and healthy green lawn by Southern Buck Lawn in Louisiana',

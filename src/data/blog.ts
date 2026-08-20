@@ -22,7 +22,7 @@ export const POSTS: BlogPost[] = [
       'weed control Baton Rouge LA',
       'weed keeps coming back after spraying',
     ],
-    heroImage: '/images/weed-control-green-lawn-denham-springs.webp',
+    heroImage: '/images/sbl-project-photo-11.webp',
     heroAlt: 'Thick, weed-free green lawn in South Louisiana after professional weed control treatment',
     sections: [
       {
@@ -76,7 +76,7 @@ export const POSTS: BlogPost[] = [
       'armyworm treatment Louisiana',
       'lawn pest control Denham Springs LA',
     ],
-    heroImage: '/images/hero-lawn-care-denham-springs-louisiana.webp',
+    heroImage: '/images/sbl-project-photo-02.webp',
     heroAlt: 'Healthy thick green lawn in Denham Springs, Louisiana, protected from armyworm damage',
     sections: [
       {
@@ -130,7 +130,7 @@ export const POSTS: BlogPost[] = [
       'acreage pest control Watson LA',
       'flea control large lot Louisiana',
     ],
-    heroImage: '/images/residential-lawn-mowing-acreage-livingston-parish-la.webp',
+    heroImage: '/images/sbl-project-photo-03.webp',
     heroAlt: 'Neatly mowed acreage lawn in Livingston Parish, Louisiana with tight, treated turf edges',
     sections: [
       {
@@ -184,7 +184,7 @@ export const POSTS: BlogPost[] = [
       'lawn pest control Walker LA',
       'why is my grass dying in summer',
     ],
-    heroImage: '/images/residential-backyard-lawn-mowing-stripes-louisiana.webp',
+    heroImage: '/images/sbl-project-photo-04.webp',
     heroAlt: 'Healthy green Louisiana backyard lawn with mowing stripes, free of chinch bug damage',
     sections: [
       {
@@ -239,7 +239,7 @@ export const POSTS: BlogPost[] = [
       'pine straw vs hardwood mulch',
       'mulch installation Denham Springs',
     ],
-    heroImage: '/images/mulch-flowerbed-install-denham-springs.webp',
+    heroImage: '/images/sbl-project-photo-05.webp',
     heroAlt: 'Fresh hardwood mulch installed in a Denham Springs flowerbed by Southern Buck Lawn',
     sections: [
       {
@@ -294,7 +294,7 @@ export const POSTS: BlogPost[] = [
       'lawn mowing Baton Rouge',
       'why is my grass turning brown after mowing',
     ],
-    heroImage: '/images/commercial-lawn-mowing-stripes-livingston-la.webp',
+    heroImage: '/images/sbl-project-photo-06.webp',
     heroAlt: 'Wide green lawn cut with clean mowing stripes at the correct summer height in Louisiana',
     sections: [
       {

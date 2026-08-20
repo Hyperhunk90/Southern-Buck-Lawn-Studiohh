@@ -19,7 +19,7 @@ export const LOCATIONS: Location[] = [
     pestNote:
       'Chinch bugs are the big one here. They go after young Centipede sod and leave dry brown patches that look like drought damage. We spot them early and treat before they spread across the whole yard.',
     neighborhoods: ['Walker South Road', 'Cove Landing', 'Townwood', 'Milton Road area', 'Highway 447 corridor'],
-    image: '/images/welcome-to-walker-louisiana-sign.webp',
+    image: '/images/sbl-project-photo-06.webp',
     imageAlt: 'Welcome to the City of Walker, Louisiana road sign',
     reviews: [],
     faqs: [
@@ -56,7 +56,7 @@ export const LOCATIONS: Location[] = [
     pestNote:
       'Watch for armyworms that can strip a lawn overnight, mole crickets tearing up the root zone, and dollar spot fungus that loves the heavy July dew. We catch them early before they take the whole yard.',
     neighborhoods: ['Antique District', 'Juban Crossing area', 'Range Avenue corridor', 'Magnolia Beach', 'Watson line'],
-    image: '/images/pine-straw-black-mulch-flower-bed-livingston-la.webp',
+    image: '/images/sbl-project-photo-07.webp',
     imageAlt: 'Fresh pine straw and black mulch flower bed with red roses, installed by Southern Buck Lawn near Denham Springs, LA',
     reviews: [],
     faqs: [
@@ -93,7 +93,7 @@ export const LOCATIONS: Location[] = [
     pestNote:
       'Virginia buttonweed is the headache here, tough as nails against most herbicides, along with brown patch fungus during the warm wet stretch of fall. We treat both with the right product and the right timing.',
     neighborhoods: ['Garden District', 'Perkins Road corridor', 'Jefferson Highway', 'Shenandoah', 'Woodlawn'],
-    image: '/images/commercial-grounds-maintenance-flags-baton-rouge-la.webp',
+    image: '/images/sbl-project-photo-08.webp',
     imageAlt: 'Commercial grounds and striped lawn maintained by Southern Buck Lawn at a Baton Rouge, LA property',
     reviews: [],
     faqs: [
@@ -130,7 +130,7 @@ export const LOCATIONS: Location[] = [
     pestNote:
       'Open rural land means fire ants, ticks, and fleas setting up in the warm sandy spots. We keep the turf tight and treated so they have nowhere good to settle in.',
     neighborhoods: ['Watson', 'Albany', 'Satsuma', 'French Settlement', 'Maurepas'],
-    image: '/images/residential-lawn-mowing-acreage-livingston-parish-la.webp',
+    image: '/images/sbl-project-photo-09.webp',
     imageAlt: 'Neatly mowed green lawn with a clean edge, typical Southern Buck Lawn acreage work in Livingston Parish',
     reviews: [],
     faqs: [

@@ -103,7 +103,7 @@ export default function ChatWidget() {
         className={`fixed bottom-24 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-safety-orange text-midnight-moss shadow-2xl transition-colors hover:bg-orange-hot ${isOpen ? 'hidden' : ''}`}
         aria-label="Open chat assistant"
       >
-        <Image src="/images/southern-buck-lawn-mascot-waving.png" alt="Buckie Mascot" width={40} height={40} className="object-contain drop-shadow-md" />
+        <Image src="/icon.png" alt="Buckie Mascot" width={40} height={40} className="object-contain drop-shadow-md" />
       </motion.button>
 
       {/* Chat Window */}
@@ -120,7 +120,7 @@ export default function ChatWidget() {
             <div className="flex items-center justify-between bg-midnight-moss px-5 py-4 text-white">
               <div className="flex items-center gap-3">
                 <div className="flex h-10 w-10 overflow-hidden items-center justify-center rounded-full bg-safety-orange text-midnight-moss">
-                  <Image src="/images/southern-buck-lawn-mascot-waving.png" alt="Buckie Mascot" width={32} height={32} className="object-contain" />
+                  <Image src="/icon.png" alt="Buckie Mascot" width={32} height={32} className="object-contain" />
                 </div>
                 <div>
                   <h3 className="font-anton text-lg tracking-wider">BUCKIE</h3>
@@ -145,7 +145,7 @@ export default function ChatWidget() {
                       {m.role === 'user' ? (
                         <User className="h-4 w-4" />
                       ) : (
-                        <Image src="/images/southern-buck-lawn-mascot-waving.png" alt="Buckie Mascot" width={24} height={24} className="object-contain" />
+                        <Image src="/icon.png" alt="Buckie Mascot" width={24} height={24} className="object-contain" />
                       )}
                     </div>
                     <div
@@ -194,7 +194,7 @@ export default function ChatWidget() {
               {isLoading && (
                 <div className="flex items-start gap-2 max-w-[85%]">
                   <div className="flex h-8 w-8 flex-shrink-0 overflow-hidden items-center justify-center rounded-full bg-safety-orange text-midnight-moss">
-                    <Image src="/images/southern-buck-lawn-mascot-waving.png" alt="Buckie Mascot" width={24} height={24} className="object-contain" />
+                    <Image src="/icon.png" alt="Buckie Mascot" width={24} height={24} className="object-contain" />
                   </div>
                   <div className="rounded-2xl rounded-bl-none bg-white px-4 py-4 shadow-sm border border-primary/5 text-midnight-moss flex items-center justify-center">
                     <Loader2 className="h-4 w-4 animate-spin text-safety-orange" />

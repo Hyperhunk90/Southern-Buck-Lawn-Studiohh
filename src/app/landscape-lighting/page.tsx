@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     description:
       'Light up your yard the right way. Path lighting, tree uplighting, security, and patio lighting across Livingston Parish and Baton Rouge.',
     url: `${SITE.url}/landscape-lighting`,
-    images: [{ url: '/images/commercial-grounds-night-entrance-livingston-la.webp' }],
+    images: [{ url: '/images/sbl-project-photo-09.webp' }],
   },
 };
 
@@ -69,7 +69,7 @@ export default function LandscapeLightingPage() {
       <section className="relative overflow-hidden bg-midnight-moss text-white">
         <div className="absolute inset-0">
           <Image
-            src="/images/commercial-grounds-night-entrance-livingston-la.webp"
+            src="/images/sbl-project-photo-10.webp"
             alt="Outdoor landscape lighting glowing at dusk on a Louisiana property by Southern Buck Lawn"
             fill
             priority

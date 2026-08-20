@@ -18,12 +18,12 @@ const serviceIcons: Record<string, React.ReactNode> = {
 };
 
 const gallery = [
-  { src: '/images/lawn-mowing-stripes-backyard-walker-la.webp', alt: 'Bold mowing stripes across a Walker, Louisiana backyard with a shade tree in the middle, by Southern Buck Lawn', w: 563, h: 1000 },
-  { src: '/images/commercial-lawn-stripes-rkm-baton-rouge.webp', alt: 'Crisp mowing stripes on the commercial lawn at the RKM location in Baton Rouge, maintained by Southern Buck Lawn', w: 1300, h: 720 },
-  { src: '/images/commercial-wildflowers-rkm-headquarters-clinton-la.webp', alt: 'Wildflowers and manicured grounds at RKM headquarters in Clinton, Louisiana, kept up by Southern Buck Lawn', w: 1600, h: 900 },
-  { src: '/images/black-mulch-install-before-after.webp', alt: 'Before and after black mulch install on a Louisiana front bed by Southern Buck Lawn', w: 1344, h: 768 },
-  { src: '/images/flower-bed-mulch-transformation-before-after-louisiana.webp', alt: 'Three-stage flower bed transformation with black mulch and stone border by Southern Buck Lawn in Louisiana', w: 900, h: 1600 },
-  { src: '/images/hedge-trimming-bed-cleanup-baton-rouge.webp', alt: 'Overgrown bed before a Baton Rouge hedge trimming and cleanup', w: 800, h: 1422 },
+  { src: '/images/sbl-project-photo-02.webp', alt: 'Bold mowing stripes across a Walker, Louisiana backyard with a shade tree in the middle, by Southern Buck Lawn', w: 563, h: 1000 },
+  { src: '/images/sbl-project-photo-03.webp', alt: 'Crisp mowing stripes on the commercial lawn at the RKM location in Baton Rouge, maintained by Southern Buck Lawn', w: 1300, h: 720 },
+  { src: '/images/sbl-project-photo-04.webp', alt: 'Wildflowers and manicured grounds at RKM headquarters in Clinton, Louisiana, kept up by Southern Buck Lawn', w: 1600, h: 900 },
+  { src: '/images/sbl-project-photo-05.webp', alt: 'Before and after black mulch install on a Louisiana front bed by Southern Buck Lawn', w: 1344, h: 768 },
+  { src: '/images/sbl-project-photo-06.webp', alt: 'Three-stage flower bed transformation with black mulch and stone border by Southern Buck Lawn in Louisiana', w: 900, h: 1600 },
+  { src: '/images/sbl-project-photo-07.webp', alt: 'Overgrown bed before a Baton Rouge hedge trimming and cleanup', w: 800, h: 1422 },
 ];
 
 const buckPoints = [
@@ -40,7 +40,7 @@ export default function Home() {
       <header className="relative overflow-hidden bg-deep-forest pt-20">
         <div className="absolute inset-0">
           <Image
-            src="/images/hero-background-lawn-care-louisiana.webp"
+            src="/images/sbl-project-photo-01.webp"
             alt="Fresh mulch bed, stone border, and healthy green lawn by Southern Buck Lawn in Denham Springs, Louisiana"
             fill
             priority
@@ -187,7 +187,7 @@ export default function Home() {
       {/* PROOF BAND — real results */}
       <section className="relative overflow-hidden bg-deep-forest">
         <Image
-          src="/images/residential-backyard-lawn-mowing-stripes-louisiana.webp"
+          src="/images/sbl-project-photo-08.webp"
           alt="Freshly striped backyard lawn mowed by Southern Buck Lawn in Louisiana"
           fill
           sizes="100vw"
