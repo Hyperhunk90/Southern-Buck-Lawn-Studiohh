@@ -61,8 +61,42 @@ const BADGES = [
 ];
 
 export default function ReviewBadgeBar() {
+  const reviewSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: 'Southern Buck Lawn',
+    image: 'https://southernbucklawn.com/images/southern-buck-lawn-logo.png',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: GOOGLE_RATING.score,
+      reviewCount: GOOGLE_RATING.count,
+      bestRating: 5,
+      worstRating: 1,
+      itemReviewed: {
+        '@type': 'LocalBusiness',
+        name: 'Southern Buck Lawn'
+      }
+    },
+    review: REVIEWS.map((r) => ({
+      '@type': 'Review',
+      author: { '@type': 'Person', name: r.author },
+      reviewRating: { '@type': 'Rating', ratingValue: r.rating, bestRating: 5, worstRating: 1 },
+      reviewBody: r.text,
+      itemReviewed: {
+        '@type': 'LocalBusiness',
+        name: 'Southern Buck Lawn'
+      }
+    }))
+  };
+
   return (
-    <div className="w-full">
+    <div
+
+      <script
+        key="ld-json-reviews"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
+      /> className="w-full">
       <div className="mb-4 flex items-center justify-center gap-2">
         <span className="font-anton text-2xl text-midnight-moss">{GOOGLE_RATING.score.toFixed(1)}</span>
         <span className="flex gap-0.5 text-safety-orange">
