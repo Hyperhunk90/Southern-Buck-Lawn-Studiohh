@@ -1,5 +1,5 @@
 import { SITE } from '@/data/site';
-import { GOOGLE_RATING } from '@/data/reviews';
+import { GOOGLE_RATING, REVIEWS } from '@/data/reviews';
 import { Star } from 'lucide-react';
 
 // Inline SVG brand marks so every badge is crisp and truly transparent.
@@ -61,42 +61,9 @@ const BADGES = [
 ];
 
 export default function ReviewBadgeBar() {
-  const reviewSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: 'Southern Buck Lawn',
-    image: 'https://southernbucklawn.com/images/southern-buck-lawn-logo.png',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: GOOGLE_RATING.score,
-      reviewCount: GOOGLE_RATING.count,
-      bestRating: 5,
-      worstRating: 1,
-      itemReviewed: {
-        '@type': 'LocalBusiness',
-        name: 'Southern Buck Lawn'
-      }
-    },
-    review: REVIEWS.map((r) => ({
-      '@type': 'Review',
-      author: { '@type': 'Person', name: r.author },
-      reviewRating: { '@type': 'Rating', ratingValue: r.rating, bestRating: 5, worstRating: 1 },
-      reviewBody: r.text,
-      itemReviewed: {
-        '@type': 'LocalBusiness',
-        name: 'Southern Buck Lawn'
-      }
-    }))
-  };
 
   return (
-    <div className="w-full">
-      <script
-        key="ld-json-reviews"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
-      />
-      <div className="mb-4 flex items-center justify-center gap-2">
+    <div className="w-full">      <div className="mb-4 flex items-center justify-center gap-2">
         <span className="font-anton text-2xl text-midnight-moss">{GOOGLE_RATING.score.toFixed(1)}</span>
         <span className="flex gap-0.5 text-safety-orange">
           {Array.from({ length: 5 }).map((_, i) => (
