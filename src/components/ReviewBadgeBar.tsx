@@ -90,13 +90,12 @@ export default function ReviewBadgeBar() {
   };
 
   return (
-    <div
-
+    <div className="w-full">
       <script
         key="ld-json-reviews"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
-      /> className="w-full">
+      />
       <div className="mb-4 flex items-center justify-center gap-2">
         <span className="font-anton text-2xl text-midnight-moss">{GOOGLE_RATING.score.toFixed(1)}</span>
         <span className="flex gap-0.5 text-safety-orange">

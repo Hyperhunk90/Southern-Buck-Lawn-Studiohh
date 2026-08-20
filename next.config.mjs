@@ -92,10 +92,7 @@ const nextConfig = {
   // provides an older glibc that is incompatible with the native SWC bindings.
   // Falling back to the classic Webpack bundler ensures the build works on the
   // Hostinger Node.js runtime.
-  experimental: {
-    // Explicitly turn off Turbopack – Next will use Webpack instead.
-    turbopack: false,
-  },
+  
 };
 
 export default nextConfig;

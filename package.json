@@ -29,6 +29,6 @@
     "typescript": "^5.8.2"
   }
   ,"engines": {
-    "node": "15.x"
+    "node": ">=18.x"
   }
 }
