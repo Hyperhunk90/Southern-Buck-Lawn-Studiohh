@@ -8,13 +8,14 @@ import { SITE } from '@/data/site';
 import { GOOGLE_RATING, REVIEWS } from '@/data/reviews';
 
 
-// Landscape image used as the default social-share preview. 1920x1080 (16:9)
-// renders cleanly as a large summary card on Facebook, X, and LinkedIn.
+// Landscape image used as the default social-share preview. A real 2000x1126
+// (~16:9) project photo so Facebook, X, and LinkedIn render a large summary
+// card (their large-card format wants at least 1200x630).
 const OG_IMAGE = {
-  url: '/images/sbl-project-photo-01.webp',
-  width: 1920,
-  height: 1080,
-  alt: 'Fresh mulch bed, stone border, and healthy green lawn by Southern Buck Lawn in Louisiana',
+  url: '/images/sbl-project-photo-08.webp',
+  width: 2000,
+  height: 1126,
+  alt: 'Freshly striped backyard lawn mowed by Southern Buck Lawn in Louisiana',
 };
 
 const anton = Anton({

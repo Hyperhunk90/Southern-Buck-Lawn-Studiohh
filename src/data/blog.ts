@@ -130,8 +130,8 @@ export const POSTS: BlogPost[] = [
       'acreage pest control Watson LA',
       'flea control large lot Louisiana',
     ],
-    heroImage: '/images/sbl-project-photo-03.webp',
-    heroAlt: 'Neatly mowed acreage lawn in Livingston Parish, Louisiana with tight, treated turf edges',
+    heroImage: '/images/sbl-project-photo-08.webp',
+    heroAlt: 'Neatly mowed lawn with tight, clean turf edges by Southern Buck Lawn in Livingston Parish, Louisiana',
     sections: [
       {
         body: [

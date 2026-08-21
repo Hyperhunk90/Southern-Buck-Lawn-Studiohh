@@ -84,8 +84,8 @@ export const SERVICES: Service[] = [
           'We start feeding heavily in mid-spring once the lawn fully greens up and the growth engine kicks in. By late summer, we shift to a potassium-heavy feed blend to toughen the grass up so it can survive the winter dormancy without damage.'
       }
     ],
-    image: '/images/sbl-project-photo-03.webp',
-    imageAlt: 'Healthy weed-free green lawn next to a mulched bed at a Denham Springs home',
+    image: '/images/sbl-project-photo-08.webp',
+    imageAlt: 'Healthy, weed-free green lawn freshly mowed and striped by Southern Buck Lawn',
   },
   {
     slug: 'landscape-design',

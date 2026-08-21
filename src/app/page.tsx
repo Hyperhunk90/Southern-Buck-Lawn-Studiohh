@@ -18,12 +18,12 @@ const serviceIcons: Record<string, React.ReactNode> = {
 };
 
 const gallery = [
-  { src: '/images/sbl-project-photo-02.webp', alt: 'Bold mowing stripes across a Walker, Louisiana backyard with a shade tree in the middle, by Southern Buck Lawn', w: 563, h: 1000 },
-  { src: '/images/sbl-project-photo-03.webp', alt: 'Crisp mowing stripes on the commercial lawn at the RKM location in Baton Rouge, maintained by Southern Buck Lawn', w: 1300, h: 720 },
-  { src: '/images/sbl-project-photo-04.webp', alt: 'Wildflowers and manicured grounds at RKM headquarters in Clinton, Louisiana, kept up by Southern Buck Lawn', w: 1600, h: 900 },
-  { src: '/images/sbl-project-photo-05.webp', alt: 'Before and after black mulch install on a Louisiana front bed by Southern Buck Lawn', w: 1344, h: 768 },
-  { src: '/images/sbl-project-photo-06.webp', alt: 'Three-stage flower bed transformation with black mulch and stone border by Southern Buck Lawn in Louisiana', w: 900, h: 1600 },
-  { src: '/images/sbl-project-photo-07.webp', alt: 'Overgrown bed before a Baton Rouge hedge trimming and cleanup', w: 800, h: 1422 },
+  { src: '/images/sbl-project-photo-02.webp', alt: 'Bold mowing stripes across a Walker, Louisiana backyard with a shade tree in the middle, by Southern Buck Lawn', w: 1125, h: 2000 },
+  { src: '/images/sbl-project-photo-09.webp', alt: 'Freshly mowed lawn and hand-trimmed topiaries at a Louisiana farmhouse by Southern Buck Lawn', w: 1126, h: 2000 },
+  { src: '/images/sbl-project-photo-04.webp', alt: 'Wildflowers and manicured grounds at RKM headquarters in Clinton, Louisiana, kept up by Southern Buck Lawn', w: 2000, h: 1125 },
+  { src: '/images/sbl-project-photo-05.webp', alt: 'Before and after black mulch install on a Louisiana front bed by Southern Buck Lawn', w: 2000, h: 1125 },
+  { src: '/images/sbl-project-photo-06.webp', alt: 'Three-stage flower bed transformation with black mulch and stone border by Southern Buck Lawn in Louisiana', w: 1125, h: 2000 },
+  { src: '/images/sbl-project-photo-07.webp', alt: 'Overgrown bed before a Baton Rouge hedge trimming and cleanup', w: 1125, h: 2000 },
 ];
 
 const buckPoints = [
@@ -40,20 +40,20 @@ export default function Home() {
       <header className="relative overflow-hidden bg-deep-forest pt-20">
         <div className="absolute inset-0">
           <Image
-            src="/images/sbl-project-photo-01.webp"
-            alt="Fresh mulch bed, stone border, and healthy green lawn by Southern Buck Lawn in Denham Springs, Louisiana"
+            src="/images/sbl-project-photo-10.webp"
+            alt="Well-kept Louisiana farmhouse with a freshly mowed lawn and tidy beds by Southern Buck Lawn"
             fill
             priority
             sizes="100vw"
             quality={60}
-            style={{ objectFit: 'cover', objectPosition: '28% center' }}
+            className="object-cover object-center"
           />
           {/* Left-to-right dark green wash keeps the headline bold and readable. */}
-          <div className="absolute inset-0 bg-gradient-to-r from-deep-forest/90 via-deep-forest/65 to-deep-forest/10" />
-          <div className="absolute inset-0 bg-gradient-to-t from-deep-forest/85 via-transparent to-deep-forest/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-deep-forest/90 via-deep-forest/70 to-deep-forest/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-deep-forest/85 via-transparent to-deep-forest/40" />
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+        <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
           <div className="max-w-2xl space-y-6">
             <span className="inline-flex items-center gap-2 rounded-full border border-sage/50 bg-safety-orange/20 px-4 py-1.5 font-archivo text-xs font-bold uppercase tracking-widest text-sage">
               <MapPin className="h-4 w-4" /> New customers &middot; Walker &middot; Denham Springs &middot; Baton Rouge
