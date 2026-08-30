@@ -54,8 +54,8 @@ export const LOCATIONS: Location[] = [
     pestNote:
       'Armyworms can strip a green lawn overnight. Mole crickets tear root zones. Dollar spot loves the July dew. I watch for all three on weekly cuts and call you if something is moving.',
     neighborhoods: ['Denham Springs 70726'],
-    image: '/images/sbl-project-photo-09.webp',
-    imageAlt: 'White ranch house lawn and hedge line trimmed in daylight by Southern Buck Lawn',
+    image: '/images/sbl-project-photo-01.webp',
+    imageAlt: 'Southern Buck Lawn work trailer. Not a Denham Springs house photo.',
     reviews: [],
     faqs: [
       {
@@ -91,8 +91,8 @@ export const LOCATIONS: Location[] = [
     pestNote:
       'Open ground around Watson is fire-ant country. Ticks and fleas set up in the warm sandy spots if the grass stays long. A tight weekly cut and targeted treatment leave them fewer places to live near the house.',
     neighborhoods: ['Watson 70786'],
-    image: '/images/sbl-project-photo-10.webp',
-    imageAlt: 'Daytime hedge and lawn work on a white ranch, real Southern Buck Lawn job photo',
+    image: '/images/sbl-project-photo-11.webp',
+    imageAlt: 'Michael Dantone, owner of Southern Buck Lawn, in a branded shirt with a shovel. Owner photo, not a Watson house.',
     reviews: [],
     faqs: [
       {
