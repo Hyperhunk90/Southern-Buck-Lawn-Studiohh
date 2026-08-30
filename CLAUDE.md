@@ -35,8 +35,12 @@ This file is the primary reference for AI assistants working on this codebase. R
 
 ## Honest claims (do not regress)
 
-- Solo operator: Michael. No “tight crew / same dedicated crew / somebody I trained.”
-- Insured (general liability) is true. No “Fully Licensed.” No landscape horticulture license yet.
+- Solo operator: Michael. No “tight crew / same dedicated crew / somebody I trained / More about the crew.”
+- Insured (general liability) is true. No “Fully Licensed.” No “Licensed & insured.” No landscape horticulture license yet (dormant-season plan).
+- Owner-operated since 2013 is true. Put it on About. Do not strip it.
+- 13 years industrial electrical is true. Use on lighting / winter securing only. Never as a landscape horticulture license.
+- 28790 Brett Dr is the home/shop address. “Based there” is enough. Do not invite walk-ins to “come see the shop.”
+- City pages: do not label photo-08/09/10 (same white ranch) as Walker, Denham Springs, and Watson. One honest ranch use (homepage) or trailer (photo-01) / owner (photo-11). Watson may have no photo. Honest alts only.
 - No invented prices or neighborhoods. Skip `/pricing`.
 - Review schema: Marty Dantone is family. Do not put in Review objects or present as a customer Google review. `GOOGLE_RATING.count` must equal `REVIEWS.length` (currently 4). Do not invent a replacement review.
 - LocalBusiness JSON-LD lives in `src/components/BusinessJsonLd.tsx` and is homepage-only. Do not mount it in `layout.tsx` (404s inherit the layout). 404s must not canonical as `/` and must not emit full business schema.
@@ -71,7 +75,7 @@ Real GBP reviews only (non-family). `GOOGLE_RATING.count` must equal `REVIEWS.le
 4. **LocalBusiness JSON-LD** — `BusinessJsonLd` on the homepage only. `reviewCount` = `REVIEWS.length`. Email in JSON-LD. Watson in areaServed; BR/Gonzales out.
 5. **Sitemaps** — auto-generated in `src/app/sitemap.ts`. Include `/about`, `/privacy`, Watson. Drop doorway/zipper URLs.
 6. **Redirects** — permanent redirects for old URLs in `next.config.mjs` (do not remove them).
-7. **Image alt text** — match the file. photo-02 dusk brick house + path lights; photo-04/05/06/07 commercial palm/pine-straw; photo-08/09/10 white ranch hedge daytime; photo-11 owner branded shirt + shovel (about only); photo-03 404; photo-01 unused tiny trailer.
+7. **Image alt text** — match the file. photo-02 dusk brick house + path lights; photo-04/05/06/07 commercial palm/pine-straw; photo-08/09/10 white ranch hedge daytime (one honest use, not three city labels); photo-11 owner branded shirt + shovel; photo-03 404; photo-01 work trailer.
 8. **Title template** is `'%s | Southern Buck Lawn'`. Page titles must not also include “Southern Buck Lawn” or the brand duplicates.
 9. **robots.ts** keeps `Disallow /api/`.
 

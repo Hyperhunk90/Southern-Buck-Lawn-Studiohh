@@ -6,20 +6,20 @@ import { BlogPost } from '@/lib/types';
 export const POSTS: BlogPost[] = [
   {
     slug: 'virginia-buttonweed-baton-rouge',
-    title: 'Virginia Buttonweed in Baton Rouge Lawns: Why It Won\'t Die and What Actually Works',
-    metaTitle: 'Virginia Buttonweed Control in South Louisiana',
+    title: 'Virginia Buttonweed: Why It Won\'t Die on Livingston Parish Lawns',
+    metaTitle: 'Virginia Buttonweed Control in Livingston Parish',
     metaDescription:
-      'Sprayed twice and the buttonweed came right back? Here is why it is so tough and what actually kills it in South Louisiana.',
-    h1: 'Virginia Buttonweed in Baton Rouge Lawns: Why It Won\'t Die and What Actually Works',
+      'Sprayed twice and the buttonweed came right back? Here is why it is so tough and what actually kills it on Livingston Parish lawns.',
+    h1: 'Virginia Buttonweed: Why It Won\'t Die on Livingston Parish Lawns',
     excerpt:
       'You spray it, it browns out for two weeks, and then it is back thicker than before. Virginia buttonweed is the toughest weed we fight around here, and most store-bought sprays do not touch it.',
     date: '2026-06-11',
     dateLabel: 'June 11, 2026',
     readMinutes: 5,
     keywords: [
-      'Virginia buttonweed Baton Rouge',
+      'Virginia buttonweed Livingston Parish',
       'how to kill Virginia buttonweed',
-      'weed control Baton Rouge LA',
+      'weed control Livingston Parish',
       'weed keeps coming back after spraying',
     ],
     heroImage: '/images/sbl-project-photo-08.webp',
@@ -27,7 +27,7 @@ export const POSTS: BlogPost[] = [
     sections: [
       {
         body: [
-          'If you live around Baton Rouge and you have a low, sprawling weed with little white star-shaped flowers that will not quit no matter what you spray on it, I already know what it is. Virginia buttonweed. It is the most common call I get about a weed that just will not die.',
+          'If you live around Walker, Denham Springs, or Watson and you have a low, sprawling weed with little white star-shaped flowers that will not quit no matter what you spray on it, I already know what it is. Virginia buttonweed. It is the most common call I get about a weed that just will not die.',
           'Most homeowners reach for a general broadleaf spray, it browns the top growth, and three weeks later it is back thicker than before. That is how buttonweed is built.',
         ],
       },
