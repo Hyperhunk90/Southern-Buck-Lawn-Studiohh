@@ -9,20 +9,20 @@ import GalleryClient from '@/components/GalleryClient';
 export const metadata: Metadata = {
   title: 'Project Gallery | Lawn Mowing, Mulch & Landscaping Photos | Southern Buck Lawn',
   description:
-    'Browse real local lawn care photos, mulch installations, before-and-after flowerbed transformations, and commercial grounds maintenance across Walker, Denham Springs, and Baton Rouge, Louisiana.',
+    'Real Southern Buck Lawn job photos: path lighting at dusk, a commercial palm and pine-straw property, ranch hedge work, and the work trailer. Honest captions, no stock.',
   keywords: [
     'lawn care gallery Walker LA',
     'mulch installation photos Denham Springs',
-    'landscaping before and after Baton Rouge',
+    'Southern Buck Lawn job photos',
     'commercial lawn care photos Livingston Parish',
     'Southern Buck Lawn work gallery',
   ],
   alternates: { canonical: '/gallery' },
   openGraph: {
-    url: '/gallery',
-    title: 'Project Gallery | Southern Buck Lawn Work in Walker & Baton Rouge',
+    url: `${SITE.url}/gallery`,
+    title: 'Project Gallery | Southern Buck Lawn Job Photos',
     description:
-      'Real photos from real yards in Walker, Denham Springs, and Baton Rouge. Lawn mowing, edging, mulch installation, and landscape design.',
+      'Real job files from Southern Buck Lawn. Captions match what is in the photo.',
     images: [{ url: '/images/sbl-project-photo-02.webp' }],
   },
 };
@@ -33,7 +33,7 @@ export default function GalleryPage() {
     '@type': 'ImageGallery',
     name: 'Southern Buck Lawn Project Gallery',
     description:
-      'Real local lawn care, mulch installation, landscape design, and grounds maintenance work across Walker, Denham Springs, and Baton Rouge.',
+      'Real Southern Buck Lawn job photos with captions that match the files.',
     url: `${SITE.url}/gallery`,
     publisher: {
       '@type': 'LocalBusiness',
@@ -75,11 +75,11 @@ export default function GalleryPage() {
             </div>
 
             <h1 className="mb-4 font-anton text-4xl uppercase tracking-tight text-white sm:text-5xl lg:text-6xl">
-              PROJECT GALLERY & <span className="text-safety-orange">TRANSFORMATIONS</span>
+              PROJECT <span className="text-safety-orange">GALLERY</span>
             </h1>
 
             <p className="mb-8 font-barlow text-lg text-white/80 leading-relaxed sm:text-xl">
-              Explore real lawn care, mulch installations, before-and-after flowerbed overhauls, and commercial grounds care across Walker, Denham Springs, and Baton Rouge. Filter by service type below to see what we can do for your yard.
+              These are real job files. We do not label a photo as a city, a before-and-after, or a mowing stripe unless that is what the picture shows.
             </p>
 
             {/* Quick Stats Badges */}
