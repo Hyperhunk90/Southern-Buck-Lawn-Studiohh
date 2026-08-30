@@ -32,10 +32,10 @@ const gallery = [
 ];
 
 const buckPoints = [
-  'Locally owned & operated',
-  'Same crew, same day, every week',
+  'Owner-operated since 2013',
+  'Same day every week',
   'Free, no-pressure estimates',
-  'Licensed, insured & guaranteed',
+  'Insured — general liability',
 ];
 
 export default function Home() {
@@ -64,14 +64,14 @@ export default function Home() {
               <MapPin className="h-4 w-4" /> Walker &middot; Denham Springs &middot; Watson
             </span>
 
-            <p className="font-caveat text-3xl font-bold text-sage sm:text-4xl">Locally owned in Walker, Louisiana</p>
+            <p className="font-caveat text-3xl font-bold text-sage sm:text-4xl">Owner-operated in Walker since 2013</p>
 
             <h1 className="font-anton text-5xl uppercase leading-[0.95] tracking-wide text-white sm:text-7xl">
               Yards Worth <span className="text-safety-orange">Showing Off.</span>
             </h1>
 
             <p className="max-w-xl font-archivo text-lg leading-relaxed text-white/85 sm:text-xl">
-              Weekly mowing, weed control, hedge trimming, and bed work from a shop on Brett Drive. We run Walker, Denham Springs, and Watson. Your yard gets the same crew, on the same day, every week.
+              Weekly mowing, weed control, hedge trimming, and bed work from a shop on Brett Drive. I run Walker, Denham Springs, and Watson. Your yard gets me, on the same day, every week.
             </p>
 
             <div className="inline-flex items-center gap-4 rounded-full border border-white/15 bg-black/25 p-2.5 pr-6 backdrop-blur-sm">
@@ -100,7 +100,7 @@ export default function Home() {
 
             <div className="flex flex-wrap gap-x-6 gap-y-2 pt-2 font-archivo text-sm font-semibold text-white/85">
               <span className="flex items-center gap-1.5"><Check className="h-4 w-4 text-safety-orange" /> Free estimates</span>
-              <span className="flex items-center gap-1.5"><Check className="h-4 w-4 text-safety-orange" /> Licensed &amp; insured</span>
+              <span className="flex items-center gap-1.5"><Check className="h-4 w-4 text-safety-orange" /> Insured (GL)</span>
               <span className="flex items-center gap-1.5"><Check className="h-4 w-4 text-safety-orange" /> Satisfaction guaranteed</span>
             </div>
           </div>
@@ -111,7 +111,7 @@ export default function Home() {
       <section className="bg-safety-orange py-5">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-x-4 gap-y-1 px-4 text-center sm:flex-row sm:px-6 lg:px-8">
           <span className="font-anton text-2xl uppercase tracking-wide text-midnight-moss sm:text-3xl">Free estimates &middot; 24-hour callback</span>
-          <span className="font-archivo text-base font-semibold text-midnight-moss">New customers welcome &mdash; same crew, same day, every week.</span>
+          <span className="font-archivo text-base font-semibold text-midnight-moss">New customers welcome &mdash; same day every week, owner on the job.</span>
         </div>
       </section>
 
@@ -119,9 +119,9 @@ export default function Home() {
       <section className="border-b border-cream-line bg-cream py-10">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 sm:px-6 lg:grid-cols-4 lg:px-8">
           {[
-            { icon: <ShieldCheck className="h-7 w-7" />, t: 'Fully Licensed', s: 'Residential & commercial' },
-            { icon: <Award className="h-7 w-7" />, t: 'Insured', s: 'Your property protected' },
-            { icon: <PhoneCall className="h-7 w-7" />, t: '24-Hour Callback', s: 'We answer fast' },
+            { icon: <ShieldCheck className="h-7 w-7" />, t: 'Insured', s: 'General liability' },
+            { icon: <Award className="h-7 w-7" />, t: 'Owner-Operated', s: 'Since 2013' },
+            { icon: <PhoneCall className="h-7 w-7" />, t: '24-Hour Callback', s: 'I answer fast' },
             { icon: <MapPin className="h-7 w-7" />, t: 'Local & Hometown', s: 'Based in Walker, LA' },
           ].map((item) => (
             <div key={item.t} className="flex items-center gap-3">
@@ -139,7 +139,7 @@ export default function Home() {
       <section id="services" className="bg-surface py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
-            <p className="font-caveat text-3xl font-bold text-safety-orange-deep">What we do</p>
+            <p className="font-caveat text-3xl font-bold text-safety-orange-deep">What I do</p>
             <h2 className="font-anton text-4xl uppercase tracking-wide text-midnight-moss sm:text-5xl">Services That Keep Your Place Sharp</h2>
             <div className="mx-auto mt-4 h-1 w-24 rounded bg-safety-orange" />
           </div>
@@ -173,9 +173,9 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_auto] lg:px-8">
           <div>
             <p className="font-caveat text-3xl font-bold text-sage">For property managers and HOA boards</p>
-            <h2 className="mt-1 font-anton text-4xl uppercase leading-tight tracking-wide sm:text-5xl">One Crew. One Schedule. No Chasing Contractors.</h2>
+            <h2 className="mt-1 font-anton text-4xl uppercase leading-tight tracking-wide sm:text-5xl">One Operator. One Schedule. No Chasing Contractors.</h2>
             <p className="mt-4 max-w-3xl font-archivo text-lg leading-relaxed text-white/80">
-              We maintain office grounds, retail frontage, entrances, and common areas on the Walker, Denham Springs, and Watson route. Bid packages include a clear scope, a service schedule, insurance paperwork, and one person to call.
+              I maintain office grounds, retail frontage, entrances, and common areas on the Walker, Denham Springs, and Watson route. Bid packages include a clear scope, a service schedule, insurance paperwork, and one person to call.
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
@@ -258,11 +258,11 @@ export default function Home() {
             </div>
           </div>
           <div className="flex-1">
-            <p className="font-caveat text-3xl font-bold text-sage">Why folks call us back</p>
+            <p className="font-caveat text-3xl font-bold text-sage">Why folks call me back</p>
             <h2 className="mt-1 font-anton text-4xl uppercase tracking-wide text-white sm:text-5xl">Meet the Buck Behind the Work</h2>
             <div className="mt-4 h-1 w-24 rounded bg-safety-orange" />
             <p className="mt-5 max-w-2xl font-archivo text-lg leading-relaxed text-white/90">
-              I&rsquo;m Michael Dantone. I run Southern Buck Lawn out of Walker &mdash; 28790 Brett Drive. Folks around here call me the Landscape Mayor, and I earned it one yard at a time. We are a tight crew, not a franchise. When you call, you get me or somebody I trained. Same day every week, yard left better than we found it.
+              I&rsquo;m Michael Dantone. I run Southern Buck Lawn out of Walker &mdash; 28790 Brett Drive. Owner-operated since 2013. Folks around here call me the Landscape Mayor, and I earned it one yard at a time. This is a one-man shop, not a franchise. When you call, you get me. Same day every week, yard left better than I found it.
             </p>
             <div className="mt-7 grid max-w-2xl grid-cols-1 gap-4 sm:grid-cols-2">
               {buckPoints.map((p) => (
@@ -275,7 +275,7 @@ export default function Home() {
               ))}
             </div>
             <Link href="/about" className="mt-8 inline-flex items-center gap-2 border-b-2 border-safety-orange font-archivo text-lg font-extrabold uppercase tracking-wide text-white transition-all hover:gap-3 hover:border-sage hover:text-sage">
-              More about the crew <ArrowRight className="h-5 w-5" />
+              More about Michael <ArrowRight className="h-5 w-5" />
             </Link>
           </div>
         </div>
@@ -285,11 +285,11 @@ export default function Home() {
       <section className="bg-surface py-20">
         <div className="mx-auto grid max-w-7xl items-start gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div className="space-y-6">
-            <p className="font-caveat text-3xl font-bold text-safety-orange-deep">Where we work</p>
+            <p className="font-caveat text-3xl font-bold text-safety-orange-deep">Where I work</p>
             <h2 className="font-anton text-4xl uppercase tracking-wide text-midnight-moss sm:text-5xl">Walker, Denham Springs, and Watson</h2>
             <div className="h-1 w-24 rounded bg-safety-orange" />
             <p className="font-archivo text-lg text-bark">
-              Those three towns are the weekly route. Pick yours to see how we handle the soil and the grass where you live. If you are a little off the corridor, ask &mdash; we will tell you if it fits.
+              Those three towns are the weekly route. Pick yours to see how I handle the soil and the grass where you live. If you are a little off the corridor, ask &mdash; I will tell you if it fits.
             </p>
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
               {AREA_NAV.map((a) => (
@@ -312,11 +312,11 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10 text-center">
             <p className="font-caveat text-3xl font-bold text-safety-orange-deep">What folks say</p>
-            <h2 className="font-anton text-4xl uppercase tracking-wide text-midnight-moss sm:text-5xl">We Earn It One Yard at a Time</h2>
+            <h2 className="font-anton text-4xl uppercase tracking-wide text-midnight-moss sm:text-5xl">I Earn It One Yard at a Time</h2>
             <div className="mx-auto mt-4 h-1 w-24 rounded bg-safety-orange" />
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2">
             {REVIEWS.map((r) => (
               <figure key={r.author} className="flex flex-col rounded-2xl border border-cream-line bg-white p-6 shadow-sm">
                 <div className="mb-3 flex gap-0.5 text-safety-orange">
@@ -345,7 +345,7 @@ export default function Home() {
           <p className="font-caveat text-3xl font-bold text-safety-orange-deep">Lock in your spot</p>
           <h2 className="mt-1 font-anton text-4xl uppercase leading-tight tracking-wide text-midnight-moss sm:text-5xl">Ready for a Yard You&rsquo;re Proud Of?</h2>
           <p className="mx-auto mt-4 max-w-2xl font-archivo text-lg text-bark">
-            Free estimate, 24-hour callback, no pressure. Call or text and we will come look at it.
+            Free estimate, 24-hour callback, no pressure. Call or text and I will come look at it.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link href="/quote" className="group flex items-center justify-center gap-2 rounded-xl bg-safety-orange px-8 py-4 font-anton text-lg uppercase tracking-wider text-midnight-moss shadow-xl transition-all hover:scale-105 active:scale-95">
