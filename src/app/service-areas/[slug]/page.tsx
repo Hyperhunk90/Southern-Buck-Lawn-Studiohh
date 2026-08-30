@@ -51,7 +51,6 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
-      {/* Hero */}
       <header className="relative overflow-hidden bg-midnight-moss pt-28 text-white">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-12 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div className="space-y-5">
@@ -82,7 +81,6 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
         </div>
       </header>
 
-      {/* Local detail */}
       <section className="bg-surface py-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-anton text-3xl uppercase text-primary">Lawn Care Built for {loc.name.replace(', LA', '')}</h2>
@@ -103,7 +101,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
 
           {loc.neighborhoods.length > 0 && (
             <>
-              <h2 className="mt-12 font-anton text-3xl uppercase text-primary">Areas We Cover Here</h2>
+              <h2 className="mt-12 font-anton text-3xl uppercase text-primary">What this page covers</h2>
               <div className="mt-4 flex flex-wrap gap-2">
                 {loc.neighborhoods.map((n) => (
                   <span key={n} className="rounded-full border border-primary/10 bg-mist-green px-4 py-1.5 font-barlow text-base font-semibold text-midnight-moss">
@@ -114,7 +112,6 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
             </>
           )}
 
-          {/* Internal links to services */}
           <h2 className="mt-12 font-anton text-3xl uppercase text-primary">Services in {loc.name.replace(', LA', '')}</h2>
           <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
             {SERVICE_NAV.map((s) => (
@@ -134,7 +131,6 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
         </div>
       </section>
 
-      {/* Reviews — only render when real reviews exist */}
       {loc.reviews.length > 0 && (
         <section className="bg-mist-green py-16">
           <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
@@ -158,19 +154,17 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
         </section>
       )}
 
-      {/* Map */}
       <section className="bg-surface py-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <ServiceAreaMap label={`Serving ${loc.name.replace(', LA', '')} & Nearby`} />
         </div>
       </section>
 
-      {/* Quote */}
       <section className="bg-mist-green py-16">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div className="mb-8 text-center">
             <h2 className="font-anton text-3xl uppercase text-primary">Free Quote in {loc.name.replace(', LA', '')}</h2>
-            <p className="mt-2 font-barlow text-lg text-gray-600">Tell us about your yard and we will call you back within 24 hours.</p>
+            <p className="mt-2 font-barlow text-lg text-gray-600">Tell me about your yard and I will call you back within 24 hours.</p>
           </div>
           <div className="rounded-2xl border border-primary/10 bg-white p-6 shadow-lg sm:p-8">
             <QuoteForm />
