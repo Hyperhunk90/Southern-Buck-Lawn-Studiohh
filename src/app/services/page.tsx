@@ -26,7 +26,7 @@ export default function ServicesIndex() {
           Lawn Care and Landscaping from Walker, Louisiana
         </h1>
         <p className="mx-auto mt-5 max-w-2xl font-barlow text-lg text-white/75">
-          Weekly cuts, weed programs, bed rebuilds, and commercial grounds on the Walker, Denham Springs, and Watson route. Pick a service and see how we handle it.
+          Weekly cuts, weed programs, bed rebuilds, and commercial grounds on the Walker, Denham Springs, and Watson route. Pick a service and see how I handle it.
         </p>
       </header>
 

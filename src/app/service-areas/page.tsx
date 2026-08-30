@@ -7,9 +7,9 @@ import { SITE } from '@/data/site';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Service Areas | Walker, Denham Springs & Watson Lawn Care',
+  title: 'Service Areas in Walker, Denham Springs & Watson',
   description:
-    'Southern Buck Lawn runs Walker, Denham Springs, and Watson every week. See how we handle the soil and the grass where you live. Call (225) 369-4434.',
+    'Southern Buck Lawn runs Walker, Denham Springs, and Watson every week. See how I handle the soil and the grass where you live. Call (225) 369-4434.',
   alternates: { canonical: '/service-areas' },
   openGraph: { url: `${SITE.url}/service-areas` },
 };
@@ -38,12 +38,8 @@ export default function ServiceAreasIndex() {
               href={`/service-areas/${l.slug}`}
               className="group grid overflow-hidden rounded-2xl border border-primary/10 bg-white shadow-sm transition-all hover:shadow-xl md:grid-cols-5"
             >
-              <div className={`relative flex h-60 items-center justify-center bg-midnight-moss md:col-span-2 md:h-auto ${i % 2 ? 'md:order-2' : ''}`}>
-                {l.image ? (
-                  <Image src={l.image} alt={l.imageAlt || l.name} fill className="object-cover" sizes="(max-width:768px) 100vw, 40vw" />
-                ) : (
-                  <p className="px-6 text-center font-anton text-2xl uppercase tracking-wide text-white">{l.name}</p>
-                )}
+              <div className={`relative h-60 md:col-span-2 md:h-auto ${i % 2 ? 'md:order-2' : ''}`}>
+                <Image src={l.image} alt={l.imageAlt} fill className="object-cover" sizes="(max-width:768px) 100vw, 40vw" />
               </div>
               <div className="space-y-3 p-7 md:col-span-3">
                 <p className="inline-flex items-center gap-2 font-barlow text-sm font-bold uppercase tracking-[0.2em] text-safety-orange-deep">
@@ -62,7 +58,7 @@ export default function ServiceAreasIndex() {
 
       <section className="bg-safety-orange py-14">
         <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-5 px-4 text-center sm:px-6 lg:flex-row lg:text-left lg:px-8">
-          <h2 className="font-anton text-3xl uppercase text-midnight-moss">Not Sure If We Cover You? Just Ask.</h2>
+          <h2 className="font-anton text-3xl uppercase text-midnight-moss">Not Sure If I Cover You? Just Ask.</h2>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Link href="/quote" className="rounded-lg bg-midnight-moss px-7 py-4 font-anton uppercase tracking-wider text-white shadow-lg transition-transform hover:scale-105">
               Get a Free Quote
