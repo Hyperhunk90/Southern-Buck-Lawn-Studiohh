@@ -5,10 +5,11 @@ import QuoteForm from '@/components/QuoteForm';
 import ObfuscatedEmail from '@/components/ObfuscatedEmail';
 
 export const metadata: Metadata = {
-  title: 'Get a Free Lawn Care Quote in Walker, Denham Springs & Baton Rouge',
+  title: 'Free Lawn Care Quote in Walker, Denham Springs & Watson',
   description:
-    'Request a free, no-pressure lawn care or landscaping quote from Southern Buck Lawn. Tell us about your yard and Michael calls you back within 24 hours.',
+    'Request a free lawn care quote from Southern Buck Lawn in Walker. Tell us about the yard and Michael calls back within 24 hours.',
   alternates: { canonical: '/quote' },
+  openGraph: { url: `${SITE.url}/quote` },
 };
 
 export default function QuotePage() {
@@ -16,14 +17,13 @@ export default function QuotePage() {
     <section className="bg-surface pb-20 pt-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid overflow-hidden rounded-3xl border border-primary/10 bg-white shadow-2xl lg:grid-cols-5">
-          {/* Left info panel */}
           <div className="space-y-8 bg-primary p-9 text-white lg:col-span-2">
             <div>
               <h1 className="font-anton text-4xl uppercase leading-tight">
                 Get a Fast, <span className="text-sage">Free</span> Quote
               </h1>
               <p className="mt-4 font-barlow text-lg text-white/85">
-                Tell us what you need and where the property is. Michael reviews every request and follows up within one business day to schedule a walk-through or confirm the next step.
+                Tell us what you need and where the property is. I look at every request and call back within one business day to walk it or confirm the next step.
               </p>
             </div>
 
@@ -41,12 +41,11 @@ export default function QuotePage() {
             </div>
 
             <div className="border-t border-white/15 pt-6">
-              <p className="font-barlow text-sm uppercase tracking-widest text-sage">Serving</p>
-              <p className="mt-1 font-barlow text-lg text-white/85">Walker &middot; Denham Springs &middot; Baton Rouge &middot; Gonzales &middot; Livingston Parish</p>
+              <p className="font-barlow text-sm uppercase tracking-widest text-sage">Home turf</p>
+              <p className="mt-1 font-barlow text-lg text-white/85">Walker 70785 &middot; Denham Springs 70726 &middot; Watson 70786</p>
             </div>
           </div>
 
-          {/* Form */}
           <div className="p-7 sm:p-10 lg:col-span-3">
             <QuoteForm />
           </div>
