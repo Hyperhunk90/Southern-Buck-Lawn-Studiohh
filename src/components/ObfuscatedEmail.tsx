@@ -7,11 +7,11 @@ import { Mail } from 'lucide-react';
  * Renders the business email as a clickable mailto link, but assembles the
  * address in the browser AFTER mount. The server-rendered HTML that spam
  * harvesters scrape never contains a real `name@domain` string or a
- * `mailto:` href — only the placeholder "SBL [at] southernbucklawn.com" —
+ * `mailto:` href — only the placeholder "sbl [at] southernbucklawn.com" —
  * so the address can't be auto-collected off the page. Real visitors (with
  * JS) still see and click the normal email.
  */
-const EMAIL_USER = 'SBL';
+const EMAIL_USER = 'sbl';
 const EMAIL_DOMAIN = 'southernbucklawn.com';
 
 type Props = {

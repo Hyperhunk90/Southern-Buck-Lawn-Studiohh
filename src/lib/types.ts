@@ -41,8 +41,8 @@ export interface Location {
   soilNote: string;
   pestNote: string;
   neighborhoods: string[];
-  image: string;
-  imageAlt: string;
+  image?: string;
+  imageAlt?: string;
   reviews: Review[];
   faqs: FAQ[];
 }

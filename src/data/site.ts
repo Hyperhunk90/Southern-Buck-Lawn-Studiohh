@@ -1,4 +1,5 @@
 // Central business info for Southern Buck Lawn.
+// Sole prop — never LLC. Home turf is Walker, Denham Springs, and Watson only.
 export const SITE = {
   name: 'Southern Buck Lawn',
   owner: 'Michael Dantone',
@@ -6,8 +7,8 @@ export const SITE = {
   phone: '(225) 369-4434',
   phoneInternational: '+12253694434',
   phoneHref: 'tel:+12253694434',
-  email: 'SBL@Southernbucklawn.com',
-  emailHref: 'mailto:SBL@Southernbucklawn.com',
+  email: 'sbl@southernbucklawn.com',
+  emailHref: 'mailto:sbl@southernbucklawn.com',
   street: '28790 Brett Dr',
   city: 'Walker',
   region: 'LA',
@@ -22,9 +23,9 @@ export const SITE = {
     { days: 'Saturday', time: '6:00 AM – 6:00 PM' },
     { days: 'Sunday', time: '7:00 AM – 4:00 PM' },
   ],
-  // Primary GBP category.
   primaryCategory: 'Lawn care service',
-  serviceAreas: ['Walker', 'Denham Springs', 'Baton Rouge', 'Gonzales', 'Livingston Parish'],
+  // Home turf only. Do not add Baton Rouge 70816/70817 or Gonzales.
+  serviceAreas: ['Walker', 'Denham Springs', 'Watson'],
   social: {
     google: 'https://share.google/KjUM9ViEKjTK29ETk',
     facebook: 'https://facebook.com/SouthernBuckLawn',
@@ -45,6 +46,6 @@ export const SERVICE_NAV = [
 export const AREA_NAV = [
   { label: 'Walker, LA', href: '/service-areas/walker' },
   { label: 'Denham Springs, LA', href: '/service-areas/denham-springs' },
-  { label: 'Baton Rouge, LA', href: '/service-areas/baton-rouge' },
+  { label: 'Watson, LA', href: '/service-areas/watson' },
   { label: 'Livingston Parish, LA', href: '/service-areas/livingston-parish' },
 ];

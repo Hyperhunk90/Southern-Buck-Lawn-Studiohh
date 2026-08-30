@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   description:
     'The page you were looking for could not be found. Browse our lawn care services or contact Southern Buck Lawn in Walker, LA.',
   robots: { index: false, follow: true },
+  openGraph: {
+    title: 'Page Not Found | Southern Buck Lawn',
+    description:
+      'The page you were looking for could not be found. Browse our lawn care services or contact Southern Buck Lawn in Walker, LA.',
+  },
 };
 
 export default function NotFound() {
