@@ -45,7 +45,6 @@ export default function Navbar() {
           </span>
         </Link>
 
-        {/* Desktop */}
         <div className="hidden items-center gap-1 lg:flex xl:gap-2">
           <Link href="/" className="px-3 py-2 font-archivo text-base font-semibold text-primary transition-colors hover:text-safety-orange-deep">
             Home
@@ -129,7 +128,6 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile: tap-to-call + quick quote button + menu toggle */}
         <div className="flex items-center gap-2 lg:hidden">
           <a
             href={SITE.phoneHref}
@@ -151,7 +149,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile menu */}
       {open && (
         <div className="border-t border-cream-line bg-cream pb-4 lg:hidden">
           <div className="space-y-1 px-3 pt-2">
