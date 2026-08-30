@@ -9,14 +9,13 @@ export default function Footer() {
     <footer className="border-t-8 border-primary bg-midnight-moss pb-8 pt-16 text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
-          {/* Brand */}
           <div className="md:col-span-2">
             <Link href="/" className="mb-5 flex w-fit items-center gap-3">
               <Image src="/images/southern-buck-lawn-logo.png" alt="Southern Buck Lawn logo" width={64} height={56} className="h-16 w-auto" />
               <span className="font-anton text-2xl tracking-wide">SOUTHERN BUCK <span className="text-safety-orange">LAWN</span></span>
             </Link>
             <p className="mb-6 max-w-md font-barlow text-lg leading-relaxed text-white/70">
-              Local lawn care and landscaping from Walker to Baton Rouge. Run by Michael Dantone, the Landscape Mayor. Same crew, same day, work we put our name on.
+              Lawn care from Walker. Run by Michael Dantone. Weekly route is Walker, Denham Springs, and Watson. Same crew, same day, work we put our name on.
             </p>
             <div className="space-y-2 font-barlow">
               <a href={SITE.phoneHref} className="flex items-center gap-2 text-white/80 hover:text-safety-orange">
@@ -32,7 +31,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Services */}
           <div>
             <h2 className="mb-5 font-anton text-xl uppercase tracking-wider text-safety-orange">Services</h2>
             <ul className="space-y-3">
@@ -53,7 +51,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Areas */}
           <div>
             <h2 className="mb-5 font-anton text-xl uppercase tracking-wider text-safety-orange">
               <Link href="/service-areas" className="hover:text-orange-hot">Service Areas</Link>
@@ -76,6 +73,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Southern Buck Lawn. All rights reserved. Walker, Louisiana.
           </p>
           <div className="flex items-center gap-5 font-barlow text-sm tracking-wider text-white/60">
+            <Link href="/about" className="hover:text-safety-orange">About</Link>
             <Link href="/gallery" className="hover:text-safety-orange">Project Gallery</Link>
             <Link href="/blog" className="hover:text-safety-orange">Blog</Link>
             <Link href="/quote" className="hover:text-safety-orange">Free Quote</Link>
