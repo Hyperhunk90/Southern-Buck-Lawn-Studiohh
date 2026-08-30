@@ -27,13 +27,12 @@ export default function BlogIndex() {
         <p className="mb-3 font-barlow text-sm font-bold uppercase tracking-[0.3em] text-safety-orange">From the field</p>
         <h1 className="font-anton text-4xl uppercase tracking-wide sm:text-5xl">Lawn Care Tips for Louisiana Yards</h1>
         <p className="mx-auto mt-4 max-w-2xl font-barlow text-lg text-white/75">
-          Straight talk on grass, weeds, mulch, and curb appeal from a crew that works these yards every week. No filler, just what works in our heat and our soil.
+          Straight talk on grass, weeds, mulch, and curb appeal from a Walker operator who works these yards every week. No filler, just what works in our heat and our soil.
         </p>
       </header>
 
       <section className="bg-surface py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          {/* Featured post */}
           <Link
             href={`/blog/${featured.slug}`}
             className="group mb-12 grid overflow-hidden rounded-2xl border border-primary/10 bg-white shadow-sm transition-all hover:shadow-xl lg:grid-cols-2"
@@ -55,7 +54,6 @@ export default function BlogIndex() {
             </div>
           </Link>
 
-          {/* Rest of posts */}
           {rest.length > 0 && (
             <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
               {rest.map((p) => (
