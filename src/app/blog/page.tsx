@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, Clock, Calendar } from 'lucide-react';
 import { POSTS } from '@/data/blog';
+import { SITE } from '@/data/site';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
   description:
     'Straight talk on lawn care, weeds, mulch, and landscaping for South Louisiana yards. Real advice from Southern Buck Lawn in Walker, LA.',
   alternates: { canonical: '/blog' },
+  openGraph: { url: `${SITE.url}/blog` },
 };
 
 export default function BlogIndex() {
