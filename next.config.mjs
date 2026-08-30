@@ -47,6 +47,7 @@ const nextConfig = {
 
       // Old /locations/ URL structure → current /service-areas/ structure.
       { source: '/locations', destination: '/service-areas', permanent: true },
+      { source: '/locations/baton-rouge', destination: '/service-areas', permanent: true },
       { source: '/locations/:slug', destination: '/service-areas/:slug', permanent: true },
 
       // City×service doorway URLs → the real service silo.
@@ -65,6 +66,7 @@ const nextConfig = {
       { source: '/commercial-grounds-baton-rouge', destination: '/services/commercial-grounds', permanent: true },
       { source: '/commercial-grounds-denham-springs', destination: '/services/commercial-grounds', permanent: true },
       { source: '/commercial-grounds-walker', destination: '/services/commercial-grounds', permanent: true },
+      { source: '/commercial-grounds-livingston-parish', destination: '/services/commercial-grounds', permanent: true },
 
       // Baton Rouge is not home turf. Collapse the city silo.
       { source: '/service-areas/baton-rouge', destination: '/service-areas', permanent: true },
