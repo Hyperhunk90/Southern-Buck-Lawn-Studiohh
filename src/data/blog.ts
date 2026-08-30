@@ -22,8 +22,8 @@ export const POSTS: BlogPost[] = [
       'weed control Baton Rouge LA',
       'weed keeps coming back after spraying',
     ],
-    heroImage: '/images/sbl-project-photo-11.webp',
-    heroAlt: 'Thick, weed-free green lawn in South Louisiana after professional weed control treatment',
+    heroImage: '/images/sbl-project-photo-01.webp',
+    heroAlt: 'Southern Buck Lawn work trailer',
     sections: [
       {
         body: [
@@ -54,7 +54,7 @@ export const POSTS: BlogPost[] = [
     ],
     relatedLinks: [
       { label: 'Weed Control & Fertilization', href: '/services/weed-control' },
-      { label: 'Lawn Care in Baton Rouge, LA', href: '/service-areas/baton-rouge' },
+      { label: 'Service Areas', href: '/service-areas' },
       { label: 'Get a Free Quote', href: '/quote' },
     ],
   },
@@ -77,7 +77,7 @@ export const POSTS: BlogPost[] = [
       'lawn pest control Denham Springs LA',
     ],
     heroImage: '/images/sbl-project-photo-02.webp',
-    heroAlt: 'Healthy thick green lawn in Denham Springs, Louisiana, protected from armyworm damage',
+    heroAlt: 'Brick house at dusk with path lights along the walkway, Southern Buck Lawn',
     sections: [
       {
         body: [
@@ -131,7 +131,7 @@ export const POSTS: BlogPost[] = [
       'flea control large lot Louisiana',
     ],
     heroImage: '/images/sbl-project-photo-08.webp',
-    heroAlt: 'Neatly mowed lawn with tight, clean turf edges by Southern Buck Lawn in Livingston Parish, Louisiana',
+    heroAlt: 'White ranch house with daytime hedge and bed work by Southern Buck Lawn',
     sections: [
       {
         body: [
@@ -185,7 +185,7 @@ export const POSTS: BlogPost[] = [
       'why is my grass dying in summer',
     ],
     heroImage: '/images/sbl-project-photo-04.webp',
-    heroAlt: 'Healthy green Louisiana backyard lawn with mowing stripes, free of chinch bug damage',
+    heroAlt: 'Commercial palm and pine-straw beds, Southern Buck Lawn job',
     sections: [
       {
         body: [
@@ -240,7 +240,7 @@ export const POSTS: BlogPost[] = [
       'mulch installation Denham Springs',
     ],
     heroImage: '/images/sbl-project-photo-05.webp',
-    heroAlt: 'Fresh hardwood mulch installed in a Denham Springs flowerbed by Southern Buck Lawn',
+    heroAlt: 'Commercial palm and pine-straw beds, another frame of the same Southern Buck Lawn job',
     sections: [
       {
         body: [
@@ -272,7 +272,7 @@ export const POSTS: BlogPost[] = [
     ],
     relatedLinks: [
       { label: 'Landscape Design & Mulch', href: '/services/landscape-design' },
-      { label: 'Mulch Install in Denham Springs', href: '/landscape-design-denham-springs' },
+      { label: 'Lawn Care in Denham Springs, LA', href: '/service-areas/denham-springs' },
       { label: 'Get a Free Quote', href: '/quote' },
     ],
   },
@@ -295,7 +295,7 @@ export const POSTS: BlogPost[] = [
       'why is my grass turning brown after mowing',
     ],
     heroImage: '/images/sbl-project-photo-06.webp',
-    heroAlt: 'Wide green lawn cut with clean mowing stripes at the correct summer height in Louisiana',
+    heroAlt: 'Commercial palm and pine-straw landscape beds by Southern Buck Lawn',
     sections: [
       {
         body: [
@@ -327,7 +327,7 @@ export const POSTS: BlogPost[] = [
     ],
     relatedLinks: [
       { label: 'Lawn Mowing & Edging', href: '/services/lawn-mowing' },
-      { label: 'Lawn Mowing in Baton Rouge', href: '/lawn-mowing-baton-rouge' },
+      { label: 'Service Areas', href: '/service-areas' },
       { label: 'Get a Free Quote', href: '/quote' },
     ],
   },
