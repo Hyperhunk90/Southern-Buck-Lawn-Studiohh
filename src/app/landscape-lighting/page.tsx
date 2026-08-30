@@ -17,16 +17,16 @@ import { SITE } from '@/data/site';
 import { REVIEWS } from '@/data/reviews';
 
 export const metadata: Metadata = {
-  title: 'Outdoor Landscape Lighting in Walker, Denham Springs & Watson | Southern Buck Lawn',
+  title: 'Outdoor Landscape Lighting in Walker, Denham Springs & Watson',
   description:
-    'Custom outdoor landscape lighting from Southern Buck Lawn. Path lights, tree uplighting, security flood lights, and patio glow in Walker, Denham Springs, and Watson. Free estimate, 24-hour callback.',
+    'Custom outdoor landscape lighting from Southern Buck Lawn. Path lights, tree uplighting, and patio glow in Walker, Denham Springs, and Watson. Free estimate, 24-hour callback.',
   alternates: { canonical: '/landscape-lighting' },
   openGraph: {
-    title: 'Outdoor Landscape Lighting | Southern Buck Lawn',
+    title: 'Outdoor Landscape Lighting',
     description:
-      'Light up your yard the right way. Path lighting, tree uplighting, security, and patio lighting on the Walker, Denham Springs, and Watson route.',
+      'Path lighting, tree uplighting, and patio lighting from the Walker shop. Walker, Denham Springs, and Watson.',
     url: `${SITE.url}/landscape-lighting`,
-    images: [{ url: '/images/sbl-project-photo-02.webp' }],
+    images: [{ url: '/images/sbl-project-photo-02.webp', alt: 'Brick house at dusk with path lights along the walk' }],
   },
 };
 
@@ -55,22 +55,21 @@ const SERVICES = [
 
 const WHY = [
   { icon: Sparkles, label: 'Custom Design' },
-  { icon: BadgeCheck, label: 'Licensed & Insured' },
+  { icon: BadgeCheck, label: 'Insured (GL)' },
   { icon: Wrench, label: 'Pro-Grade Fixtures' },
   { icon: PiggyBank, label: 'Free Estimates' },
 ];
 
 export default function LandscapeLightingPage() {
-  const reviews = REVIEWS.slice(0, 4);
+  const reviews = REVIEWS.slice(0, 3);
 
   return (
     <div className="min-h-screen bg-surface font-barlow text-midnight-moss">
-      {/* HERO */}
       <section className="relative overflow-hidden bg-midnight-moss text-white">
         <div className="absolute inset-0">
           <Image
             src="/images/sbl-project-photo-02.webp"
-            alt="Brick house at dusk with path lights along the walkway, Southern Buck Lawn"
+            alt="Brick house at dusk with path lights along the walk, Southern Buck Lawn lighting work"
             fill
             priority
             className="object-cover opacity-35"
@@ -90,7 +89,7 @@ export default function LandscapeLightingPage() {
             </h1>
             <p className="font-barlow text-xl italic text-white/85">Southern Care. The Landscape Mayor.</p>
             <p className="max-w-xl font-barlow text-lg text-white/80">
-              Low-voltage path lights, architectural uplighting, and warm outdoor living glow, quoted after we walk the property.
+              Low-voltage path lights, architectural uplighting, and warm outdoor living glow. I install it and stand behind it. Christmas lighting is not a live service on this site.
             </p>
             <div className="pt-2">
               <Link
@@ -115,12 +114,11 @@ export default function LandscapeLightingPage() {
         </div>
       </section>
 
-      {/* SERVICES */}
       <section className="bg-deep-forest px-4 py-16 text-white">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-center font-anton text-3xl uppercase tracking-wide sm:text-4xl">Our Lighting Services</h2>
           <p className="mx-auto mt-2 max-w-xl text-center font-barlow text-white/85">
-            One crew, one standard. We design it, install it, and stand behind it.
+            One operator, one standard. I design it, install it, and stand behind it.
           </p>
           <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
             {SERVICES.map((s) => (
@@ -136,7 +134,6 @@ export default function LandscapeLightingPage() {
         </div>
       </section>
 
-      {/* OPERATOR PROFILE */}
       <section className="bg-surface px-4 py-16">
         <div className="mx-auto grid max-w-5xl items-center gap-8 rounded-3xl border border-black/5 bg-white p-8 shadow-sm sm:grid-cols-5 sm:p-12">
           <div className="flex justify-center sm:col-span-2">
@@ -149,9 +146,9 @@ export default function LandscapeLightingPage() {
             />
           </div>
           <div className="sm:col-span-3 space-y-4">
-            <h2 className="font-anton text-3xl uppercase text-deep-forest">Owner-Installed Lighting</h2>
+            <h2 className="font-anton text-3xl uppercase text-deep-forest">Installed by the owner</h2>
             <p className="font-barlow text-lg text-midnight-moss/80">
-              I am Michael Dantone. I run Southern Buck Lawn from Walker. Lighting jobs we take get watertight connections and fixtures we will stand behind — quoted after we see the property, not from a menu.
+              I am Michael Dantone, owner of Southern Buck Lawn. Lighting jobs get watertight connections and fixtures that last in this humidity. If a lighting install is not a fit, I will tell you that up front.
             </p>
 
             <h3 className="pt-2 font-anton text-xl uppercase text-deep-forest">Why Choose Us</h3>
@@ -167,13 +164,12 @@ export default function LandscapeLightingPage() {
         </div>
       </section>
 
-      {/* REVIEWS */}
       <section className="bg-mist-green px-4 py-16">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-center font-anton text-3xl uppercase text-deep-forest">Customer Feedback</h2>
-          <p className="mt-2 text-center font-barlow text-midnight-moss/70">Real reviews from property owners in Walker, Watson, and Denham Springs.</p>
+          <p className="mt-2 text-center font-barlow text-midnight-moss/70">Real Google reviews from property owners. Family reviews are not shown here.</p>
           <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
-            {reviews.slice(0, 3).map((r) => (
+            {reviews.map((r) => (
               <figure
                 key={r.author}
                 className="flex flex-col justify-between rounded-2xl border border-black/5 bg-white p-6 shadow-sm"
@@ -196,12 +192,11 @@ export default function LandscapeLightingPage() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="bg-midnight-moss px-4 py-16 text-white">
         <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-6 text-center md:flex-row md:text-left">
           <div>
             <h2 className="font-anton text-3xl uppercase text-white sm:text-4xl">Ready to Transform Your Nighttime Curb Appeal?</h2>
-            <p className="mt-2 font-barlow text-lg text-white/80">Free estimate, fast response, honest pricing.</p>
+            <p className="mt-2 font-barlow text-lg text-white/80">Free estimate, fast response. I quote after I look at it.</p>
           </div>
           <Link
             href="/quote"
