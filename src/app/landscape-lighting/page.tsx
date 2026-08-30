@@ -19,12 +19,12 @@ import { REVIEWS } from '@/data/reviews';
 export const metadata: Metadata = {
   title: 'Outdoor Landscape Lighting in Walker, Denham Springs & Watson',
   description:
-    'Custom outdoor landscape lighting from Southern Buck Lawn. Path lights, tree uplighting, and patio glow in Walker, Denham Springs, and Watson. Free estimate, 24-hour callback.',
+    'Custom outdoor landscape lighting from Southern Buck Lawn. Path lights, tree uplighting, and patio glow in Walker, Denham Springs, and Watson. Built with 13 years of industrial electrical background. Free estimate, 24-hour callback.',
   alternates: { canonical: '/landscape-lighting' },
   openGraph: {
     title: 'Outdoor Landscape Lighting',
     description:
-      'Path lighting, tree uplighting, and patio lighting from the Walker shop. Walker, Denham Springs, and Watson.',
+      'Path lighting, tree uplighting, and patio lighting from the Walker shop. 13 years industrial electrical. Walker, Denham Springs, and Watson.',
     url: `${SITE.url}/landscape-lighting`,
     images: [{ url: '/images/sbl-project-photo-02.webp', alt: 'Brick house at dusk with path lights along the walk' }],
   },
@@ -56,7 +56,7 @@ const SERVICES = [
 const WHY = [
   { icon: Sparkles, label: 'Custom Design' },
   { icon: BadgeCheck, label: 'Insured (GL)' },
-  { icon: Wrench, label: 'Pro-Grade Fixtures' },
+  { icon: Wrench, label: '13 Years Electrical' },
   { icon: PiggyBank, label: 'Free Estimates' },
 ];
 
@@ -89,7 +89,7 @@ export default function LandscapeLightingPage() {
             </h1>
             <p className="font-barlow text-xl italic text-white/85">Southern Care. The Landscape Mayor.</p>
             <p className="max-w-xl font-barlow text-lg text-white/80">
-              Low-voltage path lights, architectural uplighting, and warm outdoor living glow. I install it and stand behind it. Christmas lighting is not a live service on this site.
+              Low-voltage path lights, architectural uplighting, and warm outdoor living glow. I install it with 13 years of industrial electrical background behind the work. Christmas lighting is not a live service on this site.
             </p>
             <div className="pt-2">
               <Link
@@ -146,9 +146,9 @@ export default function LandscapeLightingPage() {
             />
           </div>
           <div className="sm:col-span-3 space-y-4">
-            <h2 className="font-anton text-3xl uppercase text-deep-forest">Installed by the owner</h2>
+            <h2 className="font-anton text-3xl uppercase text-deep-forest">Backed by 13 Years Electrical Precision</h2>
             <p className="font-barlow text-lg text-midnight-moss/80">
-              I am Michael Dantone, owner of Southern Buck Lawn. Lighting jobs get watertight connections and fixtures that last in this humidity. If a lighting install is not a fit, I will tell you that up front.
+              I am Michael Dantone, owner of Southern Buck Lawn since 2013. With 13 years of industrial electrical background, I treat outdoor lighting installs with technical precision &mdash; watertight connections, balanced circuits, and fixtures that last in this humidity. That electrical work is not a landscape horticulture license. If a lighting install is not a fit, I will tell you that up front.
             </p>
 
             <h3 className="pt-2 font-anton text-xl uppercase text-deep-forest">Why Choose Us</h3>
