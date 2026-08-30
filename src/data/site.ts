@@ -14,17 +14,14 @@ export const SITE = {
   region: 'LA',
   regionFull: 'Louisiana',
   postalCode: '70785',
-  // Geo coordinates for 28790 Brett Dr, Walker, LA (used in schema + map).
   geo: { lat: 30.4849, lng: -90.8662 },
   url: 'https://southernbucklawn.com',
-  // Real hours from the Google Business Profile.
   hours: [
     { days: 'Monday – Friday', time: '6:00 AM – 6:30 PM' },
     { days: 'Saturday', time: '6:00 AM – 6:00 PM' },
     { days: 'Sunday', time: '7:00 AM – 4:00 PM' },
   ],
   primaryCategory: 'Lawn care service',
-  // Home turf only. Do not add Baton Rouge 70816/70817 or Gonzales.
   serviceAreas: ['Walker', 'Denham Springs', 'Watson'],
   social: {
     google: 'https://share.google/KjUM9ViEKjTK29ETk',

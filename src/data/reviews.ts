@@ -1,9 +1,9 @@
 import { Review } from '@/lib/types';
 
 // Real Google Business Profile reviews, transcribed verbatim.
-// Do not invent reviews. reviewCount MUST equal REVIEWS.length.
-// Marty Dantone was in the prior list; same family name as the owner.
-// Do not present that review as independent Google social proof.
+// Marty Dantone is family (confirmed 2026-08-30) — do not put in Review schema
+// or present on-page as a customer Google review. Do not invent replacements.
+// reviewCount must equal REVIEWS.length.
 export const GOOGLE_RATING = { score: 5.0, count: 4 };
 
 export const REVIEWS: Review[] = [
