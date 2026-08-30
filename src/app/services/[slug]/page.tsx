@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Check, ArrowRight, PhoneCall, CircleHelp } from 'lucide-react';
 import { SERVICES, getService } from '@/data/services';
-import { ZIPPER_COMBOS } from '@/data/zipper';
 import { AREA_NAV, SITE } from '@/data/site';
 import QuoteForm from '@/components/QuoteForm';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -37,7 +36,6 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   if (!service) notFound();
 
   const otherServices = SERVICES.filter((s) => s.slug !== service.slug);
-  const cityPages = ZIPPER_COMBOS.filter((z) => z.serviceSlug === service.slug);
 
   const faqJsonLd = {
     '@context': 'https://schema.org',
@@ -57,7 +55,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     description: service.metaDescription,
     url: `${SITE.url}/services/${service.slug}`,
     provider: { '@type': 'LocalBusiness', '@id': `${SITE.url}/#business`, name: SITE.name },
-    areaServed: SITE.serviceAreas.map((a) => ({ '@type': 'City', name: a })),
+    areaServed: SITE.serviceAreas.map((a) => ({ '@type': 'City', name: `${a}, Louisiana` })),
   };
 
   return (
@@ -65,7 +63,6 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
 
-      {/* Hero */}
       <header className="relative overflow-hidden bg-midnight-moss pt-28 text-white">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-12 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div className="space-y-5">
@@ -88,7 +85,6 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         </div>
       </header>
 
-      {/* Body */}
       <section className="bg-surface py-16">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
           <div className="space-y-6 lg:col-span-2">
@@ -105,10 +101,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               ))}
             </ul>
 
-            {/* Internal links to areas */}
             <h2 className="pt-4 font-anton text-2xl uppercase text-primary">Where We Offer This</h2>
             <p className="font-barlow text-lg text-gray-700">
-              We bring {service.title.toLowerCase()} to homes and businesses across the area. See the local details for{' '}
+              {service.title} on the weekly route:{' '}
               {AREA_NAV.map((a, i) => (
                 <span key={a.href}>
                   <Link href={a.href} className="font-bold text-primary underline decoration-safety-orange underline-offset-2 hover:text-safety-orange-deep">
@@ -119,7 +114,6 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               ))}
             </p>
 
-            {/* FAQ */}
             <h2 className="pt-4 font-anton text-2xl uppercase text-primary">Questions Folks Ask</h2>
             <div className="space-y-5">
               {service.faqs.map((f) => (
@@ -131,26 +125,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 </div>
               ))}
             </div>
-
-            {cityPages.length > 0 && (
-              <>
-                <h2 className="pt-4 font-anton text-2xl uppercase text-primary">{service.title} by Town</h2>
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                  {cityPages.map((z) => (
-                    <Link
-                      key={z.slug}
-                      href={`/${z.slug}`}
-                      className="flex items-center justify-between rounded-xl border border-primary/10 bg-white px-5 py-4 font-anton text-base uppercase text-midnight-moss shadow-sm transition-all hover:border-safety-orange hover:text-safety-orange-deep"
-                    >
-                      {z.cityName} <ArrowRight className="h-5 w-5 text-safety-orange" />
-                    </Link>
-                  ))}
-                </div>
-              </>
-            )}
           </div>
 
-          {/* Sidebar */}
           <aside className="space-y-6 lg:col-span-1">
             <div className="rounded-2xl border border-primary/10 bg-white p-6 shadow-sm">
               <p className="font-barlow text-sm font-bold uppercase tracking-wider text-safety-orange-deep">Typical pricing</p>
@@ -177,7 +153,6 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         </div>
       </section>
 
-      {/* Inline quote form */}
       <section className="bg-mist-green py-16">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div className="mb-8 text-center">
