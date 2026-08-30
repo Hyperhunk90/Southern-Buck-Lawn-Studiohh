@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: l.metaTitle,
       description: l.metaDescription,
       url: `${SITE.url}/service-areas/${l.slug}`,
-      images: [{ url: l.image }],
+      ...(l.image ? { images: [{ url: l.image }] } : {}),
     },
   };
 }
@@ -70,9 +70,15 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
               </a>
             </div>
           </div>
-          <div className="overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
-            <Image src={loc.image} alt={loc.imageAlt} width={800} height={600} sizes="(max-width: 1024px) 90vw, 600px" quality={60} className="h-80 w-full object-cover" priority />
-          </div>
+          {loc.image ? (
+            <div className="overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
+              <Image src={loc.image} alt={loc.imageAlt || loc.name} width={800} height={600} sizes="(max-width: 1024px) 90vw, 600px" quality={60} className="h-80 w-full object-cover" priority />
+            </div>
+          ) : (
+            <div className="flex h-80 items-center justify-center rounded-2xl border border-white/10 bg-deep-forest px-6 text-center">
+              <p className="font-anton text-2xl uppercase tracking-wide text-white/90">Serving {loc.name}</p>
+            </div>
+          )}
         </div>
       </header>
 
@@ -95,14 +101,18 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
             </div>
           </div>
 
-          <h2 className="mt-12 font-anton text-3xl uppercase text-primary">Areas We Cover Here</h2>
-          <div className="mt-4 flex flex-wrap gap-2">
-            {loc.neighborhoods.map((n) => (
-              <span key={n} className="rounded-full border border-primary/10 bg-mist-green px-4 py-1.5 font-barlow text-base font-semibold text-midnight-moss">
-                {n}
-              </span>
-            ))}
-          </div>
+          {loc.neighborhoods.length > 0 && (
+            <>
+              <h2 className="mt-12 font-anton text-3xl uppercase text-primary">Areas We Cover Here</h2>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {loc.neighborhoods.map((n) => (
+                  <span key={n} className="rounded-full border border-primary/10 bg-mist-green px-4 py-1.5 font-barlow text-base font-semibold text-midnight-moss">
+                    {n}
+                  </span>
+                ))}
+              </div>
+            </>
+          )}
 
           {/* Internal links to services */}
           <h2 className="mt-12 font-anton text-3xl uppercase text-primary">Services in {loc.name.replace(', LA', '')}</h2>
