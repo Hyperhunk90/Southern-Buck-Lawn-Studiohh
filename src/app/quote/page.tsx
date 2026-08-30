@@ -23,7 +23,7 @@ export default function QuotePage() {
                 Get a Fast, <span className="text-sage">Free</span> Quote
               </h1>
               <p className="mt-4 font-barlow text-lg text-white/85">
-                Tell us what you need and where the property is. I look at every request and call back within one business day to walk it or confirm the next step.
+                Tell me what you need and where the property is. I look at every request and call back within one business day to walk it or confirm the next step.
               </p>
             </div>
 
@@ -36,7 +36,7 @@ export default function QuotePage() {
                 <Clock className="h-6 w-6 text-safety-orange" /> Open 7 days &middot; Mon&ndash;Fri 6AM&ndash;6:30PM
               </p>
               <p className="flex items-center gap-3 font-barlow text-lg">
-                <ShieldCheck className="h-6 w-6 text-safety-orange" /> Licensed &amp; insured
+                <ShieldCheck className="h-6 w-6 text-safety-orange" /> Insured (general liability)
               </p>
             </div>
 

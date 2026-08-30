@@ -6,9 +6,9 @@ import ObfuscatedEmail from '@/components/ObfuscatedEmail';
 import ServiceAreaMap from '@/components/ServiceAreaMap';
 
 export const metadata: Metadata = {
-  title: 'Contact Southern Buck Lawn | Walker, LA',
+  title: 'Contact in Walker, LA',
   description:
-    'Call, email, or message Southern Buck Lawn in Walker. We run Walker, Denham Springs, and Watson. (225) 369-4434 · sbl@southernbucklawn.com',
+    'Call, email, or message Southern Buck Lawn in Walker. Walker, Denham Springs, and Watson. (225) 369-4434 · sbl@southernbucklawn.com',
   alternates: { canonical: '/contact' },
   openGraph: { url: `${SITE.url}/contact` },
 };
