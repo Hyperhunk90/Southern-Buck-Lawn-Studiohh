@@ -32,13 +32,13 @@ export default function ReoHeroContent() {
       </motion.div>
       <motion.h1 variants={itemVariants} className="mb-8 font-anton text-5xl uppercase tracking-wide text-white sm:text-6xl lg:text-7xl">
         You Manage the Assets. <br className="hidden sm:block" />
-        <span className="text-safety-orange">We Handle the Heavy Lifting.</span>
+        <span className="text-safety-orange">I Handle the Heavy Lifting.</span>
       </motion.h1>
       <motion.p variants={itemVariants} className="mx-auto max-w-3xl font-barlow text-lg leading-relaxed text-gray-300 sm:text-xl">
-        Managing foreclosed, bank-owned, or REO properties from a desk three states away is a massive headache. You need trustworthy boots on the ground in Livingston Parish—folks who actually show up, do the dirty work, and get the property secured without you having to babysit the whole process.
+        Managing foreclosed, bank-owned, or REO properties from a desk three states away is a massive headache. You need trustworthy boots on the ground in Walker, Denham Springs, and Watson—someone who actually shows up, does the dirty work, and gets the property secured without you having to babysit the whole process.
       </motion.p>
       <motion.p variants={itemVariants} className="mx-auto mt-6 max-w-3xl font-barlow text-lg font-semibold text-white sm:text-xl">
-        At Southern Buck Lawn, we’re fully insured, locally owned, and we don't back down from a mess. You send the work order; we send the trucks.
+        At Southern Buck Lawn, I’m insured, locally owned, and I don't back down from a mess. You send the work order; I send the truck.
       </motion.p>
       <motion.div variants={itemVariants} className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
         <a

@@ -45,7 +45,6 @@ export default function Navbar() {
           </span>
         </Link>
 
-        {/* Desktop */}
         <div className="hidden items-center gap-1 lg:flex xl:gap-2">
           <Link href="/" className="px-3 py-2 font-archivo text-base font-semibold text-primary transition-colors hover:text-safety-orange-deep">
             Home
@@ -115,7 +114,7 @@ export default function Navbar() {
           <Link href="/gallery" className="px-3 py-2 font-archivo text-base font-semibold text-primary transition-colors hover:text-safety-orange-deep">
             Gallery
           </Link>
-          <Link href="/#about" className="px-3 py-2 font-archivo text-base font-semibold text-primary transition-colors hover:text-safety-orange-deep">
+          <Link href="/about" className="px-3 py-2 font-archivo text-base font-semibold text-primary transition-colors hover:text-safety-orange-deep">
             About
           </Link>
           <Link href="/blog" className="px-3 py-2 font-archivo text-base font-semibold text-primary transition-colors hover:text-safety-orange-deep">
@@ -129,7 +128,6 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile: tap-to-call + quick quote button + menu toggle */}
         <div className="flex items-center gap-2 lg:hidden">
           <a
             href={SITE.phoneHref}
@@ -151,7 +149,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile menu */}
       {open && (
         <div className="border-t border-cream-line bg-cream pb-4 lg:hidden">
           <div className="space-y-1 px-3 pt-2">
@@ -179,6 +176,11 @@ export default function Navbar() {
             <div className="border-t border-cream-line pt-2">
               <Link href="/gallery" onClick={closeAll} className="block rounded px-3 py-2 font-archivo text-lg font-bold text-midnight-moss hover:bg-white">
                 Project Gallery
+              </Link>
+            </div>
+            <div className="border-t border-cream-line pt-2">
+              <Link href="/about" onClick={closeAll} className="block rounded px-3 py-2 font-archivo text-lg font-bold text-midnight-moss hover:bg-white">
+                About
               </Link>
             </div>
             <div className="border-t border-cream-line pt-2">

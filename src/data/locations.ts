@@ -6,36 +6,36 @@ export const LOCATIONS: Location[] = [
     name: 'Walker, LA',
     navLabel: 'Walker, LA',
     keywords: ['lawn care Walker LA', 'lawn service Walker Louisiana', 'landscaping Walker 70785'],
-    metaTitle: 'Lawn Care in Walker, LA | Mowing, Weed Control & Mulch',
+    metaTitle: 'Lawn Care in Walker, LA 70785',
     metaDescription:
-      'Lawn mowing, edging, and landscaping in Walker, LA, our home town. Southern Buck Lawn keeps new-build sod and established yards sharp. Free quote, same-day callback.',
-    h1: 'Professional Lawn Care in Walker, Louisiana',
+      'Weekly mowing, edging, and bed work in Walker, LA 70785. Southern Buck Lawn is based on Brett Drive. Call Michael at (225) 369-4434.',
+    h1: 'Lawn Care from a Shop That Lives in Walker',
     intro:
-      'Walker is our home town, our headquarters, and it is growing incredibly fast. New subdivisions are going in every single year, and that means a whole lot of fresh sod being laid down that desperately needs the right start to survive. We take a lot of pride in helping our neighbors here in Walker protect that expensive landscaping investment before the summer heat yellows it out. Whether you just moved into a new build off Highway 447 or you have an established yard in a historic neighborhood, we treat your property with the exact same respect we treat our own. When you hire Southern Buck Lawn, you are hiring a local crew that knows Walker inside and out.',
+      'Walker is home. The shop is on Brett Drive, 70785, and most weeks start on these streets. New sod needs a taller cut so July does not cook it. Established yards need a different pass. I know which is which because I drive past them. When you hire Southern Buck Lawn, you are hiring Michael Dantone down the road, not a company that started two parishes over.',
     soilNote:
-      'Walker sits heavily on sandy clay loam. It drains a little better than the dense ground over in Denham Springs, but the downside is that essential soil nutrients wash out extremely quick in a hard Louisiana rain. To combat that, we feed local Walker lawns with premium slow-release nitrogen fertilizers to keep your turf\'s color deep, rich, and steady through the absolute worst of the summer heat.',
+      'Walker sits on sandy clay loam. It drains a little better than the heavier ground in Denham Springs, but a hard rain still washes nutrients out fast. Slow-release nitrogen holds color through July instead of flashing green and crashing.',
     pestNote:
-      'Chinch bugs are the absolute biggest headache in this specific area. They specifically target young Centipede sod, multiplying fast and leaving huge dry brown patches that look exactly like drought damage. We know what to look for, and we spot them early and treat the yard before they can spread and destroy the whole lawn.',
-    neighborhoods: ['Walker South Road', 'Cove Landing', 'Townwood', 'Milton Road area', 'Highway 447 corridor'],
-    image: '/images/sbl-project-photo-06.webp',
-    imageAlt: 'Welcome to the City of Walker, Louisiana road sign',
+      'Chinch bugs are the headache on young Centipede around here. They leave dry brown patches that look like drought. I watch for them on weekly cuts and treat early so they do not take the whole lawn.',
+    neighborhoods: ['Walker 70785'],
+    image: '/images/sbl-project-photo-08.webp',
+    imageAlt: 'White ranch house with freshly trimmed hedges in daytime, real Southern Buck Lawn work',
     reviews: [],
     faqs: [
       {
-        question: 'How much does lawn care generally cost in Walker, LA?',
+        question: 'How do I get a number for weekly mowing in Walker?',
         answer:
-          'Most standard weekly mowing in Walker runs between $45 to $85 a visit, completely dependent on your lot size and fencing. For larger bed work, mulch installs, and landscaping overhauls, I will come out, take a quick look, and give you a custom quote. The estimate is always 100% free, and I promise to call you back within 24 hours.'
+          'Call or text (225) 369-4434, or send the quote form with your address. I look at the lot and call back within 24 hours. No charge for that. I do not post a price list because every yard is different.',
       },
       {
         question: 'Do you treat chinch bugs on new Walker sod?',
         answer:
-          'Yes, we do. Chinch bugs are the number one killer of young Centipede sod out here, and they leave dry, dead brown patches that homeowners often mistake for underwatering. We spot the damage early and apply a targeted treatment to stop them before they spread across the entire yard.'
+          'Yes. Chinch bugs hit young Centipede hard out here. Homeowners often think it is underwatering. I spot the pattern and treat before it spreads.',
       },
       {
-        question: 'How often should I have my lawn mowed in Walker through the hot summer?',
+        question: 'How often should a Walker lawn get cut in summer?',
         answer:
-          'From April through October, the warm-season grass runs extremely hard in our climate. A weekly cut is the only way to keep it healthy, clean, and prevent it from getting overly tall and stressing the root system. We ease back to every other week in early spring and late fall once the growth naturally slows down.'
-      }
+          'April through October, weekly is the honest answer. Warm-season grass runs hard in this heat. I back off to every other week in early spring and late fall when growth slows.',
+      },
     ],
   },
   {
@@ -43,110 +43,110 @@ export const LOCATIONS: Location[] = [
     name: 'Denham Springs, LA',
     navLabel: 'Denham Springs, LA',
     keywords: ['lawn care Denham Springs', 'landscaping Denham Springs LA', 'lawn service 70726'],
-    metaTitle: 'Lawn Care in Denham Springs, LA | Mowing, Weed Control & Mulch',
+    metaTitle: 'Lawn Care in Denham Springs, LA 70726',
     metaDescription:
-      'Weekly mowing, weed control, and mulch beds in Denham Springs, LA. A local crew that knows your clay soil and your weeds. Call Southern Buck Lawn for a free quote.',
-    h1: 'Dependable Lawn Care in Denham Springs, Louisiana',
+      'Weekly mowing, weed control, and mulch beds in Denham Springs, LA 70726. A Walker operator who knows the clay. Call (225) 369-4434.',
+    h1: 'Weekly Lawn Care in Denham Springs',
     intro:
-      'Denham Springs runs a very close second to home base for us. From the historic Antique District all the way out to the massive new commercial builds off Juban Road and the sprawling neighborhoods along Range Avenue, we are on these streets every single week. Because we spend so much time working here, we know exactly how the soil behaves, we know the exact weeds that pop up in April, and we know exactly which yards are going to hold water when the Amite River gets up after a big multi-day rainstorm. We bring that local, boots-on-the-ground knowledge to every single yard we cut and every flowerbed we mulch in Denham Springs.',
+      'Denham Springs is a short hop from the shop. I run 70726 every week. The clay here holds water after a rain, and the weeds that follow are predictable if you have been cutting here long enough. That is the point. I am not guessing at your soil from a map. I am already on the block.',
     soilNote:
-      'The ground here in Denham Springs is notoriously heavy silt and dense clay. It packs down incredibly tight, holds standing water for days after a storm, and literally starves grass roots of oxygen if nobody actively aerates it. We help combat this by feeding on a highly structured schedule and promoting deep root growth so your grass can breathe, drink, and survive the heavy water loads.',
+      'Denham Springs ground is heavy silt and clay. It packs tight, holds standing water, and starves roots of air if nobody aerates. I feed on a schedule and keep the cut honest so the grass can breathe instead of sitting in mud.',
     pestNote:
-      'If you live in Denham, you need to watch out for armyworms—they can literally strip a perfectly green lawn down to the dirt overnight. We also battle mole crickets tearing up the root zones, and dollar spot fungus that absolutely thrives in the heavy July morning dew. We know the signs and catch them early before they take the whole yard.',
-    neighborhoods: ['Antique District', 'Juban Crossing area', 'Range Avenue corridor', 'Magnolia Beach', 'Watson line'],
-    image: '/images/sbl-project-photo-07.webp',
-    imageAlt: 'Fresh pine straw and black mulch flower bed with red roses, installed by Southern Buck Lawn near Denham Springs, LA',
+      'Armyworms can strip a green lawn overnight. Mole crickets tear root zones. Dollar spot loves the July dew. I watch for all three on weekly cuts and call you if something is moving.',
+    neighborhoods: ['Denham Springs 70726'],
+    image: '/images/sbl-project-photo-01.webp',
+    imageAlt: 'Southern Buck Lawn work trailer. Not a Denham Springs house photo.',
     reviews: [],
     faqs: [
       {
-        question: 'How much does lawn care cost in Denham Springs?',
+        question: 'How do I get a quote in Denham Springs?',
         answer:
-          'Standard weekly mowing in Denham Springs typically runs between $45 and $85 per visit depending on your specific lot size and layout. If you need fresh mulch or a full landscaping cleanup, I will come out for a quick walk-through and give you a firm number. Every single estimate is free, with a guaranteed 24-hour callback.'
+          'Send the quote form or call (225) 369-4434. I look at the property and call back within 24 hours with a number. Every estimate is free.',
       },
       {
-        question: 'My Denham Springs yard holds water for days after a storm. Can you help?',
+        question: 'My Denham Springs yard holds water after a storm. Can you still cut it?',
         answer:
-          'Absolutely. The heavy clay around Denham Springs packs extremely tight and holds water, which literally suffocates your grass roots. While we do not dig massive French drains, we can manage the lawn\'s health, aerate the soil, and adjust our mowing patterns to ensure we are not creating deep mud ruts in the wet spots.'
+          'Yes, with care. I do not cut ruts through standing water. I can aerate, adjust the pattern, and skip a wet pocket rather than tear it up. I do not install French drains.',
       },
       {
-        question: 'What lawn pests are the worst in Denham Springs?',
+        question: 'What pests hit Denham Springs lawns the hardest?',
         answer:
-          'Armyworms are a nightmare that can strip a lawn completely bare overnight. We also see a ton of mole crickets tearing up the root zones, and dollar spot fungus loves the heavy July dew in the subdivisions here. We actively monitor for all three during our weekly cuts and will alert you immediately if we see an outbreak.'
-      }
+          'Armyworms, mole crickets, and dollar spot. I watch for them during weekly service and tell you if I see an outbreak instead of spraying the whole parish on a calendar.',
+      },
     ],
   },
   {
-    slug: 'baton-rouge',
-    name: 'Baton Rouge, LA',
-    navLabel: 'Baton Rouge, LA',
-    keywords: ['lawn care Baton Rouge', 'landscaping Baton Rouge LA', 'commercial lawn service Baton Rouge'],
-    metaTitle: 'Lawn Care & Landscaping in Baton Rouge, LA',
+    slug: 'watson',
+    name: 'Watson, LA',
+    navLabel: 'Watson, LA',
+    keywords: ['lawn care Watson LA', 'lawn service Watson 70786', 'acreage mowing Watson Louisiana'],
+    metaTitle: 'Lawn Care in Watson, LA 70786',
     metaDescription:
-      'High-standard lawn care, landscaping, and commercial grounds work across Baton Rouge, LA. Southern Buck Lawn serves homes, HOAs, and businesses. Free quote.',
-    h1: 'Premium Lawn Care and Landscaping in Baton Rouge, Louisiana',
+      'Weekly mowing and large-lot care in Watson, LA 70786. Southern Buck Lawn runs Watson from the Walker shop. Call (225) 369-4434.',
+    h1: 'Lawn Care in Watson, Louisiana',
     intro:
-      'From the massive historic oaks of the Garden District to the busy, high-traffic commercial and office corridors along Jefferson Highway and Perkins Road, Baton Rouge holds an incredibly high bar for curb appeal. At Southern Buck Lawn, we meet that bar on beautiful custom homes and sprawling commercial properties alike. When you hire us in Baton Rouge, you are not getting a revolving door of random workers. You get the same dedicated crew, pulling up on the exact same day of the week, delivering the exact same high standard of precision mowing and edging on every single visit. We treat Baton Rouge properties with the absolute highest level of detail.',
+      'Watson is home turf. 70786 sits just north of the shop, and I am on Highway 16 most weeks. Lots run bigger out here than in town — a mix of acreage, tree lines, and newer houses. A push mower will eat your Saturday. I bring commercial zero-turns, keep the borders tight, and still edge the drive. If you live in Watson, you are not the edge of the route. You are on it.',
     soilNote:
-      'Baton Rouge soil is incredibly diverse, running from heavy Mississippi river clay to rich loam, but across the board, it leans heavily acidic. We fix this by applying lime on a strict schedule to unlock the vital nutrients already sitting trapped in the ground, keeping your grass a deep, vibrant green instead of a tired, stressed pale color.',
+      'Watson ground is mostly forested silt loam with a lot of organic matter. Trees love it. So do briars along the fence. I stay ahead of that with strong border trimming and weed barrier in the beds you actually want to keep.',
     pestNote:
-      'Virginia buttonweed is the absolute biggest headache for homeowners in Baton Rouge. It is tough as nails and shrugs off most standard herbicides. We also battle severe brown patch fungus during the warm, wet stretches of fall. We treat both of these issues proactively with the right commercial-grade products and the perfect timing to keep your lawn pristine.',
-    neighborhoods: ['Garden District', 'Perkins Road corridor', 'Jefferson Highway', 'Shenandoah', 'Woodlawn'],
-    image: '/images/sbl-project-photo-08.webp',
-    imageAlt: 'Commercial grounds and striped lawn maintained by Southern Buck Lawn at a Baton Rouge, LA property',
+      'Open ground around Watson is fire-ant country. Ticks and fleas set up in the warm sandy spots if the grass stays long. A tight weekly cut and targeted treatment leave them fewer places to live near the house.',
+    neighborhoods: ['Watson 70786'],
+    image: '/images/sbl-project-photo-11.webp',
+    imageAlt: 'Michael Dantone, owner of Southern Buck Lawn, in a branded shirt with a shovel. Owner photo, not a Watson house.',
     reviews: [],
     faqs: [
       {
-        question: 'Do you handle both residential homes and commercial properties in Baton Rouge?',
+        question: 'Do you actually service Watson, or just list it?',
         answer:
-          'Yes, we do both at a very high level. We serve custom residential homes from the Garden District out to Perkins and Jefferson, plus massive commercial grounds for HOAs, corporate offices, and retail centers. It is the same crew and the same standard of excellence on every visit.'
+          'I service Watson every week. The shop is in Walker, 70786 is next door, and Watson is part of the regular route — not a maybe-if-I-am-in-the-area add-on.',
       },
       {
-        question: 'How do you actually get rid of Virginia buttonweed in Baton Rouge lawns?',
+        question: 'Can you mow acreage in Watson?',
         answer:
-          'Virginia buttonweed is incredibly stubborn and literally laughs at most store-bought weed sprays. Timing and using the right commercial product matter immensely. We treat it on a strict schedule and lime the acidic soil so your grass grows thick enough to physically fight the weed back.'
+          'Yes. Commercial zero-turns handle an acre or several. I still trim the fence, edge the drive, and blow the concrete. Big lot does not mean sloppy cut.',
       },
       {
-        question: 'Why does my Baton Rouge lawn look pale yellow even after I put fertilizer on it?',
+        question: 'How do I get a quote for a Watson property?',
         answer:
-          'Baton Rouge soil leans very acidic, which completely locks up the nutrients already sitting in the ground—meaning your fertilizer is just sitting there doing nothing. We apply lime on a schedule to balance the pH and unlock those nutrients, which is exactly how a tired pale lawn turns into a deep, even green.'
-      }
+          'Call or text (225) 369-4434, or send the quote form with your address. I will look at the property and call you back within 24 hours with a number. No charge for that.',
+      },
     ],
   },
   {
     slug: 'livingston-parish',
     name: 'Livingston Parish, LA',
     navLabel: 'Livingston Parish, LA',
-    keywords: ['acreage mowing Livingston Parish', 'rural lawn service Livingston', 'brush clearing Livingston Parish'],
-    metaTitle: 'Acreage & Large-Lot Lawn Care in Livingston Parish, LA',
+    keywords: ['acreage mowing Livingston Parish', 'rural lawn service Livingston', 'lawn care Livingston Parish LA'],
+    metaTitle: 'Large-Lot Lawn Care in Livingston Parish',
     metaDescription:
-      'Acreage mowing, brush clearing, and bed work across Livingston Parish, LA. Southern Buck Lawn brings commercial zero-turns to big rural lots. Free quote.',
-    h1: 'Acreage and Large-Lot Lawn Care Across Livingston Parish',
+      'Acreage mowing and bed work for Livingston Parish lots that fit the Walker–Denham–Watson route. Southern Buck Lawn. Call (225) 369-4434.',
+    h1: 'Large-Lot Lawn Care in Livingston Parish',
     intro:
-      'Out here in the wider parts of Livingston Parish, the lots get incredibly big. From the wide-open spaces of Watson down through Albany, French Settlement, and Satsuma, maintaining an acre or more with a standard push mower or a cheap riding tractor will eat your entire Saturday and half your Sunday. You should be spending your weekends enjoying your property, not sweating over it. At Southern Buck Lawn, we bring massive, high-speed commercial zero-turn mowers to these big rural lots. We can knock out multiple acres in a fraction of the time it takes a homeowner, and because of our heavy-duty sharp blades and precision edging, the property looks drastically better when we leave.',
+      'I am based in Walker and the weekly route is Walker, Denham Springs, and Watson. Plenty of Livingston Parish lots sit on that corridor — acreage, tree lines, long drives. If your property is in that corridor, I can knock it out with commercial equipment and still leave a clean edge. If you are way off the route, say so on the quote form and I will tell you straight whether it fits. I do not pretend to cover every corner of the parish.',
     soilNote:
-      'The ground out here is predominantly forested silt loam packed with a ton of organic matter. That is great for trees, but it means native weeds, briars, and wild growth move incredibly fast. We stay ahead of nature with aggressive, strong border string-trimming and by laying down a solid commercial weed barrier in your flowerbeds to hold the line.',
+      'Parish ground is mostly forested silt loam. Native weeds and briars move fast off the tree line. I hold the managed turf with tight borders and weed barrier in the beds, not by spraying the woods.',
     pestNote:
-      'Open rural land means you are constantly dealing with fire ants, ticks, and fleas setting up massive colonies in the warm sandy spots around your property. By keeping the turf cut tight, well-maintained, and properly treated, we ensure these pests have absolutely nowhere good to settle in around your house.',
-    neighborhoods: ['Watson', 'Albany', 'Satsuma', 'French Settlement', 'Maurepas'],
-    image: '/images/sbl-project-photo-09.webp',
-    imageAlt: 'Neatly mowed green lawn with a clean edge, typical Southern Buck Lawn acreage work in Livingston Parish',
+      'Rural lots pick up fire ants, ticks, and fleas in undisturbed sandy spots. Keeping the yard cut on a schedule is the first control. Targeted treatment is the second. I do not promise to treat a whole timber tract.',
+    neighborhoods: ['Walker', 'Denham Springs', 'Watson'],
+    image: '/images/sbl-project-photo-04.webp',
+    imageAlt: 'Commercial palm and pine-straw bed work by Southern Buck Lawn',
     reviews: [],
     faqs: [
       {
-        question: 'Do you guys mow large lots and acreage out in Livingston Parish?',
+        question: 'Which parts of Livingston Parish do you actually run?',
         answer:
-          'Yes, absolutely. We specifically bring massive commercial zero-turn mowers to Watson, Albany, Satsuma, and the surrounding areas. We can knock out an acre or five acres extremely fast, and the cut quality remains incredibly sharp and even when we leave.'
+          'Home turf is Walker 70785, Denham Springs 70726, and Watson 70786. Large lots on that corridor are a yes. Farther out, ask. I will not take a job I cannot keep on a weekly schedule.',
       },
       {
-        question: 'Can you help clear overgrown, brushy areas or ditches on a rural property?',
+        question: 'Do you clear brush and ditches on rural property?',
         answer:
-          'We certainly can. The forested silt loam out here causes wild brush to grow extremely fast and rough. We maintain property lines by keeping borders tight with heavy-duty string trimming, ditch clearing, and laying solid weed barriers in your beds to stay miles ahead of the wild overgrowth.'
+          'I keep borders, ditches along the maintained yard, and bed lines in check. Heavy land clearing is a different job. Tell me what you have and I will say if it is me or not.',
       },
       {
-        question: 'How do you help keep fire ants and fleas down on large open land?',
+        question: 'Can you keep fire ants down on a few acres?',
         answer:
-          'Large open rural ground gives fire ants, ticks, and fleas the perfect warm, undisturbed sandy spots to build massive colonies. By keeping your turf cut tight on a weekly schedule and applying targeted treatments, we drastically reduce their habitat so they have nowhere good to set up near your family.'
-      }
+          'I can treat the maintained turf and the spots around the house. A weekly cut already helps. I am not a parish-wide pest company.',
+      },
     ],
   },
 ];

@@ -5,175 +5,179 @@ export const SERVICES: Service[] = [
     slug: 'lawn-mowing',
     title: 'Lawn Mowing & Edging',
     navLabel: 'Lawn Mowing & Edging',
-    subtitle: 'Weekly residential turf care done right the first time.',
+    subtitle: 'Weekly turf care from the Walker shop, on a day you can count on.',
     keywords: [
       'lawn mowing Walker LA',
       'lawn care Walker Louisiana',
-      'driveway edging Denham Springs',
-      'weekly lawn service Baton Rouge',
+      'weekly lawn service Denham Springs',
+      'acreage mowing Watson LA',
     ],
-    metaTitle: 'Lawn Mowing & Edging in Walker, Denham Springs & Baton Rouge',
+    metaTitle: 'Lawn Mowing & Edging in Walker, Denham Springs & Watson',
     metaDescription:
-      'Sharp weekly lawn mowing, edging, and blowing across Walker, Denham Springs, and Baton Rouge. Same crew, same day, every week. Call Southern Buck Lawn for a free quote.',
-    h1: 'Precision Weekly Lawn Mowing and Hard Edging in Walker, Louisiana',
-    quickSummary: 'Mow, trim, hard edge, and blow. We show up on the same day every week, set our decks specifically to your grass type, and leave your property immaculate.',
+      'Weekly mowing, hard edging, and blow-off in Walker, Denham Springs, and Watson. Michael Dantone, Southern Buck Lawn. Call (225) 369-4434.',
+    h1: 'Weekly Lawn Mowing from the Walker Shop',
+    quickSummary:
+      'Mow, trim, hard edge, and blow. I show up on the same day every week, set the deck to your grass, and leave the concrete clean.',
     detailedContent: [
-      'Louisiana grass does not play nice. It grows fast, it grows thick, and if you cut it wrong, it punishes you. Down here in Walker and Denham Springs, St. Augustine and Centipede want a tall cut—usually right around three and a half to four inches. If a crew comes in and scalps it down to the dirt like a golf course, the summer sun will absolutely scorch it, and you will be left with thin, brown, dead patches by mid-July. On the flip side, Bermuda likes it lower and fed hard. When you hire Southern Buck Lawn, we do not just fire up the mower and blind-cut your yard. I personally make sure we set the deck specifically to what your grass type needs. And just as importantly, we keep our commercial mower blades razor sharp. A dull blade tears the grass tip, which turns brown and invites disease. A sharp blade slices clean, healing fast and keeping the lawn deep green. That is the exact difference between a lawn that just looks "cut" and a lawn that looks professionally cared for.',
-      'Every single visit, you are getting the full, no-shortcuts treatment. We do not just do a pass down the middle and leave the corners messy. We mow on a fresh, alternating pattern every week to prevent ruts and train the grass to stand up straight. We string-trim the fence lines, around your flower beds, the base of your trees, and delicately around your AC units and utility boxes without chewing them up. Then comes the hard edging. We take a vertical steel blade along your driveway, sidewalks, and curb line to establish a crisp, deep boundary that makes the whole property pop. Finally, the cleanup. The last thing we do before the truck pulls away is blow every single blade of grass and clipping off your concrete, patio, and porches back into the turf. We put the clippings where the nitrogen does some good, instead of leaving it stuck to your shoes or tracking into your house.',
-      'Consistency is everything in this business. When you are on our route, we run your property on the exact same day, every single week, across Walker, Denham Springs, and Baton Rouge. You will not be left wondering if or when the lawn guy is going to show up. If a heavy Louisiana rainstorm pushes us back, it pushes us a day at most, and then we are right back on schedule grinding it out. Steady, reliable weekly lawn care is how your yard gets thick enough to naturally crowd the weeds out on its own. It is how you end up with the best-looking house on the street, all without having to drag a mower out of your garage on a 98-degree Saturday morning when you should be spending time with your family.'
+      'Louisiana grass grows fast and it does not forgive a bad cut. Around Walker, Denham Springs, and Watson, most yards are St. Augustine or Centipede. They want a tall cut — about three and a half to four inches. Scalp that down like a golf course and July will cook it. Bermuda wants it lower and fed. I set the deck to the grass that is actually in your yard, and I keep the blades sharp so the tip slices instead of tearing brown.',
+      'Every visit is the full pass, not a swipe down the middle. Fresh pattern so we do not rut the same lines. String-trim the fence, beds, trees, and around the AC without chewing the box. Hard edge along the drive, walks, and curb. Then I blow every clipping off the concrete back into the turf, where the nitrogen belongs, not on your shoes.',
+      'When you are on the route, it is the same day every week. A storm might push me a day. Then I am back on it. Steady weekly cuts are how a lawn thickens up enough to crowd weeds on its own — and how you stop spending Saturday behind a mower in 98-degree heat.',
     ],
     localBenefits: [
-      'Mower deck cut heights strictly matched to St. Augustine, Centipede, Bermuda, and Zoysia.',
-      'Reliable scheduling: The same crew, the same day, every week, rain or shine.',
-      'Total cleanup: Clippings blown off every walk, drive, and porch before we leave.',
-      'Respect for your property: Gates are always latched and pets are respected on every single visit.'
+      'Deck height matched to St. Augustine, Centipede, Bermuda, or Zoysia.',
+      'Same day every week, rain delays aside.',
+      'Clippings blown off walks, drives, and porches before I leave.',
+      'Gates latched. Pets respected.',
     ],
-    pricingRange: '$45 to $85 per visit, set by lot size and complexity',
+    pricingRange: 'Quoted after I look at the property — free estimate',
     faqs: [
       {
         question: 'How often should I mow in a Louisiana summer?',
         answer:
-          'From April through October, the warm-season grass runs extremely hard in our heat and humidity, so a strict weekly cut keeps it healthy, clean, and prevents overgrowth. We ease back to every other week in early spring and late fall once the growth naturally slows down.'
+          'April through October, weekly. Warm-season grass runs hard in this heat. I ease back to every other week in early spring and late fall when growth slows.',
       },
       {
         question: 'Do you bag or mulch the clippings?',
         answer:
-          'We mulch by default, since finely chopped clippings feed the soil with free nitrogen. However, when the grass gets ahead of us after a wet rainy stretch, we bag it or blow it out evenly so you are never left with thick clumps baking in the sun and killing the grass underneath.'
-      }
+          'Mulch by default — chopped clippings feed the soil. After a wet stretch, if it is too heavy, I bag or spread it so you are not left with clumps baking on the lawn.',
+      },
     ],
-    image: '/images/sbl-project-photo-02.webp',
-    imageAlt: 'Freshly mowed green lawn with a sharp edge along a flagstone walkway in Walker, Louisiana',
+    image: '/images/sbl-project-photo-08.webp',
+    imageAlt: 'White ranch with daytime hedge trimming and a clean lawn edge, Southern Buck Lawn work',
   },
   {
     slug: 'weed-control',
     title: 'Weed Control & Fertilization',
     navLabel: 'Weed Control & Fertilization',
-    subtitle: 'Feed the grass, choke the weeds, and reclaim your yard.',
+    subtitle: 'Feed the grass, choke the weeds, timed for this parish.',
     keywords: [
-      'weed control Denham Springs',
-      'lawn fertilization Baton Rouge',
+      'weed control Walker LA',
+      'lawn fertilization Denham Springs',
       'crabgrass treatment Louisiana',
       'Virginia buttonweed control',
     ],
-    metaTitle: 'Weed Control & Lawn Fertilization in Denham Springs & Baton Rouge',
+    metaTitle: 'Weed Control & Fertilization in Walker, Denham Springs & Watson',
     metaDescription:
-      'Crabgrass, clover, and Virginia buttonweed do not stand a chance. Southern Buck Lawn runs a season-long feed-and-weed program built for Louisiana lawns. Get a free quote.',
-    h1: 'Expert Weed Control and Fertilization in Denham Springs and Baton Rouge',
-    quickSummary: 'A comprehensive, season-long feed-and-weed plan that builds thick turf from the roots up and chokes stubborn weeds out of your lawn for good.',
+      'Feed-and-weed for Walker, Denham Springs, and Watson lawns. Pre-emergent, fertilizer, and buttonweed treatment timed for Louisiana. (225) 369-4434.',
+    h1: 'Weed Control and Fertilization for Walker-Area Lawns',
+    quickSummary:
+      'A season-long feed-and-weed plan that builds thick turf and treats the weeds that actually grow here — not a one-spray-fits-all dump.',
     detailedContent: [
-      'A thin, hungry lawn is a weed\'s absolute best friend. If there is bare dirt and sunlight hitting the soil, nature is going to put a weed there. Our weed control and fertilization program is designed to feed your grass on a highly structured schedule so it grows incredibly dense—dense enough to physically shade out trouble before a weed seed ever gets the chance to sprout. We do not just dump cheap nitrogen on your yard for a fast green-up. We pair premium slow-release granular fertilizers with targeted liquid weed sprays, ensuring your turf gets steady, balanced nutrition and color through the entire season instead of a massive green spike followed by a tired crash a month later.',
-      'Louisiana weather hands us some of the most stubborn, aggressive weeds in the country. We battle crabgrass, clover, chickweed, spurge, and the absolute worst offender: Virginia buttonweed, which literally laughs at most store-bought sprays you get from the big box stores. We hit each specific weed with the exact right commercial product at the right time. A huge part of our success comes from applying a pre-emergent barrier in late winter and early spring that stops crabgrass and broadleaf weeds in the soil before they ever breach the surface. Timing beats brute force every time down here, and we time our applications to the local weather patterns.',
-      'Our native soil across Livingston Parish and Baton Rouge leans heavy on the clay side, which locks up nutrients and runs highly acidic. We read the soil conditions, and we apply lime and custom feed blends to open it up so the root systems can reach deeper. Deeper roots mean your lawn holds its deep green color much longer through the brutal August heat droughts. Safety is also a massive priority for us. Pets, kids, and families can get right back on the grass as soon as the liquid spray dries, which is usually well under two hours in our heat. Treat the soil right, feed the roots, and the lawn will practically take care of itself.'
+      'A thin lawn is a weed invitation. Bare dirt and sun, and something will sprout. I feed on a schedule so the grass gets dense enough to shade trouble out, then I treat what slips through. Slow-release granular plus targeted liquid — not a cheap nitrogen spike that looks great for two weeks and crashes.',
+      'The local list is crabgrass, clover, chickweed, spurge, and Virginia buttonweed, which shrugs off most store sprays. Timing beats brute force. Late-winter pre-emergent stops a lot of it in the soil before you ever see it.',
+      'Soil around Walker and Denham leans clay and acidic. Lime and a real feed blend open it up so roots go deeper and hold color through August. Pets and kids can get back on the grass once the spray dries — usually under two hours in this heat.',
     ],
     localBenefits: [
-      'Strategic late-winter pre-emergent applications that stop crabgrass before it starts.',
-      'Custom granular and liquid mixes heavily tuned for heavy Baton Rouge and Walker clay soils.',
-      'Routine pH balancing and lime correction for sour, acidic Southern soil.',
-      'Family safe: Dry and totally safe for pets and kids to play on in about two hours.'
+      'Late-winter pre-emergent to stop crabgrass before it starts.',
+      'Mixes tuned for Walker and Denham clay, not a generic bag.',
+      'Lime when the soil is sour.',
+      'Dry and back in play for pets and kids in about two hours.',
     ],
-    pricingRange: '$65 to $110 per application, six structured rounds a year recommended',
+    pricingRange: 'Quoted after I look at the property — free estimate',
     faqs: [
       {
         question: 'Is the treatment safe around my dogs and kids?',
         answer:
-          'Yes, absolutely. We just ask that you keep everyone off the grass until the liquid spray completely dries, which takes about an hour and a half depending on the sun. After that, it is back to normal. We use pet-friendly products and will tell you exactly what went down.'
+          'Keep them off until the liquid dries, about an hour and a half in the sun. After that it is normal. I will tell you what went down.',
       },
       {
         question: 'When do you fertilize St. Augustine lawns?',
         answer:
-          'We start feeding heavily in mid-spring once the lawn fully greens up and the growth engine kicks in. By late summer, we shift to a potassium-heavy feed blend to toughen the grass up so it can survive the winter dormancy without damage.'
-      }
+          'Mid-spring once it is fully green and growing. Late summer I shift potassium-heavy so it heads into dormancy tougher, not softer.',
+      },
     ],
-    image: '/images/sbl-project-photo-08.webp',
-    imageAlt: 'Healthy, weed-free green lawn freshly mowed and striped by Southern Buck Lawn',
+    image: '/images/sbl-project-photo-09.webp',
+    imageAlt: 'Daytime white ranch lawn after hedge and bed work by Southern Buck Lawn',
   },
   {
     slug: 'landscape-design',
     title: 'Landscape Design & Mulch',
     navLabel: 'Landscape Design & Mulch',
-    subtitle: 'Beds, mulch, and colorful plants that thrive in the deep heat.',
+    subtitle: 'Beds, mulch, and plants that take Louisiana heat.',
     keywords: [
       'landscape design Walker LA',
       'mulch installation Denham Springs',
-      'flowerbed design Baton Rouge',
+      'flowerbed design Watson LA',
       'crape myrtle planting Louisiana',
     ],
     metaTitle: 'Landscape Design, Mulch & Flowerbeds in Walker & Denham Springs',
     metaDescription:
-      'Fresh mulch, clean bed lines, crape myrtles, and color that holds up to Louisiana heat. See real before-and-afters from Southern Buck Lawn. Free quote.',
-    h1: 'Custom Landscape Design, Mulch, and Flowerbeds in Walker and Denham Springs',
-    quickSummary: 'Clean flowing bed lines, deep insulating mulch, stone borders, and hand-selected plants that can actually survive the brutal Louisiana summers.',
+      'Clean bed lines, deep mulch, and plants that survive Louisiana summers. Real job photos from Southern Buck Lawn. Free quote at (225) 369-4434.',
+    h1: 'Beds, Mulch, and Plants Built for Walker Heat',
+    quickSummary:
+      'Clean bed lines, deep mulch, stone borders, and plants that still look like something in August — not just on install day.',
     detailedContent: [
-      'A razor-sharp bed line does more for the curb appeal of a yard than almost anything else, and most folks do not realize it until they see it done right. Our landscape design and bed restoration work starts exactly there. We come in and cut clean, flowing, curving edges by hand. We rip out the deep-rooted weeds that have taken over, establish a clean trench, and lay down deep, triple-shredded premium hardwood mulch—usually dark brown or black. That mulch is not just for looks; it acts as a critical insulator that holds moisture in the soil through the dry summer weeks and creates a thick barrier that keeps new weed seeds from getting a foothold near your foundation.',
-      'When it comes to planting, I do not mess around with delicate flowers that look great in May and die by July. We stick with native and deeply adapted plants that actually thrive down here in the deep South. We are talking Crape Myrtles for explosive summer color, Gardenias and Camellias for the shady spots, Loropetalum and Hollies for bulletproof year-round structure, and seasonal annuals when you want a massive pop of color at the front door. We plan the layout entirely around how much sun your house gets, how the property drains during a hurricane, and honestly, how much upkeep you actually want to do. The goal is to build a bed that still looks incredible in year three, not just on installation day.',
-      'We also build the structural borders that hold the whole design together. Whether it is stacked natural stone, decorative block edging, or just a deeply trenched natural edge, we create a boundary that gives your mower a clean line to ride against and keeps the mulch from washing out into the grass during a thunderstorm. Take a look at the before-and-after photos in our gallery. These are real houses right here in Denham Springs and Baton Rouge, not stock photos. We take overgrown, tired yards and give them massive curb appeal. That is the kind of night-and-day change a properly designed and mulched flowerbed brings to your home.'
+      'A sharp bed line does more for a house than most people expect. I cut the edge, pull the weeds, and lay deep hardwood mulch or pine straw where it fits. That mulch holds moisture and blocks a lot of new seed. It is not just a color change.',
+      'I do not plant things that look pretty in May and die in July. Crape myrtles, gardenias, camellias in the shade, hollies and loropetalum for structure. Layout follows sun, drainage, and how much you actually want to mess with it later.',
+      'Stone, block, or a deep natural trench — the border gives the mower a line and keeps mulch out of the grass in a storm. The photos on this site are real jobs. No stock beds. No generated pictures.',
     ],
     localBenefits: [
-      'Tough, heat-tested, and humidity-proof plant choices specifically selected for South Louisiana.',
-      'Commercial-grade weed fabric installed under deep mulch to guarantee fewer weeds all season long.',
-      'Custom stone and block borders that hold mulch in place and make weekly mowing a breeze.',
-      'Proper drainage grading planned out so roots can breathe instead of rotting during heavy rains.'
+      'Heat-and-humidity plants that belong in South Louisiana.',
+      'Weed fabric under deep mulch.',
+      'Stone or block borders that hold the line.',
+      'Grading so roots drain instead of rot.',
     ],
-    pricingRange: 'Projects start around $450, fully customized based on bed size, stone, and plant choices',
+    pricingRange: 'Quoted after I walk the beds — free estimate',
     faqs: [
       {
         question: 'How often does mulch need refreshing down here?',
         answer:
-          'Once a year is the standard rule of thumb. It is best done in late winter or early spring before the sun bakes the soil. Our extreme humidity breaks organic mulch down faster than up north, so a yearly top-off keeps the beds looking fresh and the soil protected.'
+          'Once a year is the usual, late winter or early spring. Humidity eats organic mulch faster than up north. A yearly top-off keeps the beds looking like somebody cares.',
       },
       {
-        question: 'Should I choose Pine straw or hardwood mulch?',
+        question: 'Pine straw or hardwood mulch?',
         answer:
-          'Pine straw is light, very affordable, and fantastic on slopes and around acid-loving plants like azaleas. Hardwood mulch holds its color much longer, stays put in heavy rain, and looks a bit crisper out front. I will tell you straight which one fits your specific beds during our walk-through.'
-      }
+          'Pine straw is light, cheap, and good on slopes and around azaleas. Hardwood holds color and stays put in rain. I will tell you which fits your beds when I walk them.',
+      },
     ],
     image: '/images/sbl-project-photo-04.webp',
-    imageAlt: 'Before and after of a Denham Springs flowerbed transformation with fresh mulch by Southern Buck Lawn',
+    imageAlt: 'Commercial palm trees and pine-straw beds, real Southern Buck Lawn job',
   },
   {
     slug: 'commercial-grounds',
     title: 'Commercial Grounds Maintenance',
     navLabel: 'Commercial Grounds',
-    subtitle: 'Reliable, insured, zero-headache grounds care for local businesses.',
+    subtitle: 'One schedule, for properties on the Walker route.',
     keywords: [
-      'commercial landscaping Baton Rouge',
-      'HOA grounds maintenance Louisiana',
-      'office lawn care Baton Rouge',
-      'commercial lawn service Livingston Parish',
+      'commercial landscaping Walker LA',
+      'HOA grounds maintenance Livingston Parish',
+      'office lawn care Denham Springs',
+      'commercial lawn service Watson LA',
     ],
-    metaTitle: 'Commercial Lawn & Grounds Maintenance in Baton Rouge',
+    metaTitle: 'Commercial Grounds Maintenance in Walker, Denham Springs & Watson',
     metaDescription:
-      'Reliable, licensed, and insured grounds care for HOAs, offices, and retail across Baton Rouge and Livingston Parish. Southern Buck Lawn keeps your property sharp. Free quote.',
-    h1: 'Commercial Lawn and Grounds Maintenance in Baton Rouge and Beyond',
-    quickSummary: 'Dependable, fully insured grounds care that keeps your commercial property looking pristine, safe, and open for business 24/7.',
+      'Insured commercial grounds care for offices, retail, churches, and HOAs on the Walker–Denham–Watson route. One person to call. (225) 369-4434.',
+    h1: 'Commercial Grounds Care from the Walker Shop',
+    quickSummary:
+      'Set-schedule mowing, edging, and bed work for businesses and HOAs I can actually keep weekly — with general-liability paperwork that shows up when you ask.',
     detailedContent: [
-      'In business, your commercial curb appeal is the absolute first impression a potential customer, client, or tenant gets before they even walk through the door. If the grass is knee-high or the beds are full of trash, they notice. Southern Buck Lawn provides hyper-reliable, high-standard grounds maintenance for retail shopping centers, corporate office parks, industrial facilities, churches, and massive HOA common areas across Walker, Denham Springs, Baton Rouge, and Livingston Parish. I know property managers are busy; you do not have time to chase down your lawn guy to see if he is going to show up. With us, you get a set schedule, proactive communication, and a property that always looks its best.',
-      'We do not tackle five-acre commercial lots with residential push mowers. We run heavy-duty, commercial-grade zero-turn equipment—like our Bad Boy Magnum MZ—alongside pro-grade string trimmers and high-output blowers to handle massive properties quickly, cleanly, and consistently. We are also incredibly flexible with commercial scheduling. We work around your business hours, whether that means arriving early in the morning, working late evenings, or handling the heavy cutting on weekends. The goal is to keep our noisy equipment completely out of your customers’ way and keep grass clippings off of employee and tenant vehicles parked in the lot.',
-      'Risk management is a huge deal for commercial properties, and we take it seriously. We carry full commercial general liability insurance and workers\' compensation, so you are totally protected. We can issue a customized Certificate of Insurance (COI) made out directly to your property management firm, ownership group, or HOA board within 24 hours of signing a contract. Furthermore, when severe Gulf weather or hurricane-season storms roll through, we heavily prioritize our commercial accounts. We deploy for rapid storm cleanup, clearing fallen limbs, removing debris, and ensuring your parking lots and entrances are safe and accessible so your business stays open without missing a beat.'
+      'Curb appeal is the first thing a customer sees. If the grass is long or the beds are trash, they notice. I maintain retail frontage, office grounds, churches, and HOA common areas in Walker, Denham Springs, and Watson. You get a set day, one person to call, and a property that looks open for business.',
+      'I run commercial zero-turns, not residential mowers, on the bigger lots. I can work early, late, or weekends so I am not blowing clippings onto customer cars at noon. Tell me your hours and I work around them.',
+      'I carry general liability insurance. Need a certificate made out to your management company? Ask. Storm hits, I prioritize the commercial accounts so you can open. I do not bid properties I cannot keep on the route.',
     ],
     localBenefits: [
-      'Heavy-duty commercial zero-turn capacity designed to knock out multi-acre properties and massive retail centers.',
-      'Flexible quiet-hour and off-peak scheduling tailored for busy offices, retail shops, and churches.',
-      'Full commercial general liability insurance with rapid 24-hr COI turnaround for your management team.',
-      'A single direct point of contact (the owner), a set weekly schedule, and easy automated digital invoicing.',
-      'Rapid storm debris clearance and disaster response to keep your commercial property open and safe.'
+      'Commercial equipment for multi-acre and retail lots on the route.',
+      'Quiet-hour and off-peak scheduling.',
+      'General liability insurance, COI when you need it.',
+      'Owner as the point of contact. Digital invoices.',
+      'Storm cleanup so entrances stay open.',
     ],
-    pricingRange: 'Custom contracts tailored to the property, with most starting around $250 a month',
+    pricingRange: 'Custom contracts quoted after a site walk',
     faqs: [
       {
-        question: 'Are you fully licensed and insured for large commercial work?',
+        question: 'Are you insured for commercial work?',
         answer:
-          'Yes, absolutely. We carry full commercial liability and workers comp insurance. We can issue a certificate of insurance the exact same day you request it, made out directly to your property manager or ownership group for your records.'
+          'Yes. General liability. I can issue a certificate, made out to your manager or board. I do not currently hold a landscape horticulture license.',
       },
       {
-        question: 'Can you handle a sprawling HOA or multi-acre industrial property?',
+        question: 'Can you handle an HOA or a multi-acre site?',
         answer:
-          'We certainly do. We handle everything from miles of common-area mowing and long fence line trimming to entrance beds and monument flowerbeds. You get it all on one schedule, with one simple monthly invoice, and one person (me) to call if you ever need anything.'
-      }
+          'If it sits on the Walker–Denham–Watson route, yes. Common areas, fence lines, entrance beds, one invoice. If it is off the route, ask first and I will tell you straight.',
+      },
     ],
     image: '/images/sbl-project-photo-05.webp',
-    imageAlt: 'Commercial front entrance with fresh black mulch, roses, and flagpoles maintained by Southern Buck Lawn in Livingston, LA',
-  }
+    imageAlt: 'Commercial palm and pine-straw grounds kept by Southern Buck Lawn',
+  },
 ];
 
 export function getService(slug: string) {

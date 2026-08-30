@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import { Send, CheckCircle2, Loader2, Star } from 'lucide-react';
 import { trackEvent } from '@/lib/ga';
 import { GOOGLE_RATING } from '@/data/reviews';
@@ -101,7 +102,7 @@ export default function QuoteForm() {
         <span className="flex items-center gap-1 text-safety-orange-deep" aria-label={`${GOOGLE_RATING.score} out of 5 stars`}>
           {Array.from({ length: 5 }).map((_, index) => <Star key={index} className="h-4 w-4 fill-safety-orange-deep" />)}
         </span>
-        <span className="font-barlow text-sm font-bold uppercase tracking-wide text-midnight-moss">{GOOGLE_RATING.score.toFixed(1)} on Google · Licensed &amp; insured · Free estimates</span>
+        <span className="font-barlow text-sm font-bold uppercase tracking-wide text-midnight-moss">{GOOGLE_RATING.score.toFixed(1)} on Google · Insured · Free estimates</span>
       </div>
 
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
@@ -139,7 +140,10 @@ export default function QuoteForm() {
       <button type="submit" disabled={status === 'sending'} className="flex w-full items-center justify-center gap-2 rounded-lg bg-safety-orange py-4 font-anton text-lg uppercase tracking-wider text-midnight-moss shadow-lg transition-colors hover:bg-orange-hot disabled:cursor-wait disabled:opacity-70">
         {status === 'sending' ? <><Loader2 className="h-5 w-5 animate-spin" /> Sending...</> : <>Request My Free Estimate <Send className="h-5 w-5" /></>}
       </button>
-      <p className="text-center font-barlow text-sm text-gray-500">No obligation. Your information stays with Southern Buck Lawn.</p>
+      <p className="text-center font-barlow text-sm text-gray-500">
+        No obligation. Your information stays with Southern Buck Lawn.{' '}
+        <Link href="/privacy" className="underline decoration-safety-orange underline-offset-2 hover:text-midnight-moss">Privacy</Link>
+      </p>
     </form>
   );
 }

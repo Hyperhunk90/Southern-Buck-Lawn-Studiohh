@@ -1,8 +1,10 @@
 import { Review } from '@/lib/types';
 
-// Real Google Business Profile reviews, transcribed verbatim from the owner's GBP.
-// Do not edit the wording. Add new ones here as they come in.
-export const GOOGLE_RATING = { score: 5.0, count: 6 };
+// Real Google Business Profile reviews, transcribed verbatim.
+// Marty Dantone is family (confirmed 2026-08-30) — do not put in Review schema
+// or present on-page as a customer Google review. Do not invent replacements.
+// reviewCount must equal REVIEWS.length.
+export const GOOGLE_RATING = { score: 5.0, count: 4 };
 
 export const REVIEWS: Review[] = [
   {
@@ -25,13 +27,6 @@ export const REVIEWS: Review[] = [
     rating: 5,
     source: 'Google',
     text: "I couldn't be happier with the yard maintenance services that Southern Buck Lawn provides! Michael is very professional, reasonably priced, and the service he and his team provide is next level! They leave my yard looking stunning each time. I highly recommend them!!",
-  },
-  {
-    author: 'Marty Dantone',
-    area: 'Google review',
-    rating: 5,
-    source: 'Google',
-    text: 'Southern Buck Lawn Care did an awesome job! They showed up on time, were super friendly, and made my yard look great. The grass looks healthy and clean, and they really knew what they were doing. Highly recommend!',
   },
   {
     author: 'Ramsey Treadaway',

@@ -6,10 +6,11 @@ import ObfuscatedEmail from '@/components/ObfuscatedEmail';
 import ServiceAreaMap from '@/components/ServiceAreaMap';
 
 export const metadata: Metadata = {
-  title: 'Contact Southern Buck Lawn | Walker, LA Lawn Care',
+  title: 'Contact in Walker, LA',
   description:
-    'Call, email, or message Southern Buck Lawn for lawn care and landscaping in Walker, Denham Springs, Baton Rouge, and Livingston Parish. We answer fast.',
+    'Call, email, or message Southern Buck Lawn in Walker. Walker, Denham Springs, and Watson. (225) 369-4434 · sbl@southernbucklawn.com',
   alternates: { canonical: '/contact' },
+  openGraph: { url: `${SITE.url}/contact` },
 };
 
 export default function ContactPage() {
@@ -19,7 +20,7 @@ export default function ContactPage() {
         <p className="mb-3 font-barlow text-sm font-bold uppercase tracking-[0.3em] text-safety-orange">Get in touch</p>
         <h1 className="font-anton text-4xl uppercase tracking-wide sm:text-5xl">Contact Southern Buck Lawn</h1>
         <p className="mx-auto mt-4 max-w-2xl font-barlow text-lg text-white/75">
-          Got a question or ready to get on the schedule? Reach out and we will get right back to you.
+          Question, or ready to get on the schedule? Call, text, or send the form. I call back.
         </p>
       </header>
 
@@ -44,6 +45,9 @@ export default function ContactPage() {
                 <span className="font-barlow text-base text-gray-600">Mon&ndash;Fri 6AM&ndash;6:30PM, Sat 6AM&ndash;6PM, Sun 7AM&ndash;4PM</span>
               </div>
             </div>
+            <p className="font-barlow text-lg text-gray-600">
+              Weekly route: Walker, Denham Springs, and Watson. Off that corridor? Ask first.
+            </p>
             <ServiceAreaMap />
           </div>
 

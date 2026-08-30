@@ -46,16 +46,36 @@ const nextConfig = {
       { source: '/sitemap.xml.gz', destination: '/sitemap.xml', permanent: true },
 
       // Old /locations/ URL structure → current /service-areas/ structure.
-      // Bare /locations (no slug) is still indexed by Google as "Service Areas" —
-      // redirect it too, not just the per-city sub-paths.
       { source: '/locations', destination: '/service-areas', permanent: true },
+      { source: '/locations/baton-rouge', destination: '/service-areas', permanent: true },
       { source: '/locations/:slug', destination: '/service-areas/:slug', permanent: true },
+
+      // City×service doorway URLs → the real service silo.
+      { source: '/lawn-mowing-walker', destination: '/services/lawn-mowing', permanent: true },
+      { source: '/lawn-mowing-denham-springs', destination: '/services/lawn-mowing', permanent: true },
+      { source: '/lawn-mowing-baton-rouge', destination: '/services/lawn-mowing', permanent: true },
+      { source: '/lawn-mowing-livingston-parish', destination: '/services/lawn-mowing', permanent: true },
+      { source: '/weed-control-walker', destination: '/services/weed-control', permanent: true },
+      { source: '/weed-control-denham-springs', destination: '/services/weed-control', permanent: true },
+      { source: '/weed-control-baton-rouge', destination: '/services/weed-control', permanent: true },
+      { source: '/weed-control-livingston-parish', destination: '/services/weed-control', permanent: true },
+      { source: '/landscape-design-walker', destination: '/services/landscape-design', permanent: true },
+      { source: '/landscape-design-denham-springs', destination: '/services/landscape-design', permanent: true },
+      { source: '/landscape-design-baton-rouge', destination: '/services/landscape-design', permanent: true },
+      { source: '/landscape-design-livingston-parish', destination: '/services/landscape-design', permanent: true },
+      { source: '/commercial-grounds-baton-rouge', destination: '/services/commercial-grounds', permanent: true },
+      { source: '/commercial-grounds-denham-springs', destination: '/services/commercial-grounds', permanent: true },
+      { source: '/commercial-grounds-walker', destination: '/services/commercial-grounds', permanent: true },
+      { source: '/commercial-grounds-livingston-parish', destination: '/services/commercial-grounds', permanent: true },
+
+      // Baton Rouge is not home turf. Collapse the city silo.
+      { source: '/service-areas/baton-rouge', destination: '/service-areas', permanent: true },
 
       // Old service-area URL patterns still in crawlers' indexes.
       { source: '/walker-lawn-care', destination: '/service-areas/walker', permanent: true },
       { source: '/pages/walker-la', destination: '/service-areas/walker', permanent: true },
-      { source: '/baton-rouge-landscaping', destination: '/service-areas/baton-rouge', permanent: true },
-      { source: '/lawn-care-baton-rouge-la', destination: '/service-areas/baton-rouge', permanent: true },
+      { source: '/baton-rouge-landscaping', destination: '/service-areas', permanent: true },
+      { source: '/lawn-care-baton-rouge-la', destination: '/service-areas', permanent: true },
       { source: '/denham-springs-landscaping', destination: '/service-areas/denham-springs', permanent: true },
       { source: '/hoa-lawn-care-livingston-parish', destination: '/service-areas/livingston-parish', permanent: true },
 
@@ -66,7 +86,7 @@ const nextConfig = {
       { source: '/services/irrigation', destination: '/services', permanent: true },
       { source: '/landscape-design-install', destination: '/services/landscape-design', permanent: true },
       { source: '/landscape-design-installation', destination: '/services/landscape-design', permanent: true },
-      { source: '/landscape-design-walker-la', destination: '/landscape-design-walker', permanent: true },
+      { source: '/landscape-design-walker-la', destination: '/services/landscape-design', permanent: true },
       { source: '/commercial-landscaping', destination: '/services/commercial-grounds', permanent: true },
       { source: '/commercial-grounds-maintenance-contract', destination: '/services/commercial-grounds', permanent: true },
       { source: '/realtor-lawn-services', destination: '/services/commercial-grounds', permanent: true },
@@ -76,8 +96,7 @@ const nextConfig = {
       // Misc old pages with no direct equivalent.
       { source: '/project-gallery', destination: '/gallery', permanent: true },
       { source: '/projects', destination: '/gallery', permanent: true },
-      { source: '/walker-landscaping', destination: '/landscape-design-walker', permanent: true },
-      { source: '/about', destination: '/#about', permanent: true },
+      { source: '/walker-landscaping', destination: '/services/landscape-design', permanent: true },
 
       // Common vanity URLs visitors (and old links) might try.
       { source: '/contact-us', destination: '/contact', permanent: true },

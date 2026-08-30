@@ -5,17 +5,14 @@ import SiteChrome from '@/components/SiteChrome';
 import GaTracker from '@/components/GaTracker';
 import ChatWidget from '@/components/ChatWidget';
 import { SITE } from '@/data/site';
-import { GOOGLE_RATING, REVIEWS } from '@/data/reviews';
 
 
-// Landscape image used as the default social-share preview. A real 2000x1126
-// (~16:9) project photo so Facebook, X, and LinkedIn render a large summary
-// card (their large-card format wants at least 1200x630).
+// Default social-share preview. photo-08 is a daytime white-ranch hedge job.
 const OG_IMAGE = {
   url: '/images/sbl-project-photo-08.webp',
   width: 2000,
   height: 1126,
-  alt: 'Freshly striped backyard lawn mowed by Southern Buck Lawn in Louisiana',
+  alt: 'White ranch with daytime hedge trimming by Southern Buck Lawn',
 };
 
 const anton = Anton({
@@ -28,7 +25,6 @@ const anton = Anton({
   fallback: ['Arial Narrow', 'Arial', 'sans-serif'],
 });
 
-// Archivo is the body/UI face from the Southern Buck Lawn landing-page design.
 const archivo = Archivo({
   weight: ['400', '500', '600', '700', '800'],
   subsets: ['latin'],
@@ -39,7 +35,6 @@ const archivo = Archivo({
   fallback: ['Arial', 'sans-serif'],
 });
 
-// Caveat is the friendly script used for the small "eyebrow" accent lines.
 const caveat = Caveat({
   weight: ['600', '700'],
   subsets: ['latin'],
@@ -52,134 +47,40 @@ const caveat = Caveat({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: 'Southern Buck Lawn | Lawn Care & Landscaping in Walker, LA',
+    default: 'Southern Buck Lawn | Lawn Care in Walker, Denham Springs & Watson',
     template: '%s | Southern Buck Lawn',
   },
   description:
-    'Southern Buck Lawn delivers weekly mowing, weed control, and landscape design across Walker, Denham Springs, Baton Rouge, and Livingston Parish. Local, licensed, and insured. Free quotes.',
+    'Southern Buck Lawn is Michael Dantone in Walker, LA. Weekly mowing, weed control, and landscape work in Walker, Denham Springs, and Watson. Insured. Free quotes.',
   keywords: [
     'lawn care Walker LA',
-    'lawn service Baton Rouge',
-    'landscaping Denham Springs',
-    'lawn mowing Livingston Parish',
+    'lawn service Denham Springs',
+    'lawn mowing Watson LA',
+    'landscaping Livingston Parish',
   ],
-  alternates: { canonical: '/' },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: SITE.url,
     siteName: SITE.name,
-    title: 'Southern Buck Lawn | Lawn Care & Landscaping in Walker, LA',
+    title: 'Southern Buck Lawn | Lawn Care in Walker, Denham Springs & Watson',
     description:
-      'Weekly mowing, weed control, and landscape design across Walker, Denham Springs, Baton Rouge, and Livingston Parish.',
+      'Weekly mowing, weed control, and landscape work from a Walker shop. Serving Walker, Denham Springs, and Watson.',
     images: [OG_IMAGE],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Southern Buck Lawn | Lawn Care & Landscaping in Walker, LA',
+    title: 'Southern Buck Lawn | Lawn Care in Walker, Denham Springs & Watson',
     description:
-      'Weekly mowing, weed control, and landscape design across Walker, Denham Springs, Baton Rouge, and Livingston Parish.',
+      'Weekly mowing, weed control, and landscape work from a Walker shop. Serving Walker, Denham Springs, and Watson.',
     images: [{ url: OG_IMAGE.url, alt: OG_IMAGE.alt }],
   },
   robots: { index: true, follow: true },
-};
-
-const businessJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'LandscapingBusiness',
-  name: SITE.name,
-  image: `${SITE.url}/images/southern-buck-lawn-logo.png`,
-  '@id': `${SITE.url}/#business`,
-  url: SITE.url,
-  telephone: SITE.phoneInternational,
-  founder: SITE.owner,
-  priceRange: '$$',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: SITE.street,
-    addressLocality: SITE.city,
-    addressRegion: SITE.region,
-    postalCode: SITE.postalCode,
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: SITE.geo.lat,
-    longitude: SITE.geo.lng,
-  },
-  hasMap: SITE.social.google,
-  sameAs: [SITE.social.google, SITE.social.facebook, SITE.social.yelp, SITE.social.bbb].filter(Boolean),
-  areaServed: SITE.serviceAreas.map((area) => ({
-    '@type': area.includes('Parish') ? 'AdministrativeArea' : 'City',
-    name: `${area}, Louisiana`,
-  })),
-  knowsAbout: [
-    'Commercial grounds maintenance',
-    'HOA grounds maintenance',
-    'Lawn mowing and edging',
-    'Weed control and fertilization',
-    'Landscape design and mulch installation',
-    'Landscape lighting',
-    'Property preservation and REO services',
-  ],
-  // Real Google Business Profile rating + reviews (src/data/reviews.ts) so
-  // Google can render star-rating rich snippets in search results.
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: GOOGLE_RATING.score,
-    reviewCount: GOOGLE_RATING.count,
-    bestRating: 5,
-    worstRating: 1,
-  },
-  review: REVIEWS.map((r) => ({
-    '@type': 'Review',
-    author: { '@type': 'Person', name: r.author },
-    reviewRating: { '@type': 'Rating', ratingValue: r.rating, bestRating: 5, worstRating: 1 },
-    reviewBody: r.text,
-  })),
-  openingHoursSpecification: [
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      opens: '06:00',
-      closes: '18:30',
-    },
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: 'Saturday',
-      opens: '06:00',
-      closes: '18:00',
-    },
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: 'Sunday',
-      opens: '07:00',
-      closes: '16:00',
-    },
-  ],
-};
-
-const websiteJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  '@id': `${SITE.url}/#website`,
-  name: SITE.name,
-  url: SITE.url,
-  publisher: { '@id': `${SITE.url}/#business` },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${anton.variable} ${archivo.variable} ${caveat.variable}`}>
       <body>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(businessJsonLd) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
-        />
         <SiteChrome>{children}</SiteChrome>
         <ChatWidget />
         <GaTracker />
