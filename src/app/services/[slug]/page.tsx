@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: s.metaTitle,
       description: s.metaDescription,
       url: `${SITE.url}/services/${s.slug}`,
-      images: [{ url: s.image }],
+      images: [{ url: s.image, alt: s.imageAlt }],
     },
   };
 }
@@ -101,7 +101,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               ))}
             </ul>
 
-            <h2 className="pt-4 font-anton text-2xl uppercase text-primary">Where We Offer This</h2>
+            <h2 className="pt-4 font-anton text-2xl uppercase text-primary">Where I Offer This</h2>
             <p className="font-barlow text-lg text-gray-700">
               {service.title} on the weekly route:{' '}
               {AREA_NAV.map((a, i) => (
@@ -129,9 +129,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
           <aside className="space-y-6 lg:col-span-1">
             <div className="rounded-2xl border border-primary/10 bg-white p-6 shadow-sm">
-              <p className="font-barlow text-sm font-bold uppercase tracking-wider text-safety-orange-deep">Typical pricing</p>
+              <p className="font-barlow text-sm font-bold uppercase tracking-wider text-safety-orange-deep">How I quote</p>
               <p className="mt-1 font-anton text-xl uppercase text-midnight-moss">{service.pricingRange}</p>
-              <p className="mt-2 font-barlow text-base text-gray-600">Every yard is different. We give you a firm number after a quick look, free.</p>
+              <p className="mt-2 font-barlow text-base text-gray-600">Every yard is different. I give you a firm number after a quick look, free.</p>
               <Link href="/quote" className="mt-4 block rounded-lg bg-safety-orange py-3 text-center font-anton uppercase tracking-wider text-midnight-moss shadow transition-transform hover:scale-105">
                 Get My Quote
               </Link>
