@@ -115,7 +115,7 @@ export default function Navbar() {
           <Link href="/gallery" className="px-3 py-2 font-archivo text-base font-semibold text-primary transition-colors hover:text-safety-orange-deep">
             Gallery
           </Link>
-          <Link href="/#about" className="px-3 py-2 font-archivo text-base font-semibold text-primary transition-colors hover:text-safety-orange-deep">
+          <Link href="/about" className="px-3 py-2 font-archivo text-base font-semibold text-primary transition-colors hover:text-safety-orange-deep">
             About
           </Link>
           <Link href="/blog" className="px-3 py-2 font-archivo text-base font-semibold text-primary transition-colors hover:text-safety-orange-deep">
@@ -179,6 +179,11 @@ export default function Navbar() {
             <div className="border-t border-cream-line pt-2">
               <Link href="/gallery" onClick={closeAll} className="block rounded px-3 py-2 font-archivo text-lg font-bold text-midnight-moss hover:bg-white">
                 Project Gallery
+              </Link>
+            </div>
+            <div className="border-t border-cream-line pt-2">
+              <Link href="/about" onClick={closeAll} className="block rounded px-3 py-2 font-archivo text-lg font-bold text-midnight-moss hover:bg-white">
+                About
               </Link>
             </div>
             <div className="border-t border-cream-line pt-2">
