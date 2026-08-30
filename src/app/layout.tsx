@@ -7,14 +7,12 @@ import ChatWidget from '@/components/ChatWidget';
 import { SITE } from '@/data/site';
 
 
-// Landscape image used as the default social-share preview. A real 2000x1126
-// (~16:9) project photo so Facebook, X, and LinkedIn render a large summary
-// card (their large-card format wants at least 1200x630).
+// Default social-share preview. photo-08 is a daytime white-ranch hedge job.
 const OG_IMAGE = {
   url: '/images/sbl-project-photo-08.webp',
   width: 2000,
   height: 1126,
-  alt: 'White ranch house with daytime hedge and bed work by Southern Buck Lawn',
+  alt: 'White ranch with daytime hedge trimming by Southern Buck Lawn',
 };
 
 const anton = Anton({
@@ -53,7 +51,7 @@ export const metadata: Metadata = {
     template: '%s | Southern Buck Lawn',
   },
   description:
-    'Southern Buck Lawn is a Walker, LA lawn crew. Weekly mowing, weed control, and landscape work in Walker, Denham Springs, and Watson. Licensed and insured. Free quotes.',
+    'Southern Buck Lawn is Michael Dantone in Walker, LA. Weekly mowing, weed control, and landscape work in Walker, Denham Springs, and Watson. Insured. Free quotes.',
   keywords: [
     'lawn care Walker LA',
     'lawn service Denham Springs',

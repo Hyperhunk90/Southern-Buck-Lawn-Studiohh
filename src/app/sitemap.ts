@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/services',
     '/service-areas',
     '/about',
+    '/privacy',
     '/blog',
     '/landscape-lighting',
     '/property-preservation-reo-services',

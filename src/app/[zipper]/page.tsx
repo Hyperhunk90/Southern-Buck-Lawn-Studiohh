@@ -14,9 +14,9 @@ export async function generateMetadata({ params }: { params: Promise<{ zipper: s
   const combo = getZipper(zipper);
   if (!combo) return {};
   return {
-    title: combo.serviceTitle,
-    alternates: { canonical: `/services/${combo.serviceSlug}` },
+    title: 'Moved',
     robots: { index: false, follow: true },
+    alternates: { canonical: `/services/${combo.serviceSlug}` },
   };
 }
 
