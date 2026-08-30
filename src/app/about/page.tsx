@@ -6,9 +6,9 @@ import { SITE, AREA_NAV, SERVICE_NAV } from '@/data/site';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'About Southern Buck Lawn | Michael Dantone in Walker, LA',
+  title: 'About Michael Dantone in Walker, LA',
   description:
-    'Southern Buck Lawn is run by Michael Dantone from 28790 Brett Dr in Walker, Louisiana. A local crew for Walker, Denham Springs, and Watson. Call (225) 369-4434.',
+    'Southern Buck Lawn is run by Michael Dantone from 28790 Brett Dr in Walker, Louisiana. Walker, Denham Springs, and Watson. Call (225) 369-4434.',
   alternates: { canonical: '/about' },
   openGraph: { url: `${SITE.url}/about` },
 };
@@ -16,8 +16,8 @@ export const metadata: Metadata = {
 const facts = [
   'Based at 28790 Brett Dr, Walker, LA 70785',
   'Home turf: Walker, Denham Springs, and Watson',
-  'Same crew, same day, every week',
-  'Licensed and insured',
+  'One operator — you get Michael',
+  'Insured (general liability)',
   'Free estimates, 24-hour callback',
 ];
 
@@ -29,10 +29,10 @@ export default function AboutPage() {
           <Breadcrumbs trail={[{ name: 'About', href: '/about' }]} />
           <p className="mt-5 font-barlow text-sm font-bold uppercase tracking-[0.3em] text-safety-orange">Walker, Louisiana</p>
           <h1 className="mt-3 font-anton text-4xl uppercase leading-tight tracking-wide sm:text-5xl">
-            A Walker Lawn Crew, Not a Franchise
+            A Walker Lawn Shop, Not a Franchise
           </h1>
           <p className="mt-5 max-w-2xl font-barlow text-lg text-white/80">
-            I&rsquo;m Michael Dantone. I run Southern Buck Lawn from my shop on Brett Drive. When you call, you get me or somebody I trained.
+            I&rsquo;m Michael Dantone. I run Southern Buck Lawn from my shop on Brett Drive. When you call, you get me.
           </p>
         </div>
       </header>
@@ -41,8 +41,8 @@ export default function AboutPage() {
         <div className="mx-auto grid max-w-6xl items-start gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div className="overflow-hidden rounded-2xl border border-primary/10 bg-white shadow-sm">
             <Image
-              src="/images/michael-dantone-owner-waving.webp"
-              alt="Michael Dantone, owner of Southern Buck Lawn in Walker, Louisiana"
+              src="/images/sbl-project-photo-11.webp"
+              alt="Michael Dantone, owner of Southern Buck Lawn, in a branded shirt with a shovel"
               width={800}
               height={1000}
               sizes="(max-width: 1024px) 90vw, 540px"
@@ -55,10 +55,10 @@ export default function AboutPage() {
             <p className="font-caveat text-3xl font-bold text-safety-orange-deep">The Landscape Mayor</p>
             <h2 className="font-anton text-3xl uppercase text-primary">How this shop works</h2>
             <p className="font-barlow text-lg leading-relaxed text-gray-700">
-              Folks around Walker started calling me the Landscape Mayor. It stuck because I am on these streets every week, not because a marketing firm wrote it. This is a small operation. I quote the jobs, I train the crew, and I stand behind the cut.
+              Folks around Walker started calling me the Landscape Mayor. It stuck because I am on these streets every week, not because a marketing firm wrote it. This is a sole proprietorship. I quote the jobs, I do the work, and I stand behind the cut.
             </p>
             <p className="font-barlow text-lg leading-relaxed text-gray-700">
-              We mow, edge, treat weeds, rebuild beds, and keep commercial grounds on a set schedule. Lighting and property-preservation work when the job is a real fit. We do not run a pricing menu on the site because every lot is different. You get a number after I look at it.
+              I mow, edge, treat weeds, rebuild beds, and keep commercial grounds on a set schedule. Lighting and property-preservation work when the job is a real fit. I do not run a pricing menu on the site because every lot is different. You get a number after I look at it. I do not hold a landscape horticulture license yet — that is a dormant-season plan. General liability insurance is in place.
             </p>
             <ul className="space-y-3">
               {facts.map((item) => (
@@ -73,9 +73,9 @@ export default function AboutPage() {
 
       <section className="bg-cream py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="font-anton text-3xl uppercase text-primary">Where we actually run</h2>
+          <h2 className="font-anton text-3xl uppercase text-primary">Where I actually run</h2>
           <p className="mt-4 max-w-3xl font-barlow text-lg text-gray-700">
-            Home turf is Walker 70785, Denham Springs 70726, and Watson 70786. Livingston Parish lots on that corridor are fair game. We do not treat Baton Rouge as a home base. If your property is off the weekly route, say so on the quote form and I will tell you whether we can keep it.
+            Home turf is Walker 70785, Denham Springs 70726, and Watson 70786. Livingston Parish lots on that corridor are fair game. Baton Rouge and Gonzales are not home turf. If your property is off the weekly route, say so on the quote form and I will tell you whether I can keep it.
           </p>
           <div className="mt-8 grid gap-3 sm:grid-cols-2">
             {AREA_NAV.map((a) => (
@@ -88,7 +88,7 @@ export default function AboutPage() {
               </Link>
             ))}
           </div>
-          <h2 className="mt-12 font-anton text-3xl uppercase text-primary">What we do</h2>
+          <h2 className="mt-12 font-anton text-3xl uppercase text-primary">What I do</h2>
           <div className="mt-4 grid gap-3 sm:grid-cols-2">
             {SERVICE_NAV.map((s) => (
               <Link
