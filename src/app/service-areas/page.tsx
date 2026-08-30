@@ -7,10 +7,11 @@ import { SITE } from '@/data/site';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Service Areas | Lawn Care in Walker, Denham Springs & Baton Rouge',
+  title: 'Service Areas | Walker, Denham Springs & Watson Lawn Care',
   description:
-    'Southern Buck Lawn serves Walker, Denham Springs, Baton Rouge, and Livingston Parish with weekly mowing, weed control, and landscaping. Find your town and see how we work your yard.',
+    'Southern Buck Lawn runs Walker, Denham Springs, and Watson every week. See how we handle the soil and the grass where you live. Call (225) 369-4434.',
   alternates: { canonical: '/service-areas' },
+  openGraph: { url: `${SITE.url}/service-areas` },
 };
 
 export default function ServiceAreasIndex() {
@@ -22,11 +23,10 @@ export default function ServiceAreasIndex() {
         </div>
         <p className="mb-3 font-barlow text-sm font-bold uppercase tracking-[0.3em] text-safety-orange">Where we work</p>
         <h1 className="mx-auto max-w-3xl font-anton text-4xl uppercase leading-tight tracking-wide sm:text-5xl">
-          Lawn Care Service Areas Across Livingston Parish &amp; Baton Rouge
+          Walker, Denham Springs, and Watson
         </h1>
         <p className="mx-auto mt-5 max-w-2xl font-barlow text-lg text-white/75">
-          Based in Walker, we cover the towns and parishes around us every week. Pick your area to see how we handle the
-          soil, the weeds, and the grass right where you live.
+          Based on Brett Drive in Walker. Those three towns are the weekly route. Livingston Parish lots on that corridor are fair game. Pick your area.
         </p>
       </header>
 
@@ -38,8 +38,12 @@ export default function ServiceAreasIndex() {
               href={`/service-areas/${l.slug}`}
               className="group grid overflow-hidden rounded-2xl border border-primary/10 bg-white shadow-sm transition-all hover:shadow-xl md:grid-cols-5"
             >
-              <div className={`relative h-60 md:col-span-2 md:h-auto ${i % 2 ? 'md:order-2' : ''}`}>
-                <Image src={l.image} alt={l.imageAlt} fill className="object-cover" sizes="(max-width:768px) 100vw, 40vw" />
+              <div className={`relative flex h-60 items-center justify-center bg-midnight-moss md:col-span-2 md:h-auto ${i % 2 ? 'md:order-2' : ''}`}>
+                {l.image ? (
+                  <Image src={l.image} alt={l.imageAlt || l.name} fill className="object-cover" sizes="(max-width:768px) 100vw, 40vw" />
+                ) : (
+                  <p className="px-6 text-center font-anton text-2xl uppercase tracking-wide text-white">{l.name}</p>
+                )}
               </div>
               <div className="space-y-3 p-7 md:col-span-3">
                 <p className="inline-flex items-center gap-2 font-barlow text-sm font-bold uppercase tracking-[0.2em] text-safety-orange-deep">

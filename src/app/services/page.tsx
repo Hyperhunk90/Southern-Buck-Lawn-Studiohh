@@ -7,10 +7,11 @@ import { SITE } from '@/data/site';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Lawn Care & Landscaping Services in Walker & Baton Rouge',
+  title: 'Lawn Care & Landscaping Services in Walker, LA',
   description:
-    'Mowing, weed control, fertilization, landscape design, mulch, and commercial grounds maintenance across Walker, Denham Springs, and Baton Rouge. See every service from Southern Buck Lawn.',
+    'Mowing, weed control, landscape beds, and commercial grounds from a Walker shop. Serving Walker, Denham Springs, and Watson. Call (225) 369-4434.',
   alternates: { canonical: '/services' },
+  openGraph: { url: `${SITE.url}/services` },
 };
 
 export default function ServicesIndex() {
@@ -22,10 +23,10 @@ export default function ServicesIndex() {
         </div>
         <p className="mb-3 font-barlow text-sm font-bold uppercase tracking-[0.3em] text-safety-orange">Everything we do</p>
         <h1 className="mx-auto max-w-3xl font-anton text-4xl uppercase leading-tight tracking-wide sm:text-5xl">
-          Lawn Care and Landscaping Services in Walker, Louisiana
+          Lawn Care and Landscaping from Walker, Louisiana
         </h1>
         <p className="mx-auto mt-5 max-w-2xl font-barlow text-lg text-white/75">
-          From a weekly cut to a full bed rebuild, we keep yards and commercial grounds sharp across Walker, Denham Springs, Baton Rouge, and Livingston Parish. Pick a service to see how we handle it.
+          Weekly cuts, weed programs, bed rebuilds, and commercial grounds on the Walker, Denham Springs, and Watson route. Pick a service and see how we handle it.
         </p>
       </header>
 
