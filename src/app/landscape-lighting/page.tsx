@@ -17,16 +17,16 @@ import { SITE } from '@/data/site';
 import { REVIEWS } from '@/data/reviews';
 
 export const metadata: Metadata = {
-  title: 'Outdoor Landscape Lighting in Walker, Denham Springs & Baton Rouge | Southern Buck Lawn',
+  title: 'Outdoor Landscape Lighting in Walker, Denham Springs & Watson | Southern Buck Lawn',
   description:
-    'Custom outdoor landscape lighting from Southern Buck Lawn. Path lights, tree uplighting, security flood lights, and patio glow across Walker, Denham Springs, and Baton Rouge. Free estimate, 24-hour callback.',
+    'Custom outdoor landscape lighting from Southern Buck Lawn. Path lights, tree uplighting, security flood lights, and patio glow in Walker, Denham Springs, and Watson. Free estimate, 24-hour callback.',
   alternates: { canonical: '/landscape-lighting' },
   openGraph: {
     title: 'Outdoor Landscape Lighting | Southern Buck Lawn',
     description:
-      'Light up your yard the right way. Path lighting, tree uplighting, security, and patio lighting across Livingston Parish and Baton Rouge.',
+      'Light up your yard the right way. Path lighting, tree uplighting, security, and patio lighting on the Walker, Denham Springs, and Watson route.',
     url: `${SITE.url}/landscape-lighting`,
-    images: [{ url: '/images/sbl-project-photo-09.webp' }],
+    images: [{ url: '/images/sbl-project-photo-02.webp' }],
   },
 };
 
@@ -61,7 +61,7 @@ const WHY = [
 ];
 
 export default function LandscapeLightingPage() {
-  const reviews = REVIEWS.slice(0, 6);
+  const reviews = REVIEWS.slice(0, 4);
 
   return (
     <div className="min-h-screen bg-surface font-barlow text-midnight-moss">
@@ -69,8 +69,8 @@ export default function LandscapeLightingPage() {
       <section className="relative overflow-hidden bg-midnight-moss text-white">
         <div className="absolute inset-0">
           <Image
-            src="/images/sbl-project-photo-10.webp"
-            alt="Outdoor landscape lighting glowing at dusk on a Louisiana property by Southern Buck Lawn"
+            src="/images/sbl-project-photo-02.webp"
+            alt="Brick house at dusk with path lights along the walkway, Southern Buck Lawn"
             fill
             priority
             className="object-cover opacity-35"
@@ -90,7 +90,7 @@ export default function LandscapeLightingPage() {
             </h1>
             <p className="font-barlow text-xl italic text-white/85">Southern Care. The Landscape Mayor.</p>
             <p className="max-w-xl font-barlow text-lg text-white/80">
-              Low-voltage path lights, architectural uplighting, and warm outdoor living glow. 13 years of electrical precision background brought directly to your property.
+              Low-voltage path lights, architectural uplighting, and warm outdoor living glow, quoted after we walk the property.
             </p>
             <div className="pt-2">
               <Link
@@ -149,9 +149,9 @@ export default function LandscapeLightingPage() {
             />
           </div>
           <div className="sm:col-span-3 space-y-4">
-            <h2 className="font-anton text-3xl uppercase text-deep-forest">Backed by 13 Years Electrical Precision</h2>
+            <h2 className="font-anton text-3xl uppercase text-deep-forest">Owner-Installed Lighting</h2>
             <p className="font-barlow text-lg text-midnight-moss/80">
-              I am Michael Dantone, owner of Southern Buck Lawn. With over 13 years of industrial electrical background, we treat outdoor lighting installations with complete technical precision—watertight connections, balanced circuits, and long-lasting pro-grade fixtures.
+              I am Michael Dantone. I run Southern Buck Lawn from Walker. Lighting jobs we take get watertight connections and fixtures we will stand behind — quoted after we see the property, not from a menu.
             </p>
 
             <h3 className="pt-2 font-anton text-xl uppercase text-deep-forest">Why Choose Us</h3>
