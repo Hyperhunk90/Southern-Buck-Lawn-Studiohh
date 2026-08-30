@@ -39,7 +39,13 @@ export default function ServiceAreasIndex() {
               className="group grid overflow-hidden rounded-2xl border border-primary/10 bg-white shadow-sm transition-all hover:shadow-xl md:grid-cols-5"
             >
               <div className={`relative h-60 md:col-span-2 md:h-auto ${i % 2 ? 'md:order-2' : ''}`}>
-                <Image src={l.image} alt={l.imageAlt} fill className="object-cover" sizes="(max-width:768px) 100vw, 40vw" />
+                {l.image ? (
+                  <Image src={l.image} alt={l.imageAlt || l.name} fill className="object-cover" sizes="(max-width:768px) 100vw, 40vw" />
+                ) : (
+                  <div className="flex h-full min-h-[15rem] items-center justify-center bg-midnight-moss px-6 text-center">
+                    <p className="font-anton text-2xl uppercase tracking-wide text-white">Serving {l.name}</p>
+                  </div>
+                )}
               </div>
               <div className="space-y-3 p-7 md:col-span-3">
                 <p className="inline-flex items-center gap-2 font-barlow text-sm font-bold uppercase tracking-[0.2em] text-safety-orange-deep">
