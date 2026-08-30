@@ -17,7 +17,6 @@ export default function PropertyPreservationPage() {
     <div className="flex min-h-screen flex-col bg-light-tan">
       <main className="flex-grow pt-20 sm:pt-24">
         <section className="relative overflow-hidden bg-midnight-moss px-4 py-20 sm:px-6 sm:py-32 lg:px-8">
-          {/* No stock. No Unsplash. No AI fill. Real REO photos still needed from Michael. */}
           <div className="absolute inset-0 z-0 bg-gradient-to-t from-midnight-moss via-midnight-moss to-deep-forest" />
 
           <ReoHeroContent />
