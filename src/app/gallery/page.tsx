@@ -7,23 +7,22 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import GalleryClient from '@/components/GalleryClient';
 
 export const metadata: Metadata = {
-  title: 'Project Gallery | Lawn Mowing, Mulch & Landscaping Photos | Southern Buck Lawn',
+  title: 'Project Gallery — Lawn, Mulch & Lighting Photos',
   description:
-    'Real Southern Buck Lawn job photos: path lighting at dusk, a commercial palm and pine-straw property, ranch hedge work, and the work trailer. Honest captions, no stock.',
+    'Real job photos from Southern Buck Lawn: dusk path lighting, commercial palm and pine-straw beds, and daytime hedge work. No stock photos.',
   keywords: [
     'lawn care gallery Walker LA',
-    'mulch installation photos Denham Springs',
-    'Southern Buck Lawn job photos',
-    'commercial lawn care photos Livingston Parish',
+    'mulch installation photos',
+    'landscape lighting photos',
     'Southern Buck Lawn work gallery',
   ],
   alternates: { canonical: '/gallery' },
   openGraph: {
     url: `${SITE.url}/gallery`,
-    title: 'Project Gallery | Southern Buck Lawn Job Photos',
+    title: 'Project Gallery',
     description:
-      'Real job files from Southern Buck Lawn. Captions match what is in the photo.',
-    images: [{ url: '/images/sbl-project-photo-02.webp' }],
+      'Real photos from real jobs. Captions match the files. No stock, no generated pictures.',
+    images: [{ url: '/images/sbl-project-photo-08.webp', alt: 'White ranch with daytime hedge trimming' }],
   },
 };
 
@@ -33,7 +32,7 @@ export default function GalleryPage() {
     '@type': 'ImageGallery',
     name: 'Southern Buck Lawn Project Gallery',
     description:
-      'Real Southern Buck Lawn job photos with captions that match the files.',
+      'Real lawn care, mulch, landscape, and grounds photos. Captions match the files.',
     url: `${SITE.url}/gallery`,
     publisher: {
       '@type': 'LocalBusiness',
@@ -59,7 +58,6 @@ export default function GalleryPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(imageGallerySchema) }}
       />
 
-      {/* Hero Header */}
       <section className="relative border-b-8 border-primary bg-midnight-moss pb-16 pt-12 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-6">
@@ -70,50 +68,47 @@ export default function GalleryPage() {
             <div className="mb-4 flex items-center gap-2">
               <span className="flex items-center gap-1.5 rounded-full bg-safety-orange/20 px-3.5 py-1 font-archivo text-xs font-bold uppercase tracking-wider text-safety-orange border border-safety-orange/30">
                 <Sparkles className="h-3.5 w-3.5" />
-                Real Local Work &bull; No Stock Photos
+                Real Work &bull; No Stock Photos
               </span>
             </div>
 
             <h1 className="mb-4 font-anton text-4xl uppercase tracking-tight text-white sm:text-5xl lg:text-6xl">
-              PROJECT <span className="text-safety-orange">GALLERY</span>
+              PROJECT GALLERY
             </h1>
 
             <p className="mb-8 font-barlow text-lg text-white/80 leading-relaxed sm:text-xl">
-              These are real job files. We do not label a photo as a city, a before-and-after, or a mowing stripe unless that is what the picture shows.
+              Real jobs. Captions match the files: dusk path lights, commercial palm and pine-straw beds, daytime hedge work on a white ranch. I do not invent cities onto these photos. Filter by service type below.
             </p>
 
-            {/* Quick Stats Badges */}
             <div className="grid grid-cols-2 gap-3 sm:flex sm:items-center sm:gap-6 font-barlow text-sm font-semibold text-white/90">
               <div className="flex items-center gap-2 rounded-xl bg-white/10 px-3.5 py-2 backdrop-blur-sm">
                 <ShieldCheck className="h-4 w-4 text-safety-orange" />
-                <span>Real Local Project Photos</span>
+                <span>Real Job Photos</span>
               </div>
               <div className="flex items-center gap-2 rounded-xl bg-white/10 px-3.5 py-2 backdrop-blur-sm">
                 <Star className="h-4 w-4 text-safety-orange fill-safety-orange" />
-                <span>5.0 Star Rated Crew</span>
+                <span>Owner on the job</span>
               </div>
               <div className="flex items-center gap-2 rounded-xl bg-white/10 px-3.5 py-2 backdrop-blur-sm col-span-2 sm:col-span-1">
                 <CheckCircle2 className="h-4 w-4 text-sage" />
-                <span>Owner-Led Local Service</span>
+                <span>Walker shop</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Main Gallery Section */}
       <GalleryClient />
 
-      {/* Bottom Conversion Banner */}
       <section className="border-t border-cream-line bg-midnight-moss py-16 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center justify-between gap-8 rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-md lg:flex-row lg:p-12">
             <div className="max-w-2xl text-center lg:text-left">
               <h2 className="mb-3 font-anton text-3xl uppercase tracking-tight text-white sm:text-4xl">
-                Ready for Your Own <span className="text-safety-orange">Yard Transformation</span>?
+                Ready for Your Own <span className="text-safety-orange">Yard</span>?
               </h2>
               <p className="font-barlow text-lg text-white/80 leading-relaxed">
-                Whether you need weekly precision mowing, fresh mulch installation, or a complete flowerbed cleanup, Michael Dantone and the Southern Buck crew are ready to learn about your property. Request a free quote online.
+                Weekly mowing, beds, or a lighting install — Michael will look at the property and quote it. No price list on the site because every lot is different.
               </p>
             </div>
 
