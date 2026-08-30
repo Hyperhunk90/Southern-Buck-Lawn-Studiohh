@@ -42,7 +42,6 @@ export default function Home() {
   return (
     <>
       <BusinessJsonLd />
-      {/* HERO */}
       <header className="relative overflow-hidden bg-deep-forest pt-20">
         <div className="absolute inset-0">
           <Image
@@ -57,23 +56,18 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-deep-forest/90 via-deep-forest/70 to-deep-forest/30" />
           <div className="absolute inset-0 bg-gradient-to-t from-deep-forest/85 via-transparent to-deep-forest/40" />
         </div>
-
         <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
           <div className="max-w-2xl space-y-6">
             <span className="inline-flex items-center gap-2 rounded-full border border-sage/50 bg-safety-orange/20 px-4 py-1.5 font-archivo text-xs font-bold uppercase tracking-widest text-sage">
               <MapPin className="h-4 w-4" /> Walker &middot; Denham Springs &middot; Watson
             </span>
-
             <p className="font-caveat text-3xl font-bold text-sage sm:text-4xl">Owner-operated in Walker since 2013</p>
-
             <h1 className="font-anton text-5xl uppercase leading-[0.95] tracking-wide text-white sm:text-7xl">
               Yards Worth <span className="text-safety-orange">Showing Off.</span>
             </h1>
-
             <p className="max-w-xl font-archivo text-lg leading-relaxed text-white/85 sm:text-xl">
               Weekly mowing, weed control, hedge trimming, and bed work from a shop on Brett Drive. I run Walker, Denham Springs, and Watson. Your yard gets me, on the same day, every week.
             </p>
-
             <div className="inline-flex items-center gap-4 rounded-full border border-white/15 bg-black/25 p-2.5 pr-6 backdrop-blur-sm">
               <Image
                 src="/images/michael-dantone-southern-buck-lawn-walker.webp"
@@ -88,7 +82,6 @@ export default function Home() {
                 <p className="font-archivo text-sm font-semibold uppercase tracking-wider text-sage">The Landscape Mayor</p>
               </div>
             </div>
-
             <div className="flex flex-col gap-4 pt-2 sm:flex-row">
               <Link href="/quote" className="group flex items-center justify-center gap-2 rounded-xl bg-safety-orange px-8 py-4 font-anton text-lg uppercase tracking-wider text-midnight-moss shadow-xl transition-all hover:scale-105 active:scale-95">
                 Get a Free Quote <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -97,7 +90,6 @@ export default function Home() {
                 <PhoneCall className="h-5 w-5" /> {SITE.phone}
               </a>
             </div>
-
             <div className="flex flex-wrap gap-x-6 gap-y-2 pt-2 font-archivo text-sm font-semibold text-white/85">
               <span className="flex items-center gap-1.5"><Check className="h-4 w-4 text-safety-orange" /> Free estimates</span>
               <span className="flex items-center gap-1.5"><Check className="h-4 w-4 text-safety-orange" /> Insured (GL)</span>
@@ -106,16 +98,12 @@ export default function Home() {
           </div>
         </div>
       </header>
-
-      {/* OFFER STRIP */}
       <section className="bg-safety-orange py-5">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-x-4 gap-y-1 px-4 text-center sm:flex-row sm:px-6 lg:px-8">
           <span className="font-anton text-2xl uppercase tracking-wide text-midnight-moss sm:text-3xl">Free estimates &middot; 24-hour callback</span>
           <span className="font-archivo text-base font-semibold text-midnight-moss">New customers welcome &mdash; same day every week, owner on the job.</span>
         </div>
       </section>
-
-      {/* TRUST BAR */}
       <section className="border-b border-cream-line bg-cream py-10">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 sm:px-6 lg:grid-cols-4 lg:px-8">
           {[
@@ -134,8 +122,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
-      {/* SERVICES */}
       <section id="services" className="bg-surface py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
@@ -167,8 +153,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* COMMERCIAL / HOA */}
       <section className="bg-midnight-moss py-16 text-white">
         <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_auto] lg:px-8">
           <div>
@@ -188,8 +172,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* PROOF BAND — real results */}
       <section className="relative overflow-hidden bg-deep-forest">
         <Image
           src="/images/sbl-project-photo-10.webp"
@@ -212,8 +194,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* RECENT WORK */}
       <section id="work" className="bg-cream py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
@@ -242,8 +222,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* ABOUT — Meet the Buck */}
       <section id="about" className="bg-primary py-20">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-12 px-4 sm:px-6 lg:flex-row lg:px-8">
           <div className="flex-none">
@@ -280,8 +258,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* SERVICE AREA */}
       <section className="bg-surface py-20">
         <div className="mx-auto grid max-w-7xl items-start gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div className="space-y-6">
@@ -306,8 +282,6 @@ export default function Home() {
           <ServiceAreaMap />
         </div>
       </section>
-
-      {/* REVIEWS / SOCIAL PROOF */}
       <section className="bg-cream py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10 text-center">
@@ -315,7 +289,6 @@ export default function Home() {
             <h2 className="font-anton text-4xl uppercase tracking-wide text-midnight-moss sm:text-5xl">I Earn It One Yard at a Time</h2>
             <div className="mx-auto mt-4 h-1 w-24 rounded bg-safety-orange" />
           </div>
-
           <div className="grid gap-6 md:grid-cols-2">
             {REVIEWS.map((r) => (
               <figure key={r.author} className="flex flex-col rounded-2xl border border-cream-line bg-white p-6 shadow-sm">
@@ -332,14 +305,11 @@ export default function Home() {
               </figure>
             ))}
           </div>
-
           <div className="mt-12">
             <ReviewBadgeBar />
           </div>
         </div>
       </section>
-
-      {/* FINAL CTA */}
       <section className="bg-surface py-20">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <p className="font-caveat text-3xl font-bold text-safety-orange-deep">Lock in your spot</p>
