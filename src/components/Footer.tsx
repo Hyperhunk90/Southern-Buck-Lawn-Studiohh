@@ -15,7 +15,7 @@ export default function Footer() {
               <span className="font-anton text-2xl tracking-wide">SOUTHERN BUCK <span className="text-safety-orange">LAWN</span></span>
             </Link>
             <p className="mb-6 max-w-md font-barlow text-lg leading-relaxed text-white/70">
-              Lawn care from Walker. Run by Michael Dantone. Weekly route is Walker, Denham Springs, and Watson. Same crew, same day, work we put our name on.
+              Lawn care from Walker. Run by Michael Dantone. Weekly route is Walker, Denham Springs, and Watson. Same day, work I put my name on.
             </p>
             <div className="space-y-2 font-barlow">
               <a href={SITE.phoneHref} className="flex items-center gap-2 text-white/80 hover:text-safety-orange">
@@ -72,8 +72,9 @@ export default function Footer() {
           <p className="font-barlow text-sm tracking-wider text-white/50">
             &copy; {new Date().getFullYear()} Southern Buck Lawn. All rights reserved. Walker, Louisiana.
           </p>
-          <div className="flex items-center gap-5 font-barlow text-sm tracking-wider text-white/60">
+          <div className="flex flex-wrap items-center justify-center gap-5 font-barlow text-sm tracking-wider text-white/60">
             <Link href="/about" className="hover:text-safety-orange">About</Link>
+            <Link href="/privacy" className="hover:text-safety-orange">Privacy</Link>
             <Link href="/gallery" className="hover:text-safety-orange">Project Gallery</Link>
             <Link href="/blog" className="hover:text-safety-orange">Blog</Link>
             <Link href="/quote" className="hover:text-safety-orange">Free Quote</Link>
