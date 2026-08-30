@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import { ShieldCheck, Camera, Trash2 } from 'lucide-react';
 import ReoForm from './ReoForm';
 import ReoHeroContent from './ReoHeroContent';
@@ -12,6 +11,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://southernbucklawn.com/property-preservation-reo-services',
   },
+  openGraph: {
+    url: 'https://southernbucklawn.com/property-preservation-reo-services',
+  },
 };
 
 export default function PropertyPreservationPage() {
@@ -20,18 +22,7 @@ export default function PropertyPreservationPage() {
       <main className="flex-grow pt-20 sm:pt-24">
         {/* HERO SECTION */}
         <section className="relative overflow-hidden bg-midnight-moss px-4 py-20 sm:px-6 sm:py-32 lg:px-8">
-          {/* Background image/overlay */}
-          <div className="absolute inset-0 z-0">
-            <Image
-              src="https://images.unsplash.com/photo-1599839619722-39751411ea63?auto=format&fit=crop&q=80&w=2000"
-              alt="Abandoned property being cleaned up"
-              fill
-              className="object-cover opacity-20 grayscale"
-              priority
-              referrerPolicy="no-referrer"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-midnight-moss via-midnight-moss/80 to-transparent"></div>
-          </div>
+          <div className="absolute inset-0 z-0 bg-gradient-to-t from-midnight-moss via-deep-forest to-midnight-moss" />
 
           <ReoHeroContent />
         </section>
@@ -44,7 +35,7 @@ export default function PropertyPreservationPage() {
                 What We Do
               </h2>
               <p className="font-barlow text-lg text-gray-700 sm:text-xl">
-                Let’s shoot straight: we’ve seen it all, and frankly, it takes a whole lot to scare us off a property. Whether the previous tenants left it broom-clean or it looks like a bomb went off in the living room, we get it show-ready.
+                Let's shoot straight: we've seen it all, and frankly, it takes a whole lot to scare us off a property. Whether the previous tenants left it broom-clean or it looks like a bomb went off in the living room, we get it show-ready.
               </p>
             </div>
 
@@ -84,7 +75,7 @@ export default function PropertyPreservationPage() {
                   Initial Securing & Board-Ups
                 </h3>
                 <p className="font-barlow text-base text-gray-700">
-                  We lock it down. We’ll rekey the doors, board up the busted windows, and keep the weather (and the local wildlife) on the outside where they belong.
+                  We lock it down. We'll rekey the doors, board up the busted windows, and keep the weather (and the local wildlife) on the outside where they belong.
                 </p>
               </div>
 
@@ -116,7 +107,7 @@ export default function PropertyPreservationPage() {
                 </h2>
                 <div className="space-y-6 font-barlow text-lg text-gray-700 sm:text-xl">
                   <p>
-                    We aren't some fly-by-night guys working out of the back of a rusty sedan. We are a legitimate, fully insured operation based right here in Walker, Louisiana, proudly serving the Denham Springs and Greater Baton Rouge areas.
+                    We aren't some fly-by-night guys working out of the back of a rusty sedan. We are a legitimate, fully insured operation based right here in Walker, Louisiana, on the Walker, Denham Springs, and Watson route.
                   </p>
                   <p>
                     We run our business the old-fashioned way: we answer the phone, we do exactly what we say we're gonna do, and we don't cut corners. Period. When you assign a property to us, you can cross it off your worry list.
@@ -125,14 +116,14 @@ export default function PropertyPreservationPage() {
 
                 <div className="mt-12 rounded-xl bg-white p-8 shadow-sm">
                   <h3 className="mb-4 font-anton text-2xl uppercase tracking-wide text-midnight-moss">
-                    Let’s Get to Work
+                    Let's Get to Work
                   </h3>
                   <p className="font-barlow text-base text-gray-700">
                     Stop wasting time chasing down unreliable contractors. Drop your details in the form, or if you already have a scope of work ready to rock, email it directly to{' '}
                     <a href={SITE.emailHref} className="font-bold text-safety-orange hover:underline">
                       {SITE.email}
                     </a>{' '}
-                    and we’ll get you on the schedule.
+                    and we'll get you on the schedule.
                   </p>
                 </div>
               </div>
