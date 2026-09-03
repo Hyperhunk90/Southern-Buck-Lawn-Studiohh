@@ -55,6 +55,10 @@ test('HTML cache lifetime is bounded and business facts match the owner confirma
   assert.match(read('src/data/site.ts'), /Monday – Sunday.*6:00 AM – 6:30 PM/);
   assert.match(read('src/app/about/page.tsx'), /since June 2024/);
   assert.doesNotMatch(read('src/app/page.tsx'), /since 2013/i);
+  for (const path of ['src/components/Footer.tsx', 'src/app/quote/page.tsx', 'src/app/contact/page.tsx']) {
+    assert.match(read(path), /SITE\.hours\.map/, `${path} must use the confirmed central hours`);
+    assert.doesNotMatch(read(path), /Mon&ndash;Fri|Sat 6AM|Sun 7AM/, path);
+  }
 });
 
 test('legacy URLs reported as 404s in Search Console redirect to current equivalents', () => {

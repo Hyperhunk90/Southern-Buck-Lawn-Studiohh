@@ -42,7 +42,7 @@ export default function ContactPage() {
               <div className="flex flex-col gap-2 rounded-2xl border border-primary/10 bg-white p-6 shadow-sm">
                 <Clock className="h-7 w-7 text-safety-orange" />
                 <span className="font-anton text-lg uppercase text-midnight-moss">Hours</span>
-                <span className="font-barlow text-base text-gray-600">Mon&ndash;Fri 6AM&ndash;6:30PM, Sat 6AM&ndash;6PM, Sun 7AM&ndash;4PM</span>
+                <span className="font-barlow text-base text-gray-600">{SITE.hours.map(({ days, time }) => `${days} ${time}`).join(', ')}</span>
               </div>
             </div>
             <p className="font-barlow text-lg text-gray-600">

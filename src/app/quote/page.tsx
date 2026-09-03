@@ -33,7 +33,7 @@ export default function QuotePage() {
               </a>
               <ObfuscatedEmail className="flex items-center gap-3 font-barlow text-lg hover:text-sage" iconClassName="h-6 w-6 text-safety-orange" />
               <p className="flex items-center gap-3 font-barlow text-lg">
-                <Clock className="h-6 w-6 text-safety-orange" /> Open 7 days &middot; Mon&ndash;Fri 6AM&ndash;6:30PM
+                <Clock className="h-6 w-6 text-safety-orange" /> {SITE.hours.map(({ days, time }) => `${days} ${time}`).join(', ')}
               </p>
               <p className="flex items-center gap-3 font-barlow text-lg">
                 <ShieldCheck className="h-6 w-6 text-safety-orange" /> Insured (general liability)
