@@ -42,8 +42,8 @@ export const SERVICES: Service[] = [
           'Mulch by default — chopped clippings feed the soil. After a wet stretch, if it is too heavy, I bag or spread it so you are not left with clumps baking on the lawn.',
       },
     ],
-    image: '/images/sbl-project-photo-08.webp',
-    imageAlt: 'White ranch with daytime hedge trimming and a clean lawn edge, Southern Buck Lawn work',
+    image: '/images/walker-lawn-stripes-after.webp',
+    imageAlt: 'Freshly mowed green lawn with diagonal stripes beside a white brick house in Walker, Louisiana.',
   },
   {
     slug: 'weed-control',
@@ -86,8 +86,8 @@ export const SERVICES: Service[] = [
           'Mid-spring once it is fully green and growing. Late summer I shift potassium-heavy so it heads into dormancy tougher, not softer.',
       },
     ],
-    image: '/images/sbl-project-photo-09.webp',
-    imageAlt: 'Daytime white ranch lawn after hedge and bed work by Southern Buck Lawn',
+    image: '/images/baton-rouge-hedge-bed-during.webp',
+    imageAlt: 'Freshly trimmed green hedge around a front bed with soil and clippings at a Baton Rouge brick house.',
   },
   {
     slug: 'landscape-design',
@@ -130,8 +130,8 @@ export const SERVICES: Service[] = [
           'Pine straw is light, cheap, and good on slopes and around azaleas. Hardwood holds color and stays put in rain. I will tell you which fits your beds when I walk them.',
       },
     ],
-    image: '/images/sbl-project-photo-04.webp',
-    imageAlt: 'Commercial palm trees and pine-straw beds, real Southern Buck Lawn job',
+    image: '/images/denham-springs-mulch-edging-after.webp',
+    imageAlt: 'Fresh red mulch bed with boxwoods and gray stone edging wrapping a brick house corner in Denham Springs.',
   },
   {
     slug: 'commercial-grounds',
@@ -175,8 +175,8 @@ export const SERVICES: Service[] = [
           'If it sits on the Walker–Denham–Watson route, yes. Common areas, fence lines, entrance beds, one invoice. If it is off the route, ask first and I will tell you straight.',
       },
     ],
-    image: '/images/sbl-project-photo-05.webp',
-    imageAlt: 'Commercial palm and pine-straw grounds kept by Southern Buck Lawn',
+    image: '/images/sherwood-oaks-commercial-trim.webp',
+    imageAlt: 'Bad Boy Magnum zero-turn and string trimming around shrubs at a Sherwood Oaks property under a blue sky.',
   },
 ];
 
