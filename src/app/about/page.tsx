@@ -8,13 +8,13 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 export const metadata: Metadata = {
   title: 'About Michael Dantone in Walker, LA',
   description:
-    'Southern Buck Lawn is owner-operated by Michael Dantone since 2013 from 28790 Brett Dr in Walker, Louisiana. Walker, Denham Springs, and Watson. Call (225) 369-4434.',
+    'Southern Buck Lawn is owner-operated by Michael Dantone since June 2024 from 28790 Brett Dr in Walker, Louisiana. Walker, Denham Springs, and Watson. Call (225) 369-4434.',
   alternates: { canonical: '/about' },
   openGraph: { url: `${SITE.url}/about` },
 };
 
 const facts = [
-  'Owner-operated since 2013',
+  'Owner-operated since June 2024',
   'Based at 28790 Brett Dr, Walker, LA 70785',
   'Home turf: Walker, Denham Springs, and Watson',
   'One operator — you get Michael',
@@ -33,7 +33,7 @@ export default function AboutPage() {
             A Walker Lawn Shop, Not a Franchise
           </h1>
           <p className="mt-5 max-w-2xl font-barlow text-lg text-white/80">
-            I&rsquo;m Michael Dantone. I have run Southern Buck Lawn from Brett Drive since 2013. When you call, you get me.
+            I&rsquo;m Michael Dantone. I have run Southern Buck Lawn from Brett Drive since June 2024. When you call, you get me.
           </p>
         </div>
       </header>
@@ -56,7 +56,7 @@ export default function AboutPage() {
             <p className="font-caveat text-3xl font-bold text-safety-orange-deep">The Landscape Mayor</p>
             <h2 className="font-anton text-3xl uppercase text-primary">How this shop works</h2>
             <p className="font-barlow text-lg leading-relaxed text-gray-700">
-              Folks around Walker started calling me the Landscape Mayor. It stuck because I am on these streets every week, not because a marketing firm wrote it. This is a sole proprietorship, owner-operated since 2013. I quote the jobs, I do the work, and I stand behind the cut.
+              Folks around Walker started calling me the Landscape Mayor. It stuck because I am on these streets every week, not because a marketing firm wrote it. This is a sole proprietorship, owner-operated since June 2024. I quote the jobs, I do the work, and I stand behind the cut.
             </p>
             <p className="font-barlow text-lg leading-relaxed text-gray-700">
               I mow, edge, treat weeds, rebuild beds, and keep commercial grounds on a set schedule. Lighting and winter-secure / property-preservation work when the job is a real fit &mdash; that is where 13 years of industrial electrical belongs, not as a horticulture license. I do not hold a landscape horticulture license. I do not run a pricing menu on the site because every lot is different. You get a number after I look at it. General liability insurance is in place.

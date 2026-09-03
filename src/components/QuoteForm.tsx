@@ -22,7 +22,7 @@ const FREQUENCIES = ['Weekly', 'Every other week', 'Monthly', 'One time', 'Reque
 export default function QuoteForm() {
   const [form, setForm] = useState({
     name: '', phone: '', email: '', address: '', propertyType: 'Residential', companyName: '',
-    service: SERVICES[0], lotSize: LOT_SIZES[1], frequency: FREQUENCIES[0], message: '', company: '',
+    service: SERVICES[0], lotSize: LOT_SIZES[1], frequency: FREQUENCIES[0], message: '',
     sourcePage: '', landingPage: '', referrer: '', campaign: '',
   });
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
@@ -66,7 +66,7 @@ export default function QuoteForm() {
         body: JSON.stringify({ type: 'Quote Request', ...form }),
       });
       const result = await response.json().catch(() => ({}));
-      if (!response.ok) throw new Error(result.error || 'We could not send your request.');
+      if (!response.ok || result?.ok !== true) throw new Error(result?.error || 'We could not send your request.');
       setStatus('sent');
       trackEvent('generate_lead', {
         form_name: 'quote',
@@ -94,10 +94,6 @@ export default function QuoteForm() {
 
   return (
     <form onSubmit={submit} className="space-y-5" aria-busy={status === 'sending'}>
-      <div aria-hidden="true" className="absolute left-[-9999px] top-[-9999px] h-0 w-0 overflow-hidden">
-        <label>Company<input type="text" name="company" tabIndex={-1} autoComplete="off" value={form.company} onChange={(e) => update('company', e.target.value)} /></label>
-      </div>
-
       <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 rounded-lg bg-mist-green px-4 py-2.5 text-center">
         <span className="flex items-center gap-1 text-safety-orange-deep" aria-label={`${GOOGLE_RATING.score} out of 5 stars`}>
           {Array.from({ length: 5 }).map((_, index) => <Star key={index} className="h-4 w-4 fill-safety-orange-deep" />)}

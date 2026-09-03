@@ -148,7 +148,7 @@ export default function LandscapeLightingPage() {
           <div className="sm:col-span-3 space-y-4">
             <h2 className="font-anton text-3xl uppercase text-deep-forest">Backed by 13 Years Electrical Precision</h2>
             <p className="font-barlow text-lg text-midnight-moss/80">
-              I am Michael Dantone, owner of Southern Buck Lawn since 2013. With 13 years of industrial electrical background, I treat outdoor lighting installs with technical precision &mdash; watertight connections, balanced circuits, and fixtures that last in this humidity. That electrical work is not a landscape horticulture license. If a lighting install is not a fit, I will tell you that up front.
+              I am Michael Dantone, owner of Southern Buck Lawn since June 2024. With 13 years of industrial electrical background, I treat outdoor lighting installs with technical precision &mdash; watertight connections, balanced circuits, and fixtures that last in this humidity. That electrical work is not a landscape horticulture license. If a lighting install is not a fit, I will tell you that up front.
             </p>
 
             <h3 className="pt-2 font-anton text-xl uppercase text-deep-forest">Why Choose Us</h3>

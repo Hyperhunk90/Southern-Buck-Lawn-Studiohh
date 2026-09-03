@@ -1,11 +1,10 @@
 import { SITE } from '@/data/site';
-import { GOOGLE_RATING, REVIEWS } from '@/data/reviews';
 
 // Homepage-only. Do not mount this on 404s or inner pages.
 export default function BusinessJsonLd() {
   const businessJsonLd = {
     '@context': 'https://schema.org',
-    '@type': ['LocalBusiness', 'LandscapingBusiness'],
+    '@type': 'LocalBusiness',
     name: SITE.name,
     image: `${SITE.url}/images/southern-buck-lawn-logo.png`,
     '@id': `${SITE.url}/#business`,
@@ -42,37 +41,12 @@ export default function BusinessJsonLd() {
       'Landscape lighting',
       'Property preservation and REO services',
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: GOOGLE_RATING.score,
-      reviewCount: REVIEWS.length,
-      bestRating: 5,
-      worstRating: 1,
-    },
-    review: REVIEWS.map((r) => ({
-      '@type': 'Review',
-      author: { '@type': 'Person', name: r.author },
-      reviewRating: { '@type': 'Rating', ratingValue: r.rating, bestRating: 5, worstRating: 1 },
-      reviewBody: r.text,
-    })),
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
         opens: '06:00',
         closes: '18:30',
-      },
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: 'Saturday',
-        opens: '06:00',
-        closes: '18:00',
-      },
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: 'Sunday',
-        opens: '07:00',
-        closes: '16:00',
       },
     ],
   };

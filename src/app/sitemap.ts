@@ -5,7 +5,7 @@ import { POSTS } from '@/data/blog';
 import { SITE } from '@/data/site';
 
 // Bump when page content meaningfully changes. Do not use `new Date()` per build.
-const LAST_CONTENT_UPDATE = new Date('2026-08-30');
+const LAST_CONTENT_UPDATE = new Date('2026-09-03');
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = SITE.url;

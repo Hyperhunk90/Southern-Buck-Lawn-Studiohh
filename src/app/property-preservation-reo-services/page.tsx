@@ -7,7 +7,7 @@ import { SITE } from '@/data/site';
 export const metadata: Metadata = {
   title: 'Property Preservation & REO Trash-Outs in Walker, LA',
   description:
-    'Property preservation, REO debris removal, and winter-secure work from Walker. Southern Buck Lawn. Insured, owner-operated since 2013. Walker, Denham Springs, and Watson.',
+    'Property preservation, REO debris removal, and winter-secure work from Walker. Southern Buck Lawn. Insured, owner-operated since June 2024. Walker, Denham Springs, and Watson.',
   alternates: { canonical: '/property-preservation-reo-services' },
   openGraph: { url: `${SITE.url}/property-preservation-reo-services` },
 };
@@ -94,7 +94,7 @@ export default function PropertyPreservationPage() {
                 </h2>
                 <div className="space-y-6 font-barlow text-lg text-gray-700 sm:text-xl">
                   <p>
-                    I am a sole prop, owner-operated since 2013, with general liability insurance, based at 28790 Brett Dr in Walker. Home turf is Walker, Denham Springs, and Watson. I do not treat Baton Rouge as a home market.
+                    I am a sole prop, owner-operated since June 2024, with general liability insurance, based at 28790 Brett Dr in Walker. Home turf is Walker, Denham Springs, and Watson. I do not treat Baton Rouge as a home market.
                   </p>
                   <p>
                     I run the business the old-fashioned way: I answer the phone, I do exactly what I say I'm gonna do, and I don't cut corners. Period. When you assign a property to me, you can cross it off your worry list.

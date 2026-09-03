@@ -1,5 +1,5 @@
 import { SITE } from '@/data/site';
-import { GOOGLE_RATING, REVIEWS } from '@/data/reviews';
+import { GOOGLE_RATING } from '@/data/reviews';
 import { Star } from 'lucide-react';
 
 // Inline SVG brand marks so every badge is crisp and truly transparent.
@@ -57,7 +57,7 @@ const BADGES = [
   { key: 'google', label: 'Google Reviews', mark: <GoogleMark />, href: SITE.social.google },
   { key: 'facebook', label: 'Facebook', mark: <FacebookMark />, href: SITE.social.facebook },
   { key: 'yelp', label: 'Yelp', mark: <YelpMark />, href: SITE.social.yelp },
-  { key: 'bbb', label: 'BBB Accredited', mark: <BBBMark />, href: SITE.social.bbb },
+  { key: 'bbb', label: 'BBB Profile', mark: <BBBMark />, href: SITE.social.bbb },
 ];
 
 export default function ReviewBadgeBar() {

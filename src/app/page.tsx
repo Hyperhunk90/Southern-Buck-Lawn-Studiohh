@@ -32,7 +32,7 @@ const gallery = [
 ];
 
 const buckPoints = [
-  'Owner-operated since 2013',
+  'Owner-operated since June 2024',
   'Same day every week',
   'Free, no-pressure estimates',
   'Insured — general liability',
@@ -61,7 +61,7 @@ export default function Home() {
             <span className="inline-flex items-center gap-2 rounded-full border border-sage/50 bg-safety-orange/20 px-4 py-1.5 font-archivo text-xs font-bold uppercase tracking-widest text-sage">
               <MapPin className="h-4 w-4" /> Walker &middot; Denham Springs &middot; Watson
             </span>
-            <p className="font-caveat text-3xl font-bold text-sage sm:text-4xl">Owner-operated in Walker since 2013</p>
+            <p className="font-caveat text-3xl font-bold text-sage sm:text-4xl">Owner-operated in Walker since June 2024</p>
             <h1 className="font-anton text-5xl uppercase leading-[0.95] tracking-wide text-white sm:text-7xl">
               Yards Worth <span className="text-safety-orange">Showing Off.</span>
             </h1>
@@ -108,7 +108,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 sm:px-6 lg:grid-cols-4 lg:px-8">
           {[
             { icon: <ShieldCheck className="h-7 w-7" />, t: 'Insured', s: 'General liability' },
-            { icon: <Award className="h-7 w-7" />, t: 'Owner-Operated', s: 'Since 2013' },
+            { icon: <Award className="h-7 w-7" />, t: 'Owner-Operated', s: 'Since June 2024' },
             { icon: <PhoneCall className="h-7 w-7" />, t: '24-Hour Callback', s: 'I answer fast' },
             { icon: <MapPin className="h-7 w-7" />, t: 'Local & Hometown', s: 'Based in Walker, LA' },
           ].map((item) => (
@@ -240,7 +240,7 @@ export default function Home() {
             <h2 className="mt-1 font-anton text-4xl uppercase tracking-wide text-white sm:text-5xl">Meet the Buck Behind the Work</h2>
             <div className="mt-4 h-1 w-24 rounded bg-safety-orange" />
             <p className="mt-5 max-w-2xl font-archivo text-lg leading-relaxed text-white/90">
-              I&rsquo;m Michael Dantone. I run Southern Buck Lawn out of Walker &mdash; 28790 Brett Drive. Owner-operated since 2013. Folks around here call me the Landscape Mayor, and I earned it one yard at a time. This is a one-man shop, not a franchise. When you call, you get me. Same day every week, yard left better than I found it.
+              I&rsquo;m Michael Dantone. I run Southern Buck Lawn out of Walker &mdash; 28790 Brett Drive. Owner-operated since June 2024. Folks around here call me the Landscape Mayor, and I earned it one yard at a time. This is a one-man shop, not a franchise. When you call, you get me. Same day every week, yard left better than I found it.
             </p>
             <div className="mt-7 grid max-w-2xl grid-cols-1 gap-4 sm:grid-cols-2">
               {buckPoints.map((p) => (

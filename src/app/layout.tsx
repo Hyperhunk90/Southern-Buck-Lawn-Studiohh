@@ -6,6 +6,9 @@ import GaTracker from '@/components/GaTracker';
 import ChatWidget from '@/components/ChatWidget';
 import { SITE } from '@/data/site';
 
+// Bound HTML freshness at the CDN so a deployment cannot leave pages pointing
+// at retired JavaScript bundles for a year. Hashed assets remain immutable.
+export const revalidate = 300;
 
 // Default social-share preview. photo-08 is a daytime white-ranch hedge job.
 const OG_IMAGE = {

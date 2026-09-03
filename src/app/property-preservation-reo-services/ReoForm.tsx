@@ -12,7 +12,6 @@ export default function ReoForm() {
     phone: '',
     address: '',
     service: 'Trash-Out',
-    company: '', // Honeypot
   });
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
 
@@ -39,11 +38,11 @@ export default function ReoForm() {
           address: form.address,
           service: form.service,
           message: messagePayload,
-          company: form.company, // Honeypot
         }),
       });
 
-      if (!res.ok) throw new Error('failed');
+      const result = await res.json().catch(() => ({}));
+      if (!res.ok || result?.ok !== true) throw new Error('failed');
       setStatus('sent');
       trackEvent('generate_lead', { form_name: 'reo_form', property_type: 'Commercial', service: form.service });
     } catch {
@@ -70,21 +69,6 @@ export default function ReoForm() {
 
   return (
     <form onSubmit={submit} className="space-y-5 rounded-2xl bg-light-tan p-6 shadow-xl sm:p-10">
-      {/* Honeypot */}
-      <div aria-hidden="true" className="absolute left-[-9999px] top-[-9999px] h-0 w-0 overflow-hidden">
-        <label>
-          Company
-          <input
-            type="text"
-            name="company"
-            tabIndex={-1}
-            autoComplete="off"
-            value={form.company}
-            onChange={(e) => update('company', e.target.value)}
-          />
-        </label>
-      </div>
-
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <label className="flex flex-col gap-2">
           <span className="font-barlow text-sm font-bold uppercase tracking-wide text-midnight-moss">
@@ -92,6 +76,8 @@ export default function ReoForm() {
           </span>
           <input
             required
+            name="firmName"
+            autoComplete="organization"
             value={form.firmName}
             onChange={(e) => update('firmName', e.target.value)}
             placeholder="Firm Name"
@@ -105,6 +91,8 @@ export default function ReoForm() {
           </span>
           <input
             required
+            name="nameTitle"
+            autoComplete="name"
             value={form.nameTitle}
             onChange={(e) => update('nameTitle', e.target.value)}
             placeholder="John Doe, Asset Manager"
@@ -121,7 +109,9 @@ export default function ReoForm() {
           <input
             required
             type="tel"
+            name="phone"
             inputMode="tel"
+            autoComplete="tel"
             value={form.phone}
             onChange={(e) => update('phone', e.target.value)}
             placeholder="(555) 555-5555"
@@ -135,6 +125,7 @@ export default function ReoForm() {
           </span>
           <select
             required
+            name="service"
             value={form.service}
             onChange={(e) => update('service', e.target.value)}
             className={inputClass + " cursor-pointer appearance-none"}
@@ -153,6 +144,8 @@ export default function ReoForm() {
         </span>
         <input
           required
+          name="address"
+          autoComplete="street-address"
           value={form.address}
           onChange={(e) => update('address', e.target.value)}
           placeholder="123 Main St, Walker, LA"

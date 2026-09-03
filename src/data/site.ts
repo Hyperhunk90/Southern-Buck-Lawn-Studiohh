@@ -17,9 +17,7 @@ export const SITE = {
   geo: { lat: 30.4849, lng: -90.8662 },
   url: 'https://southernbucklawn.com',
   hours: [
-    { days: 'Monday – Friday', time: '6:00 AM – 6:30 PM' },
-    { days: 'Saturday', time: '6:00 AM – 6:00 PM' },
-    { days: 'Sunday', time: '7:00 AM – 4:00 PM' },
+    { days: 'Monday – Sunday', time: '6:00 AM – 6:30 PM' },
   ],
   primaryCategory: 'Lawn care service',
   serviceAreas: ['Walker', 'Denham Springs', 'Watson'],

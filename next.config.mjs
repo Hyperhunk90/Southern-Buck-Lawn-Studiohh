@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // Match the root layout's 5-minute revalidation without a year-long
+  // stale-while-revalidate window at the hosting CDN.
+  expireTime: 300,
   // Ensure all URLs are served without trailing slashes. Next.js will 308-redirect
   // any request that includes a trailing slash (e.g. /services/ → /services) so
   // Google only ever indexes one canonical version of each URL.
@@ -76,14 +79,17 @@ const nextConfig = {
       { source: '/pages/walker-la', destination: '/service-areas/walker', permanent: true },
       { source: '/baton-rouge-landscaping', destination: '/service-areas', permanent: true },
       { source: '/lawn-care-baton-rouge-la', destination: '/service-areas', permanent: true },
+      { source: '/baton-rouge-lawn-care', destination: '/service-areas', permanent: true },
       { source: '/denham-springs-landscaping', destination: '/service-areas/denham-springs', permanent: true },
       { source: '/hoa-lawn-care-livingston-parish', destination: '/service-areas/livingston-parish', permanent: true },
 
       // Old service URL patterns.
       { source: '/services/residential-lawn-care', destination: '/services/lawn-mowing', permanent: true },
+      { source: '/services/lawn-care-maintenance', destination: '/services/lawn-mowing', permanent: true },
       { source: '/residential-lawn-care', destination: '/services/lawn-mowing', permanent: true },
       { source: '/lawn-care-maintenance', destination: '/services/lawn-mowing', permanent: true },
       { source: '/services/irrigation', destination: '/services', permanent: true },
+      { source: '/services/property-preservation', destination: '/property-preservation-reo-services', permanent: true },
       { source: '/landscape-design-install', destination: '/services/landscape-design', permanent: true },
       { source: '/landscape-design-installation', destination: '/services/landscape-design', permanent: true },
       { source: '/landscape-design-walker-la', destination: '/services/landscape-design', permanent: true },
@@ -94,6 +100,9 @@ const nextConfig = {
       { source: '/christmas-lights', destination: '/landscape-lighting', permanent: true },
 
       // Misc old pages with no direct equivalent.
+      { source: '/index.html', destination: '/', permanent: true },
+      { source: '/about-us', destination: '/about', permanent: true },
+      { source: '/walker', destination: '/service-areas/walker', permanent: true },
       { source: '/project-gallery', destination: '/gallery', permanent: true },
       { source: '/projects', destination: '/gallery', permanent: true },
       { source: '/walker-landscaping', destination: '/services/landscape-design', permanent: true },

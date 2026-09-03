@@ -76,9 +76,7 @@ export async function POST(req: NextRequest) {
     const landingPage = text(raw.landingPage, 300);
     const referrer = text(raw.referrer, 500);
     const campaign = text(raw.campaign, 300);
-    const honeypot = text(raw.company, 200);
 
-    if (honeypot) return NextResponse.json({ ok: true });
     if (!ALLOWED_TYPES.has(type)) {
       return NextResponse.json({ error: 'Invalid form type.' }, { status: 400 });
     }

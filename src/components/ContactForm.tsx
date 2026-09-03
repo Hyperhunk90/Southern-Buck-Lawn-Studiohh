@@ -6,7 +6,7 @@ import { Send, CheckCircle2, Loader2 } from 'lucide-react';
 import { trackEvent } from '@/lib/ga';
 
 export default function ContactForm() {
-  const [form, setForm] = useState({ name: '', phone: '', email: '', message: '', company: '', sourcePage: '', landingPage: '', referrer: '', campaign: '' });
+  const [form, setForm] = useState({ name: '', phone: '', email: '', message: '', sourcePage: '', landingPage: '', referrer: '', campaign: '' });
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -36,7 +36,7 @@ export default function ContactForm() {
         body: JSON.stringify({ type: 'Contact Message', ...form }),
       });
       const result = await response.json().catch(() => ({}));
-      if (!response.ok) throw new Error(result.error || 'We could not send your message.');
+      if (!response.ok || result?.ok !== true) throw new Error(result?.error || 'We could not send your message.');
       setStatus('sent');
       trackEvent('generate_lead', { form_name: 'contact' });
     } catch (error) {
@@ -58,9 +58,6 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={submit} className="space-y-5" aria-busy={status === 'sending'}>
-      <div aria-hidden="true" className="absolute left-[-9999px] top-[-9999px] h-0 w-0 overflow-hidden">
-        <label>Company<input type="text" name="company" tabIndex={-1} autoComplete="off" value={form.company} onChange={(e) => update('company', e.target.value)} /></label>
-      </div>
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <Field label="Name" required><input required minLength={2} name="name" autoComplete="name" value={form.name} onChange={(e) => update('name', e.target.value)} placeholder="Your name" className={inputClass} /></Field>
         <Field label="Phone" required><input required type="tel" name="phone" pattern="[0-9()+. -]{10,}" autoComplete="tel" value={form.phone} onChange={(e) => update('phone', e.target.value)} placeholder="(225) 555-0123" className={inputClass} /></Field>
