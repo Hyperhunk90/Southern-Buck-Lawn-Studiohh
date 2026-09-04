@@ -25,14 +25,14 @@ const serviceIcons: Record<string, React.ReactNode> = {
 };
 
 const gallery = [
-  { src: '/images/sbl-project-photo-02.webp', alt: 'Brick house at dusk with path lights along the walkway, Southern Buck Lawn lighting job', w: 1125, h: 2000 },
-  { src: '/images/sbl-project-photo-04.webp', alt: 'Commercial palm and pine-straw beds, Southern Buck Lawn job', w: 2000, h: 1125 },
-  { src: '/images/sbl-project-photo-11.webp', alt: 'Michael Dantone, owner of Southern Buck Lawn, in a branded shirt with a shovel', w: 1125, h: 2000 },
-  { src: '/images/sbl-project-photo-01.webp', alt: 'Southern Buck Lawn work trailer', w: 2000, h: 1125 },
+  { src: '/images/walker-lawn-stripes-after.webp', alt: 'Freshly mowed green lawn with diagonal stripes beside a white brick house in Walker, Louisiana.', w: 788, h: 1400 },
+  { src: '/images/denham-springs-mulch-edging-after.webp', alt: 'Fresh red mulch bed with boxwoods and gray stone edging wrapping a brick house corner in Denham Springs.', w: 630, h: 1400 },
+  { src: '/images/denham-springs-bed-before.webp', alt: 'Curved Denham Springs flower bed with pine straw, boxwoods, and gray stone pavers along a brick house.', w: 630, h: 1400 },
+  { src: '/images/sherwood-oaks-commercial-trim.webp', alt: 'Bad Boy Magnum zero-turn and string trimming around shrubs at a Sherwood Oaks property under a blue sky.', w: 720, h: 1280 },
 ];
 
 const buckPoints = [
-  'Owner-operated since June 2024',
+  'Owner-operated since 2013',
   'Same day every week',
   'Free, no-pressure estimates',
   'Insured — general liability',
@@ -45,8 +45,8 @@ export default function Home() {
       <header className="relative overflow-hidden bg-deep-forest pt-20">
         <div className="absolute inset-0">
           <Image
-            src="/images/sbl-project-photo-08.webp"
-            alt="White ranch house with daytime hedge and bed work by Southern Buck Lawn"
+            src="/images/walker-lawn-stripes-after.webp"
+            alt="Freshly mowed green lawn with diagonal stripes beside a white brick house in Walker, Louisiana."
             fill
             priority
             sizes="100vw"
@@ -61,7 +61,7 @@ export default function Home() {
             <span className="inline-flex items-center gap-2 rounded-full border border-sage/50 bg-safety-orange/20 px-4 py-1.5 font-archivo text-xs font-bold uppercase tracking-widest text-sage">
               <MapPin className="h-4 w-4" /> Walker &middot; Denham Springs &middot; Watson
             </span>
-            <p className="font-caveat text-3xl font-bold text-sage sm:text-4xl">Owner-operated in Walker since June 2024</p>
+            <p className="font-caveat text-3xl font-bold text-sage sm:text-4xl">Owner-operated in Walker since 2013</p>
             <h1 className="font-anton text-5xl uppercase leading-[0.95] tracking-wide text-white sm:text-7xl">
               Yards Worth <span className="text-safety-orange">Showing Off.</span>
             </h1>
@@ -70,8 +70,8 @@ export default function Home() {
             </p>
             <div className="inline-flex items-center gap-4 rounded-full border border-white/15 bg-black/25 p-2.5 pr-6 backdrop-blur-sm">
               <Image
-                src="/images/michael-dantone-southern-buck-lawn-walker.webp"
-                alt="Michael Dantone, owner of Southern Buck Lawn in Walker, Louisiana"
+                src="/images/michael-dantone-owner.webp"
+                alt="Headshot of Michael Dantone, owner of Southern Buck Lawn, in a company polo."
                 width={56}
                 height={56}
                 loading="eager"
@@ -108,7 +108,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 sm:px-6 lg:grid-cols-4 lg:px-8">
           {[
             { icon: <ShieldCheck className="h-7 w-7" />, t: 'Insured', s: 'General liability' },
-            { icon: <Award className="h-7 w-7" />, t: 'Owner-Operated', s: 'Since June 2024' },
+            { icon: <Award className="h-7 w-7" />, t: 'Owner-Operated', s: 'Since 2013' },
             { icon: <PhoneCall className="h-7 w-7" />, t: '24-Hour Callback', s: 'I answer fast' },
             { icon: <MapPin className="h-7 w-7" />, t: 'Local & Hometown', s: 'Based in Walker, LA' },
           ].map((item) => (
@@ -174,8 +174,8 @@ export default function Home() {
       </section>
       <section className="relative overflow-hidden bg-deep-forest">
         <Image
-          src="/images/sbl-project-photo-10.webp"
-          alt="White ranch house with daytime hedge and bed work, another frame of the same Southern Buck Lawn job"
+          src="/images/denham-springs-mulch-edging-after.webp"
+          alt="Fresh red mulch bed with boxwoods and gray stone edging wrapping a brick house corner in Denham Springs."
           fill
           sizes="100vw"
           quality={60}
@@ -201,7 +201,7 @@ export default function Home() {
             <h2 className="font-anton text-4xl uppercase tracking-wide text-midnight-moss sm:text-5xl">Work From the Route</h2>
             <div className="mx-auto mt-4 h-1 w-24 rounded bg-safety-orange" />
             <p className="mx-auto mt-4 max-w-2xl font-archivo text-lg text-bark">
-              Lighting, a commercial palm job, the owner on site, and the work trailer. Captions match the files. Dedicated Walker, Denham, and Watson yard shots still need to be added.
+              Walker stripes, a Denham Springs mulch before-and-after on the same house, and a Sherwood Oaks commercial trim. Captions match the files. No stock. No crew shots.
             </p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2">
@@ -225,22 +225,22 @@ export default function Home() {
       <section id="about" className="bg-primary py-20">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-12 px-4 sm:px-6 lg:flex-row lg:px-8">
           <div className="flex-none">
-            <div className="flex h-60 w-60 items-center justify-center rounded-3xl bg-forest-dark shadow-2xl sm:h-72 sm:w-72">
+            <div className="overflow-hidden rounded-3xl bg-forest-dark shadow-2xl">
               <Image
-                src="/images/southern-buck-lawn-buck-mascot.webp"
-                alt="Southern Buck Lawn deer mascot in overalls"
+                src="/images/michael-dantone-owner.webp"
+                alt="Headshot of Michael Dantone, owner of Southern Buck Lawn, in a company polo."
                 width={300}
                 height={300}
-                className="h-52 w-52 object-contain sm:h-60 sm:w-60"
+                className="h-60 w-60 object-cover object-top sm:h-72 sm:w-72"
               />
             </div>
           </div>
           <div className="flex-1">
             <p className="font-caveat text-3xl font-bold text-sage">Why folks call me back</p>
-            <h2 className="mt-1 font-anton text-4xl uppercase tracking-wide text-white sm:text-5xl">Meet the Buck Behind the Work</h2>
+            <h2 className="mt-1 font-anton text-4xl uppercase tracking-wide text-white sm:text-5xl">Meet the Owner Behind the Work</h2>
             <div className="mt-4 h-1 w-24 rounded bg-safety-orange" />
             <p className="mt-5 max-w-2xl font-archivo text-lg leading-relaxed text-white/90">
-              I&rsquo;m Michael Dantone. I run Southern Buck Lawn out of Walker &mdash; 28790 Brett Drive. Owner-operated since June 2024. Folks around here call me the Landscape Mayor, and I earned it one yard at a time. This is a one-man shop, not a franchise. When you call, you get me. Same day every week, yard left better than I found it.
+              I&rsquo;m Michael Dantone. I run Southern Buck Lawn out of Walker &mdash; 28790 Brett Drive. Owner-operated since 2013. Folks around here call me the Landscape Mayor, and I earned it one yard at a time. This is a one-man shop, not a franchise. When you call, you get me. Same day every week, yard left better than I found it.
             </p>
             <div className="mt-7 grid max-w-2xl grid-cols-1 gap-4 sm:grid-cols-2">
               {buckPoints.map((p) => (
