@@ -9,7 +9,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 export const metadata: Metadata = {
   title: 'Lawn Care & Landscaping Services in Walker, LA',
   description:
-    'Mowing, weed control, landscape beds, and commercial grounds from a Walker shop. Serving Walker, Denham Springs, and Watson. Call (225) 369-4434.',
+    'Mowing, weed control, landscape beds, commercial grounds, lighting, and property preservation from a Walker shop. Walker, Denham Springs, and Watson. Free estimates — (225) 369-4434.',
   alternates: { canonical: '/services' },
   openGraph: { url: `${SITE.url}/services` },
 };
@@ -21,12 +21,12 @@ export default function ServicesIndex() {
         <div className="mx-auto mb-5 flex max-w-3xl justify-center">
           <Breadcrumbs trail={[{ name: 'Services', href: '/services' }]} />
         </div>
-        <p className="mb-3 font-barlow text-sm font-bold uppercase tracking-[0.3em] text-safety-orange">Everything we do</p>
+        <p className="mb-3 font-barlow text-sm font-bold uppercase tracking-[0.3em] text-safety-orange">What I offer</p>
         <h1 className="mx-auto max-w-3xl font-anton text-4xl uppercase leading-tight tracking-wide sm:text-5xl">
           Lawn Care and Landscaping from Walker, Louisiana
         </h1>
         <p className="mx-auto mt-5 max-w-2xl font-barlow text-lg text-white/75">
-          Weekly cuts, weed programs, bed rebuilds, and commercial grounds on the Walker, Denham Springs, and Watson route. Pick a service and see how I handle it.
+          Weekly cuts, weed programs, bed rebuilds, and commercial grounds on the Walker, Denham Springs, and Watson route. Pick a service and see how I handle it — solo operator, free estimates, no rushed route cuts.
         </p>
       </header>
 
@@ -52,6 +52,27 @@ export default function ServicesIndex() {
               </div>
             </Link>
           ))}
+
+          <div className="grid gap-6 md:grid-cols-2">
+            <Link href="/landscape-lighting" className="group rounded-2xl border border-primary/10 bg-white p-7 shadow-sm transition-all hover:shadow-xl">
+              <h2 className="font-anton text-2xl uppercase text-primary">Landscape Lighting</h2>
+              <p className="mt-2 font-barlow text-lg text-gray-600">
+                Low-voltage lighting planned and installed by Michael — evening curb appeal without a mystery crew.
+              </p>
+              <span className="mt-4 inline-flex items-center gap-2 font-barlow font-extrabold uppercase text-primary group-hover:text-safety-orange-deep">
+                Lighting details <ArrowRight className="h-4 w-4" />
+              </span>
+            </Link>
+            <Link href="/property-preservation-reo-services" className="group rounded-2xl border border-primary/10 bg-white p-7 shadow-sm transition-all hover:shadow-xl">
+              <h2 className="font-anton text-2xl uppercase text-primary">Property Preservation &amp; REO</h2>
+              <p className="mt-2 font-barlow text-lg text-gray-600">
+                Trash-outs, yard recovery, board-ups, and photo documentation for banks, brokers, and asset managers on the route.
+              </p>
+              <span className="mt-4 inline-flex items-center gap-2 font-barlow font-extrabold uppercase text-primary group-hover:text-safety-orange-deep">
+                Preservation details <ArrowRight className="h-4 w-4" />
+              </span>
+            </Link>
+          </div>
         </div>
       </section>
 
