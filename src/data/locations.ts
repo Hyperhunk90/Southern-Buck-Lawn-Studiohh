@@ -17,8 +17,8 @@ export const LOCATIONS: Location[] = [
     pestNote:
       'Chinch bugs are the headache on young Centipede around here. They leave dry brown patches that look like drought. I watch for them on weekly cuts and treat early so they do not take the whole lawn.',
     neighborhoods: ['Walker 70785'],
-    image: '/images/sbl-project-photo-08.webp',
-    imageAlt: 'White ranch house with freshly trimmed hedges in daytime, real Southern Buck Lawn work',
+    image: '/images/walker-lawn-stripes-after.webp',
+    imageAlt: 'Freshly mowed green lawn with diagonal stripes beside a white brick house in Walker, Louisiana.',
     reviews: [],
     faqs: [
       {
@@ -54,8 +54,8 @@ export const LOCATIONS: Location[] = [
     pestNote:
       'Armyworms can strip a green lawn overnight. Mole crickets tear root zones. Dollar spot loves the July dew. I watch for all three on weekly cuts and call you if something is moving.',
     neighborhoods: ['Denham Springs 70726'],
-    image: '/images/sbl-project-photo-01.webp',
-    imageAlt: 'Southern Buck Lawn work trailer. Not a Denham Springs house photo.',
+    image: '/images/denham-springs-mulch-edging-after.webp',
+    imageAlt: 'Fresh red mulch bed with boxwoods and gray stone edging wrapping a brick house corner in Denham Springs.',
     reviews: [],
     faqs: [
       {
@@ -91,8 +91,8 @@ export const LOCATIONS: Location[] = [
     pestNote:
       'Open ground around Watson is fire-ant country. Ticks and fleas set up in the warm sandy spots if the grass stays long. A tight weekly cut and targeted treatment leave them fewer places to live near the house.',
     neighborhoods: ['Watson 70786'],
-    image: '/images/sbl-project-photo-11.webp',
-    imageAlt: 'Michael Dantone, owner of Southern Buck Lawn, in a branded shirt with a shovel. Owner photo, not a Watson house.',
+    image: '/images/sherwood-oaks-commercial-trim.webp',
+    imageAlt: 'Bad Boy Magnum zero-turn and string trimming around shrubs at a Sherwood Oaks property under a blue sky. Equipment photo, not a Watson yard.',
     reviews: [],
     faqs: [
       {
@@ -128,8 +128,8 @@ export const LOCATIONS: Location[] = [
     pestNote:
       'Rural lots pick up fire ants, ticks, and fleas in undisturbed sandy spots. Keeping the yard cut on a schedule is the first control. Targeted treatment is the second. I do not promise to treat a whole timber tract.',
     neighborhoods: ['Walker', 'Denham Springs', 'Watson'],
-    image: '/images/sbl-project-photo-04.webp',
-    imageAlt: 'Commercial palm and pine-straw bed work by Southern Buck Lawn',
+    image: '/images/southern-hills-bed-prep.webp',
+    imageAlt: 'Landscape fabric laid in a residential bed around a tree during mulch prep. Job photo, not a Livingston Parish house.',
     reviews: [],
     faqs: [
       {

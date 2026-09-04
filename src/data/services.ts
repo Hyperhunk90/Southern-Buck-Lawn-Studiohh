@@ -42,8 +42,8 @@ export const SERVICES: Service[] = [
           'Mulch by default — chopped clippings feed the soil. After a wet stretch, if it is too heavy, I bag or spread it so you are not left with clumps baking on the lawn.',
       },
     ],
-    image: '/images/sbl-project-photo-08.webp',
-    imageAlt: 'White ranch with daytime hedge trimming and a clean lawn edge, Southern Buck Lawn work',
+    image: '/images/residential-lawn-stripes-magnum.webp',
+    imageAlt: 'Freshly striped green residential lawn with an orange Bad Boy Magnum zero-turn parked by the driveway.',
   },
   {
     slug: 'weed-control',
@@ -86,8 +86,8 @@ export const SERVICES: Service[] = [
           'Mid-spring once it is fully green and growing. Late summer I shift potassium-heavy so it heads into dormancy tougher, not softer.',
       },
     ],
-    image: '/images/sbl-project-photo-09.webp',
-    imageAlt: 'Daytime white ranch lawn after hedge and bed work by Southern Buck Lawn',
+    image: '/images/baton-rouge-hedge-bed-during.webp',
+    imageAlt: 'Freshly trimmed green hedge around a front bed with soil and clippings at a Baton Rouge brick house.',
   },
   {
     slug: 'landscape-design',
@@ -130,8 +130,8 @@ export const SERVICES: Service[] = [
           'Pine straw is light, cheap, and good on slopes and around azaleas. Hardwood holds color and stays put in rain. I will tell you which fits your beds when I walk them.',
       },
     ],
-    image: '/images/sbl-project-photo-04.webp',
-    imageAlt: 'Commercial palm trees and pine-straw beds, real Southern Buck Lawn job',
+    image: '/images/azalea-bed-after-black-mulch.webp',
+    imageAlt: 'Fresh black-mulch bed with red azaleas and clean black edging along a light stucco house.',
   },
   {
     slug: 'commercial-grounds',
@@ -175,8 +175,8 @@ export const SERVICES: Service[] = [
           'If it sits on the Walker–Denham–Watson route, yes. Common areas, fence lines, entrance beds, one invoice. If it is off the route, ask first and I will tell you straight.',
       },
     ],
-    image: '/images/sbl-project-photo-05.webp',
-    imageAlt: 'Commercial palm and pine-straw grounds kept by Southern Buck Lawn',
+    image: '/images/commercial-property-grounds.webp',
+    imageAlt: 'Maintained commercial building lawn and beds with Southern Buck Lawn trailer and zero-turn in view.',
   },
 ];
 

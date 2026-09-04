@@ -9,7 +9,7 @@ import GalleryClient from '@/components/GalleryClient';
 export const metadata: Metadata = {
   title: 'Project Gallery — Lawn, Mulch & Lighting Photos',
   description:
-    'Real job photos from Southern Buck Lawn: dusk path lighting, commercial palm and pine-straw beds, and daytime hedge work. No stock photos.',
+    'Real job photos from Southern Buck Lawn: Denham Springs mulch beds, Walker lawn stripes, Sherwood Oaks commercial trim, and Baton Rouge cleanup work. No stock photos.',
   keywords: [
     'lawn care gallery Walker LA',
     'mulch installation photos',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: 'Project Gallery',
     description:
       'Real photos from real jobs. Captions match the files. No stock, no generated pictures.',
-    images: [{ url: '/images/sbl-project-photo-08.webp', alt: 'White ranch with daytime hedge trimming' }],
+    images: [{ url: '/images/denham-springs-mulch-edging-after.webp', alt: 'Fresh red mulch bed with boxwoods and gray stone edging wrapping a brick house corner in Denham Springs.' }],
   },
 };
 
@@ -77,7 +77,7 @@ export default function GalleryPage() {
             </h1>
 
             <p className="mb-8 font-barlow text-lg text-white/80 leading-relaxed sm:text-xl">
-              Real jobs. Captions match the files: dusk path lights, commercial palm and pine-straw beds, daytime hedge work on a white ranch. I do not invent cities onto these photos. Filter by service type below.
+              Real jobs. Captions match the files: a Denham Springs mulch before-and-after (same house, two walls), Walker lawn stripes, Sherwood Oaks commercial trim, and Baton Rouge cleanup work shown as job location — not home turf. Filter by service type below.
             </p>
 
             <div className="grid grid-cols-2 gap-3 sm:flex sm:items-center sm:gap-6 font-barlow text-sm font-semibold text-white/90">

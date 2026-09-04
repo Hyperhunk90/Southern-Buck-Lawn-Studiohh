@@ -2,7 +2,7 @@ import { BlogPost } from '@/lib/types';
 
 // Pest posts may name Baton Rouge as where a weed shows up; they are not city silos.
 // Do not link to /service-areas/baton-rouge or zipper URLs.
-// Do not use photo-11 as a lawn/blog hero. Do not invent cities onto photos.
+// Do not use photo-11 as a lawn/blog hero. Blog heroes are real job photos with honest alts — do not invent pest damage onto the frame.
 export const POSTS: BlogPost[] = [
   {
     slug: 'virginia-buttonweed-baton-rouge',
@@ -22,8 +22,8 @@ export const POSTS: BlogPost[] = [
       'weed control Livingston Parish',
       'weed keeps coming back after spraying',
     ],
-    heroImage: '/images/sbl-project-photo-08.webp',
-    heroAlt: 'White ranch lawn and daytime hedges, Southern Buck Lawn job photo — not a stock lawn',
+    heroImage: '/images/residential-brush-cleanup.webp',
+    heroAlt: 'Pile of cut branches on a driveway after residential hedge and tree cleanup.',
     sections: [
       {
         body: [
@@ -76,8 +76,8 @@ export const POSTS: BlogPost[] = [
       'armyworm treatment Louisiana',
       'lawn pest control Denham Springs LA',
     ],
-    heroImage: '/images/sbl-project-photo-09.webp',
-    heroAlt: 'Daytime white ranch hedge and lawn, Southern Buck Lawn job photo',
+    heroImage: '/images/azalea-bed-after-black-mulch.webp',
+    heroAlt: 'Fresh black-mulch bed with red azaleas and clean black edging along a light stucco house.',
     sections: [
       {
         body: [
@@ -128,8 +128,8 @@ export const POSTS: BlogPost[] = [
       'acreage pest control Watson LA',
       'flea control large lot Louisiana',
     ],
-    heroImage: '/images/sbl-project-photo-10.webp',
-    heroAlt: 'Daytime white ranch lawn and hedges, Southern Buck Lawn job photo',
+    heroImage: '/images/commercial-property-grounds.webp',
+    heroAlt: 'Maintained commercial building lawn and beds with Southern Buck Lawn trailer and zero-turn in view.',
     sections: [
       {
         body: [
@@ -179,8 +179,8 @@ export const POSTS: BlogPost[] = [
       'lawn pest control Walker LA',
       'why is my grass dying in summer',
     ],
-    heroImage: '/images/sbl-project-photo-08.webp',
-    heroAlt: 'Daytime white ranch lawn, Southern Buck Lawn job photo',
+    heroImage: '/images/residential-lawn-stripes-magnum.webp',
+    heroAlt: 'Freshly striped green residential lawn with an orange Bad Boy Magnum zero-turn parked by the driveway.',
     sections: [
       {
         body: [
@@ -232,8 +232,8 @@ export const POSTS: BlogPost[] = [
       'pine straw vs hardwood mulch',
       'mulch installation Denham Springs',
     ],
-    heroImage: '/images/sbl-project-photo-04.webp',
-    heroAlt: 'Commercial palm trees and pine-straw beds, Southern Buck Lawn job photo',
+    heroImage: '/images/black-mulch-flagstone-bed-after.webp',
+    heroAlt: 'Fresh black mulch bed bordered by light flagstones along a white house and aggregate driveway.',
     sections: [
       {
         body: [
@@ -282,8 +282,8 @@ export const POSTS: BlogPost[] = [
       'lawn mowing Walker LA',
       'why is my grass turning brown after mowing',
     ],
-    heroImage: '/images/sbl-project-photo-09.webp',
-    heroAlt: 'Daytime white ranch lawn and hedges, Southern Buck Lawn job photo',
+    heroImage: '/images/walker-lawn-stripes-after.webp',
+    heroAlt: 'Freshly mowed green lawn with diagonal stripes beside a white brick house in Walker, Louisiana.',
     sections: [
       {
         body: [

@@ -79,8 +79,8 @@ export default function LandscapeLightingPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-midnight-moss/95 via-midnight-moss/80 to-midnight-moss/50" />
         </div>
 
-        <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-8 px-4 py-16 sm:py-24 md:grid-cols-5">
-          <div className="space-y-5 md:col-span-3">
+        <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-8 px-4 py-16 sm:py-24">
+          <div className="space-y-5">
             <p className="inline-flex items-center gap-2 rounded-full bg-safety-orange px-4 py-1 font-barlow text-xs font-extrabold uppercase tracking-widest text-midnight-moss">
               <Lightbulb className="h-4 w-4" /> Pro-Grade Outdoor Lighting
             </p>
@@ -101,15 +101,6 @@ export default function LandscapeLightingPage() {
             </div>
           </div>
 
-          <div className="relative hidden justify-center md:col-span-2 md:flex">
-            <Image
-              src="/images/southern-buck-lawn-mascot-waving.png"
-              alt="Southern Buck Lawn deer mascot"
-              width={320}
-              height={600}
-              priority
-              className="h-auto max-h-[420px] w-auto drop-shadow-2xl"
-            />
           </div>
         </div>
       </section>
@@ -135,20 +126,11 @@ export default function LandscapeLightingPage() {
       </section>
 
       <section className="bg-surface px-4 py-16">
-        <div className="mx-auto grid max-w-5xl items-center gap-8 rounded-3xl border border-black/5 bg-white p-8 shadow-sm sm:grid-cols-5 sm:p-12">
-          <div className="flex justify-center sm:col-span-2">
-            <Image
-              src="/images/southern-buck-lawn-mascot-waving.png"
-              alt="Southern Buck Lawn, the Landscape Mayor"
-              width={260}
-              height={480}
-              className="h-auto max-h-[280px] w-auto"
-            />
-          </div>
-          <div className="sm:col-span-3 space-y-4">
+        <div className="mx-auto max-w-5xl rounded-3xl border border-black/5 bg-white p-8 shadow-sm sm:p-12">
+          <div className="space-y-4">
             <h2 className="font-anton text-3xl uppercase text-deep-forest">Backed by 13 Years Electrical Precision</h2>
             <p className="font-barlow text-lg text-midnight-moss/80">
-              I am Michael Dantone, owner of Southern Buck Lawn since June 2024. With 13 years of industrial electrical background, I treat outdoor lighting installs with technical precision &mdash; watertight connections, balanced circuits, and fixtures that last in this humidity. That electrical work is not a landscape horticulture license. If a lighting install is not a fit, I will tell you that up front.
+              I am Michael Dantone, owner of Southern Buck Lawn since 2013. With 13 years of industrial electrical background, I treat outdoor lighting installs with technical precision &mdash; watertight connections, balanced circuits, and fixtures that last in this humidity. That electrical work is not a landscape horticulture license. If a lighting install is not a fit, I will tell you that up front.
             </p>
 
             <h3 className="pt-2 font-anton text-xl uppercase text-deep-forest">Why Choose Us</h3>

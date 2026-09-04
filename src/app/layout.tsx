@@ -10,12 +10,12 @@ import { SITE } from '@/data/site';
 // at retired JavaScript bundles for a year. Hashed assets remain immutable.
 export const revalidate = 300;
 
-// Default social-share preview. photo-08 is a daytime white-ranch hedge job.
+// Default social-share preview: real Walker lawn stripes.
 const OG_IMAGE = {
-  url: '/images/sbl-project-photo-08.webp',
-  width: 2000,
-  height: 1126,
-  alt: 'White ranch with daytime hedge trimming by Southern Buck Lawn',
+  url: '/images/walker-lawn-stripes-after.webp',
+  width: 788,
+  height: 1400,
+  alt: 'Freshly mowed green lawn with diagonal stripes beside a white brick house in Walker, Louisiana.',
 };
 
 const anton = Anton({
