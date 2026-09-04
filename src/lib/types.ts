@@ -19,6 +19,7 @@ export interface Service {
   faqs: FAQ[];
   image: string;
   imageAlt: string;
+  relatedPostSlugs: string[];
 }
 
 export interface Review {
@@ -45,6 +46,7 @@ export interface Location {
   imageAlt?: string;
   reviews: Review[];
   faqs: FAQ[];
+  relatedPostSlugs: string[];
 }
 
 export interface BlogSection {

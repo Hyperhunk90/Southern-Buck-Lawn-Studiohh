@@ -1,9 +1,11 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Send, CheckCircle2, Loader2, Mail } from 'lucide-react';
 import { trackEvent } from '@/lib/ga';
 import { SITE } from '@/data/site';
+
+const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'] as const;
 
 export default function ReoForm() {
   const [form, setForm] = useState({
@@ -13,7 +15,44 @@ export default function ReoForm() {
     address: '',
     service: 'Trash-Out',
   });
+  const [attribution, setAttribution] = useState({ sourcePage: '', landingPage: '', referrer: '', campaign: '' });
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const currentLandingPage = `${window.location.pathname}${window.location.search}`;
+    const currentCampaign = UTM_KEYS
+      .map((key) => params.get(key) ? `${key}=${params.get(key)}` : '')
+      .filter(Boolean)
+      .join('&');
+    let landingPage = currentLandingPage;
+    let referrer = document.referrer || '';
+    let campaign = currentCampaign;
+
+    try {
+      const storedLandingPage = sessionStorage.getItem('sbl_landing_page');
+      const storedReferrer = sessionStorage.getItem('sbl_referrer');
+      const storedCampaign = sessionStorage.getItem('sbl_campaign');
+      landingPage = storedLandingPage ?? currentLandingPage;
+      referrer = storedReferrer ?? referrer;
+      campaign = storedCampaign ?? currentCampaign;
+
+      if (storedLandingPage === null) sessionStorage.setItem('sbl_landing_page', currentLandingPage);
+      if (storedReferrer === null) sessionStorage.setItem('sbl_referrer', referrer);
+      if (storedCampaign === null) sessionStorage.setItem('sbl_campaign', currentCampaign);
+
+      for (const key of UTM_KEYS) {
+        const storageKey = `sbl_${key}`;
+        if (sessionStorage.getItem(storageKey) === null) {
+          sessionStorage.setItem(storageKey, params.get(key) || '');
+        }
+      }
+    } catch {
+      // Keep the form usable when browser storage is unavailable.
+    }
+
+    setAttribution({ sourcePage: window.location.href, landingPage, referrer, campaign });
+  }, []);
 
 
   const update = (k: string, v: string) => setForm((p) => ({ ...p, [k]: v }));
@@ -38,6 +77,10 @@ export default function ReoForm() {
           address: form.address,
           service: form.service,
           message: messagePayload,
+          sourcePage: attribution.sourcePage,
+          landingPage: attribution.landingPage,
+          referrer: attribution.referrer,
+          campaign: attribution.campaign,
         }),
       });
 

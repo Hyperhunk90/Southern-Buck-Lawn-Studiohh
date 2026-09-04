@@ -6,6 +6,8 @@ import { SITE } from '@/data/site';
 import { trackEvent } from '@/lib/ga';
 import { AMBER, ASH, BEST_TIMES, CHARCOAL, GOLD, INK, INTERESTS, WARM } from './lightingContent';
 
+const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'] as const;
+
 const inputClass =
   'w-full rounded-lg border bg-[#16161C] px-3 py-2.5 text-sm text-[#F4EDE3] outline-none transition placeholder:text-[#F4EDE3]/35 focus:border-[#E8A54B] focus:ring-2 focus:ring-[#E8A54B]/25';
 
@@ -50,17 +52,37 @@ export default function LightingQuoteForm({ id }: { id?: string }) {
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    const campaign = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content']
+    const campaign = UTM_KEYS
       .map((key) => (params.get(key) ? `${key}=${params.get(key)}` : ''))
       .filter(Boolean)
       .join('&');
-    const landingPage =
-      sessionStorage.getItem('sbl_landing_page') || `${window.location.pathname}${window.location.search}`;
-    const firstCampaign = sessionStorage.getItem('sbl_campaign') || campaign;
-    const firstReferrer = sessionStorage.getItem('sbl_referrer') || document.referrer;
-    sessionStorage.setItem('sbl_landing_page', landingPage);
-    if (firstCampaign) sessionStorage.setItem('sbl_campaign', firstCampaign);
-    if (firstReferrer) sessionStorage.setItem('sbl_referrer', firstReferrer);
+    const currentLandingPage = `${window.location.pathname}${window.location.search}`;
+    let landingPage = currentLandingPage;
+    let firstCampaign = campaign;
+    let firstReferrer = document.referrer || '';
+
+    try {
+      const storedLandingPage = sessionStorage.getItem('sbl_landing_page');
+      const storedCampaign = sessionStorage.getItem('sbl_campaign');
+      const storedReferrer = sessionStorage.getItem('sbl_referrer');
+      landingPage = storedLandingPage ?? currentLandingPage;
+      firstCampaign = storedCampaign ?? campaign;
+      firstReferrer = storedReferrer ?? firstReferrer;
+
+      if (storedLandingPage === null) sessionStorage.setItem('sbl_landing_page', currentLandingPage);
+      if (storedCampaign === null) sessionStorage.setItem('sbl_campaign', campaign);
+      if (storedReferrer === null) sessionStorage.setItem('sbl_referrer', firstReferrer);
+
+      for (const key of UTM_KEYS) {
+        const storageKey = `sbl_${key}`;
+        if (sessionStorage.getItem(storageKey) === null) {
+          sessionStorage.setItem(storageKey, params.get(key) || '');
+        }
+      }
+    } catch {
+      // Keep the form usable when browser storage is unavailable.
+    }
+
     setForm((previous) => ({
       ...previous,
       sourcePage: window.location.href,

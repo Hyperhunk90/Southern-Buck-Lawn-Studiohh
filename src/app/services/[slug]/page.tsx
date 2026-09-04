@@ -4,6 +4,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Check, ArrowRight, PhoneCall, CircleHelp } from 'lucide-react';
 import { SERVICES, getService } from '@/data/services';
+import { POSTS } from '@/data/blog';
+import { PROJECTS } from '@/data/projects';
 import { AREA_NAV, SITE } from '@/data/site';
 import QuoteForm from '@/components/QuoteForm';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -36,6 +38,11 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   if (!service) notFound();
 
   const otherServices = SERVICES.filter((s) => s.slug !== service.slug);
+  const relatedPosts = service.relatedPostSlugs.flatMap((postSlug) => {
+    const post = POSTS.find((candidate) => candidate.slug === postSlug);
+    return post ? [post] : [];
+  });
+  const serviceProjects = PROJECTS.filter((project) => project.serviceSlug === service.slug).slice(0, 3);
 
   const faqJsonLd = {
     '@context': 'https://schema.org',
@@ -114,6 +121,27 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               ))}
             </p>
 
+            {relatedPosts.length > 0 && (
+              <section aria-labelledby="local-lawn-guides-heading" className="pt-4">
+                <h2 id="local-lawn-guides-heading" className="font-anton text-2xl uppercase text-primary">Local Lawn Guides</h2>
+                <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                  {relatedPosts.map((post) => (
+                    <article key={post.slug} className="rounded-xl border border-primary/10 bg-white p-5 shadow-sm">
+                      <h3 className="font-anton text-lg uppercase text-midnight-moss">
+                        <Link href={`/blog/${post.slug}`} className="hover:text-safety-orange-deep">
+                          {post.title}
+                        </Link>
+                      </h3>
+                      <p className="mt-2 font-barlow text-base leading-relaxed text-gray-600">{post.excerpt}</p>
+                      <Link href={`/blog/${post.slug}`} className="mt-3 inline-flex items-center gap-2 font-barlow font-bold text-primary hover:text-safety-orange-deep">
+                        Read the guide <ArrowRight className="h-4 w-4" />
+                      </Link>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            )}
+
             <h2 className="pt-4 font-anton text-2xl uppercase text-primary">Questions Folks Ask</h2>
             <div className="space-y-5">
               {service.faqs.map((f) => (
@@ -152,6 +180,52 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           </aside>
         </div>
       </section>
+
+      {serviceProjects.length > 0 && (
+        <section className="bg-white py-16" aria-labelledby="actual-job-photos-heading">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-3xl text-center">
+              <p className="font-barlow text-sm font-bold uppercase tracking-[0.25em] text-safety-orange-deep">Actual Southern Buck Lawn Work</p>
+              <h2 id="actual-job-photos-heading" className="mt-2 font-anton text-3xl uppercase text-primary">
+                Actual {service.title} Job Photos
+              </h2>
+              <p className="mt-3 font-barlow text-lg text-gray-600">
+                These photos come from Southern Buck Lawn jobs and appear here only when the project is tagged to this exact service.
+              </p>
+            </div>
+            <div className="mt-8 grid gap-6 md:grid-cols-3">
+              {serviceProjects.map((project) => (
+                <article key={project.id} className="overflow-hidden rounded-2xl border border-primary/10 bg-surface shadow-sm">
+                  <div className="relative">
+                    <Image
+                      src={project.image}
+                      alt={project.imageAlt}
+                      width={800}
+                      height={600}
+                      sizes="(max-width: 768px) 90vw, 33vw"
+                      quality={60}
+                      className="h-64 w-full object-cover"
+                    />
+                    <span className="absolute left-3 top-3 rounded-full bg-midnight-moss/90 px-3 py-1 font-barlow text-xs font-bold uppercase tracking-wider text-white">
+                      Actual job photo
+                    </span>
+                  </div>
+                  <div className="p-5">
+                    <p className="font-barlow text-sm font-bold uppercase tracking-wider text-safety-orange-deep">{project.serviceLabel}</p>
+                    <h3 className="mt-1 font-anton text-xl uppercase text-midnight-moss">{project.title}</h3>
+                    <p className="mt-2 font-barlow text-base leading-relaxed text-gray-600">{project.description}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <div className="mt-8 text-center">
+              <Link href="/gallery" className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 font-anton uppercase tracking-wider text-white hover:bg-deep-forest">
+                View All Actual Job Photos <ArrowRight className="h-5 w-5" />
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="bg-mist-green py-16">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">

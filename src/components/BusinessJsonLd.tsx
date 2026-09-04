@@ -11,7 +11,14 @@ export default function BusinessJsonLd() {
     url: SITE.url,
     telephone: SITE.phoneInternational,
     email: SITE.email,
-    founder: SITE.owner,
+    founder: {
+      '@type': 'Person',
+      '@id': `${SITE.url}/about#owner`,
+      name: SITE.owner,
+      url: `${SITE.url}/about`,
+      image: `${SITE.url}/images/sbl-project-photo-11.webp`,
+    },
+    foundingDate: '2024-06',
     priceRange: '$$',
     address: {
       '@type': 'PostalAddress',

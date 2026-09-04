@@ -97,6 +97,29 @@ test('quote with a legacy autofilled company field sends, normalizes email, and 
   assert.doesNotMatch(route.sends[0].html, /<script>/);
 });
 
+test('landscape-lighting quote payload sends with complete attribution', async () => {
+  const route = createRouteHarness();
+  const result = await route.invoke({
+    type: 'Quote Request',
+    name: 'Lighting Lead Test',
+    phone: '225-555-0104',
+    email: 'lighting@example.invalid',
+    address: 'Walker, LA 70785',
+    propertyType: 'Residential',
+    service: 'Landscape Lighting — Landscape lighting',
+    message: 'Lighting interest: Landscape lighting. Best time to reach: Evening.',
+    sourcePage: 'https://southernbucklawn.com/landscape-lighting?utm_source=google',
+    landingPage: '/landscape-lighting?utm_source=google',
+    referrer: 'https://www.google.com/',
+    campaign: 'utm_source=google&utm_medium=organic&utm_campaign=gbp',
+  }, 200, 1);
+
+  assert.equal(result.ok, true);
+  assert.match(route.sends[0].text, /Landscape Lighting — Landscape lighting/);
+  assert.match(route.sends[0].text, /First landing page: \/landscape-lighting\?utm_source=google/);
+  assert.match(route.sends[0].text, /utm_campaign=gbp/);
+});
+
 test('contact message with a legacy autofilled company field sends', async () => {
   const route = createRouteHarness();
   const result = await route.invoke({ ...base, type: 'Contact Message', message: 'Test contact' }, 200, 1);

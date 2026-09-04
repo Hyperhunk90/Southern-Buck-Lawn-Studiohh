@@ -1,6 +1,6 @@
 import { SITE } from '@/data/site';
 import { GOOGLE_RATING } from '@/data/reviews';
-import { Star } from 'lucide-react';
+import { MessageSquarePlus, Star } from 'lucide-react';
 
 // Inline SVG brand marks so every badge is crisp and truly transparent.
 // Each badge links to the matching profile URL set in src/data/site.ts.
@@ -89,6 +89,20 @@ export default function ReviewBadgeBar() {
             </span>
           </a>
         ))}
+      </div>
+      <div className="mt-5 text-center">
+        <a
+          href={SITE.social.googleReview}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-track="google_review_request"
+          className="inline-flex items-center gap-2 rounded-xl border-2 border-primary px-5 py-3 font-barlow text-sm font-extrabold uppercase tracking-wide text-primary transition-colors hover:border-safety-orange hover:bg-safety-orange hover:text-midnight-moss"
+        >
+          <MessageSquarePlus className="h-5 w-5" /> Share an honest Google review
+        </a>
+        <p className="mx-auto mt-2 max-w-xl font-barlow text-sm text-gray-500">
+          Worked with Southern Buck Lawn? Your honest feedback helps local property owners know what to expect.
+        </p>
       </div>
     </div>
   );

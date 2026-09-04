@@ -23,6 +23,7 @@ export const SITE = {
   serviceAreas: ['Walker', 'Denham Springs', 'Watson'],
   social: {
     google: 'https://share.google/KjUM9ViEKjTK29ETk',
+    googleReview: 'https://g.page/r/Cf_J1ApLyF3gEBE/review',
     facebook: 'https://facebook.com/SouthernBuckLawn',
     yelp: 'https://www.yelp.com/biz/southern-buck-lawn-walker',
     nextdoor: '#',

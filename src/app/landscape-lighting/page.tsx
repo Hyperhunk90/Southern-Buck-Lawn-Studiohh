@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Your Home Should Look This Good at Night',
     description:
-      'Custom low-voltage landscape lighting by Michael Dantone — solo operator since 2013, 13 years industrial electrical background. Walker, Denham Springs, and Watson.',
+      'Custom low-voltage landscape lighting by Michael Dantone — owner-operator since June 2024, with 13 years of industrial electrical background. Walker, Denham Springs, and Watson.',
     url: `${SITE.url}/landscape-lighting`,
     images: [
       {

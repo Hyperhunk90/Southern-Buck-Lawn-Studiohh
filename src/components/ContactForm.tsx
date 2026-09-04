@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { Send, CheckCircle2, Loader2 } from 'lucide-react';
 import { trackEvent } from '@/lib/ga';
 
+const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'] as const;
+
 export default function ContactForm() {
   const [form, setForm] = useState({ name: '', phone: '', email: '', message: '', sourcePage: '', landingPage: '', referrer: '', campaign: '' });
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
@@ -12,13 +14,27 @@ export default function ContactForm() {
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    const campaign = ['utm_source', 'utm_medium', 'utm_campaign'].map((key) => params.get(key) ? `${key}=${params.get(key)}` : '').filter(Boolean).join('&');
-    const landingPage = sessionStorage.getItem('sbl_landing_page') || `${window.location.pathname}${window.location.search}`;
-    const firstCampaign = sessionStorage.getItem('sbl_campaign') || campaign;
-    const firstReferrer = sessionStorage.getItem('sbl_referrer') || document.referrer;
-    sessionStorage.setItem('sbl_landing_page', landingPage);
-    if (firstCampaign) sessionStorage.setItem('sbl_campaign', firstCampaign);
-    if (firstReferrer) sessionStorage.setItem('sbl_referrer', firstReferrer);
+    const campaign = UTM_KEYS.map((key) => params.get(key) ? `${key}=${params.get(key)}` : '').filter(Boolean).join('&');
+    const currentLandingPage = `${window.location.pathname}${window.location.search}`;
+    let landingPage = currentLandingPage;
+    let firstCampaign = campaign;
+    let firstReferrer = document.referrer || '';
+
+    try {
+      const storedLandingPage = sessionStorage.getItem('sbl_landing_page');
+      const storedCampaign = sessionStorage.getItem('sbl_campaign');
+      const storedReferrer = sessionStorage.getItem('sbl_referrer');
+      landingPage = storedLandingPage ?? currentLandingPage;
+      firstCampaign = storedCampaign ?? campaign;
+      firstReferrer = storedReferrer ?? firstReferrer;
+
+      if (storedLandingPage === null) sessionStorage.setItem('sbl_landing_page', currentLandingPage);
+      if (storedCampaign === null) sessionStorage.setItem('sbl_campaign', campaign);
+      if (storedReferrer === null) sessionStorage.setItem('sbl_referrer', firstReferrer);
+    } catch {
+      // Keep the contact form usable when browser storage is unavailable.
+    }
+
     setForm((previous) => ({ ...previous, sourcePage: window.location.href, landingPage, referrer: firstReferrer, campaign: firstCampaign }));
   }, []);
 

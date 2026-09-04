@@ -14,15 +14,50 @@ const SERVICES = [
   'Landscape Lighting',
   'Full Cleanup / One-Time Job',
   'Not Sure Yet',
-];
+] as const;
+export type QuoteService = (typeof SERVICES)[number];
+
+const SERVICE_QUERY_MAP: Record<string, QuoteService> = {
+  'lawn-mowing': 'Weekly Lawn Mowing & Edging',
+  'weed-control': 'Weed Control & Fertilization',
+  'landscape-design': 'Landscape Design & Mulch',
+  'commercial-grounds': 'Commercial Grounds Maintenance',
+  'landscape-lighting': 'Landscape Lighting',
+  'full-cleanup': 'Full Cleanup / One-Time Job',
+  'one-time-job': 'Full Cleanup / One-Time Job',
+  cleanup: 'Full Cleanup / One-Time Job',
+  'not-sure': 'Not Sure Yet',
+};
+
+type QuoteFormProps = {
+  defaultService?: QuoteService;
+};
+
+function isQuoteService(value: string | undefined): value is QuoteService {
+  return Boolean(value && SERVICES.some((service) => service === value));
+}
+
+function resolveService(value: string | null): QuoteService | undefined {
+  const normalized = value?.trim().toLowerCase();
+  if (!normalized) return undefined;
+  return SERVICE_QUERY_MAP[normalized] || SERVICES.find((service) => service.toLowerCase() === normalized);
+}
+
+function serviceForPathname(pathname: string): QuoteService | undefined {
+  if (pathname === '/landscape-lighting') return SERVICE_QUERY_MAP['landscape-lighting'];
+  const match = pathname.match(/^\/services\/([^/]+)\/?$/);
+  return match ? SERVICE_QUERY_MAP[match[1].toLowerCase()] : undefined;
+}
+
 const PROPERTY_TYPES = ['Residential', 'Commercial', 'HOA / Multi-property', 'Not sure'];
 const LOT_SIZES = ['Small yard (under 1/4 acre)', 'Average yard (1/4 to 1/2 acre)', 'Large yard (1/2 to 1 acre)', 'Acreage / commercial property'];
 const FREQUENCIES = ['Weekly', 'Every other week', 'Monthly', 'One time', 'Requesting a maintenance contract', 'Not sure'];
 
-export default function QuoteForm() {
+export default function QuoteForm({ defaultService = SERVICES[0] }: QuoteFormProps) {
+  const safeDefaultService = isQuoteService(defaultService) ? defaultService : SERVICES[0];
   const [form, setForm] = useState({
     name: '', phone: '', email: '', address: '', propertyType: 'Residential', companyName: '',
-    service: SERVICES[0], lotSize: LOT_SIZES[1], frequency: FREQUENCIES[0], message: '',
+    service: safeDefaultService, lotSize: LOT_SIZES[1], frequency: FREQUENCIES[0], message: '',
     sourcePage: '', landingPage: '', referrer: '', campaign: '',
   });
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
@@ -34,12 +69,34 @@ export default function QuoteForm() {
       .map((key) => params.get(key) ? `${key}=${params.get(key)}` : '')
       .filter(Boolean)
       .join('&');
-    const landingPage = sessionStorage.getItem('sbl_landing_page') || `${window.location.pathname}${window.location.search}`;
-    const firstCampaign = sessionStorage.getItem('sbl_campaign') || campaign;
-    const firstReferrer = sessionStorage.getItem('sbl_referrer') || document.referrer;
-    sessionStorage.setItem('sbl_landing_page', landingPage);
-    if (firstCampaign) sessionStorage.setItem('sbl_campaign', firstCampaign);
-    if (firstReferrer) sessionStorage.setItem('sbl_referrer', firstReferrer);
+    const currentLandingPage = `${window.location.pathname}${window.location.search}`;
+    let landingPage = currentLandingPage;
+    let firstCampaign = campaign;
+    let firstReferrer = document.referrer || '';
+
+    try {
+      const storedLandingPage = sessionStorage.getItem('sbl_landing_page');
+      const storedCampaign = sessionStorage.getItem('sbl_campaign');
+      const storedReferrer = sessionStorage.getItem('sbl_referrer');
+      landingPage = storedLandingPage ?? currentLandingPage;
+      firstCampaign = storedCampaign ?? campaign;
+      firstReferrer = storedReferrer ?? firstReferrer;
+
+      if (storedLandingPage === null) sessionStorage.setItem('sbl_landing_page', currentLandingPage);
+      if (storedCampaign === null) sessionStorage.setItem('sbl_campaign', campaign);
+      if (storedReferrer === null) sessionStorage.setItem('sbl_referrer', firstReferrer);
+
+      for (const key of ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content']) {
+        const storageKey = `sbl_${key}`;
+        if (sessionStorage.getItem(storageKey) === null) {
+          sessionStorage.setItem(storageKey, params.get(key) || '');
+        }
+      }
+    } catch {
+      // Keep the form usable when browser storage is unavailable.
+    }
+
+    const requestedService = resolveService(params.get('service')) || serviceForPathname(window.location.pathname);
     setForm((previous) => ({
       ...previous,
       sourcePage: window.location.href,
@@ -47,6 +104,7 @@ export default function QuoteForm() {
       referrer: firstReferrer,
       campaign: firstCampaign,
       propertyType: params.get('property') && PROPERTY_TYPES.includes(params.get('property')!) ? params.get('property')! : previous.propertyType,
+      service: requestedService || previous.service,
     }));
   }, []);
 

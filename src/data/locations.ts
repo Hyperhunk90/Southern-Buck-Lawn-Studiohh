@@ -20,6 +20,11 @@ export const LOCATIONS: Location[] = [
     image: '/images/walker-lawn-stripes-after.webp',
     imageAlt: 'Freshly mowed green lawn with diagonal stripes beside a white brick house in Walker, Louisiana.',
     reviews: [],
+    relatedPostSlugs: [
+      'virginia-buttonweed-baton-rouge',
+      'chinch-bugs-st-augustine-louisiana',
+      'how-tall-to-cut-grass-louisiana-summer',
+    ],
     faqs: [
       {
         question: 'How do I get a number for weekly mowing in Walker?',
@@ -57,6 +62,12 @@ export const LOCATIONS: Location[] = [
     image: '/images/denham-springs-mulch-edging-after.webp',
     imageAlt: 'Fresh red mulch bed with boxwoods and gray stone edging wrapping a brick house corner in Denham Springs.',
     reviews: [],
+    relatedPostSlugs: [
+      'armyworms-denham-springs-overnight-damage',
+      'virginia-buttonweed-baton-rouge',
+      'chinch-bugs-st-augustine-louisiana',
+      'best-time-to-mulch-flowerbeds-louisiana',
+    ],
     faqs: [
       {
         question: 'How do I get a quote in Denham Springs?',
@@ -94,6 +105,11 @@ export const LOCATIONS: Location[] = [
     image: '/images/sherwood-oaks-commercial-trim.webp',
     imageAlt: 'Bad Boy Magnum zero-turn and string trimming around shrubs at a Sherwood Oaks property under a blue sky. Equipment photo, not a Watson yard.',
     reviews: [],
+    relatedPostSlugs: [
+      'fire-ants-ticks-fleas-livingston-parish-acreage',
+      'virginia-buttonweed-baton-rouge',
+      'how-tall-to-cut-grass-louisiana-summer',
+    ],
     faqs: [
       {
         question: 'Do you actually service Watson, or just list it?',
@@ -131,6 +147,12 @@ export const LOCATIONS: Location[] = [
     image: '/images/southern-hills-bed-prep.webp',
     imageAlt: 'Landscape fabric laid in a residential bed around a tree during mulch prep. Job photo, not a Livingston Parish house.',
     reviews: [],
+    relatedPostSlugs: [
+      'virginia-buttonweed-baton-rouge',
+      'fire-ants-ticks-fleas-livingston-parish-acreage',
+      'best-time-to-mulch-flowerbeds-louisiana',
+      'how-tall-to-cut-grass-louisiana-summer',
+    ],
     faqs: [
       {
         question: 'Which parts of Livingston Parish do you actually run?',

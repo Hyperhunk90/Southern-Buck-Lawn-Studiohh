@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, PhoneCall, MapPin, Sprout, Bug, Star } from 'lucide-react';
 import { LOCATIONS, getLocation } from '@/data/locations';
+import { POSTS } from '@/data/blog';
 import { SERVICE_NAV, SITE } from '@/data/site';
 import ServiceAreaMap from '@/components/ServiceAreaMap';
 import QuoteForm from '@/components/QuoteForm';
@@ -36,21 +37,13 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
   const { slug } = await params;
   const loc = getLocation(slug);
   if (!loc) notFound();
-
-  const faqJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: loc.faqs.map((f) => ({
-      '@type': 'Question',
-      name: f.question,
-      acceptedAnswer: { '@type': 'Answer', text: f.answer },
-    })),
-  };
+  const relatedPosts = loc.relatedPostSlugs.flatMap((postSlug) => {
+    const post = POSTS.find((candidate) => candidate.slug === postSlug);
+    return post ? [post] : [];
+  });
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
-
       <header className="relative overflow-hidden bg-midnight-moss pt-28 text-white">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-12 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div className="space-y-5">
@@ -124,6 +117,32 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
               </Link>
             ))}
           </div>
+
+          {relatedPosts.length > 0 && (
+            <section className="mt-12" aria-labelledby="local-area-guides-heading">
+              <h2 id="local-area-guides-heading" className="font-anton text-3xl uppercase text-primary">
+                Local Lawn Guides for {loc.name.replace(', LA', '')}
+              </h2>
+              <p className="mt-2 font-barlow text-lg text-gray-600">
+                Practical lawn and landscape guidance tied to the conditions and services covered on this route.
+              </p>
+              <div className="mt-5 grid gap-4 md:grid-cols-2">
+                {relatedPosts.map((post) => (
+                  <article key={post.slug} className="rounded-xl border border-primary/10 bg-white p-5 shadow-sm">
+                    <h3 className="font-anton text-xl uppercase text-midnight-moss">
+                      <Link href={`/blog/${post.slug}`} className="hover:text-safety-orange-deep">
+                        {post.title}
+                      </Link>
+                    </h3>
+                    <p className="mt-2 font-barlow text-base leading-relaxed text-gray-600">{post.excerpt}</p>
+                    <Link href={`/blog/${post.slug}`} className="mt-3 inline-flex items-center gap-2 font-barlow font-bold text-primary hover:text-safety-orange-deep">
+                      Read the guide <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </article>
+                ))}
+              </div>
+            </section>
+          )}
 
           <div className="mt-12">
             <FaqSection faqs={loc.faqs} heading={`${loc.name.replace(', LA', '')} Lawn Care Questions`} />

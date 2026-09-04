@@ -44,6 +44,7 @@ export const SERVICES: Service[] = [
     ],
     image: '/images/residential-lawn-stripes-magnum.webp',
     imageAlt: 'Freshly striped green residential lawn with an orange Bad Boy Magnum zero-turn parked by the driveway.',
+    relatedPostSlugs: ['how-tall-to-cut-grass-louisiana-summer'],
   },
   {
     slug: 'weed-control',
@@ -88,6 +89,12 @@ export const SERVICES: Service[] = [
     ],
     image: '/images/baton-rouge-hedge-bed-during.webp',
     imageAlt: 'Freshly trimmed green hedge around a front bed with soil and clippings at a Baton Rouge brick house.',
+    relatedPostSlugs: [
+      'virginia-buttonweed-baton-rouge',
+      'armyworms-denham-springs-overnight-damage',
+      'fire-ants-ticks-fleas-livingston-parish-acreage',
+      'chinch-bugs-st-augustine-louisiana',
+    ],
   },
   {
     slug: 'landscape-design',
@@ -132,6 +139,7 @@ export const SERVICES: Service[] = [
     ],
     image: '/images/azalea-bed-after-black-mulch.webp',
     imageAlt: 'Fresh black-mulch bed with red azaleas and clean black edging along a light stucco house.',
+    relatedPostSlugs: ['best-time-to-mulch-flowerbeds-louisiana'],
   },
   {
     slug: 'commercial-grounds',
@@ -177,6 +185,10 @@ export const SERVICES: Service[] = [
     ],
     image: '/images/commercial-property-grounds.webp',
     imageAlt: 'Maintained commercial building lawn and beds with Southern Buck Lawn trailer and zero-turn in view.',
+    relatedPostSlugs: [
+      'how-tall-to-cut-grass-louisiana-summer',
+      'best-time-to-mulch-flowerbeds-louisiana',
+    ],
   },
 ];
 

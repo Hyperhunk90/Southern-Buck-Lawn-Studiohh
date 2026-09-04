@@ -56,7 +56,7 @@ export default function LightingStory() {
             architecture, and create a warm finish that feels built in, not bolted on.
           </p>
           <p>
-            I am Michael Dantone — solo operator of Southern Buck Lawn since 2013. Lighting installs
+            I am Michael Dantone — solo operator of Southern Buck Lawn since June 2024. Lighting installs
             lean on about 13 years of industrial electrical background. That is electrical experience,
             not a landscape horticulture license. No crew of forty. If a lighting install is not a
             fit, I will tell you that up front.

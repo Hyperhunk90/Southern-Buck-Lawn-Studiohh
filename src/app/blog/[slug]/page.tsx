@@ -48,7 +48,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     image: `${SITE.url}${post.heroImage}`,
     datePublished: post.date,
     dateModified: post.date,
-    author: { '@type': 'Person', name: SITE.owner },
+    author: {
+      '@type': 'Person',
+      '@id': `${SITE.url}/about#owner`,
+      name: SITE.owner,
+      url: `${SITE.url}/about`,
+      image: `${SITE.url}/images/sbl-project-photo-11.webp`,
+    },
     publisher: {
       '@type': 'Organization',
       name: SITE.name,
@@ -69,7 +75,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <div className="mt-4 flex items-center gap-4 font-barlow text-sm text-white/70">
             <span className="flex items-center gap-1"><Calendar className="h-4 w-4 text-safety-orange" /> {post.dateLabel}</span>
             <span className="flex items-center gap-1"><Clock className="h-4 w-4 text-safety-orange" /> {post.readMinutes} min read</span>
-            <span>by {SITE.owner}</span>
+            <span>
+              by{' '}
+              <Link href="/about" className="underline decoration-white/30 underline-offset-4 hover:text-white">
+                {SITE.owner}
+              </Link>
+            </span>
           </div>
         </div>
       </header>
@@ -98,6 +109,30 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               ))}
             </section>
           ))}
+
+          <aside className="mt-10 flex flex-col gap-5 rounded-2xl border border-primary/10 bg-white p-6 shadow-sm sm:flex-row sm:items-center" aria-label={`About ${SITE.owner}`}>
+            <Image
+              src="/images/sbl-project-photo-11.webp"
+              alt={`${SITE.owner}, owner of ${SITE.name}`}
+              width={96}
+              height={96}
+              sizes="96px"
+              quality={70}
+              className="h-24 w-24 flex-shrink-0 rounded-full object-cover object-top"
+            />
+            <div>
+              <p className="font-barlow text-sm font-bold uppercase tracking-[0.2em] text-safety-orange-deep">Written from the field</p>
+              <h2 className="mt-1 font-anton text-2xl uppercase text-primary">
+                <Link href="/about" className="hover:text-safety-orange-deep">{SITE.owner}</Link>
+              </h2>
+              <p className="mt-2 font-barlow text-base leading-relaxed text-gray-700">
+                Michael has owner-operated Southern Buck Lawn from Walker since June 2024. He quotes the jobs, performs the work, and writes from experience serving Walker, Denham Springs, and Watson.
+              </p>
+              <Link href="/about" className="mt-3 inline-flex items-center gap-2 font-barlow font-bold text-midnight-moss hover:text-safety-orange-deep">
+                About Michael <ArrowRight className="h-4 w-4 text-safety-orange" />
+              </Link>
+            </div>
+          </aside>
 
           {/* Related internal links */}
           <div className="mt-10 rounded-2xl border border-primary/10 bg-mist-green p-6">

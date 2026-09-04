@@ -319,10 +319,20 @@ export default function GalleryClient() {
                   {project.description}
                 </p>
 
+                {project.serviceSlug && (
+                  <Link
+                    href={`/services/${project.serviceSlug}`}
+                    onClick={(event) => event.stopPropagation()}
+                    className="mt-3 inline-flex items-center gap-1 font-archivo text-xs font-extrabold uppercase tracking-wide text-primary hover:text-safety-orange-deep hover:underline"
+                  >
+                    See {project.serviceLabel} service <ArrowRight className="h-3.5 w-3.5" />
+                  </Link>
+                )}
+
                 <div className="mt-4 flex items-center justify-between border-t border-cream-line pt-3 font-archivo text-xs font-bold text-midnight-moss/60">
                   <span className="flex items-center gap-1">
                     <CheckCircle2 className="h-3.5 w-3.5 text-sage" />
-                    Southern Buck Verified
+                    Photo from our work
                   </span>
                   <span className="text-safety-orange-deep font-extrabold group-hover:underline">
                     Expand &rarr;
@@ -449,7 +459,7 @@ export default function GalleryClient() {
                   {/* Modal CTA Buttons */}
                   <div className="space-y-2.5 border-t border-cream-line pt-4">
                     <Link
-                      href={`/quote?service=${activeProject.serviceSlug || 'lawn-mowing'}&location=${encodeURIComponent(activeProject.location)}`}
+                      href={`/quote?service=${activeProject.serviceSlug || 'lawn-mowing'}`}
                       onClick={() => setActiveModalId(null)}
                       className="flex w-full items-center justify-center gap-2 rounded-xl bg-safety-orange py-3.5 px-4 font-archivo text-sm font-extrabold uppercase tracking-wide text-midnight-moss shadow-md hover:bg-safety-orange/90 transition-all text-center"
                     >
