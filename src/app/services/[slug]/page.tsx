@@ -21,7 +21,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: s.metaTitle,
     description: s.metaDescription,
-    keywords: s.keywords,
     alternates: { canonical: `/services/${s.slug}` },
     openGraph: {
       title: s.metaTitle,
@@ -57,12 +56,18 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const serviceJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Service',
+    '@id': `${SITE.url}/services/${service.slug}#service`,
     name: service.title,
-    serviceType: service.title,
-    description: service.metaDescription,
+    serviceType: service.schemaServiceType ?? service.title,
+    description: service.schemaDescription ?? service.metaDescription,
     url: `${SITE.url}/services/${service.slug}`,
-    provider: { '@type': 'LocalBusiness', '@id': `${SITE.url}/#business`, name: SITE.name },
-    areaServed: SITE.serviceAreas.map((a) => ({ '@type': 'City', name: `${a}, Louisiana` })),
+    provider: {
+      '@id': `${SITE.url}/#business`,
+    },
+    areaServed: [
+      ...SITE.serviceAreas.map((a) => ({ '@type': 'City', name: a, addressRegion: 'LA' })),
+      { '@type': 'AdministrativeArea', name: 'Livingston Parish' },
+    ],
   };
 
   return (
@@ -74,11 +79,16 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-12 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div className="space-y-5">
             <Breadcrumbs trail={[{ name: 'Services', href: '/services' }, { name: service.title, href: `/services/${service.slug}` }]} />
-            <p className="font-barlow text-sm font-bold uppercase tracking-[0.3em] text-safety-orange">{service.subtitle}</p>
+            <p className="font-barlow text-sm font-bold uppercase tracking-[0.3em] text-safety-orange">
+              {service.eyebrow ?? service.subtitle}
+            </p>
             <h1 className="font-anton text-4xl uppercase leading-tight tracking-wide sm:text-5xl">{service.h1}</h1>
             <p className="font-barlow text-xl text-white/80">{service.quickSummary}</p>
+            {service.trustLine && (
+              <p className="font-barlow text-sm font-semibold uppercase tracking-wider text-sage">{service.trustLine}</p>
+            )}
             <div className="flex flex-col gap-4 pt-2 sm:flex-row">
-              <Link href="/quote" className="flex items-center justify-center gap-2 rounded-lg bg-safety-orange px-7 py-3.5 font-anton uppercase tracking-wider text-midnight-moss shadow-lg transition-transform hover:scale-105">
+              <Link href="#quote-form" className="flex items-center justify-center gap-2 rounded-lg bg-safety-orange px-7 py-3.5 font-anton uppercase tracking-wider text-midnight-moss shadow-lg transition-transform hover:scale-105">
                 Get a Free Quote <ArrowRight className="h-5 w-5" />
               </Link>
               <a href={SITE.phoneHref} className="flex items-center justify-center gap-2 rounded-lg border border-white/20 bg-deep-forest px-7 py-3.5 font-anton uppercase tracking-wider text-white hover:bg-primary">
@@ -97,6 +107,34 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <div className="space-y-6 lg:col-span-2">
             {service.detailedContent.map((p, i) => (
               <p key={i} className="font-barlow text-lg leading-relaxed text-gray-700">{p}</p>
+            ))}
+
+            {service.sections?.map((section) => (
+              <section key={section.id} id={section.id} className="space-y-4 pt-2">
+                <h2 className="font-anton text-2xl uppercase text-primary">{section.heading}</h2>
+                {section.paragraphs.map((p, i) => (
+                  <p key={i} className="font-barlow text-lg leading-relaxed text-gray-700">{p}</p>
+                ))}
+                {section.bullets && section.bullets.length > 0 && (
+                  <ul className="space-y-3">
+                    {section.bullets.map((b) => (
+                      <li key={b} className="flex items-start gap-3 font-barlow text-lg text-gray-700">
+                        <Check className="mt-1 h-5 w-5 flex-shrink-0 text-safety-orange" /> {b}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {section.steps && section.steps.length > 0 && (
+                  <ol className="space-y-4">
+                    {section.steps.map((step) => (
+                      <li key={step.title} className="rounded-xl border border-primary/10 bg-white p-5 shadow-sm">
+                        <p className="font-anton text-lg uppercase text-midnight-moss">{step.title}</p>
+                        <p className="mt-2 font-barlow text-lg text-gray-700">{step.body}</p>
+                      </li>
+                    ))}
+                  </ol>
+                )}
+              </section>
             ))}
 
             <h2 className="pt-4 font-anton text-2xl uppercase text-primary">What You Get</h2>
@@ -153,6 +191,29 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 </div>
               ))}
             </div>
+
+            <div className="pt-4">
+              <h2 className="font-anton text-2xl uppercase text-primary">Related Services</h2>
+              <ul className="mt-3 space-y-2">
+                {otherServices.map((s) => (
+                  <li key={s.slug}>
+                    <Link href={`/services/${s.slug}`} className="inline-flex items-center gap-2 font-barlow text-lg font-semibold text-primary hover:text-safety-orange-deep">
+                      <ArrowRight className="h-4 w-4 text-safety-orange" /> {s.title}
+                    </Link>
+                  </li>
+                ))}
+                <li>
+                  <Link href="/landscape-lighting" className="inline-flex items-center gap-2 font-barlow text-lg font-semibold text-primary hover:text-safety-orange-deep">
+                    <ArrowRight className="h-4 w-4 text-safety-orange" /> Landscape Lighting
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/property-preservation-reo-services" className="inline-flex items-center gap-2 font-barlow text-lg font-semibold text-primary hover:text-safety-orange-deep">
+                    <ArrowRight className="h-4 w-4 text-safety-orange" /> Property Preservation &amp; REO
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
 
           <aside className="space-y-6 lg:col-span-1">
@@ -160,8 +221,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <p className="font-barlow text-sm font-bold uppercase tracking-wider text-safety-orange-deep">How I quote</p>
               <p className="mt-1 font-anton text-xl uppercase text-midnight-moss">{service.pricingRange}</p>
               <p className="mt-2 font-barlow text-base text-gray-600">Every yard is different. I give you a firm number after a quick look, free.</p>
-              <Link href="/quote" className="mt-4 block rounded-lg bg-safety-orange py-3 text-center font-anton uppercase tracking-wider text-midnight-moss shadow transition-transform hover:scale-105">
-                Get My Quote
+              <Link href="#quote-form" className="mt-4 block rounded-lg bg-safety-orange py-3 text-center font-anton uppercase tracking-wider text-midnight-moss shadow transition-transform hover:scale-105">
+                Get My Free Estimate
               </Link>
             </div>
 
@@ -227,11 +288,14 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         </section>
       )}
 
-      <section className="bg-mist-green py-16">
+      <section id="quote-form" className="bg-mist-green py-16">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div className="mb-8 text-center">
             <h2 className="font-anton text-3xl uppercase text-primary">Get Your Free {service.title} Quote</h2>
             <p className="mt-2 font-barlow text-lg text-gray-600">Fill this out and Michael calls you back within 24 hours.</p>
+            {service.trustLine && (
+              <p className="mt-2 font-barlow text-sm font-semibold uppercase tracking-wider text-safety-orange-deep">{service.trustLine}</p>
+            )}
           </div>
           <div className="rounded-2xl border border-primary/10 bg-white p-6 shadow-lg sm:p-8">
             <QuoteForm />

@@ -15,7 +15,7 @@ export default function Footer() {
               <span className="font-anton text-2xl tracking-wide">SOUTHERN BUCK <span className="text-safety-orange">LAWN</span></span>
             </Link>
             <p className="mb-6 max-w-md font-barlow text-lg leading-relaxed text-white/70">
-              Lawn care from Walker. Run by Michael Dantone. Weekly route is Walker, Denham Springs, and Watson. Same day, work I put my name on.
+              Lawn care from Walker. Run by Michael Dantone — solo operator since June 2024. Weekly route is Walker, Denham Springs, and Watson. Same day, work I put my name on. Need property care? Request a free estimate.
             </p>
             <div className="space-y-2 font-barlow">
               <a href={SITE.phoneHref} className="flex items-center gap-2 text-white/80 hover:text-safety-orange">
