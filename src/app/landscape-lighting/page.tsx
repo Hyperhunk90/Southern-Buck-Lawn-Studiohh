@@ -100,8 +100,6 @@ export default function LandscapeLightingPage() {
               </Link>
             </div>
           </div>
-
-          </div>
         </div>
       </section>
 
