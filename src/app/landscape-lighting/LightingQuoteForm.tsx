@@ -4,7 +4,7 @@ import { FormEvent, useEffect, useState } from 'react';
 import { CheckCircle2, Loader2 } from 'lucide-react';
 import { SITE } from '@/data/site';
 import { trackEvent } from '@/lib/ga';
-import { AMBER, ASH, BEST_TIMES, CHARCOAL, GOLD, INK, INTERESTS, WARM } from './lighting-content';
+import { AMBER, ASH, BEST_TIMES, CHARCOAL, GOLD, INK, INTERESTS, WARM } from './lightingContent';
 
 const inputClass =
   'w-full rounded-lg border bg-[#16161C] px-3 py-2.5 text-sm text-[#F4EDE3] outline-none transition placeholder:text-[#F4EDE3]/35 focus:border-[#E8A54B] focus:ring-2 focus:ring-[#E8A54B]/25';
@@ -132,8 +132,7 @@ export default function LightingQuoteForm({ id }: { id?: string }) {
           Thanks — we received your request.
         </h3>
         <p className="mt-2 text-sm leading-relaxed" style={{ color: `${WARM}cc` }}>
-          A lighting professional will review your needs and contact you shortly. Michael usually calls within one
-          business day.
+          Michael will review your needs and contact you shortly — usually within one business day.
         </p>
       </div>
     );
@@ -157,18 +156,6 @@ export default function LightingQuoteForm({ id }: { id?: string }) {
         style={{ background: `radial-gradient(circle, ${AMBER}38 0%, transparent 70%)` }}
       />
       <div className="relative space-y-4">
-        <div>
-          <p className="text-[11px] font-semibold uppercase tracking-[0.16em]" style={{ color: GOLD }}>
-            Free lighting quote
-          </p>
-          <h2
-            className="mt-1 text-xl leading-snug sm:text-2xl"
-            style={{ color: WARM, fontFamily: 'var(--font-lighting-display), Fraunces, serif' }}
-          >
-            See What Professional Lighting Could Do for Your Home
-          </h2>
-        </div>
-
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
           <Field label="Name" required>
             <input

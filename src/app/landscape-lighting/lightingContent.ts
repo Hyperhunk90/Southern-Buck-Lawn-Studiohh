@@ -5,6 +5,24 @@ import {
   Home,
 } from 'lucide-react';
 
+export const INK = '#07070A';
+export const CHARCOAL = '#16161C';
+export const AMBER = '#E8A54B';
+export const GOLD = '#C9A66B';
+export const WARM = '#F4EDE3';
+export const ASH = '#2A2A33';
+
+export const INTERESTS = [
+  'Pathway lighting',
+  'Landscape lighting',
+  'Home accent lighting',
+  'Security lighting',
+  'Full property design',
+  'Not sure yet',
+] as const;
+
+export const BEST_TIMES = ['Morning', 'Afternoon', 'Evening', 'Anytime'] as const;
+
 export const BENEFITS = [
   {
     icon: Footprints,
