@@ -20,6 +20,19 @@ export interface Service {
   image: string;
   imageAlt: string;
   relatedPostSlugs: string[];
+  /** Optional eyebrow above H1 */
+  eyebrow?: string;
+  trustLine?: string;
+  /** Richer body sections (landscape-design depth pattern) */
+  sections?: {
+    id: string;
+    heading: string;
+    paragraphs: string[];
+    bullets?: string[];
+    steps?: { title: string; body: string }[];
+  }[];
+  schemaServiceType?: string;
+  schemaDescription?: string;
 }
 
 export interface Review {
