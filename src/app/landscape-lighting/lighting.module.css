@@ -1,0 +1,536 @@
+.page {
+  --ink: #07070a;
+  --charcoal: #16161c;
+  --amber: #e8a54b;
+  --soft-gold: #c9a66b;
+  --warm-white: #f4ede3;
+  --ember: rgba(255, 184, 107, 0.22);
+  --ash: #2a2a33;
+  --warm-muted: rgba(244, 237, 227, 0.72);
+  --warm-faint: rgba(244, 237, 227, 0.55);
+
+  background: var(--ink);
+  color: var(--warm-white);
+  font-family: var(--font-lighting-sans), Manrope, system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+.page :global(h1),
+.page :global(h2),
+.page :global(h3) {
+  font-family: var(--font-lighting-display), Fraunces, Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-transform: none;
+}
+
+.eyebrow {
+  color: var(--soft-gold);
+  font-family: var(--font-lighting-sans), Manrope, system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.display {
+  font-family: var(--font-lighting-display), Fraunces, Georgia, serif;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--warm-white);
+}
+
+.subhead {
+  color: var(--warm-muted);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  max-width: 36rem;
+}
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: min(100svh, 920px);
+  padding: 6.5rem 1rem 3rem;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 7.5rem 1.5rem 4rem;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.heroMedia {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+
+.heroMedia img {
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 55% 60% at 78% 45%, var(--ember), transparent 70%),
+    linear-gradient(90deg, rgba(7, 7, 10, 0.92) 0%, rgba(7, 7, 10, 0.72) 42%, rgba(7, 7, 10, 0.45) 70%, rgba(7, 7, 10, 0.7) 100%),
+    linear-gradient(180deg, rgba(7, 7, 10, 0.55) 0%, transparent 28%, rgba(7, 7, 10, 0.85) 100%);
+}
+
+.emberGlow {
+  position: absolute;
+  right: 8%;
+  top: 35%;
+  width: min(420px, 55vw);
+  height: min(420px, 55vw);
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(255, 184, 107, 0.28), transparent 68%);
+  filter: blur(8px);
+  pointer-events: none;
+  z-index: -1;
+  animation: emberBreathe 8s ease-in-out infinite;
+}
+
+@keyframes emberBreathe {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.06); }
+}
+
+.heroGrid {
+  width: 100%;
+  max-width: 72rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+}
+
+.formCard {
+  position: relative;
+  background: rgba(22, 22, 28, 0.88);
+  border: 1px solid var(--ash);
+  border-radius: 1.25rem;
+  padding: 1.35rem 1.25rem 1.25rem;
+  backdrop-filter: blur(14px);
+  box-shadow:
+    0 0 0 1px rgba(232, 165, 75, 0.08),
+    0 24px 60px rgba(0, 0, 0, 0.45),
+    0 0 80px rgba(255, 184, 107, 0.08);
+}
+
+.formCard h2 {
+  font-size: 1.35rem;
+  line-height: 1.25;
+  margin-bottom: 0.35rem;
+}
+
+.ctaPrimary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  background: var(--amber);
+  color: var(--ink);
+  font-family: var(--font-lighting-sans), Manrope, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  padding: 0.95rem 1.4rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  box-shadow: 0 8px 28px rgba(232, 165, 75, 0.28);
+}
+
+.ctaPrimary:hover {
+  background: #f0b45d;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 32px rgba(232, 165, 75, 0.38);
+}
+
+.ctaPrimary:disabled {
+  opacity: 0.7;
+  cursor: wait;
+  transform: none;
+}
+
+.ctaGhost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--warm-white);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.ctaGhost:hover {
+  color: var(--amber);
+  border-color: var(--amber);
+}
+
+.benefitStrip {
+  background: var(--charcoal);
+  border-block: 1px solid var(--ash);
+  padding: 2.5rem 1rem;
+}
+
+.benefitGrid {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .benefitGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+.benefitCard {
+  border: 1px solid var(--ash);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  background: rgba(7, 7, 10, 0.35);
+}
+
+.benefitCard h3 {
+  font-size: 1.15rem;
+  margin: 0.65rem 0 0.4rem;
+  position: relative;
+}
+
+.benefitCard h3::after {
+  content: '';
+  display: block;
+  width: 2.25rem;
+  height: 2px;
+  margin-top: 0.55rem;
+  background: var(--amber);
+  transform-origin: left;
+  animation: underlineDraw 0.7s ease forwards;
+}
+
+@keyframes underlineDraw {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+.benefitCard p {
+  color: var(--warm-faint);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.section {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+.sectionNarrow {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+.pullQuote {
+  border-left: 2px solid var(--soft-gold);
+  padding-left: 1.25rem;
+  margin: 1.75rem 0;
+  color: var(--warm-white);
+  font-family: var(--font-lighting-display), Fraunces, Georgia, serif;
+  font-size: 1.35rem;
+  line-height: 1.4;
+}
+
+.transformWrap {
+  position: relative;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  border: 1px solid var(--ash);
+  background: var(--charcoal);
+  min-height: 280px;
+  aspect-ratio: 16 / 10;
+}
+
+.transformLayer {
+  position: absolute;
+  inset: 0;
+}
+
+.transformLayer img {
+  object-fit: cover;
+}
+
+.beforeFilter {
+  filter: brightness(0.42) saturate(0.55) contrast(1.05);
+}
+
+.afterGlow {
+  box-shadow: inset 0 0 80px rgba(232, 165, 75, 0.12);
+}
+
+.scrubRange {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 3;
+  accent-color: var(--amber);
+}
+
+.chipRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.chip {
+  border: 1px solid var(--ash);
+  background: rgba(22, 22, 28, 0.9);
+  color: var(--warm-white);
+  border-radius: 999px;
+  padding: 0.55rem 0.95rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.chipActive {
+  border-color: var(--amber);
+  color: var(--amber);
+  box-shadow: 0 0 0 1px rgba(232, 165, 75, 0.25);
+}
+
+.faqItem {
+  border: 1px solid var(--ash);
+  border-radius: 0.9rem;
+  background: var(--charcoal);
+  overflow: hidden;
+}
+
+.faqItem + .faqItem {
+  margin-top: 0.75rem;
+}
+
+.faqButton {
+  width: 100%;
+  text-align: left;
+  padding: 1rem 1.15rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  color: var(--warm-white);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.faqOpen {
+  color: var(--amber);
+}
+
+.faqPanel {
+  padding: 0 1.15rem 1.1rem;
+  color: var(--warm-muted);
+  font-size: 0.975rem;
+  line-height: 1.6;
+}
+
+.ctaBand {
+  background: var(--ink);
+  border-block: 1px solid var(--ash);
+  padding: 3.5rem 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.ctaBand::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: min(280px, 50%);
+  height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, var(--soft-gold), transparent);
+}
+
+.finalCta {
+  background:
+    radial-gradient(ellipse 50% 60% at 50% 0%, rgba(255, 184, 107, 0.14), transparent 65%),
+    var(--charcoal);
+  border-top: 1px solid var(--ash);
+  padding: 4.5rem 1rem 5.5rem;
+  text-align: center;
+}
+
+.napBlock {
+  border-top: 1px solid var(--ash);
+  background: #050507;
+  padding: 2.5rem 1rem 6.5rem;
+  text-align: center;
+  color: var(--warm-faint);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.napBlock strong {
+  color: var(--warm-white);
+  font-family: var(--font-lighting-display), Fraunces, Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.stickyBar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 60;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  background: rgba(22, 22, 28, 0.96);
+  border-top: 1px solid var(--ash);
+  backdrop-filter: blur(12px);
+  transform: translateY(110%);
+  transition: transform 0.35s ease;
+}
+
+.stickyVisible {
+  transform: translateY(0);
+}
+
+.stickyCall,
+.stickyQuote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.9rem 0.75rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+}
+
+.stickyCall {
+  color: var(--warm-white);
+}
+
+.stickyQuote {
+  background: var(--amber);
+  color: var(--ink);
+}
+
+@media (min-width: 640px) {
+  .stickyBar {
+    left: auto;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    width: min(420px, calc(100vw - 2.5rem));
+    border-radius: 999px;
+    border: 1px solid var(--ash);
+    overflow: hidden;
+    grid-template-columns: 1fr 1.35fr;
+  }
+
+  .napBlock {
+    padding-bottom: 3rem;
+  }
+}
+
+.fieldLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--warm-faint);
+}
+
+.fieldControl {
+  width: 100%;
+  border-radius: 0.65rem;
+  border: 1px solid var(--ash);
+  background: rgba(7, 7, 10, 0.65);
+  color: var(--warm-white);
+  padding: 0.7rem 0.8rem;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.fieldControl::placeholder {
+  color: rgba(244, 237, 227, 0.35);
+}
+
+.fieldControl:focus {
+  border-color: var(--amber);
+  box-shadow: 0 0 0 3px rgba(232, 165, 75, 0.2);
+}
+
+.fieldControl option {
+  background: #16161c;
+  color: #f4ede3;
+}
+
+.muted {
+  color: var(--warm-faint);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.numberMark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--soft-gold);
+  color: var(--soft-gold);
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .emberGlow {
+    animation: none;
+    opacity: 0.85;
+  }
+
+  .benefitCard h3::after {
+    animation: none;
+  }
+
+  .stickyBar {
+    transition: none;
+  }
+
+  .ctaPrimary:hover {
+    transform: none;
+  }
+}
