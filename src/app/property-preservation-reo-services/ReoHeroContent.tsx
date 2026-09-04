@@ -38,7 +38,7 @@ export default function ReoHeroContent() {
         Managing foreclosed, bank-owned, or REO properties from a desk three states away is a massive headache. You need trustworthy boots on the ground in Walker, Denham Springs, and Watson—someone who actually shows up, does the dirty work, and gets the property secured without you having to babysit the whole process.
       </motion.p>
       <motion.p variants={itemVariants} className="mx-auto mt-6 max-w-3xl font-barlow text-lg font-semibold text-white sm:text-xl">
-        At Southern Buck Lawn, I’m insured, locally owned, and I don't back down from a mess. You send the work order; I send the truck.
+        Southern Buck Lawn is insured and locally owned. I do not back down from a mess. You send the work order; I send the truck.
       </motion.p>
       <motion.div variants={itemVariants} className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
         <a
