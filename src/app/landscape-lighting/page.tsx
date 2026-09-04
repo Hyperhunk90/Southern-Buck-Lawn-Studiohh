@@ -3,19 +3,19 @@ import { SITE } from '@/data/site';
 import LightingNightPage from './LightingNightPage';
 
 export const metadata: Metadata = {
-  title: 'Landscape Lighting After Dark in Walker, Denham Springs & Watson',
+  title: 'Professional Landscape Lighting in Walker, Denham Springs & Watson',
   description:
-    'Professionally designed low-voltage landscape lighting for homes that should look this good at night. Safer paths, warmer curb appeal, lasting quality — not disposable solar. Michael Dantone, Southern Buck Lawn. Walker, Denham Springs, and Watson.',
+    'Professionally designed low-voltage landscape lighting from Southern Buck Lawn. Safer walkways, warmer curb appeal, and lasting quality — not disposable solar. Walker, Denham Springs, and Watson. Free lighting quote.',
   alternates: { canonical: '/landscape-lighting' },
   openGraph: {
-    title: 'Your Home Should Look This Good at Night | Southern Buck Lawn',
+    title: 'Your Home Should Look This Good at Night',
     description:
-      'Night-forward landscape lighting from a Walker shop. Real dusk path-light work, solo-operator craft, and a free lighting quote for Walker, Denham Springs, and Watson.',
+      'Custom low-voltage landscape lighting by Michael Dantone — solo operator since 2013, 13 years industrial electrical background. Walker, Denham Springs, and Watson.',
     url: `${SITE.url}/landscape-lighting`,
     images: [
       {
         url: '/images/sbl-project-photo-02.webp',
-        alt: 'Brick house at dusk with warm path lights along the walk — Southern Buck Lawn',
+        alt: 'Brick house at dusk with path lights along the walk — Southern Buck Lawn lighting work',
       },
     ],
   },
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: '/images/sbl-project-photo-02.webp',
-        alt: 'Brick house at dusk with warm path lights along the walk — Southern Buck Lawn',
+        alt: 'Brick house at dusk with path lights along the walk — Southern Buck Lawn',
       },
     ],
   },
