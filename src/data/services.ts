@@ -42,8 +42,8 @@ export const SERVICES: Service[] = [
           'Mulch by default — chopped clippings feed the soil. After a wet stretch, if it is too heavy, I bag or spread it so you are not left with clumps baking on the lawn.',
       },
     ],
-    image: '/images/walker-lawn-stripes-after.webp',
-    imageAlt: 'Freshly mowed green lawn with diagonal stripes beside a white brick house in Walker, Louisiana.',
+    image: '/images/residential-lawn-stripes-magnum.webp',
+    imageAlt: 'Freshly striped green residential lawn with an orange Bad Boy Magnum zero-turn parked by the driveway.',
   },
   {
     slug: 'weed-control',
@@ -130,8 +130,8 @@ export const SERVICES: Service[] = [
           'Pine straw is light, cheap, and good on slopes and around azaleas. Hardwood holds color and stays put in rain. I will tell you which fits your beds when I walk them.',
       },
     ],
-    image: '/images/denham-springs-mulch-edging-after.webp',
-    imageAlt: 'Fresh red mulch bed with boxwoods and gray stone edging wrapping a brick house corner in Denham Springs.',
+    image: '/images/azalea-bed-after-black-mulch.webp',
+    imageAlt: 'Fresh black-mulch bed with red azaleas and clean black edging along a light stucco house.',
   },
   {
     slug: 'commercial-grounds',
@@ -175,8 +175,8 @@ export const SERVICES: Service[] = [
           'If it sits on the Walker–Denham–Watson route, yes. Common areas, fence lines, entrance beds, one invoice. If it is off the route, ask first and I will tell you straight.',
       },
     ],
-    image: '/images/sherwood-oaks-commercial-trim.webp',
-    imageAlt: 'Bad Boy Magnum zero-turn and string trimming around shrubs at a Sherwood Oaks property under a blue sky.',
+    image: '/images/commercial-property-grounds.webp',
+    imageAlt: 'Maintained commercial building lawn and beds with Southern Buck Lawn trailer and zero-turn in view.',
   },
 ];
 
