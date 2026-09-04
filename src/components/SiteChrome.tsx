@@ -8,9 +8,15 @@ import TextBubble from '@/components/TextBubble';
 // Routes that render as standalone pages (no main-site nav/footer/text bubble).
 const BARE_ROUTES: string[] = [];
 
+// Night-cinema lighting page ships its own sticky Call + Quote bar.
+const HIDE_TEXT_BUBBLE_ROUTES = ['/landscape-lighting'];
+
 export default function SiteChrome({ children }: { children: React.ReactNode }) {
   const pathname = usePathname() || '/';
   const bare = BARE_ROUTES.some((r) => pathname === r || pathname.startsWith(`${r}/`));
+  const hideTextBubble = HIDE_TEXT_BUBBLE_ROUTES.some(
+    (r) => pathname === r || pathname.startsWith(`${r}/`),
+  );
 
   if (bare) {
     return <>{children}</>;
@@ -23,7 +29,7 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
       <Footer />
       {/* Spacer so the mobile sticky action bar never covers footer content. */}
       <div className="h-14 sm:hidden" aria-hidden />
-      <TextBubble />
+      {!hideTextBubble && <TextBubble />}
     </>
   );
 }
