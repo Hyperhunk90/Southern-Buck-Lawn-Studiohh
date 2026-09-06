@@ -42,7 +42,7 @@ export const POSTS: BlogPost[] = [
         heading: 'What It Actually Takes',
         body: [
           'Killing it for good takes a specific herbicide mix and more than one application timed to the weed\'s growth cycle, not the calendar.',
-          'A thick lawn is buttonweed\'s biggest enemy. Lime and a real feed so the turf grows dense enough that the weed has nowhere to land.',
+          'A dense, healthy lawn helps limit the open space where weeds establish. Match mowing and fertilizer to your grass, address drainage problems, and use a soil test before adding lime. Some lawn grasses naturally prefer acidic soil.',
         ],
       },
       {
@@ -66,7 +66,7 @@ export const POSTS: BlogPost[] = [
       'Lawn looked fine yesterday and is chewed to the dirt today? Armyworms move fast in Denham Springs. Here is how to catch them before they take the whole yard.',
     h1: 'Armyworms Can Strip a Denham Springs Lawn Overnight — Here Is What to Watch For',
     excerpt:
-      'A lawn that looks perfect on Tuesday and looks chewed down to dirt by Thursday is not a fluke. That is armyworms.',
+      'A lawn that looks green on Tuesday and chewed down by Thursday needs a closer look. Armyworms are one possible cause of rapid leaf damage.',
     date: '2026-06-04',
     dateLabel: 'June 4, 2026',
     readMinutes: 4,
@@ -100,7 +100,7 @@ export const POSTS: BlogPost[] = [
       {
         heading: 'What Stops Them',
         body: [
-          'Speed is everything. Caught early, a targeted treatment stops them. Wait until you see bare dirt and you are reseeding. If your yard changed overnight, call me.',
+          'Check for caterpillars before choosing a treatment. If armyworms are confirmed, prompt control can limit further leaf damage. Healthy, actively growing grass can recover even after heavy feeding, so bare-looking turf does not automatically need reseeding. The grass type and condition of the crowns and roots matter. If your yard changed overnight, call me.',
         ],
       },
     ],
@@ -184,21 +184,21 @@ export const POSTS: BlogPost[] = [
     sections: [
       {
         body: [
-          'Every July I get the same call. A homeowner in Walker or Denham Springs has a brown patch that keeps growing no matter how much they water. Nine times out of ten, chinch bugs.',
+          'A spreading brown patch in a Walker or Denham Springs lawn can have several causes, including drought stress, disease, and insects. Chinch bugs are one possibility in St. Augustine, especially in hot, sunny areas. Confirm that the insects are present before choosing a treatment.',
           'They hide in the thatch, suck the juice out of the blades, and inject a toxin. In this heat they breed fast.',
         ],
       },
       {
         heading: 'The Telltale Signs',
         body: [
-          'Damage shows first in the hottest spots, along the sidewalk and driveway. Unlike drought it does not green back up after you water.',
+          'Chinch bug damage often appears in hot spots along sidewalks and driveways. It can resemble drought stress or other lawn problems, so watering response alone is not a diagnosis.',
           'Part the grass where the green meets the brown and look at the soil line. Little black and white bugs. Or the coffee-can test: push a can into the ground, fill it with water, wait. Chinch bugs float.',
         ],
       },
       {
         heading: 'Why Louisiana Lawns Get Hit Hard',
         body: [
-          'Heat, humidity, and thick St. Augustine. Heavy thatch is a hotel for them. Quick-release nitrogen makes it worse. I feed slow-release for that reason.',
+          'Chinch bugs favor hot, dry conditions and thick thatch in St. Augustine. Mow at the right height, water according to the lawn\'s needs, and base fertilizer on the grass and soil-test recommendations. Excess fertilizer is not a substitute for diagnosis.',
         ],
       },
       {

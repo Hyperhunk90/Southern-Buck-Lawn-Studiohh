@@ -64,7 +64,7 @@ export default function LightingStory() {
         </div>
       </section>
 
-      <section id="dusk-reel" className={styles.section} aria-label="Dusk to night transformation">
+      <section id="dusk-reel" className={styles.section} aria-label="Digital lighting concept preview">
         <p className={styles.eyebrow}>Better-placed light</p>
         <h2 className="mt-3 max-w-3xl text-[clamp(1.75rem,3.2vw,2.6rem)] leading-tight">
           The Difference Is Not More Light. It Is Better-Placed Light.
@@ -78,7 +78,7 @@ export default function LightingStory() {
           <div className={styles.transformLayer}>
             <Image
               src="/images/sbl-project-photo-02.webp"
-              alt="Southern Buck Lawn dusk project plate — intentional warm path lighting"
+              alt="Digitally adjusted lighting concept using a Southern Buck Lawn photograph of a brick home and landscaped walkway"
               fill
               sizes="(max-width: 1024px) 100vw, 960px"
               className={progress < 0.5 ? styles.beforeFilter : undefined}
@@ -99,7 +99,7 @@ export default function LightingStory() {
             aria-hidden
           />
           <p className="absolute left-4 top-4 z-[2] rounded-full bg-[rgba(7,7,10,0.8)] px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-[var(--soft-gold)]">
-            {progress < 0.5 ? 'Before — flat after dark' : 'After — intentional warm light'}
+            {progress < 0.5 ? 'Concept preview — dimmed' : 'Concept preview — warm glow'}
           </p>
           {!reduce && (
             <input
@@ -108,18 +108,20 @@ export default function LightingStory() {
               min={0}
               max={100}
               value={Math.round(progress * 100)}
-              aria-label="Scrub dusk to night lighting"
+              aria-label="Adjust the digital lighting concept"
+              aria-describedby="lighting-concept-disclosure"
               onChange={(e) => setProgress(Number(e.target.value) / 100)}
             />
           )}
         </div>
-        <p className="mt-3 text-center text-sm text-[var(--warm-muted)]">
-          Designed for your home — not pulled from a box.
+        <p id="lighting-concept-disclosure" className="mt-3 text-center text-sm text-[var(--warm-muted)]">
+          This concept preview digitally adjusts one photograph to illustrate a lighting mood.
+          It is not a documented before-and-after installation or a prediction of your finished result.
         </p>
 
         <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
           <div className={styles.benefitCard}>
-            <h3 className="text-[var(--soft-gold)]">Before</h3>
+            <h3 className="text-[var(--soft-gold)]">Common lighting problems</h3>
             <ul className="mt-3 space-y-2 text-sm text-[var(--warm-muted)]">
               {BEFORE.map((item) => (
                 <li key={item}>{item}</li>
@@ -127,7 +129,7 @@ export default function LightingStory() {
             </ul>
           </div>
           <div className={styles.benefitCard}>
-            <h3 className="text-[var(--amber)]">After</h3>
+            <h3 className="text-[var(--amber)]">What a lighting plan can improve</h3>
             <ul className="mt-3 space-y-2 text-sm text-[var(--warm-muted)]">
               {AFTER.map((item) => (
                 <li key={item}>{item}</li>
