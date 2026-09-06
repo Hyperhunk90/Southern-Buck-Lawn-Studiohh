@@ -14,7 +14,7 @@ const nextConfig = {
     // poorly at the default 75, so big atmospheric shots use 50-60. Every
     // quality value used by an <Image> MUST be listed here — in production
     // Next.js returns a 400 (broken image) for any quality not in this list.
-    qualities: [50, 55, 60, 75],
+    qualities: [50, 55, 60, 70, 75],
   },
   async headers() {
     return [

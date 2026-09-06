@@ -17,7 +17,7 @@ export const SERVICES: Service[] = [
     quickSummary:
       'Mow, trim, hard edge, and blow. I show up on the same day every week, set the deck to your grass, and leave the concrete clean.',
     detailedContent: [
-      'Louisiana grass grows fast and it does not forgive a bad cut. Around Walker, Denham Springs, and Watson, most yards are St. Augustine or Centipede. They want a tall cut — about three and a half to four inches. Scalp that down like a golf course and July will cook it. Bermuda wants it lower and fed. I set the deck to the grass that is actually in your yard, and I keep the blades sharp so the tip slices instead of tearing brown.',
+      'Louisiana grass grows fast and it does not forgive a bad cut. Around Walker, Denham Springs, and Watson, St. Augustine and Centipede need different mowing heights. St. Augustine generally needs a taller cut; Centipede is usually maintained around one to two inches. The right setting depends on the grass variety and conditions. I set the deck to the grass that is actually in your yard, and I keep the blades sharp so the tip slices instead of tearing brown.',
       'Every visit is the full pass, not a swipe down the middle. Fresh pattern so the same lines do not rut. String-trim the fence, beds, trees, and around the AC without chewing the box. Hard edge along the drive, walks, and curb. Then I blow every clipping off the concrete back into the turf, where the nitrogen belongs, not on your shoes.',
       'When you are on the route, it is the same day every week. A storm might push me a day. Then I am back on it. Steady weekly cuts are how a lawn thickens up enough to crowd weeds on its own — and how you stop spending Saturday behind a mower in 98-degree heat.',
     ],
@@ -108,7 +108,7 @@ export const SERVICES: Service[] = [
     detailedContent: [
       'A thin lawn is a weed invitation. Bare dirt and sun, and something will sprout. I feed on a schedule so the grass gets dense enough to shade trouble out, then I treat what slips through. Slow-release granular plus targeted liquid — not a cheap nitrogen spike that looks great for two weeks and crashes.',
       'The local list is crabgrass, clover, chickweed, spurge, and Virginia buttonweed, which shrugs off most store sprays. Timing beats brute force. Late-winter pre-emergent stops a lot of it in the soil before you ever see it.',
-      'Soil around Walker and Denham leans clay and acidic. Lime and a real feed blend open it up so roots go deeper and hold color through August. Pets and kids can get back on the grass once the spray dries — usually under two hours in this heat.',
+      'Soil conditions vary from yard to yard. A soil test tells us whether lime or a nutrient adjustment is needed; lime is not a routine fix for every lawn. Keep children and pets away during an application and follow every re-entry instruction on the product label. For sprays, that includes waiting until the treated area is dry and any longer label restriction has passed.',
     ],
     sections: [
       {
@@ -121,7 +121,7 @@ export const SERVICES: Service[] = [
           'Late-winter pre-emergent to stop crabgrass before it starts',
           'Slow-release feed instead of a short nitrogen spike',
           'Targeted treatment for buttonweed and other local pests',
-          'Lime when the soil is sour and holding the grass back',
+          'Lime only when a soil test recommends it for your grass',
         ],
       },
       {
@@ -150,16 +150,16 @@ export const SERVICES: Service[] = [
     ],
     localBenefits: [
       'Late-winter pre-emergent to stop crabgrass before it starts.',
-      'Mixes tuned for Walker and Denham clay, not a generic bag.',
-      'Lime when the soil is sour.',
-      'Dry and back in play for pets and kids in about two hours.',
+      'Treatment choices matched to the grass, weeds, and site conditions.',
+      'Lime only when a soil test shows it is needed.',
+      'Children and pets return only after the product-label restrictions are met.',
     ],
     pricingRange: 'Quoted after I look at the property — free estimate',
     faqs: [
       {
         question: 'Is the treatment safe around my dogs and kids?',
         answer:
-          'Keep them off until the liquid dries, about an hour and a half in the sun. After that it is normal. I will tell you what went down.',
+          'Keep children and pets out of the treatment area during application. Follow the specific product label for watering, drying, and re-entry restrictions before allowing them back. There is no single safe waiting time for every treatment; I will explain the instructions for the product used.',
       },
       {
         question: 'When do you fertilize St. Augustine lawns?',
