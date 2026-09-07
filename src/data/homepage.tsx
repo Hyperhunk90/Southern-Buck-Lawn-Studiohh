@@ -71,7 +71,7 @@ export const faqs = [
 ];
 
 export const buckPoints = [
-  'Owner-operated since June 2024',
+  'Owner-operated since 2013',
   'Same day every week on the route',
   'Free, no-pressure estimates',
   'Insured — general liability',
