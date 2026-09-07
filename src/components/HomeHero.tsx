@@ -30,7 +30,7 @@ export default function HomeHero() {
           <span className="inline-flex items-center gap-2 rounded-full border border-sage/50 bg-safety-orange/20 px-4 py-1.5 font-archivo text-xs font-bold uppercase tracking-widest text-sage">
             <MapPin className="h-4 w-4" /> Walker &middot; Denham Springs &middot; Watson
           </span>
-          <p className="font-caveat text-3xl font-bold text-sage sm:text-4xl">Owner-operated in Walker since June 2024</p>
+          <p className="font-caveat text-3xl font-bold text-sage sm:text-4xl">Owner-operated in Walker since 2013</p>
           <h1 className="font-anton text-5xl uppercase leading-[0.95] tracking-wide text-white sm:text-7xl">
             Your Property Deserves <span className="text-safety-orange">Better Than a Rushed Cut.</span>
           </h1>
@@ -79,7 +79,7 @@ export default function HomeHero() {
       <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 sm:px-6 lg:grid-cols-4 lg:px-8">
         {[
           { icon: <ShieldCheck className="h-7 w-7" />, t: 'Insured', s: 'General liability' },
-          { icon: <Award className="h-7 w-7" />, t: 'Owner-Operated', s: 'Since June 2024' },
+          { icon: <Award className="h-7 w-7" />, t: 'Owner-Operated', s: 'Since 2013' },
           { icon: <PhoneCall className="h-7 w-7" />, t: '24-Hour Callback', s: 'I answer fast' },
           { icon: <MapPin className="h-7 w-7" />, t: 'Local Route', s: 'Walker · Denham · Watson' },
         ].map((item) => (
