@@ -4,7 +4,7 @@ import { SITE } from '@/data/site';
 export default function BusinessJsonLd() {
   const businessJsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': ['LocalBusiness', 'Landscaper'],
     name: SITE.name,
     image: `${SITE.url}/images/southern-buck-lawn-logo.png`,
     '@id': `${SITE.url}/#business`,
@@ -16,9 +16,9 @@ export default function BusinessJsonLd() {
       '@id': `${SITE.url}/about#owner`,
       name: SITE.owner,
       url: `${SITE.url}/about`,
-      image: `${SITE.url}/images/sbl-project-photo-11.webp`,
+      image: `${SITE.url}/images/michael-dantone-owner.webp`,
     },
-    foundingDate: '2024-06',
+    foundingDate: '2013',
     priceRange: '$$',
     address: {
       '@type': 'PostalAddress',

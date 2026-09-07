@@ -66,7 +66,7 @@ export default function HomeMidRest() {
           <h2 className="mt-1 font-anton text-4xl uppercase tracking-wide text-white sm:text-5xl">Meet the Owner Behind the Work</h2>
           <div className="mt-4 h-1 w-24 rounded bg-safety-orange" />
           <p className="mt-5 max-w-2xl font-archivo text-lg leading-relaxed text-white/90">
-            I&rsquo;m Michael Dantone. I run Southern Buck Lawn out of Walker &mdash; 28790 Brett Drive. Owner-operated since June 2024. Folks around here call me the Landscape Mayor, and I earned it one yard at a time. This is a one-man shop, not a franchise. When you call, you get me. Same day every week, yard left better than I found it.
+            I&rsquo;m Michael Dantone. I run Southern Buck Lawn out of Walker &mdash; 28790 Brett Drive. Owner-operated since 2013. Folks around here call me the Landscape Mayor, and I earned it one yard at a time. This is a one-man shop, not a franchise. When you call, you get me. Same day every week, yard left better than I found it.
           </p>
           <div className="mt-7 grid max-w-2xl grid-cols-1 gap-4 sm:grid-cols-2">
             {buckPoints.map((p) => (
