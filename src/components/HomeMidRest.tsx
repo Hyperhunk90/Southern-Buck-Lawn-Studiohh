@@ -6,10 +6,8 @@ import {
 import { AREA_NAV } from '@/data/site';
 import { REVIEWS } from '@/data/reviews';
 import { gallery, faqs, buckPoints } from '@/data/homepage';
-import dynamic from 'next/dynamic';
-
-const ServiceAreaMap = dynamic(() => import('@/components/ServiceAreaMap'));
-const ReviewBadgeBar = dynamic(() => import('@/components/ReviewBadgeBar'));
+import ServiceAreaMap from '@/components/ServiceAreaMap';
+import ReviewBadgeBar from '@/components/ReviewBadgeBar';
 
 /** Job-photo strip: 1-col / sm:2 inside max-w-7xl + padding. */
 const GALLERY_CARD_SIZES =
