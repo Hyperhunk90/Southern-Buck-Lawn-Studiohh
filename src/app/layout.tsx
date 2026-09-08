@@ -3,7 +3,7 @@ import { Anton, Archivo, Caveat } from 'next/font/google';
 import './globals.css';
 import SiteChrome from '@/components/SiteChrome';
 import GaTracker from '@/components/GaTracker';
-import ChatWidget from '@/components/ChatWidget';
+import ChatWidgetLazy from '@/components/ChatWidgetLazy';
 import { SITE, DEFAULT_OG_IMAGE } from '@/data/site';
 
 // Bound HTML freshness at the CDN so a deployment cannot leave pages pointing
@@ -80,7 +80,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to content
         </a>
         <SiteChrome>{children}</SiteChrome>
-        <ChatWidget />
+        <ChatWidgetLazy />
         <GaTracker />
       </body>
     </html>

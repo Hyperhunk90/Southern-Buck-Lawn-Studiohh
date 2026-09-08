@@ -1,4 +1,3 @@
-'use client';
 import Link from 'next/link';
 import Image from 'next/image';
 import {
@@ -8,8 +7,13 @@ import { AREA_NAV } from '@/data/site';
 import { REVIEWS } from '@/data/reviews';
 import { gallery, faqs, buckPoints } from '@/data/homepage';
 import dynamic from 'next/dynamic';
+
 const ServiceAreaMap = dynamic(() => import('@/components/ServiceAreaMap'));
 const ReviewBadgeBar = dynamic(() => import('@/components/ReviewBadgeBar'));
+
+/** Job-photo strip: 1-col / sm:2 inside max-w-7xl + padding. */
+const GALLERY_CARD_SIZES =
+  '(max-width: 639px) calc(100vw - 2rem), (max-width: 1279px) calc(50vw - 1.75rem), 608px';
 
 export default function HomeMidRest() {
   return (
@@ -32,7 +36,7 @@ export default function HomeMidRest() {
                 alt={g.alt}
                 width={g.w}
                 height={g.h}
-                sizes="(max-width: 640px) 92vw, 46vw"
+                sizes={GALLERY_CARD_SIZES}
                 quality={60}
                 className="h-72 w-full rounded-xl"
                 style={{ objectFit: 'cover' }}
@@ -57,6 +61,8 @@ export default function HomeMidRest() {
               alt="Headshot of Michael Dantone, owner of Southern Buck Lawn, in a company polo."
               width={300}
               height={300}
+              sizes="(max-width: 639px) 240px, 288px"
+              quality={60}
               className="h-60 w-60 object-cover object-top sm:h-72 sm:w-72"
             />
           </div>
