@@ -55,6 +55,17 @@ test('website assistant keeps Walker home turf and treats Baton Rouge as selecti
   assert.doesNotMatch(chat, /Baton Rouge and Gonzales are not home markets/);
 });
 
+test('SITE.serviceAreas City list is Walker / Denham Springs / Watson only (BR page OK, not City areaServed)', () => {
+  const site = read('src/data/site.ts');
+  assert.match(site, /serviceAreas:\s*\[\s*'Walker'\s*,\s*'Denham Springs'\s*,\s*'Watson'\s*\]/);
+  assert.doesNotMatch(site, /serviceAreas:[^\]]*Baton Rouge/);
+  assert.doesNotMatch(site, /serviceAreas:[^\]]*Gonzales/);
+  // Selective BR page + nav stay; same pattern as Livingston Parish (page without City serviceAreas).
+  assert.match(site, /href: '\/service-areas\/baton-rouge'/);
+  assert.match(read('src/data/locations.ts'), /slug: 'baton-rouge'/);
+  assert.match(read('src/data/locations.ts'), /slug: 'livingston-parish'/);
+});
+
 test('gallery proof stays honest and sends service intent without a placeholder address', () => {
   const gallery = read('src/components/GalleryClient.tsx');
   assert.match(gallery, /Photo from our work/);
