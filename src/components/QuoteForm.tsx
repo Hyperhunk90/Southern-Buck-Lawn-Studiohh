@@ -153,8 +153,12 @@ export default function QuoteForm({ defaultService = SERVICES[0] }: QuoteFormPro
   return (
     <form onSubmit={submit} className="space-y-5" aria-busy={status === 'sending'}>
       <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 rounded-lg bg-mist-green px-4 py-2.5 text-center">
-        <span className="flex items-center gap-1 text-safety-orange-deep" aria-label={`${GOOGLE_RATING.score} out of 5 stars`}>
-          {Array.from({ length: 5 }).map((_, index) => <Star key={index} className="h-4 w-4 fill-safety-orange-deep" />)}
+        <span
+          role="img"
+          aria-label={`${GOOGLE_RATING.score} out of 5 stars`}
+          className="flex items-center gap-1 text-safety-orange-deep"
+        >
+          {Array.from({ length: 5 }).map((_, index) => <Star key={index} className="h-4 w-4 fill-safety-orange-deep" aria-hidden="true" />)}
         </span>
         <span className="font-barlow text-sm font-bold uppercase tracking-wide text-midnight-moss">{GOOGLE_RATING.score.toFixed(1)} on Google · Insured · Free estimates</span>
       </div>
