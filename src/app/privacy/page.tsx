@@ -1,14 +1,26 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { SITE } from '@/data/site';
+import { SITE, DEFAULT_OG_IMAGE } from '@/data/site';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Privacy',
+  title: { absolute: 'Privacy Policy | Southern Buck Lawn' },
   description:
-    'How Southern Buck Lawn uses the name, phone, email, and address you send on the quote and contact forms.',
+    'How Southern Buck Lawn uses the name, phone, email, and address you send on the quote and contact forms. Walker, LA sole prop.',
   alternates: { canonical: '/privacy' },
-  openGraph: { url: `${SITE.url}/privacy` },
+  openGraph: {
+    type: 'website',
+    url: `${SITE.url}/privacy`,
+    title: 'Privacy Policy | Southern Buck Lawn',
+    description:
+      'How Southern Buck Lawn uses information from quote and contact forms.',
+    images: [DEFAULT_OG_IMAGE],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Privacy Policy | Southern Buck Lawn',
+    images: [{ url: DEFAULT_OG_IMAGE.url, alt: DEFAULT_OG_IMAGE.alt }],
+  },
 };
 
 export default function PrivacyPage() {
