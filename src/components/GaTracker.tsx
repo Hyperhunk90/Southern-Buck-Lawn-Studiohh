@@ -86,6 +86,11 @@ function ConversionTracking() {
   return null;
 }
 
+/**
+ * Loads GA4 / gtag after Consent Mode v2 defaults (see ConsentMode).
+ * Tags stay present on the page with denied defaults — do not delay or strip
+ * conversion / generate_lead firing until consent.
+ */
 export default function GaTracker() {
   return (
     <>
