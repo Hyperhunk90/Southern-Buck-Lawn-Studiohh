@@ -76,13 +76,16 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${anton.variable} ${archivo.variable} ${caveat.variable}`}>
+      <head>
+        {/* First head script when possible: CM v2 denied defaults before any gtag preload. */}
+        <ConsentMode />
+      </head>
       <body>
         <a href="#main-content" className="skip-to-content">
           Skip to content
         </a>
         <SiteChrome>{children}</SiteChrome>
         <ChatWidget />
-        <ConsentMode />
         <GaTracker />
       </body>
     </html>
