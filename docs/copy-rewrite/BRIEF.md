@@ -8,7 +8,7 @@ Rewrite homepage + main service pages to sound down-to-earth: Walker solo operat
 ## Hard honesty rules
 - Sole prop, never LLC. NAP: Southern Buck Lawn, 28790 Brett Dr, Walker, LA 70785, 225-369-4434, sbl@southernbucklawn.com
 - Home turf only: Walker 70785, Denham Springs 70726, Watson 70786 (+ Livingston Parish when honest). Do not sell Baton Rouge 70816/70817 as home turf.
-- Solo Michael since 2013. No “crew,” “our team,” “premium standard,” invented response times, fake reviews, or unearned licenses.
+- Solo Michael since June 2024. No “crew,” “our team,” “premium standard,” invented response times, fake reviews, or unearned licenses.
 - Free estimates OK if already used sitewide. 5.0 Google only if still true on the live review count.
 - Real job photos only. Honest ALT/titles. No stock/AI. Do not duplicate the same image across pages.
 - No meta keywords tags. One visible H1. Merge Service schema into existing business entity — no duplicate LocalBusiness.
