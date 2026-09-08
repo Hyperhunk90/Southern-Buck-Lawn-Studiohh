@@ -4,19 +4,11 @@ import './globals.css';
 import SiteChrome from '@/components/SiteChrome';
 import GaTracker from '@/components/GaTracker';
 import ChatWidget from '@/components/ChatWidget';
-import { SITE } from '@/data/site';
+import { SITE, DEFAULT_OG_IMAGE } from '@/data/site';
 
 // Bound HTML freshness at the CDN so a deployment cannot leave pages pointing
 // at retired JavaScript bundles for a year. Hashed assets remain immutable.
 export const revalidate = 300;
-
-// Default social-share preview: real Walker lawn stripes.
-const OG_IMAGE = {
-  url: '/images/walker-lawn-stripes-after.webp',
-  width: 788,
-  height: 1400,
-  alt: 'Freshly mowed green lawn with diagonal stripes beside a white brick house in Walker, Louisiana.',
-};
 
 const anton = Anton({
   weight: '400',
@@ -68,14 +60,14 @@ export const metadata: Metadata = {
     title: 'Southern Buck Lawn | Lawn Care in Walker, Denham Springs & Watson',
     description:
       'Weekly mowing, weed control, and landscape work from a Walker shop. Serving Walker, Denham Springs, and Watson.',
-    images: [OG_IMAGE],
+    images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Southern Buck Lawn | Lawn Care in Walker, Denham Springs & Watson',
     description:
       'Weekly mowing, weed control, and landscape work from a Walker shop. Serving Walker, Denham Springs, and Watson.',
-    images: [{ url: OG_IMAGE.url, alt: OG_IMAGE.alt }],
+    images: [{ url: DEFAULT_OG_IMAGE.url, alt: DEFAULT_OG_IMAGE.alt }],
   },
   robots: { index: true, follow: true },
 };
@@ -84,6 +76,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${anton.variable} ${archivo.variable} ${caveat.variable}`}>
       <body>
+        <a href="#main-content" className="skip-to-content">
+          Skip to content
+        </a>
         <SiteChrome>{children}</SiteChrome>
         <ChatWidget />
         <GaTracker />
