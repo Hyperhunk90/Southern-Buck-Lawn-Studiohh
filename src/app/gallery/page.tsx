@@ -10,12 +10,6 @@ export const metadata: Metadata = {
   title: { absolute: 'Project Gallery — Real Job Photos | Southern Buck Lawn' },
   description:
     'Real job photos from Southern Buck Lawn: Denham Springs mulch beds, Walker lawn stripes, Sherwood Oaks commercial trim, and Baton Rouge cleanup. No stock photos.',
-  keywords: [
-    'lawn care gallery Walker LA',
-    'mulch installation photos',
-    'landscape lighting photos',
-    'Southern Buck Lawn work gallery',
-  ],
   alternates: { canonical: '/gallery' },
   openGraph: {
     type: 'website',
