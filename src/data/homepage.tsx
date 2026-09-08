@@ -30,10 +30,10 @@ export const extraServices = [
 ];
 
 export const gallery = [
+  { src: '/images/kennedi-denham-front-after.webp', alt: 'Finished Denham Springs front bed with fresh black mulch, steel edging, and ornamental grasses along a brick house.', w: 900, h: 1600 },
+  { src: '/images/kennedi-denham-corner-after.webp', alt: 'Mulched corner bed with steel edging, ornamental grasses, and a cleaned-up crape myrtle in Denham Springs, LA.', w: 900, h: 1600 },
   { src: '/images/residential-lawn-stripes-magnum.webp', alt: 'Freshly striped green residential lawn with an orange Bad Boy Magnum zero-turn parked by the driveway.', w: 1600, h: 901 },
   { src: '/images/azalea-bed-after-black-mulch.webp', alt: 'Fresh black-mulch bed with red azaleas and clean black edging along a light stucco house.', w: 1400, h: 3031 },
-  { src: '/images/commercial-property-grounds.webp', alt: 'Maintained commercial building lawn and beds with Southern Buck Lawn trailer and zero-turn in view.', w: 1600, h: 740 },
-  { src: '/images/walker-lawn-stripes-after.webp', alt: 'Freshly mowed green lawn with diagonal stripes beside a white brick house in Walker, Louisiana.', w: 788, h: 1400 },
 ];
 
 export const processSteps = [
