@@ -47,10 +47,12 @@ test('the review request uses the verified GBP review link and neutral language'
   assert.doesNotMatch(badges, /discount|incentive|five-star|5-star/i);
 });
 
-test('website assistant does not promise out-of-route Baton Rouge or Gonzales coverage', () => {
+test('website assistant keeps Walker home turf and treats Baton Rouge as selective only', () => {
   const chat = read('src/app/api/chat/route.ts');
   assert.match(chat, /Walker, Denham Springs, and Watson/);
-  assert.match(chat, /Baton Rouge and Gonzales are not home markets/);
+  assert.match(chat, /Baton Rouge jobs are accepted selectively/);
+  assert.match(chat, /Gonzales is not a home market/);
+  assert.doesNotMatch(chat, /Baton Rouge and Gonzales are not home markets/);
 });
 
 test('gallery proof stays honest and sends service intent without a placeholder address', () => {

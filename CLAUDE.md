@@ -12,7 +12,7 @@ This file is the primary reference for AI assistants working on this codebase. R
 - **Owner:** Michael Dantone (`sbl@southernbucklawn.com`)
 - **Phone:** (225) 369-4434
 - **NAP:** Southern Buck Lawn, 28790 Brett Dr, Walker, LA 70785. Sole prop, never LLC.
-- **Home turf:** Walker 70785, Denham Springs 70726, Watson 70786. Baton Rouge and Gonzales are not home turf.
+- **Home turf:** Walker 70785, Denham Springs 70726, Watson 70786. Baton Rouge is selective / on-route from Walker (thin area page OK). Gonzales is not home turf.
 
 ---
 
@@ -44,7 +44,7 @@ This file is the primary reference for AI assistants working on this codebase. R
 - No invented prices or neighborhoods. Skip `/pricing`.
 - Review markup: Marty Dantone is family. Do not put first-party reviews in LocalBusiness Review JSON-LD or present family as a customer Google review. `GOOGLE_RATING.count` is the live GBP total (verified 9 on 2026-09-02); `REVIEWS` contains only independently verified reviews reproduced on-page. Do not invent a replacement review.
 - LocalBusiness JSON-LD lives in `src/components/BusinessJsonLd.tsx` and is homepage-only. Do not mount it in `layout.tsx` (404s inherit the layout). 404s must not canonical as `/` and must not emit full business schema.
-- City×service zipper URLs 301 to `/services/{slug}`. Do not add new zipper combos. Do not 301 hub pages (`/services/*`, `/service-areas/walker`, `/service-areas/denham-springs`, `/service-areas/watson`). 301 `/service-areas/baton-rouge` → `/service-areas`.
+- City×service zipper URLs 301 to `/services/{slug}`. Do not add new zipper combos. Do not 301 hub pages (`/services/*`, `/service-areas/walker`, `/service-areas/denham-springs`, `/service-areas/watson`, `/service-areas/baton-rouge`). Keep `/service-areas/baton-rouge` as the selective Walker-operator page — do not collapse it to the hub.
 - Christmas lights is not a live service. Existing `/christmas-lights` → `/landscape-lighting` 301 is OK.
 - No stock photos. No Unsplash. No AI fill. Photo alts must match the file.
 - Do not break POST `/api/lead` (Resend).
@@ -57,7 +57,7 @@ This file is the primary reference for AI assistants working on this codebase. R
 
 **Current services:** `lawn-mowing`, `weed-control`, `landscape-design`, `commercial-grounds`
 
-**Current locations:** `walker`, `denham-springs`, `watson`, `livingston-parish` (parish large-lot page, not a fake city)
+**Current locations:** `walker`, `denham-springs`, `watson`, `livingston-parish` (parish large-lot page, not a fake city), `baton-rouge` (thin selective / on-route page — Walker operator voice, not a doorway)
 
 ### `src/data/zipper.ts`
 Legacy city×service URLs. They 301 to `/services/{serviceSlug}` in `next.config.mjs`. Do **not** add new zipper combos.
@@ -72,7 +72,7 @@ Real GBP reviews only (non-family) may be reproduced on-page. Keep the live GBP 
 1. **One `<h1>` per page** — from the data object's `h1` field.
 2. **`metaTitle` and `metaDescription`** — every page exports `generateMetadata()` from `src/data/`.
 3. **Canonical URLs** — set in `generateMetadata()` via `alternates.canonical`. og:url must match. Root layout must **not** set a sitewide canonical.
-4. **LocalBusiness JSON-LD** — `BusinessJsonLd` on the homepage only. Do not add first-party `review` or `aggregateRating` markup. Email in JSON-LD. Watson in areaServed; BR/Gonzales out.
+4. **LocalBusiness JSON-LD** — `BusinessJsonLd` on the homepage only. Do not add first-party `review` or `aggregateRating` markup. Email in JSON-LD. City `areaServed` follows `SITE.serviceAreas` (Walker, Denham Springs, Watson, Baton Rouge). Gonzales stays out. Chuck should confirm BR in areaServed now that the selective page is live.
 5. **Sitemaps** — auto-generated in `src/app/sitemap.ts`. Include `/about`, `/privacy`, Watson. Drop doorway/zipper URLs.
 6. **Redirects** — permanent redirects for old URLs in `next.config.mjs` (do not remove them).
 7. **Image alt text** — match the file. photo-02 dusk brick house + path lights; photo-04/05/06/07 commercial palm/pine-straw; photo-08/09/10 white ranch hedge daytime (one honest use, not three city labels); photo-11 owner branded shirt + shovel; photo-03 404; photo-01 work trailer.
@@ -97,7 +97,7 @@ Handles quote and contact form submissions via Resend. Do not break this route.
 
 - **No database.** Content is in TypeScript data files. Forms submit to email only.
 - **Never LLC.** Sole prop.
-- **Home turf only:** Walker, Denham Springs, Watson.
+- **Home turf:** Walker, Denham Springs, Watson. **Selective:** Baton Rouge when route fits. Not Gonzales.
 - **`dynamicParams = false`** on the `[zipper]` route — leftover slugs 301 to `/services/{slug}`; unknown slugs 404.
 - **No authentication** on `/api/lead`.
 
