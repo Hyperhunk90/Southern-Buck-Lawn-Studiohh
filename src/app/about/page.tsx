@@ -2,15 +2,27 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, PhoneCall, MapPin, Check } from 'lucide-react';
-import { SITE, AREA_NAV, SERVICE_NAV } from '@/data/site';
+import { SITE, AREA_NAV, SERVICE_NAV, DEFAULT_OG_IMAGE } from '@/data/site';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'About Michael Dantone in Walker, LA',
+  title: { absolute: 'About Michael Dantone | Southern Buck Lawn Walker' },
   description:
-    'Southern Buck Lawn has been owner-operated by Michael Dantone since June 2024 from 28790 Brett Dr in Walker, Louisiana. Walker, Denham Springs, and Watson. Call (225) 369-4434.',
+    'Southern Buck Lawn is owner-operated by Michael Dantone since June 2024 from 28790 Brett Dr, Walker, LA. Walker, Denham Springs, and Watson. Call (225) 369-4434.',
   alternates: { canonical: '/about' },
-  openGraph: { url: `${SITE.url}/about` },
+  openGraph: {
+    type: 'website',
+    url: `${SITE.url}/about`,
+    title: 'About Michael Dantone | Southern Buck Lawn Walker',
+    description:
+      'Owner-operated since June 2024 from Brett Drive in Walker. Sole prop serving Walker, Denham Springs, and Watson.',
+    images: [DEFAULT_OG_IMAGE],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Michael Dantone | Southern Buck Lawn Walker',
+    images: [{ url: DEFAULT_OG_IMAGE.url, alt: DEFAULT_OG_IMAGE.alt }],
+  },
 };
 
 const facts = [

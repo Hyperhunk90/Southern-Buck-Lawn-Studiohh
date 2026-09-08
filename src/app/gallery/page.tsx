@@ -1,15 +1,15 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Phone, CheckCircle2, Sparkles, ArrowRight, ShieldCheck, Star } from 'lucide-react';
-import { SITE } from '@/data/site';
+import { SITE, DEFAULT_OG_IMAGE } from '@/data/site';
 import { PROJECTS } from '@/data/projects';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import GalleryClient from '@/components/GalleryClient';
 
 export const metadata: Metadata = {
-  title: 'Project Gallery — Lawn, Mulch & Lighting Photos',
+  title: { absolute: 'Project Gallery — Real Job Photos | Southern Buck Lawn' },
   description:
-    'Real job photos from Southern Buck Lawn: Denham Springs mulch beds, Walker lawn stripes, Sherwood Oaks commercial trim, and Baton Rouge cleanup work. No stock photos.',
+    'Real job photos from Southern Buck Lawn: Denham Springs mulch beds, Walker lawn stripes, Sherwood Oaks commercial trim, and Baton Rouge cleanup. No stock photos.',
   keywords: [
     'lawn care gallery Walker LA',
     'mulch installation photos',
@@ -18,11 +18,18 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: '/gallery' },
   openGraph: {
+    type: 'website',
     url: `${SITE.url}/gallery`,
-    title: 'Project Gallery',
+    title: 'Project Gallery — Real Job Photos | Southern Buck Lawn',
     description:
       'Real photos from real jobs. Captions match the files. No stock, no generated pictures.',
-    images: [{ url: '/images/denham-springs-mulch-edging-after.webp', alt: 'Fresh red mulch bed with boxwoods and gray stone edging wrapping a brick house corner in Denham Springs.' }],
+    images: [
+      {
+        url: `${SITE.url}/images/denham-springs-mulch-edging-after.webp`,
+        alt: 'Fresh red mulch bed with boxwoods and gray stone edging wrapping a brick house corner in Denham Springs.',
+      },
+      DEFAULT_OG_IMAGE,
+    ],
   },
 };
 
@@ -50,7 +57,8 @@ export default function GalleryPage() {
   };
 
   return (
-    <main className="min-h-screen bg-cream">
+    /* SiteChrome already wraps pages in a single <main> — do not nest another. */
+    <div className="min-h-screen bg-cream">
       <script
         key="ld-json-gallery"
         id="ld-json-gallery"
@@ -58,7 +66,7 @@ export default function GalleryPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(imageGallerySchema) }}
       />
 
-      <section className="relative border-b-8 border-primary bg-midnight-moss pb-16 pt-12 text-white">
+      <header className="relative border-b-8 border-primary bg-midnight-moss pb-16 pt-12 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-6">
             <Breadcrumbs trail={[{ name: 'Project Gallery', href: '/gallery' }]} />
@@ -96,9 +104,19 @@ export default function GalleryPage() {
             </div>
           </div>
         </div>
-      </section>
+      </header>
 
-      <GalleryClient />
+      <section aria-labelledby="gallery-photos-heading" className="bg-cream/40">
+        <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6 lg:px-8">
+          <h2 id="gallery-photos-heading" className="font-anton text-3xl uppercase tracking-tight text-midnight-moss sm:text-4xl">
+            Job Photos from the Route
+          </h2>
+          <p className="mt-2 max-w-2xl font-barlow text-base text-midnight-moss/70">
+            Filter by service, search by area, or open any card for details. Project titles below are subsections of this gallery.
+          </p>
+        </div>
+        <GalleryClient />
+      </section>
 
       <section className="border-t border-cream-line bg-midnight-moss py-16 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -129,6 +147,6 @@ export default function GalleryPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

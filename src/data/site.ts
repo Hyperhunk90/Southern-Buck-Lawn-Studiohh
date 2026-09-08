@@ -7,6 +7,7 @@ export const SITE = {
   phone: '(225) 369-4434',
   phoneInternational: '+12253694434',
   phoneHref: 'tel:+12253694434',
+  smsHref: 'sms:+12253694434',
   email: 'sbl@southernbucklawn.com',
   emailHref: 'mailto:sbl@southernbucklawn.com',
   street: '28790 Brett Dr',
@@ -29,6 +30,14 @@ export const SITE = {
     nextdoor: '#',
     bbb: 'https://www.bbb.org/us/la/walker/profile/lawn-care/southern-buck-lawn-0835-90048199',
   },
+};
+
+/** Default Open Graph image — real Walker job photo (absolute HTTPS). */
+export const DEFAULT_OG_IMAGE = {
+  url: `${SITE.url}/images/walker-lawn-stripes-after.webp`,
+  width: 788,
+  height: 1400,
+  alt: 'Freshly mowed green lawn with diagonal stripes beside a white brick house in Walker, Louisiana.',
 };
 
 export const SERVICE_NAV = [
