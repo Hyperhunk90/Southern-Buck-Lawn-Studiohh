@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Anton, Archivo, Caveat } from 'next/font/google';
 import './globals.css';
 import SiteChrome from '@/components/SiteChrome';
+import ConsentMode from '@/components/ConsentMode';
 import GaTracker from '@/components/GaTracker';
 import ChatWidgetLazy from '@/components/ChatWidgetLazy';
 import { SITE, DEFAULT_OG_IMAGE } from '@/data/site';
@@ -81,6 +82,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </a>
         <SiteChrome>{children}</SiteChrome>
         <ChatWidgetLazy />
+        <ConsentMode />
         <GaTracker />
       </body>
     </html>
