@@ -1,4 +1,3 @@
-'use client';
 import Link from 'next/link';
 import Image from 'next/image';
 import {
@@ -43,7 +42,9 @@ export default function HomeHero() {
               alt="Headshot of Michael Dantone, owner of Southern Buck Lawn, in a company polo."
               width={56}
               height={56}
-              loading="eager"
+              sizes="56px"
+              quality={60}
+              priority
               className="h-14 w-14 rounded-full border-2 border-safety-orange object-cover object-top"
             />
             <div className="leading-tight">

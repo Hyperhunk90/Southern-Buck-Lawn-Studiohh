@@ -1,4 +1,3 @@
-'use client';
 import Link from 'next/link';
 import Image from 'next/image';
 import {
@@ -6,6 +5,10 @@ import {
 } from 'lucide-react';
 import { SERVICES } from '@/data/services';
 import { serviceIcons, extraServices } from '@/data/homepage';
+
+/** Card grid: 1-col / md:2 / lg:3 inside max-w-7xl + page padding. */
+const SERVICE_CARD_SIZES =
+  '(max-width: 767px) calc(100vw - 2rem), (max-width: 1023px) calc(50vw - 2rem), 380px';
 
 export default function HomeServices() {
   return (
@@ -25,7 +28,7 @@ export default function HomeServices() {
               className="group flex flex-col overflow-hidden rounded-2xl border border-cream-line bg-white shadow-sm transition-all hover:-translate-y-2 hover:shadow-xl"
             >
               <div className="relative h-44 overflow-hidden">
-                <Image src={s.image} alt={s.imageAlt} fill sizes="(max-width: 768px) 92vw, (max-width: 1024px) 45vw, 30vw" quality={60} className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                <Image src={s.image} alt={s.imageAlt} fill sizes={SERVICE_CARD_SIZES} quality={60} className="object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-midnight-moss/55 to-transparent" />
                 <div className="absolute bottom-3 left-4 inline-flex rounded-xl bg-cream/95 p-3 text-primary shadow">{serviceIcons[s.slug]}</div>
               </div>
@@ -45,7 +48,7 @@ export default function HomeServices() {
               className="group flex flex-col overflow-hidden rounded-2xl border border-cream-line bg-white shadow-sm transition-all hover:-translate-y-2 hover:shadow-xl"
             >
               <div className="relative h-44 overflow-hidden">
-                <Image src={s.image} alt={s.imageAlt} fill sizes="(max-width: 768px) 92vw, (max-width: 1024px) 45vw, 30vw" quality={60} className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                <Image src={s.image} alt={s.imageAlt} fill sizes={SERVICE_CARD_SIZES} quality={60} className="object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-midnight-moss/55 to-transparent" />
                 <div className="absolute bottom-3 left-4 inline-flex rounded-xl bg-cream/95 p-3 text-primary shadow">{s.icon}</div>
               </div>
