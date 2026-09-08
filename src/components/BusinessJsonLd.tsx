@@ -18,7 +18,7 @@ export default function BusinessJsonLd() {
       url: `${SITE.url}/about`,
       image: `${SITE.url}/images/michael-dantone-owner.webp`,
     },
-    foundingDate: '2013',
+    foundingDate: '2024-06',
     priceRange: '$$',
     address: {
       '@type': 'PostalAddress',
