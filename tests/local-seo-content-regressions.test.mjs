@@ -35,7 +35,7 @@ test('service and location topic clusters reference only real blog posts', () =>
   const locationGroups = LOCATIONS.map((location) => location.relatedPostSlugs);
 
   assert.equal(serviceGroups.length, 4, 'every service should define a related-post cluster');
-  assert.equal(locationGroups.length, 4, 'every location should define a related-post cluster');
+  assert.equal(locationGroups.length, 5, 'every location should define a related-post cluster');
 
   for (const group of [...serviceGroups, ...locationGroups]) {
     assert.ok(Array.isArray(group), 'every record should define a related-post cluster');
