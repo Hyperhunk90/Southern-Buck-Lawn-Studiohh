@@ -50,65 +50,98 @@ export default function Navbar() {
             Home
           </Link>
 
+          {/* Services dropdown: child links always in SSR HTML; visually closed until open */}
           <div className="relative" onMouseLeave={() => setServicesOpen(false)}>
             <button
+              type="button"
               onClick={() => setServicesOpen((v) => !v)}
               onMouseEnter={() => setServicesOpen(true)}
               aria-expanded={servicesOpen}
               aria-haspopup="true"
+              aria-controls="nav-services-menu"
               className="flex items-center gap-1 px-3 py-2 font-archivo text-base font-semibold text-primary transition-colors hover:text-safety-orange-deep"
             >
               Services
               <ChevronDown className={`h-4 w-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
             </button>
-            {servicesOpen && (
-              <div className="absolute right-0 mt-1 w-64 rounded-xl border border-cream-line bg-white py-2 shadow-2xl">
-                {SERVICE_NAV.map((s) => (
-                  <Link
-                    key={s.href}
-                    href={s.href}
-                    onClick={closeAll}
-                    className="block px-4 py-2 font-archivo text-base text-midnight-moss hover:bg-cream hover:text-safety-orange-deep"
-                  >
-                    {s.label}
-                  </Link>
-                ))}
-              </div>
-            )}
+            <div
+              id="nav-services-menu"
+              role="menu"
+              className={`absolute right-0 mt-1 w-64 rounded-xl border border-cream-line bg-white py-2 shadow-2xl ${
+                servicesOpen ? 'visible opacity-100' : 'invisible opacity-0 pointer-events-none'
+              }`}
+            >
+              <Link
+                href="/services"
+                onClick={closeAll}
+                role="menuitem"
+                className="block border-b border-cream-line px-4 py-2 font-archivo text-base font-bold text-safety-orange-deep hover:bg-cream"
+              >
+                All Services
+              </Link>
+              {SERVICE_NAV.map((s) => (
+                <Link
+                  key={s.href}
+                  href={s.href}
+                  onClick={closeAll}
+                  role="menuitem"
+                  className="block px-4 py-2 font-archivo text-base text-midnight-moss hover:bg-cream hover:text-safety-orange-deep"
+                >
+                  {s.label}
+                </Link>
+              ))}
+              <Link
+                href="/landscape-lighting"
+                onClick={closeAll}
+                role="menuitem"
+                className="block px-4 py-2 font-archivo text-base text-midnight-moss hover:bg-cream hover:text-safety-orange-deep"
+              >
+                Landscape Lighting
+              </Link>
+            </div>
           </div>
 
+          {/* Service Areas dropdown: child links always in SSR HTML */}
           <div className="relative" onMouseLeave={() => setAreasOpen(false)}>
             <button
+              type="button"
               onClick={() => setAreasOpen((v) => !v)}
               onMouseEnter={() => setAreasOpen(true)}
               aria-expanded={areasOpen}
               aria-haspopup="true"
+              aria-controls="nav-areas-menu"
               className="flex items-center gap-1 px-3 py-2 font-archivo text-base font-semibold text-primary transition-colors hover:text-safety-orange-deep"
             >
               Service Areas
               <ChevronDown className={`h-4 w-4 transition-transform ${areasOpen ? 'rotate-180' : ''}`} />
             </button>
-            {areasOpen && (
-              <div className="absolute right-0 mt-1 w-60 rounded-xl border border-cream-line bg-white py-2 shadow-2xl">
-                {AREA_NAV.map((a) => (
-                  <Link
-                    key={a.href}
-                    href={a.href}
-                    onClick={closeAll}
-                    className="block px-4 py-2 font-archivo text-base text-midnight-moss hover:bg-cream hover:text-safety-orange-deep"
-                  >
-                    {a.label}
-                  </Link>
-                ))}
+            <div
+              id="nav-areas-menu"
+              role="menu"
+              className={`absolute right-0 mt-1 w-60 rounded-xl border border-cream-line bg-white py-2 shadow-2xl ${
+                areasOpen ? 'visible opacity-100' : 'invisible opacity-0 pointer-events-none'
+              }`}
+            >
+              {AREA_NAV.map((a) => (
                 <Link
-                  href="/service-areas"
+                  key={a.href}
+                  href={a.href}
                   onClick={closeAll}
-                  className="mt-1 block border-t border-cream-line px-4 pt-2 font-archivo text-base font-bold text-safety-orange-deep hover:bg-cream"
+                  role="menuitem"
+                  className="block px-4 py-2 font-archivo text-base text-midnight-moss hover:bg-cream hover:text-safety-orange-deep"
                 >
-                  All Service Areas
+                  {a.label}
                 </Link>
-              </div>
-            )}
+              ))}
+              <Link
+                href="/service-areas"
+                onClick={closeAll}
+                role="menuitem"
+                className="mt-1 block border-t border-cream-line px-4 pt-2 font-archivo text-base font-bold text-safety-orange-deep hover:bg-cream"
+              >
+                All Service Areas
+              </Link>
+            </div>
           </div>
 
           <Link href="/gallery" className="px-3 py-2 font-archivo text-base font-semibold text-primary transition-colors hover:text-safety-orange-deep">
@@ -120,12 +153,22 @@ export default function Navbar() {
           <Link href="/blog" className="px-3 py-2 font-archivo text-base font-semibold text-primary transition-colors hover:text-safety-orange-deep">
             Blog
           </Link>
+          <Link href="/contact" className="px-3 py-2 font-archivo text-base font-semibold text-primary transition-colors hover:text-safety-orange-deep">
+            Contact
+          </Link>
           <a
             href={SITE.phoneHref}
-            className="ml-2 flex items-center gap-2 rounded-xl bg-safety-orange px-5 py-2.5 font-archivo text-base font-bold text-midnight-moss shadow-md transition-all hover:scale-105 active:scale-95"
+            className="ml-1 flex items-center gap-1.5 px-2 py-2 font-archivo text-base font-semibold text-primary transition-colors hover:text-safety-orange-deep"
+            aria-label={`Call ${SITE.phone}`}
           >
-            <Phone className="h-4 w-4" /> {SITE.phone}
+            <Phone className="h-4 w-4" />
           </a>
+          <Link
+            href="/quote"
+            className="ml-1 rounded-xl bg-safety-orange px-5 py-2.5 font-archivo text-base font-bold text-midnight-moss shadow-md transition-all hover:scale-105 active:scale-95"
+          >
+            Get Quote
+          </Link>
         </div>
 
         <div className="flex items-center gap-2 lg:hidden">
@@ -156,12 +199,17 @@ export default function Navbar() {
               Home
             </Link>
             <div className="border-t border-cream-line pt-2">
-              <p className="px-3 py-1 font-anton text-sm uppercase tracking-wider text-safety-orange-deep">Services</p>
+              <Link href="/services" onClick={closeAll} className="block px-3 py-1 font-anton text-sm uppercase tracking-wider text-safety-orange-deep hover:text-safety-orange">
+                Services
+              </Link>
               {SERVICE_NAV.map((s) => (
                 <Link key={s.href} href={s.href} onClick={closeAll} className="block px-5 py-2 font-archivo text-base text-midnight-moss hover:bg-white">
                   {s.label}
                 </Link>
               ))}
+              <Link href="/landscape-lighting" onClick={closeAll} className="block px-5 py-2 font-archivo text-base text-midnight-moss hover:bg-white">
+                Landscape Lighting
+              </Link>
             </div>
             <div className="border-t border-cream-line pt-2">
               <Link href="/service-areas" onClick={closeAll} className="block px-3 py-1 font-anton text-sm uppercase tracking-wider text-safety-orange-deep hover:text-safety-orange">
@@ -186,6 +234,11 @@ export default function Navbar() {
             <div className="border-t border-cream-line pt-2">
               <Link href="/blog" onClick={closeAll} className="block rounded px-3 py-2 font-archivo text-lg font-bold text-midnight-moss hover:bg-white">
                 Blog
+              </Link>
+            </div>
+            <div className="border-t border-cream-line pt-2">
+              <Link href="/contact" onClick={closeAll} className="block rounded px-3 py-2 font-archivo text-lg font-bold text-midnight-moss hover:bg-white">
+                Contact
               </Link>
             </div>
             <div className="border-t border-cream-line pt-3">

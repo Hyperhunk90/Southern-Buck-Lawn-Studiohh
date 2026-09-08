@@ -3,15 +3,27 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, Clock, Calendar } from 'lucide-react';
 import { POSTS } from '@/data/blog';
-import { SITE } from '@/data/site';
+import { SITE, DEFAULT_OG_IMAGE } from '@/data/site';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Lawn Care Tips & Louisiana Yard Advice | Southern Buck Lawn Blog',
+  title: { absolute: 'Lawn Care Tips for Louisiana Yards | Southern Buck Lawn' },
   description:
-    'Straight talk on lawn care, weeds, mulch, and landscaping for South Louisiana yards. Real advice from Southern Buck Lawn in Walker, LA.',
+    'Straight talk on lawn care, weeds, mulch, and landscaping for South Louisiana yards. Real advice from Southern Buck Lawn in Walker — no filler.',
   alternates: { canonical: '/blog' },
-  openGraph: { url: `${SITE.url}/blog` },
+  openGraph: {
+    type: 'website',
+    url: `${SITE.url}/blog`,
+    title: 'Lawn Care Tips for Louisiana Yards | Southern Buck Lawn',
+    description:
+      'Real advice on grass, weeds, mulch, and curb appeal from a Walker operator.',
+    images: [DEFAULT_OG_IMAGE],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Lawn Care Tips for Louisiana Yards | Southern Buck Lawn',
+    images: [{ url: DEFAULT_OG_IMAGE.url, alt: DEFAULT_OG_IMAGE.alt }],
+  },
 };
 
 export default function BlogIndex() {

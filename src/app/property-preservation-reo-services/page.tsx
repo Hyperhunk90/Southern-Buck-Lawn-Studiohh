@@ -2,18 +2,25 @@ import type { Metadata } from 'next';
 import { ShieldCheck, Camera, Trash2 } from 'lucide-react';
 import ReoForm from './ReoForm';
 import ReoHeroContent from './ReoHeroContent';
-import { SITE } from '@/data/site';
+import { SITE, DEFAULT_OG_IMAGE } from '@/data/site';
 
 export const metadata: Metadata = {
-  title: 'Property Preservation & REO Trash-Outs in Walker, LA',
+  title: { absolute: 'REO & Property Preservation in Walker | Southern Buck Lawn' },
   description:
-    'Property preservation, REO debris removal, and winter-secure work from Walker. Southern Buck Lawn. Insured, owner-operated since June 2024. Walker, Denham Springs, and Watson. Free estimate.',
+    'Property preservation, REO debris removal, and winter-secure work from Walker. Insured, owner-operated since June 2024. Walker, Denham Springs, Watson. Free estimate.',
   alternates: { canonical: '/property-preservation-reo-services' },
   openGraph: {
-    title: 'Property Preservation & REO Trash-Outs in Walker, LA',
+    type: 'website',
+    title: 'REO & Property Preservation in Walker | Southern Buck Lawn',
     description:
       'Trash-outs, yard recovery, board-ups, and photo documentation for banks, brokers, and asset managers on the Walker route.',
     url: `${SITE.url}/property-preservation-reo-services`,
+    images: [DEFAULT_OG_IMAGE],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'REO & Property Preservation in Walker | Southern Buck Lawn',
+    images: [{ url: DEFAULT_OG_IMAGE.url, alt: DEFAULT_OG_IMAGE.alt }],
   },
 };
 
@@ -37,7 +44,8 @@ export default function PropertyPreservationPage() {
   return (
     <div className="flex min-h-screen flex-col bg-light-tan">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
-      <main className="flex-grow pt-20 sm:pt-24">
+      {/* Use div — SiteChrome already provides the single sitewide <main>. */}
+      <div className="flex-grow pt-20 sm:pt-24">
         <section className="relative overflow-hidden bg-midnight-moss px-4 py-20 sm:px-6 sm:py-32 lg:px-8">
           <div className="absolute inset-0 z-0 bg-gradient-to-t from-midnight-moss via-midnight-moss to-deep-forest" />
           <ReoHeroContent />
@@ -142,7 +150,7 @@ export default function PropertyPreservationPage() {
             </div>
           </div>
         </section>
-      </main>
+      </div>
     </div>
   );
 }
