@@ -87,17 +87,16 @@ function ConversionTracking() {
 }
 
 /**
- * Loads GA4 / gtag after Consent Mode v2 defaults (see ConsentMode).
- * Tags stay present on the page with denied defaults — do not delay or strip
- * conversion / generate_lead firing until consent.
+ * Loads GA4 / gtag after Consent Mode v2 defaults (early head inline in ConsentMode).
+ * Tags stay present — do not delay or strip conversion / generate_lead until consent.
+ *
+ * Avoid next/script `src=` for gtag/js: App Router emits an early <link rel="preload"
+ * as="script"> for that URL in <head>, which raced the old beforeInteractive (__next_s)
+ * consent default. Load gtag by appending the script afterInteractive instead.
  */
 export default function GaTracker() {
   return (
     <>
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-        strategy="afterInteractive"
-      />
       <Script id="ga4-config" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
@@ -109,6 +108,13 @@ export default function GaTracker() {
             anonymize_ip: true,
             allow_google_signals: false
           });
+          if (!document.querySelector('script[data-sbl-gtag]')) {
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=${GA_ID}';
+            s.setAttribute('data-sbl-gtag', '1');
+            document.head.appendChild(s);
+          }
         `}
       </Script>
       <Suspense fallback={null}>
