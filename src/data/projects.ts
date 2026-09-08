@@ -1,4 +1,5 @@
 import { Project } from '@/lib/types';
+import { KENNEDI_PROJECTS } from '@/data/kennedi-projects';
 
 export const GALLERY_CATEGORIES = [
   { id: 'all', label: 'All Projects' },
@@ -9,10 +10,11 @@ export const GALLERY_CATEGORIES = [
   { id: 'weed-control', label: 'Weed Control & Cleanups' },
 ] as const;
 
-// Drive 9 (Sep 2026) + phone-roll 16 (Sep 2026). Captions/ALTs from Chuck.
-// Denham #2+#3 same job. BR hedge+crape same property. Azalea before/after = true B&A.
+// Kennedi Denham Springs front-bed (Fri Sep 4 2026) + Drive 9 + phone-roll 16. Captions/ALTs from Chuck.
+// Kennedi = Denham Springs / Seigle Village (not Walker). Denham #2+#3 same earlier job. Azalea = true B&A.
 // Brick-house cleanup / soil / sidewalk = same job family. RKM name OK (on sign).
 export const PROJECTS: Project[] = [
+  ...KENNEDI_PROJECTS,
   {
     id: 'azalea-bed-before',
     title: 'Azalea Bed — Before',
