@@ -1,12 +1,10 @@
 import type { Metadata } from 'next';
-import { SITE, DEFAULT_OG_IMAGE } from '@/data/site';
+import { SITE } from '@/data/site';
 import LightingNightPage from './LightingNightPage';
 import { FAQS } from './lightingContent';
 
 const OG_LIGHTING = {
   url: `${SITE.url}/images/sbl-project-photo-02.webp`,
-  width: 1200,
-  height: 800,
   alt: 'Brick house at dusk with path lights along the walk — Southern Buck Lawn lighting work',
 };
 
@@ -79,9 +77,6 @@ export default function LandscapeLightingPage() {
       },
     ],
   };
-
-  // DEFAULT_OG_IMAGE kept referenced so unused-import lint stays clean if OG_LIGHTING is preferred.
-  void DEFAULT_OG_IMAGE;
 
   return (
     <>

@@ -3,15 +3,27 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, MapPin, PhoneCall } from 'lucide-react';
 import { LOCATIONS } from '@/data/locations';
-import { SITE } from '@/data/site';
+import { SITE, DEFAULT_OG_IMAGE } from '@/data/site';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Service Areas in Walker, Denham Springs & Watson',
+  title: { absolute: 'Service Areas: Walker, Denham Springs & Watson' },
   description:
-    'Southern Buck Lawn runs Walker, Denham Springs, and Watson every week. See how I handle the soil and the grass where you live. Call (225) 369-4434.',
+    'Southern Buck Lawn runs Walker, Denham Springs, and Watson every week. See how I handle the soil and grass where you live. Call (225) 369-4434.',
   alternates: { canonical: '/service-areas' },
-  openGraph: { url: `${SITE.url}/service-areas` },
+  openGraph: {
+    type: 'website',
+    url: `${SITE.url}/service-areas`,
+    title: 'Service Areas: Walker, Denham Springs & Watson',
+    description:
+      'Weekly route covering Walker, Denham Springs, and Watson from a Brett Drive shop.',
+    images: [DEFAULT_OG_IMAGE],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Service Areas: Walker, Denham Springs & Watson',
+    images: [{ url: DEFAULT_OG_IMAGE.url, alt: DEFAULT_OG_IMAGE.alt }],
+  },
 };
 
 export default function ServiceAreasIndex() {

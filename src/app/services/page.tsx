@@ -3,15 +3,27 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, PhoneCall } from 'lucide-react';
 import { SERVICES } from '@/data/services';
-import { SITE } from '@/data/site';
+import { SITE, DEFAULT_OG_IMAGE } from '@/data/site';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Lawn Care & Landscaping Services in Walker, LA',
+  title: { absolute: 'Lawn Care Services in Walker, LA | Southern Buck Lawn' },
   description:
-    'Mowing, weed control, landscape beds, commercial grounds, lighting, and property preservation from a Walker shop. Walker, Denham Springs, and Watson. Free estimates — (225) 369-4434.',
+    'Mowing, weed control, landscape beds, commercial grounds, lighting, and REO from a Walker shop. Walker, Denham Springs, and Watson. Free estimates — (225) 369-4434.',
   alternates: { canonical: '/services' },
-  openGraph: { url: `${SITE.url}/services` },
+  openGraph: {
+    type: 'website',
+    url: `${SITE.url}/services`,
+    title: 'Lawn Care Services in Walker, LA | Southern Buck Lawn',
+    description:
+      'Mowing, weed control, beds, commercial grounds, and lighting from Walker. Free estimates.',
+    images: [DEFAULT_OG_IMAGE],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Lawn Care Services in Walker, LA | Southern Buck Lawn',
+    images: [{ url: DEFAULT_OG_IMAGE.url, alt: DEFAULT_OG_IMAGE.alt }],
+  },
 };
 
 export default function ServicesIndex() {
