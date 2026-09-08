@@ -66,7 +66,7 @@ export const faqs = [
   },
   {
     q: 'What areas do you serve?',
-    a: 'Home turf is Walker, Denham Springs, and Watson. Livingston Parish lots on that corridor are fair game. Baton Rouge is not a home market. Submit your address and I will confirm availability.',
+    a: 'Home turf is Walker, Denham Springs, and Watson. Livingston Parish lots on that corridor are fair game. Baton Rouge is selective when a job fits the Walker route — not the home base. Submit your address and I will confirm availability.',
   },
 ];
 

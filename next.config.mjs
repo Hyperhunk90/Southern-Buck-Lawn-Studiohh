@@ -50,7 +50,7 @@ const nextConfig = {
 
       // Old /locations/ URL structure → current /service-areas/ structure.
       { source: '/locations', destination: '/service-areas', permanent: true },
-      { source: '/locations/baton-rouge', destination: '/service-areas', permanent: true },
+      { source: '/locations/baton-rouge', destination: '/service-areas/baton-rouge', permanent: true },
       { source: '/locations/:slug', destination: '/service-areas/:slug', permanent: true },
 
       // City×service doorway URLs → the real service silo.
@@ -71,15 +71,14 @@ const nextConfig = {
       { source: '/commercial-grounds-walker', destination: '/services/commercial-grounds', permanent: true },
       { source: '/commercial-grounds-livingston-parish', destination: '/services/commercial-grounds', permanent: true },
 
-      // Baton Rouge is not home turf. Collapse the city silo.
-      { source: '/service-areas/baton-rouge', destination: '/service-areas', permanent: true },
+      // Baton Rouge is selective (Walker-operator page). Keep /service-areas/baton-rouge live — do not 301 it to the hub.
 
       // Old service-area URL patterns still in crawlers' indexes.
       { source: '/walker-lawn-care', destination: '/service-areas/walker', permanent: true },
       { source: '/pages/walker-la', destination: '/service-areas/walker', permanent: true },
-      { source: '/baton-rouge-landscaping', destination: '/service-areas', permanent: true },
-      { source: '/lawn-care-baton-rouge-la', destination: '/service-areas', permanent: true },
-      { source: '/baton-rouge-lawn-care', destination: '/service-areas', permanent: true },
+      { source: '/baton-rouge-landscaping', destination: '/service-areas/baton-rouge', permanent: true },
+      { source: '/lawn-care-baton-rouge-la', destination: '/service-areas/baton-rouge', permanent: true },
+      { source: '/baton-rouge-lawn-care', destination: '/service-areas/baton-rouge', permanent: true },
       { source: '/denham-springs-landscaping', destination: '/service-areas/denham-springs', permanent: true },
       { source: '/hoa-lawn-care-livingston-parish', destination: '/service-areas/livingston-parish', permanent: true },
 

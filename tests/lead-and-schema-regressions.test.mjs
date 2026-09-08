@@ -47,10 +47,23 @@ test('the review request uses the verified GBP review link and neutral language'
   assert.doesNotMatch(badges, /discount|incentive|five-star|5-star/i);
 });
 
-test('website assistant does not promise out-of-route Baton Rouge or Gonzales coverage', () => {
+test('website assistant keeps Walker home turf and treats Baton Rouge as selective only', () => {
   const chat = read('src/app/api/chat/route.ts');
   assert.match(chat, /Walker, Denham Springs, and Watson/);
-  assert.match(chat, /Baton Rouge and Gonzales are not home markets/);
+  assert.match(chat, /Baton Rouge jobs are accepted selectively/);
+  assert.match(chat, /Gonzales is not a home market/);
+  assert.doesNotMatch(chat, /Baton Rouge and Gonzales are not home markets/);
+});
+
+test('SITE.serviceAreas City list is Walker / Denham Springs / Watson only (BR page OK, not City areaServed)', () => {
+  const site = read('src/data/site.ts');
+  assert.match(site, /serviceAreas:\s*\[\s*'Walker'\s*,\s*'Denham Springs'\s*,\s*'Watson'\s*\]/);
+  assert.doesNotMatch(site, /serviceAreas:[^\]]*Baton Rouge/);
+  assert.doesNotMatch(site, /serviceAreas:[^\]]*Gonzales/);
+  // Selective BR page + nav stay; same pattern as Livingston Parish (page without City serviceAreas).
+  assert.match(site, /href: '\/service-areas\/baton-rouge'/);
+  assert.match(read('src/data/locations.ts'), /slug: 'baton-rouge'/);
+  assert.match(read('src/data/locations.ts'), /slug: 'livingston-parish'/);
 });
 
 test('gallery proof stays honest and sends service intent without a placeholder address', () => {

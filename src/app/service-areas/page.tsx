@@ -7,21 +7,21 @@ import { SITE, DEFAULT_OG_IMAGE } from '@/data/site';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Service Areas: Walker, Denham Springs & Watson' },
+  title: { absolute: 'Service Areas: Walker Route + Selective Baton Rouge' },
   description:
-    'Southern Buck Lawn runs Walker, Denham Springs, and Watson every week. See how I handle the soil and grass where you live. Call (225) 369-4434.',
+    'Southern Buck Lawn runs Walker, Denham Springs, and Watson every week, with selective Baton Rouge jobs on that route. Call (225) 369-4434.',
   alternates: { canonical: '/service-areas' },
   openGraph: {
     type: 'website',
     url: `${SITE.url}/service-areas`,
-    title: 'Service Areas: Walker, Denham Springs & Watson',
+    title: 'Service Areas: Walker Route + Selective Baton Rouge',
     description:
-      'Weekly route covering Walker, Denham Springs, and Watson from a Brett Drive shop.',
+      'Weekly Walker, Denham Springs, and Watson route from Brett Drive, plus selective Baton Rouge jobs.',
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Service Areas: Walker, Denham Springs & Watson',
+    title: 'Service Areas: Walker Route + Selective Baton Rouge',
     images: [{ url: DEFAULT_OG_IMAGE.url, alt: DEFAULT_OG_IMAGE.alt }],
   },
 };
@@ -38,7 +38,7 @@ export default function ServiceAreasIndex() {
           Walker, Denham Springs, and Watson
         </h1>
         <p className="mx-auto mt-5 max-w-2xl font-barlow text-lg text-white/75">
-          Based on Brett Drive in Walker. Those three towns are the weekly route. Livingston Parish lots on that corridor are fair game. Pick your area.
+          Based on Brett Drive in Walker. Those three towns are the weekly route. Livingston Parish lots on that corridor are fair game. Baton Rouge is selective when it fits the same route — not the home base. Pick your area.
         </p>
       </header>
 

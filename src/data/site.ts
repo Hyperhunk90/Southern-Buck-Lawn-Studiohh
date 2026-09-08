@@ -1,5 +1,7 @@
 // Central business info for Southern Buck Lawn.
-// Sole prop — never LLC. Home turf is Walker, Denham Springs, and Watson only.
+// Sole prop — never LLC. Home turf is Walker, Denham Springs, and Watson.
+// Baton Rouge has a selective area page + AREA_NAV entry, but is NOT in City serviceAreas
+// (same pattern as Livingston Parish). Core areaServed cities: Walker, Denham Springs, Watson only.
 export const SITE = {
   name: 'Southern Buck Lawn',
   owner: 'Michael Dantone',
@@ -53,4 +55,5 @@ export const AREA_NAV = [
   { label: 'Denham Springs, LA', href: '/service-areas/denham-springs' },
   { label: 'Watson, LA', href: '/service-areas/watson' },
   { label: 'Livingston Parish, LA', href: '/service-areas/livingston-parish' },
+  { label: 'Baton Rouge, LA', href: '/service-areas/baton-rouge' },
 ];

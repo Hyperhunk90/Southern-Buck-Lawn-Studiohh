@@ -11,11 +11,11 @@ export const LOCATIONS: Location[] = [
       'Weekly mowing, edging, and bed work in Walker, LA 70785. Southern Buck Lawn is based on Brett Drive. Call Michael at (225) 369-4434.',
     h1: 'Lawn Care from a Shop That Lives in Walker',
     intro:
-      'Walker is home. The shop is on Brett Drive, 70785, and most weeks start on these streets. New sod needs a taller cut so July does not cook it. Established yards need a different pass. I know which is which because I drive past them. When you hire Southern Buck Lawn, you are hiring Michael Dantone down the road, not a company that started two parishes over.',
+      'Walker is home. The shop is on Brett Drive, 70785, and most weeks start on these streets — residential cuts first, then commercial frontage along the I-12 / Hwy 447 side of town when it is on the route. New sod needs a taller cut so July does not cook it. Established yards need a different pass. I know which is which because I drive past them. When you hire Southern Buck Lawn, you are hiring Michael Dantone down the road, not a company that started two parishes over.',
     soilNote:
-      'Walker sits on sandy clay loam. It drains a little better than the heavier ground in Denham Springs, but a hard rain still washes nutrients out fast. Slow-release nitrogen holds color through July instead of flashing green and crashing.',
+      'Walker sits on sandy clay loam. It drains a little better than the heavier ground in Denham Springs, but a hard rain still washes nutrients out fast — especially on newer lots where the builder left thin topsoil over fill. Slow-release nitrogen holds color through July instead of flashing green and crashing.',
     pestNote:
-      'Chinch bugs are the headache on young Centipede around here. They leave dry brown patches that look like drought. I watch for them on weekly cuts and treat early so they do not take the whole lawn.',
+      'Chinch bugs are the headache on young Centipede around here. They leave dry brown patches that look like drought, often along hot sidewalk edges. I watch for them on weekly cuts and treat early so they do not take the whole lawn.',
     neighborhoods: ['Walker 70785'],
     image: '/images/walker-lawn-stripes-after.webp',
     imageAlt: 'Freshly mowed green lawn with diagonal stripes beside a white brick house in Walker, Louisiana.',
@@ -37,6 +37,11 @@ export const LOCATIONS: Location[] = [
           'Yes. Chinch bugs hit young Centipede hard out here. Homeowners often think it is underwatering. I spot the pattern and treat before it spreads.',
       },
       {
+        question: 'Can a Walker house and a nearby commercial strip share the same weekly day?',
+        answer:
+          'Often yes. Brett Drive is base, so residential Walker and commercial frontage on the same corridor usually stack on one route day. Send both addresses and I will tell you if they fit the same pass.',
+      },
+      {
         question: 'How often should a Walker lawn get cut in summer?',
         answer:
           'April through October, weekly is the honest answer. Warm-season grass runs hard in this heat. I back off to every other week in early spring and late fall when growth slows.',
@@ -53,9 +58,9 @@ export const LOCATIONS: Location[] = [
       'Weekly mowing, weed control, and mulch beds in Denham Springs, LA 70726. A Walker operator who knows the clay. Call (225) 369-4434.',
     h1: 'Weekly Lawn Care in Denham Springs',
     intro:
-      'Denham Springs is a short hop from the shop. I run 70726 every week. The clay here holds water after a rain, and the weeds that follow are predictable if you have been cutting here long enough. That is the point. I am not guessing at your soil from a map. I am already on the block.',
+      'Denham Springs is a short hop from the shop. I run 70726 every week — homes and the commercial strips along the Range / Juban corridor when they sit on that pass. The clay here holds water after a rain, and the weeds that follow are predictable if you have been cutting here long enough. That is the point. I am not guessing at your soil from a map. I am already on the block.',
     soilNote:
-      'Denham Springs ground is heavy silt and clay. It packs tight, holds standing water, and starves roots of air if nobody aerates. I feed on a schedule and keep the cut honest so the grass can breathe instead of sitting in mud.',
+      'Denham Springs ground is heavy silt and clay. It packs tight, holds standing water after Gulf Coast storms, and starves roots of air if nobody aerates. Older lots and newer subdivisions drain differently, but the clay habit is the same. I feed on a schedule and keep the cut honest so the grass can breathe instead of sitting in mud.',
     pestNote:
       'Armyworms can strip a green lawn overnight. Mole crickets tear root zones. Dollar spot loves the July dew. I watch for all three on weekly cuts and call you if something is moving.',
     neighborhoods: ['Denham Springs 70726'],
@@ -80,6 +85,11 @@ export const LOCATIONS: Location[] = [
           'Yes, with care. I do not cut ruts through standing water. I can aerate, adjust the pattern, and skip a wet pocket rather than tear it up. I do not install French drains.',
       },
       {
+        question: 'Will wet clay after a storm mess up fresh mulch beds?',
+        answer:
+          'It can if the beds were piled too high or left without an edge. I keep mulch at two to three inches and hold a clean edge so clay splash and washouts do less damage. If a bed is already floating, say so on the quote form.',
+      },
+      {
         question: 'What pests hit Denham Springs lawns the hardest?',
         answer:
           'Armyworms, mole crickets, and dollar spot. I watch for them during weekly service and tell you if I see an outbreak instead of spraying the whole parish on a calendar.',
@@ -96,7 +106,7 @@ export const LOCATIONS: Location[] = [
       'Weekly mowing and large-lot care in Watson, LA 70786. Southern Buck Lawn runs Watson from the Walker shop. Call (225) 369-4434.',
     h1: 'Lawn Care in Watson, Louisiana',
     intro:
-      'Watson is home turf. 70786 sits just north of the shop, and I am on Highway 16 most weeks. Lots run bigger out here than in town — a mix of acreage, tree lines, and newer houses. A push mower will eat your Saturday. I bring commercial zero-turns, keep the borders tight, and still edge the drive. If you live in Watson, you are not the edge of the route. You are on it.',
+      'Watson is home turf. 70786 sits just north of the shop, and I am on Highway 16 most weeks. Lots run bigger out here than in town — a mix of acreage, mixed pine and hardwood tree lines, and newer houses. Leaf drop and briars along the fence are part of the job. A push mower will eat your Saturday. I bring commercial zero-turns, keep the borders tight, and still edge the drive. If you live in Watson, you are not the edge of the route. You are on it.',
     soilNote:
       'Watson ground is mostly forested silt loam with a lot of organic matter. Trees love it. So do briars along the fence. I stay ahead of that with strong border trimming and weed barrier in the beds you actually want to keep.',
     pestNote:
@@ -120,6 +130,11 @@ export const LOCATIONS: Location[] = [
         question: 'Can you mow acreage in Watson?',
         answer:
           'Yes. Commercial zero-turns handle an acre or several. I still trim the fence, edge the drive, and blow the concrete. Big lot does not mean sloppy cut.',
+      },
+      {
+        question: 'What about fall leaf drop along Watson tree lines?',
+        answer:
+          'Mixed pine and hardwood lots drop hard in fall. I can blow and bag what lands on the maintained turf and keep the tree-line border tight. I do not clear timber tracts — just the yard you actually live in.',
       },
       {
         question: 'How do I get a quote for a Watson property?',
@@ -168,6 +183,49 @@ export const LOCATIONS: Location[] = [
         question: 'Can you keep fire ants down on a few acres?',
         answer:
           'I can treat the maintained turf and the spots around the house. A weekly cut already helps. I am not a parish-wide pest company.',
+      },
+    ],
+  },
+  {
+    slug: 'baton-rouge',
+    name: 'Baton Rouge, LA',
+    navLabel: 'Baton Rouge, LA',
+    keywords: ['lawn care Baton Rouge from Walker', 'lawn service Baton Rouge selective', 'Walker lawn care Baton Rouge route'],
+    metaTitle: 'Lawn Care in Baton Rouge (From Walker)',
+    metaDescription:
+      'Selective Baton Rouge lawn care from a Walker shop. Southern Buck Lawn takes metro jobs when they fit the Walker route. Call (225) 369-4434.',
+    h1: 'Baton Rouge Lawn Care from a Walker Operator',
+    intro:
+      'I am Michael Dantone. Southern Buck Lawn is based on Brett Drive in Walker — not downtown Baton Rouge. Home turf is Walker, Denham Springs, and Watson. I take Baton Rouge jobs selectively when they fit that route and I can keep the schedule honest. If your address works, you get the same owner on site. If it does not, I will say so. This is not a Baton Rouge storefront page.',
+    soilNote:
+      'East Baton Rouge soils run the same heavy Gulf Coast clay and silt mix you feel after a hard rain. Drainage and compaction matter more than branding. I match the cut and feed to what the yard is doing, not to a metro marketing map.',
+    pestNote:
+      'Warm, humid stretches bring the same buttonweed, chinch pressure on St. Augustine, and summer worm risk you see across the parish line. I watch during service and treat what is actually there — no calendar spray for the whole city.',
+    neighborhoods: ['Baton Rouge (selective / on route from Walker)'],
+    image: '/images/baton-rouge-crape-myrtle-cleanup.webp',
+    imageAlt:
+      'Pile of freshly cut crape myrtle branches on a driveway during a Baton Rouge trim and cleanup.',
+    reviews: [],
+    relatedPostSlugs: [
+      'virginia-buttonweed-baton-rouge',
+      'chinch-bugs-st-augustine-louisiana',
+      'how-tall-to-cut-grass-louisiana-summer',
+    ],
+    faqs: [
+      {
+        question: 'Do you really serve Baton Rouge, or is this just SEO?',
+        answer:
+          'I serve Baton Rouge selectively. The shop and weekly route are Walker, Denham Springs, and Watson. If your BR address fits that route and the schedule, yes. If it pulls me too far off, I will tell you no. Send the address and ask.',
+      },
+      {
+        question: 'Are you a Baton Rouge lawn company?',
+        answer:
+          'No. I am a Walker operator — 28790 Brett Dr, Walker, LA 70785. Baton Rouge is on-route work when it fits, not the home base.',
+      },
+      {
+        question: 'How do I find out if my Baton Rouge property qualifies?',
+        answer:
+          'Call or text (225) 369-4434, or send the quote form with the full address. I will confirm within 24 hours whether it fits the Walker route.',
       },
     ],
   },
