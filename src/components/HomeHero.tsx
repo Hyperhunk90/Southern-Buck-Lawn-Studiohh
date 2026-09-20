@@ -23,6 +23,7 @@ export default function HomeHero() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-deep-forest/90 via-deep-forest/70 to-deep-forest/30" />
         <div className="absolute inset-0 bg-gradient-to-t from-deep-forest/85 via-transparent to-deep-forest/40" />
+        <div className="grain-overlay" aria-hidden />
       </div>
       <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
         <div className="max-w-2xl space-y-6">
@@ -53,10 +54,10 @@ export default function HomeHero() {
             </div>
           </div>
           <div className="flex flex-col gap-4 pt-2 sm:flex-row">
-            <Link href="/quote" className="group flex items-center justify-center gap-2 rounded-xl bg-safety-orange px-8 py-4 font-anton text-lg uppercase tracking-wider text-midnight-moss shadow-xl transition-all hover:scale-105 active:scale-95">
+            <Link href="/quote" className="group flex items-center justify-center gap-2 rounded-2xl bg-safety-orange px-8 py-4 font-anton text-lg uppercase tracking-wider text-midnight-moss shadow-xl transition-all hover:scale-105 active:scale-95">
               Request a Free Estimate <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Link>
-            <a href={SITE.phoneHref} className="flex items-center justify-center gap-2 rounded-xl border-2 border-white/55 bg-white/10 px-8 py-4 font-anton text-lg uppercase tracking-wider text-white backdrop-blur-sm transition-all hover:bg-white/20">
+            <a href={SITE.phoneHref} className="flex items-center justify-center gap-2 rounded-2xl border-2 border-white/55 bg-white/10 px-8 py-4 font-anton text-lg uppercase tracking-wider text-white backdrop-blur-sm transition-all hover:bg-white/20">
               <PhoneCall className="h-5 w-5" /> {SITE.phone}
             </a>
           </div>
@@ -67,6 +68,19 @@ export default function HomeHero() {
           </div>
         </div>
       </div>
+      {/* Grass-blade divider — decorative; grows from the blaze bar below. */}
+      <svg
+        className="absolute inset-x-0 bottom-0 h-8 w-full sm:h-10"
+        viewBox="0 0 1200 40"
+        preserveAspectRatio="none"
+        aria-hidden
+        focusable="false"
+      >
+        <path
+          fill="var(--color-safety-orange)"
+          d="M0 40h1200V22c-18 0-24-16-33-16s-14 12-25 12-15-18-26-18-16 15-27 15-14-13-24-13-16 14-27 14-15-16-26-16-15 13-25 13-16-15-27-15-15 14-26 14-14-13-25-13-16 15-27 15-15-16-26-16-15 13-25 13-16-14-27-14-15 13-26 13-15-15-26-15-15 14-26 14-14-14-25-14-16 14-27 14-15-15-26-15-15 13-25 13-16-14-27-14-16 14-26 14-15-15-26-15-15 13-26 13-15-14-26-14-14 13-25 13-16-14-27-14-15 14-26 14-15-15-26-15-14 13-25 13-16-14-27-14L0 22Z"
+        />
+      </svg>
     </header>
 
     <section className="bg-safety-orange py-5">
@@ -101,7 +115,7 @@ export default function HomeHero() {
           <p className="font-caveat text-3xl font-bold text-safety-orange-deep">Consistent care shows</p>
           <h2 className="font-anton text-4xl uppercase tracking-wide text-midnight-moss sm:text-5xl">Property Care That Shows in the Details</h2>
           <div className="mx-auto mt-4 h-1 w-24 rounded bg-safety-orange" />
-          <p className="mt-5 font-archivo text-lg leading-relaxed text-bark">
+          <p className="dropcap mt-6 text-left font-archivo text-lg leading-relaxed text-bark">
             Your lawn and landscape are often the first thing people notice. Whether you are protecting curb appeal at home, keeping a commercial frontage sharp, or prepping an investment property for its next stage, the details matter. I focus on thorough work and a finished look — not rushing through a route.
           </p>
           <Link href="/quote" className="mt-6 inline-flex items-center gap-2 font-archivo text-base font-extrabold uppercase tracking-wide text-safety-orange-deep hover:gap-3">
