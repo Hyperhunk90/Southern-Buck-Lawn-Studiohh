@@ -1,37 +1,42 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand palette — Southern Buck Lawn landing-page design
-     (cream canvas + hunter green + safety orange). */
-  --color-primary: #23491a;        /* hunter green (Meet-the-Buck panel, accents) */
-  --color-deep-forest: #16280f;    /* dark hero green */
-  --color-forest-dark: #0f1f0a;    /* darkest green */
-  --color-safety-orange: #e2701f;  /* primary CTA orange */
-  /* Darkened orange for text on light backgrounds — #e2701f only hits ~2.9:1 there; this passes WCAG AA (>=4.5:1) on surface/mist-green/white. */
-  --color-safety-orange-deep: #b0500f;
-  --color-orange-hot: #f2913e;     /* lighter orange accent */
-  --color-midnight-moss: #16280f;  /* darkest green — dark sections + body text */
-  --color-mist-green: #fbf8ef;     /* warm cream section background */
+  /* Brand palette — Southern Buck Lawn "Loam, Cypress & Blaze" redesign
+     (cotton-cream canvas + cypress green + a rare BLAZE signature accent).
+     Token names are preserved from the prior palette so every existing
+     utility (bg-deep-forest, text-safety-orange, ...) reskins in place. */
+  --color-primary: #2c4a34;        /* cypress green (panels, accents) */
+  --color-deep-forest: #1b3322;    /* deep cypress (hero) */
+  --color-forest-dark: #12231a;    /* darkest cypress */
+  --color-safety-orange: #e4572e;  /* BLAZE — the signature marking color */
+  /* Deepened blaze for text/links/CTAs on light — passes WCAG AA (>=4.5:1)
+     on cream/surface/white. */
+  --color-safety-orange-deep: #bb3f18;
+  --color-orange-hot: #f0784a;     /* lighter blaze accent */
+  --color-midnight-moss: #241c14;  /* LOAM near-black — dark bands + body text */
+  --color-mist-green: #f6f1e7;     /* cotton-cream section background */
   --color-surface: #ffffff;        /* white section background */
-  --color-sage: #f4b070;           /* peach script/accent on dark greens */
+  --color-sage: #eec59b;           /* warm pine-straw script/accent on dark */
 
   /* Extra design tokens */
-  --color-canvas: #e7e5df;         /* warm outer canvas */
-  --color-cream: #fbf8ef;          /* card / soft section cream */
-  --color-cream-line: #ebe3cf;     /* cream hairline border */
-  --color-bark: #5a5f52;           /* warm body-copy gray */
-  --color-leaf-tile: #e8f0e0;      /* light-green icon tile */
+  --color-canvas: #ebe3d1;         /* sand outer canvas */
+  --color-cream: #f6f1e7;          /* card / soft section cream */
+  --color-cream-line: #d9cdb5;     /* dry-grass hairline border */
+  --color-bark: #6b5d4b;           /* warm body-copy brown-gray */
+  --color-leaf-tile: #e7ead6;      /* light moss icon tile */
 
   /* Fonts wired from next/font (see layout.tsx) with safe fallbacks.
-     --font-barlow is kept as a legacy alias pointing at Archivo so existing
-     `font-barlow` utilities across the site pick up the new body face. */
-  --font-anton: var(--font-anton-src), "Anton", sans-serif;
-  --font-archivo: var(--font-archivo-src), "Archivo", system-ui, sans-serif;
-  --font-barlow: var(--font-archivo-src), "Archivo", system-ui, sans-serif;
+     Display = Fraunces, Body = Inter, Accent = Caveat. The --font-anton /
+     --font-archivo / --font-barlow theme keys are retained so the existing
+     `font-anton` (headings) and `font-archivo`/`font-barlow` (body) utilities
+     switch to the new faces with no per-component edits. */
+  --font-anton: var(--font-anton-src), "Fraunces", Georgia, serif;
+  --font-archivo: var(--font-archivo-src), "Inter", system-ui, sans-serif;
+  --font-barlow: var(--font-archivo-src), "Inter", system-ui, sans-serif;
   --font-caveat: var(--font-caveat-src), "Caveat", "Comic Sans MS", cursive;
 
-  --radius-lg: 0.5rem;
-  --radius-xl: 0.75rem;
+  --radius-lg: 0.85rem;
+  --radius-xl: 1.15rem;
 }
 
 @layer base {
@@ -48,9 +53,37 @@
   }
   h1, h2, h3, h4 {
     font-family: var(--font-anton);
-    font-weight: 400;
-    letter-spacing: 0.01em;
+    font-weight: 600;
+    letter-spacing: -0.005em;
   }
+}
+
+/* ── Redesign helpers: earthy "creative outdoor portal" ──────────────── */
+
+/* Editorial drop cap for lead paragraphs. */
+.dropcap::first-letter {
+  float: left;
+  font-family: var(--font-anton);
+  font-weight: 700;
+  font-size: 3.4em;
+  line-height: 0.72;
+  padding: 0.06em 0.1em 0 0;
+  color: var(--color-safety-orange-deep);
+}
+
+/* Subtle organic grain overlay for immersive dark bands (self-contained SVG,
+   no extra asset). Sits above photo/color, below content. */
+.grain-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.10;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grain-overlay { display: none; }
 }
 
 /* Skip link — visually hidden until focused (keyboard / assistive tech). */

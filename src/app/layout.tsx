@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Anton, Archivo, Caveat } from 'next/font/google';
+import { Fraunces, Inter, Caveat } from 'next/font/google';
 import './globals.css';
 import SiteChrome from '@/components/SiteChrome';
 import ConsentMode from '@/components/ConsentMode';
@@ -11,24 +11,31 @@ import { SITE, DEFAULT_OG_IMAGE } from '@/data/site';
 // at retired JavaScript bundles for a year. Hashed assets remain immutable.
 export const revalidate = 300;
 
-const anton = Anton({
-  weight: '400',
+// Display face: Fraunces — a warm, characterful "old-style" serif that carries
+// the earthy, editorial "creative outdoor portal" direction and reads well in
+// both large caps and normal case. Keeps the --font-anton-src variable name so
+// existing `font-anton` heading utilities pick it up with no per-component edits.
+const displayFont = Fraunces({
+  weight: ['400', '500', '600', '700', '900'],
+  style: ['normal', 'italic'],
   subsets: ['latin'],
   variable: '--font-anton-src',
-  display: 'optional',
+  display: 'swap',
   preload: true,
   adjustFontFallback: true,
-  fallback: ['Arial Narrow', 'Arial', 'sans-serif'],
+  fallback: ['Georgia', 'Times New Roman', 'serif'],
 });
 
-const archivo = Archivo({
-  weight: ['400', '500', '600', '700', '800'],
+// Body face: Inter — clean, legible, variable. Reuses --font-archivo-src so all
+// `font-archivo`/`font-barlow` utilities across the site switch over cleanly.
+const bodyFont = Inter({
+  weight: ['300', '400', '500', '600', '700'],
   subsets: ['latin'],
   variable: '--font-archivo-src',
   display: 'swap',
   preload: true,
   adjustFontFallback: true,
-  fallback: ['Arial', 'sans-serif'],
+  fallback: ['system-ui', 'Arial', 'sans-serif'],
 });
 
 const caveat = Caveat({
@@ -75,7 +82,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${anton.variable} ${archivo.variable} ${caveat.variable}`}>
+    <html lang="en" className={`${displayFont.variable} ${bodyFont.variable} ${caveat.variable}`}>
       <head>
         {/* First head script when possible: CM v2 denied defaults before any gtag preload. */}
         <ConsentMode />
