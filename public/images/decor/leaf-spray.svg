@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="lf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7ba85f"/><stop offset="1" stop-color="#3f6b45"/>
+    </linearGradient>
+  </defs>
+  <!-- main stem -->
+  <path d="M8 192 C 40 150 70 120 150 40" stroke="#4f351d" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M60 132 C 84 118 104 110 132 96" stroke="#5a3f22" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M96 96 C 112 76 122 62 132 40" stroke="#5a3f22" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- leaves -->
+  <g fill="url(#lf)" stroke="#2f5136" stroke-width="1.5">
+    <path d="M150 40 C 176 30 190 44 182 66 C 170 60 156 56 150 40 Z"/>
+    <path d="M132 40 C 140 14 160 12 168 24 C 152 30 142 34 132 40 Z"/>
+    <path d="M132 96 C 158 92 168 108 158 126 C 146 118 136 110 132 96 Z"/>
+    <path d="M96 96 C 84 72 96 56 116 58 C 112 74 108 88 96 96 Z"/>
+    <path d="M60 132 C 34 128 26 146 38 162 C 50 152 56 144 60 132 Z"/>
+    <path d="M70 120 C 78 96 98 96 104 108 C 88 112 80 116 70 120 Z"/>
+  </g>
+  <!-- berries -->
+  <g fill="#8f3a1e">
+    <circle cx="46" cy="150" r="5"/><circle cx="58" cy="158" r="4"/><circle cx="52" cy="164" r="3.5"/>
+  </g>
+</svg>

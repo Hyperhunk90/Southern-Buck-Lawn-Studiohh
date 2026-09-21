@@ -5,6 +5,7 @@ import { SITE, DEFAULT_OG_IMAGE } from '@/data/site';
 import { PROJECTS } from '@/data/projects';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import GalleryClient from '@/components/GalleryClient';
+import GrassDivider from '@/components/GrassDivider';
 
 export const metadata: Metadata = {
   title: { absolute: 'Project Gallery — Real Job Photos | Southern Buck Lawn' },
@@ -60,7 +61,7 @@ export default function GalleryPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(imageGallerySchema) }}
       />
 
-      <header className="relative border-b-8 border-primary bg-midnight-moss pb-16 pt-12 text-white">
+      <header className="relative bg-midnight-moss pb-16 pt-12 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-6">
             <Breadcrumbs trail={[{ name: 'Project Gallery', href: '/gallery' }]} />
@@ -99,6 +100,8 @@ export default function GalleryPage() {
           </div>
         </div>
       </header>
+
+      <GrassDivider tone="cream" />
 
       <section aria-labelledby="gallery-photos-heading" className="bg-cream/40">
         <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6 lg:px-8">

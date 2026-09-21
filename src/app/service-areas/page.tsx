@@ -5,6 +5,7 @@ import { ArrowRight, MapPin, PhoneCall } from 'lucide-react';
 import { LOCATIONS } from '@/data/locations';
 import { SITE, DEFAULT_OG_IMAGE } from '@/data/site';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import GrassDivider from '@/components/GrassDivider';
 
 export const metadata: Metadata = {
   title: { absolute: 'Service Areas: Walker Route + Selective Baton Rouge' },
@@ -42,6 +43,8 @@ export default function ServiceAreasIndex() {
         </p>
       </header>
 
+      <GrassDivider tone="surface" />
+
       <section className="bg-surface py-16">
         <div className="mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8">
           {LOCATIONS.map((l, i) => (
@@ -78,10 +81,10 @@ export default function ServiceAreasIndex() {
         <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-5 px-4 text-center sm:px-6 lg:flex-row lg:text-left lg:px-8">
           <h2 className="font-anton text-3xl uppercase text-midnight-moss">Not Sure If I Cover You? Just Ask.</h2>
           <div className="flex flex-col gap-3 sm:flex-row">
-            <Link href="/quote" className="rounded-lg bg-midnight-moss px-7 py-4 font-anton uppercase tracking-wider text-white shadow-lg transition-transform hover:scale-105">
+            <Link href="/quote" className="rounded-lg bg-midnight-moss px-7 py-4 font-btn uppercase tracking-wider text-white shadow-lg transition-transform hover:scale-105">
               Get a Free Quote
             </Link>
-            <a href={SITE.phoneHref} className="flex items-center justify-center gap-2 rounded-lg border-2 border-midnight-moss px-7 py-4 font-anton uppercase tracking-wider text-midnight-moss">
+            <a href={SITE.phoneHref} className="flex items-center justify-center gap-2 rounded-lg border-2 border-midnight-moss px-7 py-4 font-btn uppercase tracking-wider text-midnight-moss">
               <PhoneCall className="h-5 w-5" /> {SITE.phone}
             </a>
           </div>

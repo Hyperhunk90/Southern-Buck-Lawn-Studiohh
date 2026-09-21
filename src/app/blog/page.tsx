@@ -5,6 +5,7 @@ import { ArrowRight, Clock, Calendar } from 'lucide-react';
 import { POSTS } from '@/data/blog';
 import { SITE, DEFAULT_OG_IMAGE } from '@/data/site';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import GrassDivider from '@/components/GrassDivider';
 
 export const metadata: Metadata = {
   title: { absolute: 'Lawn Care Tips for Louisiana Yards | Southern Buck Lawn' },
@@ -42,6 +43,8 @@ export default function BlogIndex() {
           Straight talk on grass, weeds, mulch, and curb appeal from a Walker operator who works these yards every week. No filler, just what works in our heat and our soil.
         </p>
       </header>
+
+      <GrassDivider tone="surface" />
 
       <section className="bg-surface py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -95,7 +98,7 @@ export default function BlogIndex() {
       <section className="bg-safety-orange py-14">
         <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-5 px-4 text-center sm:px-6 lg:flex-row lg:text-left lg:px-8">
           <h2 className="font-anton text-3xl uppercase text-midnight-moss">Rather Skip the Yard Work?</h2>
-          <Link href="/quote" className="whitespace-nowrap rounded-lg bg-midnight-moss px-8 py-4 font-anton text-lg uppercase tracking-wider text-white shadow-xl transition-transform hover:scale-105">
+          <Link href="/quote" className="whitespace-nowrap rounded-lg bg-midnight-moss px-8 py-4 font-btn text-lg uppercase tracking-wider text-white shadow-xl transition-transform hover:scale-105">
             Get a Free Quote
           </Link>
         </div>

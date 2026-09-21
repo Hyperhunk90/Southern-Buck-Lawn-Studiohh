@@ -32,19 +32,19 @@ export default function NotFound() {
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <Link
             href="/"
-            className="rounded-lg bg-safety-orange px-7 py-3.5 font-anton uppercase tracking-wider text-midnight-moss shadow-lg transition-transform hover:scale-105"
+            className="rounded-lg bg-safety-orange px-7 py-3.5 font-btn uppercase tracking-wider text-midnight-moss shadow-lg transition-transform hover:scale-105"
           >
             Go to Home
           </Link>
           <Link
             href="/quote"
-            className="flex items-center gap-2 rounded-lg border border-white/30 bg-deep-forest px-7 py-3.5 font-anton uppercase tracking-wider text-white hover:bg-primary"
+            className="flex items-center gap-2 rounded-lg border border-white/30 bg-deep-forest px-7 py-3.5 font-btn uppercase tracking-wider text-white hover:bg-primary"
           >
             Get a Free Quote <ArrowRight className="h-4 w-4" />
           </Link>
           <a
             href={SITE.phoneHref}
-            className="flex items-center gap-2 rounded-lg border border-white/30 px-7 py-3.5 font-anton uppercase tracking-wider text-white hover:bg-white/10"
+            className="flex items-center gap-2 rounded-lg border border-white/30 px-7 py-3.5 font-btn uppercase tracking-wider text-white hover:bg-white/10"
           >
             <PhoneCall className="h-4 w-4" /> {SITE.phone}
           </a>

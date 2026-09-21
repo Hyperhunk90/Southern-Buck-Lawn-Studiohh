@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { ArrowRight, PhoneCall, MapPin, Check } from 'lucide-react';
 import { SITE, AREA_NAV, SERVICE_NAV, DEFAULT_OG_IMAGE } from '@/data/site';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import GrassDivider from '@/components/GrassDivider';
 
 export const metadata: Metadata = {
   title: { absolute: 'About Michael Dantone | Southern Buck Lawn Walker' },
@@ -50,6 +51,8 @@ export default function AboutPage() {
         </div>
       </header>
 
+      <GrassDivider tone="surface" />
+
       <section className="bg-surface py-16">
         <div className="mx-auto grid max-w-6xl items-start gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div className="overflow-hidden rounded-2xl border border-primary/10 bg-white shadow-sm">
@@ -95,7 +98,7 @@ export default function AboutPage() {
               <Link
                 key={a.href}
                 href={a.href}
-                className="flex items-center justify-between rounded-xl border border-primary/10 bg-white px-5 py-4 font-anton text-lg uppercase text-midnight-moss shadow-sm hover:border-safety-orange"
+                className="flex items-center justify-between rounded-xl border border-primary/10 bg-white px-5 py-4 font-btn text-lg uppercase text-midnight-moss shadow-sm hover:border-safety-orange"
               >
                 {a.label} <ArrowRight className="h-5 w-5 text-safety-orange" />
               </Link>
@@ -107,7 +110,7 @@ export default function AboutPage() {
               <Link
                 key={s.href}
                 href={s.href}
-                className="flex items-center justify-between rounded-xl border border-primary/10 bg-white px-5 py-4 font-anton text-base uppercase text-midnight-moss shadow-sm hover:border-safety-orange"
+                className="flex items-center justify-between rounded-xl border border-primary/10 bg-white px-5 py-4 font-btn text-base uppercase text-midnight-moss shadow-sm hover:border-safety-orange"
               >
                 {s.label} <ArrowRight className="h-5 w-5 text-safety-orange" />
               </Link>
@@ -125,10 +128,10 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
-            <Link href="/quote" className="rounded-lg bg-midnight-moss px-7 py-4 font-anton uppercase tracking-wider text-white shadow-lg">
+            <Link href="/quote" className="rounded-lg bg-midnight-moss px-7 py-4 font-btn uppercase tracking-wider text-white shadow-lg">
               Get a Free Quote
             </Link>
-            <a href={SITE.phoneHref} className="flex items-center justify-center gap-2 rounded-lg border-2 border-midnight-moss px-7 py-4 font-anton uppercase tracking-wider text-midnight-moss">
+            <a href={SITE.phoneHref} className="flex items-center justify-center gap-2 rounded-lg border-2 border-midnight-moss px-7 py-4 font-btn uppercase tracking-wider text-midnight-moss">
               <PhoneCall className="h-5 w-5" /> {SITE.phone}
             </a>
           </div>

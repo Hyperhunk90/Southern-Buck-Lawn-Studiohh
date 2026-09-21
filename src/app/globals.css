@@ -5,38 +5,43 @@
      (cotton-cream canvas + cypress green + a rare BLAZE signature accent).
      Token names are preserved from the prior palette so every existing
      utility (bg-deep-forest, text-safety-orange, ...) reskins in place. */
-  --color-primary: #2c4a34;        /* cypress green (panels, accents) */
-  --color-deep-forest: #1b3322;    /* deep cypress (hero) */
-  --color-forest-dark: #12231a;    /* darkest cypress */
-  --color-safety-orange: #e4572e;  /* BLAZE — the signature marking color */
-  /* Deepened blaze for text/links/CTAs on light — passes WCAG AA (>=4.5:1)
-     on cream/surface/white. */
-  --color-safety-orange-deep: #bb3f18;
-  --color-orange-hot: #f0784a;     /* lighter blaze accent */
-  --color-midnight-moss: #241c14;  /* LOAM near-black — dark bands + body text */
-  --color-mist-green: #f6f1e7;     /* cotton-cream section background */
-  --color-surface: #ffffff;        /* white section background */
-  --color-sage: #eec59b;           /* warm pine-straw script/accent on dark */
+  --color-primary: #2f5136;        /* pine green (panels, accents) */
+  --color-deep-forest: #1d3524;    /* deep pine (dark bands) */
+  --color-forest-dark: #14251a;    /* darkest pine */
+  --color-safety-orange: #d9541e;  /* rust/blaze — signature marking color */
+  /* Deepened rust for text/links/CTAs on light — passes WCAG AA (>=4.5:1)
+     on paper/cream/white. */
+  --color-safety-orange-deep: #b23c12;
+  --color-orange-hot: #e8763a;     /* lighter blaze accent */
+  --color-midnight-moss: #2a2013;  /* LOAM near-black — dark bands + body text */
+  --color-mist-green: #f4ead6;     /* kraft-cream section background */
+  --color-surface: #fbf4e4;        /* warm paper section background */
+  --color-sage: #e7c79b;           /* warm straw script/accent on dark */
 
-  /* Extra design tokens */
-  --color-canvas: #ebe3d1;         /* sand outer canvas */
-  --color-cream: #f6f1e7;          /* card / soft section cream */
-  --color-cream-line: #d9cdb5;     /* dry-grass hairline border */
-  --color-bark: #6b5d4b;           /* warm body-copy brown-gray */
-  --color-leaf-tile: #e7ead6;      /* light moss icon tile */
+  /* Rustic almanac extras */
+  --color-canvas: #e6d7ba;         /* kraft outer canvas */
+  --color-cream: #f4ead6;          /* paper / soft section cream */
+  --color-cream-line: #d8c39c;     /* kraft hairline border */
+  --color-bark: #6b5844;           /* warm body-copy brown */
+  --color-leaf-tile: #e3e7cf;      /* light moss icon tile */
+  --color-kraft: #c9ac7d;          /* kraft brown (frames, tape) */
+  --color-kraft-dark: #a8875a;     /* deep kraft (twig/stick tones) */
+  --color-barn: #8f3a1e;           /* barn-red deep accent */
 
   /* Fonts wired from next/font (see layout.tsx) with safe fallbacks.
-     Display = Fraunces, Body = Inter, Accent = Caveat. The --font-anton /
-     --font-archivo / --font-barlow theme keys are retained so the existing
-     `font-anton` (headings) and `font-archivo`/`font-barlow` (body) utilities
-     switch to the new faces with no per-component edits. */
-  --font-anton: var(--font-anton-src), "Fraunces", Georgia, serif;
-  --font-archivo: var(--font-archivo-src), "Inter", system-ui, sans-serif;
-  --font-barlow: var(--font-archivo-src), "Inter", system-ui, sans-serif;
+     Display = Amatic SC, Accent(Southern) = Rye, Body = Cabin, Script = Caveat.
+     The --font-anton / --font-archivo / --font-barlow theme keys are retained
+     so existing `font-anton` (headings) and `font-archivo`/`font-barlow` (body)
+     utilities switch to the new faces with no per-component edits. */
+  --font-anton: var(--font-anton-src), "Amatic SC", Georgia, serif;
+  --font-archivo: var(--font-archivo-src), "Cabin", system-ui, sans-serif;
+  --font-barlow: var(--font-archivo-src), "Cabin", system-ui, sans-serif;
+  --font-btn: var(--font-anton-btn-src), "Anton", "Arial Narrow", sans-serif;
+  --font-rye: var(--font-rye-src), "Rye", Georgia, serif;
   --font-caveat: var(--font-caveat-src), "Caveat", "Comic Sans MS", cursive;
 
-  --radius-lg: 0.85rem;
-  --radius-xl: 1.15rem;
+  --radius-lg: 0.6rem;
+  --radius-xl: 0.9rem;
 }
 
 @layer base {
@@ -45,16 +50,20 @@
   }
   body {
     background-color: var(--color-cream);
+    /* Subtle paper-fiber texture across the whole site (self-contained SVG). */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.42  0 0 0 0 0.34  0 0 0 0 0.22  0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E");
     color: var(--color-midnight-moss);
     font-family: var(--font-archivo);
     font-size: 1.0625rem;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
+  /* Amatic SC is tall/hand-drawn — needs full weight and tighter leading. */
   h1, h2, h3, h4 {
     font-family: var(--font-anton);
-    font-weight: 600;
-    letter-spacing: -0.005em;
+    font-weight: 700;
+    letter-spacing: 0.005em;
+    line-height: 1.02;
   }
 }
 
@@ -84,6 +93,53 @@
 
 @media (prefers-reduced-motion: reduce) {
   .grain-overlay { display: none; }
+}
+
+/* ── Rustic almanac / field-guide kit ────────────────────────────────── */
+
+/* Kraft-paper matte around a framed real photo (taped-print look). */
+.photo-matte {
+  background: var(--color-surface);
+  padding: 0.6rem 0.6rem 0.85rem;
+  border: 1px solid var(--color-cream-line);
+  border-radius: 4px;
+  box-shadow: 0 10px 26px -8px rgba(42, 32, 19, 0.45), 0 2px 6px rgba(42, 32, 19, 0.18);
+}
+
+/* A strip of masking tape pinning a card/photo to the page. */
+.tape {
+  position: absolute;
+  width: 5.5rem;
+  height: 1.6rem;
+  background: color-mix(in srgb, var(--color-kraft) 78%, transparent);
+  border-left: 1px dashed rgba(42, 32, 19, 0.18);
+  border-right: 1px dashed rgba(42, 32, 19, 0.18);
+  box-shadow: 0 1px 3px rgba(42, 32, 19, 0.2);
+}
+
+/* Hand-drawn dashed frame for note/index cards. */
+.stitch-border {
+  border: 2px dashed var(--color-kraft-dark);
+  border-radius: 8px;
+}
+
+/* Kraft texture panel for dark "field-guide" bands. */
+.kraft-band {
+  position: relative;
+  background-color: var(--color-deep-forest);
+}
+.kraft-band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.14;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kraft-band::before { display: none; }
 }
 
 /* Skip link — visually hidden until focused (keyboard / assistive tech). */
