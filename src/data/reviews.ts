@@ -3,9 +3,10 @@ import { Review } from '@/lib/types';
 // Real Google Business Profile reviews, transcribed verbatim.
 // Marty Dantone is family (confirmed 2026-08-30) — do not present it on-page
 // as a customer Google review. Do not invent replacements. The total below is
-// the live Google Business Profile count verified 2026-09-02; only the four
-// independently verified customer reviews below are reproduced on the site.
-export const GOOGLE_RATING = { score: 5.0, count: 9 };
+// the live Google Business Profile count (owner-confirmed 10 on 2026-09-21);
+// only the four independently verified customer reviews below are reproduced
+// on the site.
+export const GOOGLE_RATING = { score: 5.0, count: 10 };
 
 export const REVIEWS: Review[] = [
   {
