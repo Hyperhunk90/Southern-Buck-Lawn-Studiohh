@@ -11,7 +11,7 @@ export const LOCATIONS: Location[] = [
       'Weekly mowing, edging, and bed work in Walker, LA 70785. Southern Buck Lawn is based on Brett Drive. Call Michael at (225) 369-4434.',
     h1: 'Lawn Care from a Shop That Lives in Walker',
     intro:
-      'Walker is home. The shop is on Brett Drive, 70785, and most weeks start on these streets — residential cuts first, then commercial frontage along the I-12 / Hwy 447 side of town when it is on the route. New sod needs a taller cut so July does not cook it. Established yards need a different pass. I know which is which because I drive past them. When you hire Southern Buck Lawn, you are hiring Michael Dantone down the road, not a company that started two parishes over.',
+      'Walker is home. The shop is on Brett Drive, 70785, and most weeks start on these streets. Residential cuts first, then commercial frontage along the I-12 / Hwy 447 side of town when it is on the route. New sod needs a taller cut so July does not cook it. Established yards need a different pass. I know which is which because I drive past them every day. When you hire Southern Buck Lawn, you are hiring Michael Dantone down the road, not a company that started two parishes over.',
     soilNote:
       'Walker sits on sandy clay loam. It drains a little better than the heavier ground in Denham Springs, but a hard rain still washes nutrients out fast — especially on newer lots where the builder left thin topsoil over fill. Slow-release nitrogen holds color through July instead of flashing green and crashing.',
     pestNote:
@@ -196,7 +196,7 @@ export const LOCATIONS: Location[] = [
       'Selective Baton Rouge lawn care from a Walker shop. Southern Buck Lawn takes metro jobs when they fit the Walker route. Call (225) 369-4434.',
     h1: 'Baton Rouge Lawn Care from a Walker Operator',
     intro:
-      'I am Michael Dantone. Southern Buck Lawn is based on Brett Drive in Walker — not downtown Baton Rouge. Home turf is Walker, Denham Springs, and Watson. I take Baton Rouge jobs selectively when they fit that route and I can keep the schedule honest. If your address works, you get the same owner on site. If it does not, I will say so. This is not a Baton Rouge storefront page.',
+      'I am Michael Dantone. Southern Buck Lawn is based on Brett Drive in Walker, not downtown Baton Rouge. Home turf is Walker, Denham Springs, and Watson. I take Baton Rouge jobs selectively when they fit that route and I can keep the schedule honest. If your address works, you get the same owner on site. If it does not, I will say so. This is not a Baton Rouge storefront page.',
     soilNote:
       'East Baton Rouge soils run the same heavy Gulf Coast clay and silt mix you feel after a hard rain. Drainage and compaction matter more than branding. I match the cut and feed to what the yard is doing, not to a metro marketing map.',
     pestNote:
