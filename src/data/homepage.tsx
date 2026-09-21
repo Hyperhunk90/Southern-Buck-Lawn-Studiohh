@@ -12,7 +12,7 @@ export const extraServices = [
   {
     href: '/landscape-lighting',
     title: 'Landscape Lighting',
-    summary: 'Low-voltage lighting that extends the look of your beds and walks into the evening — planned and installed by Michael.',
+    summary: 'Low-voltage lighting that carries your beds and walkways into the evening. Planned and installed by Michael himself, not a sub.',
     icon: <Lightbulb className="h-7 w-7" />,
     image: '/images/sbl-project-photo-02.webp',
     imageAlt: 'Brick house at dusk with path lights along the walk, Southern Buck Lawn lighting work.',
