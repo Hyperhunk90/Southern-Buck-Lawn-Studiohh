@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 110" width="240" height="110" preserveAspectRatio="xMidMax meet" fill="none" aria-hidden="true">
+  <defs>
+    <path id="s" d="M0 110 C -2 70 3 45 0 6 C 2 44 -4 74 -5 110 Z"/>
+    <path id="l" d="M0 110 C -6 72 -9 44 -13 10 C -4 46 -1 76 -3 110 Z"/>
+    <path id="r" d="M0 110 C 6 72 9 44 13 10 C 4 46 1 76 3 110 Z"/>
+    <linearGradient id="g" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#274a2f"/><stop offset="0.6" stop-color="#3f6b45"/><stop offset="1" stop-color="#6fa05a"/>
+    </linearGradient>
+  </defs>
+  <g fill="url(#g)">
+    <use href="#r" transform="translate(4 0) scale(1 0.78)"/>
+    <use href="#s" transform="translate(13 0) scale(1 1.0)"/>
+    <use href="#l" transform="translate(22 0) scale(1 0.66)"/>
+    <use href="#s" transform="translate(30 0) scale(1 0.9)"/>
+    <use href="#r" transform="translate(39 0) scale(1 1.02)"/>
+    <use href="#l" transform="translate(49 0) scale(1 0.72)"/>
+    <use href="#s" transform="translate(57 0) scale(1 0.94)"/>
+    <use href="#r" transform="translate(66 0) scale(1 0.8)"/>
+    <use href="#l" transform="translate(76 0) scale(1 1.0)"/>
+    <use href="#s" transform="translate(84 0) scale(1 0.7)"/>
+    <use href="#r" transform="translate(93 0) scale(1 0.96)"/>
+    <use href="#l" transform="translate(103 0) scale(1 0.82)"/>
+    <use href="#s" transform="translate(111 0) scale(1 1.03)"/>
+    <use href="#r" transform="translate(120 0) scale(1 0.72)"/>
+    <use href="#l" transform="translate(130 0) scale(1 0.92)"/>
+    <use href="#s" transform="translate(138 0) scale(1 0.8)"/>
+    <use href="#r" transform="translate(147 0) scale(1 1.0)"/>
+    <use href="#l" transform="translate(157 0) scale(1 0.68)"/>
+    <use href="#s" transform="translate(165 0) scale(1 0.95)"/>
+    <use href="#r" transform="translate(174 0) scale(1 0.82)"/>
+    <use href="#l" transform="translate(184 0) scale(1 1.02)"/>
+    <use href="#s" transform="translate(192 0) scale(1 0.72)"/>
+    <use href="#r" transform="translate(201 0) scale(1 0.94)"/>
+    <use href="#l" transform="translate(211 0) scale(1 0.8)"/>
+    <use href="#s" transform="translate(219 0) scale(1 1.0)"/>
+    <use href="#r" transform="translate(228 0) scale(1 0.74)"/>
+    <use href="#l" transform="translate(237 0) scale(1 0.9)"/>
+  </g>
+</svg>

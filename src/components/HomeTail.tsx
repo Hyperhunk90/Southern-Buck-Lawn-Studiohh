@@ -18,10 +18,10 @@ export default function HomeTail() {
           Serving homeowners, businesses, and property professionals in Walker, Denham Springs, and Watson.
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Link href="/quote" className="group flex items-center justify-center gap-2 rounded-xl bg-safety-orange px-8 py-4 font-anton text-lg uppercase tracking-wider text-midnight-moss shadow-xl transition-all hover:scale-105 active:scale-95">
+          <Link href="/quote" className="group flex items-center justify-center gap-2 rounded-xl bg-safety-orange px-8 py-4 font-btn text-lg uppercase tracking-wider text-midnight-moss shadow-xl transition-all hover:scale-105 active:scale-95">
             Request Your Free Estimate <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
           </Link>
-          <a href={SITE.phoneHref} className="flex items-center justify-center gap-3 rounded-xl border-2 border-white/40 px-8 py-4 font-anton text-lg uppercase tracking-wider text-white transition-transform hover:scale-105">
+          <a href={SITE.phoneHref} className="flex items-center justify-center gap-3 rounded-xl border-2 border-white/40 px-8 py-4 font-btn text-lg uppercase tracking-wider text-white transition-transform hover:scale-105">
             <PhoneCall className="h-5 w-5 text-safety-orange" /> {SITE.phone}
           </a>
         </div>

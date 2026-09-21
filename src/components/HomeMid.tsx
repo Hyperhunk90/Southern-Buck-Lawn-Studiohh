@@ -65,7 +65,7 @@ export default function HomeMid() {
           ))}
         </div>
         <div className="mt-10 text-center">
-          <Link href="/quote" className="inline-flex items-center gap-2 rounded-xl bg-safety-orange px-8 py-4 font-anton text-lg uppercase tracking-wider text-midnight-moss shadow-xl transition-all hover:scale-105">
+          <Link href="/quote" className="inline-flex items-center gap-2 rounded-xl bg-safety-orange px-8 py-4 font-btn text-lg uppercase tracking-wider text-midnight-moss shadow-xl transition-all hover:scale-105">
             Submit a Service Request <ArrowRight className="h-5 w-5" />
           </Link>
         </div>
