@@ -81,7 +81,7 @@ export default function ContactForm() {
       <Field label="Email"><input type="email" name="email" autoComplete="email" value={form.email} onChange={(e) => update('email', e.target.value)} placeholder="you@email.com" className={inputClass} /></Field>
       <Field label="Message" required><textarea required name="message" rows={5} maxLength={2000} value={form.message} onChange={(e) => update('message', e.target.value)} placeholder="How can we help?" className={inputClass} /></Field>
       {status === 'error' && <p className="font-barlow text-base font-semibold text-red-700" role="alert">{errorMessage} You can also call (225) 369-4434.</p>}
-      <button type="submit" disabled={status === 'sending'} className="flex w-full items-center justify-center gap-2 rounded-lg bg-safety-orange py-4 font-anton text-lg uppercase tracking-wider text-midnight-moss shadow-lg transition-colors hover:bg-orange-hot disabled:cursor-wait disabled:opacity-70">
+      <button type="submit" disabled={status === 'sending'} className="flex w-full items-center justify-center gap-2 rounded-lg bg-safety-orange py-4 font-btn text-lg uppercase tracking-wider text-midnight-moss shadow-lg transition-colors hover:bg-orange-hot disabled:cursor-wait disabled:opacity-70">
         {status === 'sending' ? <><Loader2 className="h-5 w-5 animate-spin" /> Sending...</> : <>Send Message <Send className="h-5 w-5" /></>}
       </button>
       <p className="text-center font-barlow text-sm text-gray-500">

@@ -213,7 +213,7 @@ export default function ReoForm() {
       <button
         type="submit"
         disabled={status === 'sending'}
-        className="mt-6 flex w-full items-center justify-center gap-3 rounded-lg bg-safety-orange py-5 font-anton text-xl uppercase tracking-wider text-midnight-moss shadow-lg transition-all hover:-translate-y-1 hover:bg-orange-hot hover:shadow-xl disabled:pointer-events-none disabled:opacity-70"
+        className="mt-6 flex w-full items-center justify-center gap-3 rounded-lg bg-safety-orange py-5 font-btn text-xl uppercase tracking-wider text-midnight-moss shadow-lg transition-all hover:-translate-y-1 hover:bg-orange-hot hover:shadow-xl disabled:pointer-events-none disabled:opacity-70"
       >
         {status === 'sending' ? (
           <>

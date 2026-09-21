@@ -43,13 +43,13 @@ export default function ReoHeroContent() {
       <motion.div variants={itemVariants} className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
         <a
           href="#lead-form"
-          className="group flex w-full items-center justify-center gap-2 rounded-lg bg-safety-orange px-8 py-4 font-anton text-lg uppercase tracking-wider text-midnight-moss shadow-lg transition-all hover:bg-orange-hot sm:w-auto"
+          className="group flex w-full items-center justify-center gap-2 rounded-lg bg-safety-orange px-8 py-4 font-btn text-lg uppercase tracking-wider text-midnight-moss shadow-lg transition-all hover:bg-orange-hot sm:w-auto"
         >
           Submit Work Order <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
         </a>
         <a
           href={SITE.phoneHref}
-          className="flex w-full items-center justify-center rounded-lg border-2 border-white/20 bg-white/5 px-8 py-4 font-anton text-lg uppercase tracking-wider text-white backdrop-blur-sm transition-all hover:bg-white/10 sm:w-auto"
+          className="flex w-full items-center justify-center rounded-lg border-2 border-white/20 bg-white/5 px-8 py-4 font-btn text-lg uppercase tracking-wider text-white backdrop-blur-sm transition-all hover:bg-white/10 sm:w-auto"
         >
           Call {SITE.phone}
         </a>

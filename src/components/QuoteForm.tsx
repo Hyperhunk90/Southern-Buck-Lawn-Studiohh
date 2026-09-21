@@ -195,7 +195,7 @@ export default function QuoteForm({ defaultService = SERVICES[0] }: QuoteFormPro
 
       {status === 'error' && <p className="font-barlow text-base font-semibold text-red-700" role="alert">{errorMessage} You can also call (225) 369-4434.</p>}
 
-      <button type="submit" disabled={status === 'sending'} className="flex w-full items-center justify-center gap-2 rounded-lg bg-safety-orange py-4 font-anton text-lg uppercase tracking-wider text-midnight-moss shadow-lg transition-colors hover:bg-orange-hot disabled:cursor-wait disabled:opacity-70">
+      <button type="submit" disabled={status === 'sending'} className="flex w-full items-center justify-center gap-2 rounded-lg bg-safety-orange py-4 font-btn text-lg uppercase tracking-wider text-midnight-moss shadow-lg transition-colors hover:bg-orange-hot disabled:cursor-wait disabled:opacity-70">
         {status === 'sending' ? <><Loader2 className="h-5 w-5 animate-spin" /> Sending...</> : <>Request My Free Estimate <Send className="h-5 w-5" /></>}
       </button>
       <p className="text-center font-barlow text-sm text-gray-500">

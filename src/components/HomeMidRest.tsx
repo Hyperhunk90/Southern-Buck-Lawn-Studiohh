@@ -103,7 +103,7 @@ export default function HomeMidRest() {
               <Link
                 key={a.href}
                 href={a.href}
-                className="flex items-center justify-between rounded-xl border border-cream-line bg-cream px-5 py-4 font-anton text-lg uppercase text-midnight-moss shadow-sm transition-all hover:border-safety-orange hover:text-safety-orange-deep"
+                className="flex items-center justify-between rounded-xl border border-cream-line bg-cream px-5 py-4 font-btn text-lg uppercase text-midnight-moss shadow-sm transition-all hover:border-safety-orange hover:text-safety-orange-deep"
               >
                 {a.label} <ArrowRight className="h-5 w-5 text-safety-orange" />
               </Link>

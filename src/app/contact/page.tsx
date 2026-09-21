@@ -6,6 +6,7 @@ import ContactForm from '@/components/ContactForm';
 import ObfuscatedEmail from '@/components/ObfuscatedEmail';
 import ServiceAreaMap from '@/components/ServiceAreaMap';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import GrassDivider from '@/components/GrassDivider';
 
 export const metadata: Metadata = {
   title: { absolute: 'Contact Southern Buck Lawn in Walker, LA' },
@@ -89,6 +90,8 @@ export default function ContactPage() {
         </p>
       </header>
 
+      <GrassDivider tone="surface" />
+
       <section className="bg-surface py-16">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div className="space-y-7">
@@ -169,7 +172,7 @@ export default function ContactPage() {
                 </Link>
                 <Link
                   href="/quote"
-                  className="flex items-center justify-center gap-2 rounded-xl bg-safety-orange px-4 py-3 font-anton text-base uppercase tracking-wider text-midnight-moss shadow-md hover:scale-[1.02] sm:col-span-2"
+                  className="flex items-center justify-center gap-2 rounded-xl bg-safety-orange px-4 py-3 font-btn text-base uppercase tracking-wider text-midnight-moss shadow-md hover:scale-[1.02] sm:col-span-2"
                 >
                   Request a Free Quote <ArrowRight className="h-4 w-4" />
                 </Link>

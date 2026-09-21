@@ -9,6 +9,7 @@ import { PROJECTS } from '@/data/projects';
 import { AREA_NAV, SITE } from '@/data/site';
 import QuoteForm from '@/components/QuoteForm';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import GrassDivider from '@/components/GrassDivider';
 
 export function generateStaticParams() {
   return SERVICES.map((s) => ({ slug: s.slug }));
@@ -88,10 +89,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <p className="font-barlow text-sm font-semibold uppercase tracking-wider text-sage">{service.trustLine}</p>
             )}
             <div className="flex flex-col gap-4 pt-2 sm:flex-row">
-              <Link href="#quote-form" className="flex items-center justify-center gap-2 rounded-lg bg-safety-orange px-7 py-3.5 font-anton uppercase tracking-wider text-midnight-moss shadow-lg transition-transform hover:scale-105">
+              <Link href="#quote-form" className="flex items-center justify-center gap-2 rounded-lg bg-safety-orange px-7 py-3.5 font-btn uppercase tracking-wider text-midnight-moss shadow-lg transition-transform hover:scale-105">
                 Get a Free Quote <ArrowRight className="h-5 w-5" />
               </Link>
-              <a href={SITE.phoneHref} className="flex items-center justify-center gap-2 rounded-lg border border-white/20 bg-deep-forest px-7 py-3.5 font-anton uppercase tracking-wider text-white hover:bg-primary">
+              <a href={SITE.phoneHref} className="flex items-center justify-center gap-2 rounded-lg border border-white/20 bg-deep-forest px-7 py-3.5 font-btn uppercase tracking-wider text-white hover:bg-primary">
                 <PhoneCall className="h-5 w-5" /> {SITE.phone}
               </a>
             </div>
@@ -101,6 +102,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           </div>
         </div>
       </header>
+
+      <GrassDivider tone="surface" />
 
       <section className="bg-surface py-16">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
@@ -221,7 +224,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <p className="font-barlow text-sm font-bold uppercase tracking-wider text-safety-orange-deep">How I quote</p>
               <p className="mt-1 font-anton text-xl uppercase text-midnight-moss">{service.pricingRange}</p>
               <p className="mt-2 font-barlow text-base text-gray-600">Every yard is different. I give you a firm number after a quick look, free.</p>
-              <Link href="#quote-form" className="mt-4 block rounded-lg bg-safety-orange py-3 text-center font-anton uppercase tracking-wider text-midnight-moss shadow transition-transform hover:scale-105">
+              <Link href="#quote-form" className="mt-4 block rounded-lg bg-safety-orange py-3 text-center font-btn uppercase tracking-wider text-midnight-moss shadow transition-transform hover:scale-105">
                 Get My Free Estimate
               </Link>
             </div>
@@ -280,7 +283,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               ))}
             </div>
             <div className="mt-8 text-center">
-              <Link href="/gallery" className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 font-anton uppercase tracking-wider text-white hover:bg-deep-forest">
+              <Link href="/gallery" className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 font-btn uppercase tracking-wider text-white hover:bg-deep-forest">
                 View All Actual Job Photos <ArrowRight className="h-5 w-5" />
               </Link>
             </div>

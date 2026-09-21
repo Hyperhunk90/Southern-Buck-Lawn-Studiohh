@@ -10,6 +10,7 @@ import ServiceAreaMap from '@/components/ServiceAreaMap';
 import QuoteForm from '@/components/QuoteForm';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import FaqSection from '@/components/FaqSection';
+import GrassDivider from '@/components/GrassDivider';
 
 export function generateStaticParams() {
   return LOCATIONS.map((l) => ({ slug: l.slug }));
@@ -54,10 +55,10 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
             <h1 className="font-anton text-4xl uppercase leading-tight tracking-wide sm:text-5xl">{loc.h1}</h1>
             <p className="font-barlow text-xl text-white/80">{loc.intro}</p>
             <div className="flex flex-col gap-4 pt-2 sm:flex-row">
-              <Link href="/quote" className="flex items-center justify-center gap-2 rounded-lg bg-safety-orange px-7 py-3.5 font-anton uppercase tracking-wider text-midnight-moss shadow-lg transition-transform hover:scale-105">
+              <Link href="/quote" className="flex items-center justify-center gap-2 rounded-lg bg-safety-orange px-7 py-3.5 font-btn uppercase tracking-wider text-midnight-moss shadow-lg transition-transform hover:scale-105">
                 Get a Free Quote <ArrowRight className="h-5 w-5" />
               </Link>
-              <a href={SITE.phoneHref} className="flex items-center justify-center gap-2 rounded-lg border border-white/20 bg-deep-forest px-7 py-3.5 font-anton uppercase tracking-wider text-white hover:bg-primary">
+              <a href={SITE.phoneHref} className="flex items-center justify-center gap-2 rounded-lg border border-white/20 bg-deep-forest px-7 py-3.5 font-btn uppercase tracking-wider text-white hover:bg-primary">
                 <PhoneCall className="h-5 w-5" /> {SITE.phone}
               </a>
             </div>
@@ -73,6 +74,8 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
           )}
         </div>
       </header>
+
+      <GrassDivider tone="surface" />
 
       <section className="bg-surface py-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
@@ -111,7 +114,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
               <Link
                 key={s.href}
                 href={s.href}
-                className="flex items-center justify-between rounded-xl border border-primary/10 bg-white px-5 py-4 font-anton text-lg uppercase text-midnight-moss shadow-sm transition-all hover:border-safety-orange hover:text-safety-orange-deep"
+                className="flex items-center justify-between rounded-xl border border-primary/10 bg-white px-5 py-4 font-btn text-lg uppercase text-midnight-moss shadow-sm transition-all hover:border-safety-orange hover:text-safety-orange-deep"
               >
                 {s.label} <ArrowRight className="h-5 w-5 text-safety-orange" />
               </Link>
