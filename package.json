@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "decode-photos": "node scripts/decode-job-photos.mjs",
-    "prebuild": "node scripts/decode-job-photos.mjs",
+    "prebuild": "node scripts/decode-job-photos.mjs && node scripts/indexnow-revision.mjs --write",
+    "indexnow": "node scripts/indexnow.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

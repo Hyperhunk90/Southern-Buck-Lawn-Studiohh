@@ -25,6 +25,13 @@ const nextConfig = {
         source: '/((?!api/).*)',
         headers: [{ key: 'X-Robots-Tag', value: 'index, follow' }],
       },
+      {
+        source: '/indexnow-deployment.json',
+        headers: [
+          { key: 'Cache-Control', value: 'no-store, max-age=0' },
+          { key: 'X-Robots-Tag', value: 'noindex' },
+        ],
+      },
     ];
   },
   async redirects() {

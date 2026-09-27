@@ -1,0 +1,35 @@
+name: IndexNow after Hostinger deployment
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'next.config.mjs'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'public/ebfef7aab80048eb802244a625e0795e.txt'
+      - 'scripts/indexnow*.mjs'
+      - '.github/workflows/indexnow.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow-production
+  cancel-in-progress: true
+
+jobs:
+  notify-search-engines:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check URL validation and submission handling
+        run: node --test scripts/indexnow.test.mjs
+      - name: Wait for this version on production, verify the key, and submit the sitemap
+        run: node scripts/indexnow.mjs --wait-for-deploy
