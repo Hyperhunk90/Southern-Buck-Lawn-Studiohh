@@ -1,7 +1,26 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { mkdtempSync, mkdirSync, writeFileSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 import { sitemapUrls, submitUrls, validateUrls, verifyKey } from './indexnow.mjs';
-import { key, site } from './indexnow-revision.mjs';
+import { key, site, sourceRevision } from './indexnow-revision.mjs';
+
+test('the deployment marker changes with website source, independently of installer rewrites', () => {
+  const folder = mkdtempSync(join(tmpdir(), 'indexnow-'));
+  try {
+    for (const name of ['src', 'scripts', 'public']) mkdirSync(join(folder, name));
+    writeFileSync(join(folder, 'scripts/indexnow-revision.mjs'), 'marker generator');
+    writeFileSync(join(folder, 'public', `${key}.txt`), key);
+    writeFileSync(join(folder, 'src/page.tsx'), 'old page');
+    const before = sourceRevision(folder);
+    writeFileSync(join(folder, 'package-lock.json'), 'installer metadata');
+    writeFileSync(join(folder, 'package.json'), 'hosting configuration');
+    assert.equal(sourceRevision(folder), before);
+    writeFileSync(join(folder, 'src/page.tsx'), 'new page');
+    assert.notEqual(sourceRevision(folder), before);
+  } finally { rmSync(folder, { recursive: true, force: true }); }
+});
 
 test('canonical URLs are deduplicated and external, private, and tracking URLs are rejected', () => {
   assert.deepEqual(validateUrls([site, `${site}/`, `${site}/about`]), [`${site}/`, `${site}/about`]);
