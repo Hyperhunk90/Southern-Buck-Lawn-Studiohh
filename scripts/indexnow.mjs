@@ -96,7 +96,11 @@ async function main() {
   for (const arg of args) {
     if (arg.startsWith('--') && !flags.has(arg)) throw new Error(`Unknown option: ${arg}`);
   }
-  if (args.includes('--wait-for-deploy')) await waitForDeployment();
+  if (args.includes('--wait-for-deploy')) {
+    // Check an existing URL first so TLS/DNS failures do not look like a slow deployment.
+    await getText(`${site}/robots.txt`);
+    await waitForDeployment();
+  }
   await verifyKey();
 
   const explicit = args.filter((arg) => !flags.has(arg));
@@ -131,5 +135,5 @@ async function main() {
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  main().catch((error) => { console.error(error.message); process.exitCode = 1; });
+  main().catch((error) => { console.error(error); process.exitCode = 1; });
 }
