@@ -51,14 +51,17 @@ export async function verifyKey(fetcher = fetch) {
 async function waitForDeployment() {
   const expected = sourceRevision();
   const deadline = Date.now() + 15 * 60 * 1000;
+  console.log(`Waiting for production source revision: ${expected}`);
   while (true) {
     try {
-      const { text } = await getText(`${site}/indexnow-deployment.json?revision=${expected}`);
-      if (JSON.parse(text).revision === expected) {
+      // A unique query also bypasses hosting/CDN caches of pre-deployment 404s.
+      const { text } = await getText(`${site}/indexnow-deployment.json?revision=${expected}&check=${Date.now()}`);
+      const actual = JSON.parse(text).revision;
+      if (actual === expected) {
         console.log(`Production deployment verified: ${expected}`);
         return;
       }
-      console.log('Hostinger is still serving an earlier deployment.');
+      console.log(`Hostinger is still serving an earlier deployment: ${actual}`);
     } catch (error) {
       console.log(`Waiting for the production deployment: ${error.message}`);
     }
