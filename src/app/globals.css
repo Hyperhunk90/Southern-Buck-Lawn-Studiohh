@@ -8,7 +8,8 @@
   --color-primary: #2f5136;        /* pine green (panels, accents) */
   --color-deep-forest: #1d3524;    /* deep pine (dark bands) */
   --color-forest-dark: #14251a;    /* darkest pine */
-  --color-safety-orange: #d9541e;  /* rust/blaze — signature marking color */
+  /* Rust/blaze signature color. Dark loam text on it must stay >= 4.5:1. */
+  --color-safety-orange: #e8672a;
   /* Deepened rust for text/links/CTAs on light — passes WCAG AA (>=4.5:1)
      on paper/cream/white. */
   --color-safety-orange-deep: #b23c12;

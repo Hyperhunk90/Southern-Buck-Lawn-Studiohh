@@ -70,7 +70,7 @@ export default function ReviewBadgeBar() {
             <Star key={i} className="h-5 w-5 fill-safety-orange" />
           ))}
         </span>
-        <span className="font-barlow text-base text-gray-500">{GOOGLE_RATING.count} Google reviews</span>
+        <span className="font-barlow text-base text-bark">{GOOGLE_RATING.count} Google reviews</span>
       </div>
 
       <div className="flex gap-3 overflow-x-auto pb-2 sm:flex-wrap sm:justify-center sm:overflow-visible">
@@ -100,7 +100,7 @@ export default function ReviewBadgeBar() {
         >
           <MessageSquarePlus className="h-5 w-5" /> Share an honest Google review
         </a>
-        <p className="mx-auto mt-2 max-w-xl font-barlow text-sm text-gray-500">
+        <p className="mx-auto mt-2 max-w-xl font-barlow text-sm text-bark">
           Worked with Southern Buck Lawn? Your honest feedback helps local property owners know what to expect.
         </p>
       </div>
