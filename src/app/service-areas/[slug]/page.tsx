@@ -10,8 +10,6 @@ import ServiceAreaMap from '@/components/ServiceAreaMap';
 import QuoteForm from '@/components/QuoteForm';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import FaqSection from '@/components/FaqSection';
-import GrassDivider from '@/components/GrassDivider';
-
 export function generateStaticParams() {
   return LOCATIONS.map((l) => ({ slug: l.slug }));
 }
@@ -74,8 +72,6 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
           )}
         </div>
       </header>
-
-      <GrassDivider tone="surface" />
 
       <section className="bg-surface py-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">

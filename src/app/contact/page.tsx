@@ -6,7 +6,6 @@ import ContactForm from '@/components/ContactForm';
 import ObfuscatedEmail from '@/components/ObfuscatedEmail';
 import ServiceAreaMap from '@/components/ServiceAreaMap';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import GrassDivider from '@/components/GrassDivider';
 
 export const metadata: Metadata = {
   title: { absolute: 'Contact Southern Buck Lawn in Walker, LA' },
@@ -89,8 +88,6 @@ export default function ContactPage() {
           Question, or ready to get on the schedule? Call, text, or send the form. I call back.
         </p>
       </header>
-
-      <GrassDivider tone="surface" />
 
       <section className="bg-surface py-16">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">

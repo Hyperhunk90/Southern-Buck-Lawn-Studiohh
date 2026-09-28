@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { ArrowRight, PhoneCall, MapPin, Check } from 'lucide-react';
 import { SITE, AREA_NAV, SERVICE_NAV, DEFAULT_OG_IMAGE } from '@/data/site';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import GrassDivider from '@/components/GrassDivider';
 
 export const metadata: Metadata = {
   title: { absolute: 'About Michael Dantone | Southern Buck Lawn Walker' },
@@ -50,8 +49,6 @@ export default function AboutPage() {
           </p>
         </div>
       </header>
-
-      <GrassDivider tone="surface" />
 
       <section className="bg-surface py-16">
         <div className="mx-auto grid max-w-6xl items-start gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">

@@ -9,8 +9,6 @@ import { PROJECTS } from '@/data/projects';
 import { AREA_NAV, SITE } from '@/data/site';
 import QuoteForm from '@/components/QuoteForm';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import GrassDivider from '@/components/GrassDivider';
-
 export function generateStaticParams() {
   return SERVICES.map((s) => ({ slug: s.slug }));
 }
@@ -102,8 +100,6 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           </div>
         </div>
       </header>
-
-      <GrassDivider tone="surface" />
 
       <section className="bg-surface py-16">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">

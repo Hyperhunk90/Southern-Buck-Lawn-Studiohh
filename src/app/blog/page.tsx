@@ -5,7 +5,6 @@ import { ArrowRight, Clock, Calendar } from 'lucide-react';
 import { POSTS } from '@/data/blog';
 import { SITE, DEFAULT_OG_IMAGE } from '@/data/site';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import GrassDivider from '@/components/GrassDivider';
 
 export const metadata: Metadata = {
   title: { absolute: 'Lawn Care Tips for Louisiana Yards | Southern Buck Lawn' },
@@ -43,8 +42,6 @@ export default function BlogIndex() {
           Straight talk on grass, weeds, mulch, and curb appeal from a Walker operator who works these yards every week. No filler, just what works in our heat and our soil.
         </p>
       </header>
-
-      <GrassDivider tone="surface" />
 
       <section className="bg-surface py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

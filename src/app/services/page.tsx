@@ -5,7 +5,6 @@ import { ArrowRight, PhoneCall } from 'lucide-react';
 import { SERVICES } from '@/data/services';
 import { SITE, DEFAULT_OG_IMAGE } from '@/data/site';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import GrassDivider from '@/components/GrassDivider';
 
 export const metadata: Metadata = {
   title: { absolute: 'Lawn Care Services in Walker, LA | Southern Buck Lawn' },
@@ -42,8 +41,6 @@ export default function ServicesIndex() {
           Weekly cuts, weed programs, bed rebuilds, and commercial grounds on the Walker, Denham Springs, and Watson route. Pick a service and see how I handle it — solo operator, free estimates, no rushed route cuts.
         </p>
       </header>
-
-      <GrassDivider tone="surface" />
 
       <section className="bg-surface py-16">
         <div className="mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8">

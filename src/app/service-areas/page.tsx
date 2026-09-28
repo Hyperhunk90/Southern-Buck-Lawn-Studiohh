@@ -5,7 +5,6 @@ import { ArrowRight, MapPin, PhoneCall } from 'lucide-react';
 import { LOCATIONS } from '@/data/locations';
 import { SITE, DEFAULT_OG_IMAGE } from '@/data/site';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import GrassDivider from '@/components/GrassDivider';
 
 export const metadata: Metadata = {
   title: { absolute: 'Service Areas: Walker Route + Selective Baton Rouge' },
@@ -42,8 +41,6 @@ export default function ServiceAreasIndex() {
           Based on Brett Drive in Walker. Those three towns are the weekly route. Livingston Parish lots on that corridor are fair game. Baton Rouge is selective when it fits the same route — not the home base. Pick your area.
         </p>
       </header>
-
-      <GrassDivider tone="surface" />
 
       <section className="bg-surface py-16">
         <div className="mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8">
