@@ -74,12 +74,12 @@ export default function HomeMid() {
 
     <section className="relative overflow-hidden bg-deep-forest">
       <Image
-        src="/images/azalea-bed-after-black-mulch.webp"
-        alt="Fresh black-mulch bed with red azaleas and clean black edging along a light stucco house."
+        src="/images/port-allen-la-commercial-entrance-bed.webp"
+        alt="Commercial entrance bed in Port Allen, LA with crape myrtles, lush green groundcover, and fresh red mulch inside a curbed island."
         fill
         sizes="100vw"
         quality={60}
-        style={{ objectFit: 'cover', objectPosition: '50% 56%' }}
+        style={{ objectFit: 'cover', objectPosition: '50% 50%' }}
       />
       <div className="absolute inset-0 bg-gradient-to-r from-deep-forest/95 via-deep-forest/65 to-deep-forest/5" />
       <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">

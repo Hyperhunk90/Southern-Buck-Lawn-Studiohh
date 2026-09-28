@@ -5,7 +5,7 @@ import {
 import { SITE } from '@/data/site';
 import { GOOGLE_RATING } from '@/data/reviews';
 import FramedPhoto from '@/components/FramedPhoto';
-import GrassDivider from '@/components/GrassDivider';
+import BuckWatermark from '@/components/BuckWatermark';
 
 export default function HomeHero() {
   return (
@@ -55,11 +55,10 @@ export default function HomeHero() {
 
           <div className="relative mx-auto w-full max-w-xl lg:mr-0">
             <FramedPhoto
-              src="/images/residential-lawn-stripes-magnum.webp"
-              alt="Freshly striped green residential lawn with an orange Bad Boy Magnum zero-turn parked by the driveway."
+              src="/images/walker-la-weiss-rd-striped-front-lawn.webp"
+              alt="Freshly mowed front lawn with crisp diagonal stripes on Weiss Rd in Walker, LA, with an American flag and brick house in the background."
               aspect="aspect-[4/3]"
               sizes="(max-width: 1023px) 90vw, 46vw"
-              quality={60}
               priority
               corner="twig"
               cornerPos="tl"
@@ -71,7 +70,6 @@ export default function HomeHero() {
               alt="Headshot of Michael Dantone, owner of Southern Buck Lawn, in a company polo."
               aspect="aspect-square"
               sizes="(max-width: 1023px) 40vw, 18vw"
-              quality={60}
               corner="leaf"
               cornerPos="br"
               className="absolute -bottom-8 -left-6 w-36 -rotate-6 sm:w-44"
@@ -84,10 +82,7 @@ export default function HomeHero() {
       </div>
     </header>
 
-    {/* grass line growing up into the announcement band */}
-    <GrassDivider tone="orange" />
-
-    <section className="bg-safety-orange pb-6 pt-1">
+    <section className="bg-safety-orange py-5">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-x-4 gap-y-1 px-4 text-center sm:flex-row sm:px-6 lg:px-8">
         <span className="font-anton text-3xl tracking-wide text-midnight-moss sm:text-4xl">Free estimates &middot; 24-hour callback</span>
         <span className="font-archivo text-base font-semibold text-midnight-moss">Tell me about your property — I follow up with the next step.</span>
@@ -113,8 +108,9 @@ export default function HomeHero() {
       </div>
     </section>
 
-    <section className="bg-cream py-16">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="relative overflow-hidden bg-cream py-16">
+      <BuckWatermark side="right" />
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <p className="font-rye text-lg text-safety-orange-deep">Consistent care shows</p>
           <h2 className="mt-2 font-anton text-5xl tracking-wide text-midnight-moss sm:text-6xl">Property Care That Shows in the Details</h2>

@@ -31,18 +31,24 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" onClick={closeAll} className="group flex items-center gap-3">
+        <Link href="/" onClick={closeAll} className="group flex shrink-0 items-center gap-2 sm:gap-3">
           <Image
             src="/images/southern-buck-lawn-logo.png"
             alt="Southern Buck Lawn logo"
             width={56}
             height={49}
-            className="h-14 w-auto transition-transform group-hover:scale-105"
+            className="h-11 w-auto transition-transform group-hover:scale-105 sm:h-14"
             priority
           />
-          <span className="font-anton text-2xl tracking-tight text-midnight-moss">
-            SOUTHERN BUCK <span className="text-safety-orange">LAWN</span>
-          </span>
+          <Image
+            src="/images/southern-buck-lawn-wordmark.webp"
+            alt="Southern Buck Lawn"
+            width={600}
+            height={233}
+            sizes="140px"
+            className="h-9 w-auto rounded-md shadow-sm sm:h-12"
+            priority
+          />
         </Link>
 
         <div className="hidden items-center gap-1 lg:flex xl:gap-2">
@@ -182,7 +188,7 @@ export default function Navbar() {
           <Link
             href="/quote"
             onClick={closeAll}
-            className="rounded-lg bg-safety-orange px-4 py-2 font-archivo text-sm font-bold uppercase tracking-wide text-midnight-moss shadow-md active:scale-95"
+            className="whitespace-nowrap rounded-lg bg-safety-orange px-3 py-2 font-archivo text-sm font-bold uppercase tracking-wide text-midnight-moss shadow-md active:scale-95 sm:px-4"
           >
             Get Quote
           </Link>

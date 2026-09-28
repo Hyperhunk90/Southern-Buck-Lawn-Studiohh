@@ -8,7 +8,6 @@ type FramedPhotoProps = {
   /** Tailwind aspect utility, e.g. 'aspect-[4/3]'. */
   aspect?: string;
   sizes?: string;
-  quality?: number;
   priority?: boolean;
   corner?: Corner;
   /** Which corner the ornament sits in. */
@@ -40,7 +39,6 @@ export default function FramedPhoto({
   alt,
   aspect = 'aspect-[4/3]',
   sizes = '(max-width: 767px) 90vw, 40vw',
-  quality = 60,
   priority = false,
   corner = 'twig',
   cornerPos = 'tl',
@@ -61,7 +59,7 @@ export default function FramedPhoto({
           alt={alt}
           fill
           sizes={sizes}
-          quality={quality}
+          quality={60}
           priority={priority}
           className="object-cover"
         />

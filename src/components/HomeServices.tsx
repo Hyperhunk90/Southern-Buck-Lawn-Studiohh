@@ -7,6 +7,26 @@ import { serviceIcons, extraServices } from '@/data/homepage';
 const SERVICE_CARD_SIZES =
   '(max-width: 767px) calc(100vw - 2rem), (max-width: 1023px) calc(50vw - 2rem), 380px';
 
+// Homepage card photos. Service pages keep their own hero image from SERVICES.
+const HOME_CARD_IMAGES: Record<string, { image: string; imageAlt: string }> = {
+  'lawn-mowing': {
+    image: '/images/walker-la-weekly-lawn-mowing-stripes.webp',
+    imageAlt: 'Weekly lawn mowing in Walker, LA with even light-and-dark stripes across a wide green yard.',
+  },
+  'weed-control': {
+    image: '/images/satsuma-la-commercial-bed-weed-removal.webp',
+    imageAlt: 'Pulled weeds piled on a tarp beside a cleaned-out commercial landscape bed in Satsuma, LA.',
+  },
+  'landscape-design': {
+    image: '/images/clinton-la-commercial-flower-bed-mulch.webp',
+    imageAlt: 'Commercial front bed in Clinton, LA with red and pink flowering shrubs, fresh mulch, and a clean lawn edge.',
+  },
+  'commercial-grounds': {
+    image: '/images/satsuma-la-rv-resort-commercial-grounds.webp',
+    imageAlt: 'Commercial grounds at an RV resort in Satsuma, LA with palm trees, planted beds, and a walkway by the lazy river.',
+  },
+};
+
 type Card = {
   key: string;
   href: string;
@@ -58,8 +78,8 @@ export default function HomeServices() {
     ...SERVICES.map((s) => ({
       key: s.slug,
       href: `/services/${s.slug}`,
-      image: s.image,
-      imageAlt: s.imageAlt,
+      image: HOME_CARD_IMAGES[s.slug]?.image ?? s.image,
+      imageAlt: HOME_CARD_IMAGES[s.slug]?.imageAlt ?? s.imageAlt,
       icon: serviceIcons[s.slug],
       title: s.title,
       summary: s.quickSummary,

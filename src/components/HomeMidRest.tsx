@@ -8,6 +8,7 @@ import { REVIEWS } from '@/data/reviews';
 import { gallery, faqs, buckPoints } from '@/data/homepage';
 import ServiceAreaMap from '@/components/ServiceAreaMap';
 import ReviewBadgeBar from '@/components/ReviewBadgeBar';
+import BuckWatermark from '@/components/BuckWatermark';
 
 /** Job-photo strip: 1-col / sm:2 inside max-w-7xl + padding. */
 const GALLERY_CARD_SIZES =
@@ -16,14 +17,15 @@ const GALLERY_CARD_SIZES =
 export default function HomeMidRest() {
   return (
     <>
-    <section id="work" className="bg-cream py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section id="work" className="relative overflow-hidden bg-cream py-20">
+      <BuckWatermark side="right" />
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
           <p className="font-caveat text-3xl font-bold text-safety-orange-deep">Job photos</p>
           <h2 className="font-anton text-4xl uppercase tracking-wide text-midnight-moss sm:text-5xl">Work From the Route</h2>
           <div className="mx-auto mt-4 h-1 w-24 rounded bg-safety-orange" />
           <p className="mx-auto mt-4 max-w-2xl font-archivo text-lg text-bark">
-            Residential Magnum stripes, an azalea black-mulch after, commercial grounds with the trailer, and Walker stripes. Captions match the files. No stock. Owner headshot in the about section.
+            Two Walker flower bed installs, before and after. Bare, patchy beds turned into clean edges and fresh mulch. Captions match the files. No stock.
           </p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2">
@@ -50,8 +52,9 @@ export default function HomeMidRest() {
       </div>
     </section>
 
-    <section id="about" className="bg-primary py-20">
-      <div className="mx-auto flex max-w-7xl flex-col items-center gap-12 px-4 sm:px-6 lg:flex-row lg:px-8">
+    <section id="about" className="relative overflow-hidden bg-primary py-20">
+      <BuckWatermark side="right" />
+      <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-12 px-4 sm:px-6 lg:flex-row lg:px-8">
         <div className="flex-none">
           <div className="overflow-hidden rounded-3xl bg-forest-dark shadow-2xl">
             <Image

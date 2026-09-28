@@ -39,9 +39,9 @@ export default function HomeHeroWhy() {
 
           <div className="relative mx-auto w-full max-w-sm">
             <FramedPhoto
-              src="/images/walker-lawn-stripes-after.webp"
-              alt="Freshly mowed lawn with clean mowing stripes after a Southern Buck Lawn visit."
-              aspect="aspect-[4/5]"
+              src="/images/walker-la-river-rock-edging-mulch-bed.webp"
+              alt="New landscape bed in Walker, LA with river rock edging, fresh red mulch, and shrubs along a front porch."
+              aspect="aspect-[4/3]"
               sizes="(max-width: 1023px) 80vw, 30vw"
               corner="leaf"
               cornerPos="tr"

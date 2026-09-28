@@ -14,8 +14,8 @@ export const extraServices = [
     title: 'Landscape Lighting',
     summary: 'Low-voltage lighting that carries your beds and walkways into the evening. Planned and installed by Michael himself, not a sub.',
     icon: <Lightbulb className="h-7 w-7" />,
-    image: '/images/sbl-project-photo-02.webp',
-    imageAlt: 'Brick house at dusk with path lights along the walk, Southern Buck Lawn lighting work.',
+    image: '/images/walker-la-landscape-bed-install-edging.webp',
+    imageAlt: 'New landscape bed in Walker, LA with brick edging, fresh black mulch, and a young shrub beside a porch post.',
     cta: 'Request a lighting consultation',
   },
   {
@@ -23,17 +23,17 @@ export const extraServices = [
     title: 'Property Preservation & REO',
     summary: 'Trash-outs, yard recovery, board-ups, and photo documentation for banks, brokers, and asset managers on the Walker route.',
     icon: <HardHat className="h-7 w-7" />,
-    image: '/images/residential-brush-cleanup.webp',
-    imageAlt: 'Pile of cut branches on a driveway after residential hedge and tree cleanup.',
+    image: '/images/clinton-la-medical-complex-entrance-bed.webp',
+    imageAlt: 'Entrance bed at a medical complex in Clinton, LA with red celosia and white vinca in fresh black mulch.',
     cta: 'Submit a preservation request',
   },
 ];
 
 export const gallery = [
-  { src: '/images/kennedi-denham-front-after.webp', alt: 'Finished Denham Springs front bed with fresh black mulch, steel edging, and ornamental grasses along a brick house.', w: 900, h: 1600 },
-  { src: '/images/kennedi-denham-corner-after.webp', alt: 'Mulched corner bed with steel edging, ornamental grasses, and a cleaned-up crape myrtle in Denham Springs, LA.', w: 900, h: 1600 },
-  { src: '/images/residential-lawn-stripes-magnum.webp', alt: 'Freshly striped green residential lawn with an orange Bad Boy Magnum zero-turn parked by the driveway.', w: 1600, h: 901 },
-  { src: '/images/azalea-bed-after-black-mulch.webp', alt: 'Fresh black-mulch bed with red azaleas and clean black edging along a light stucco house.', w: 1400, h: 3031 },
+  { src: '/images/walker-la-flower-bed-before-brick-house.webp', alt: 'Before: bare, patchy flower bed along a brick house wall in Walker, LA, ready for a new landscape install.', w: 1400, h: 721 },
+  { src: '/images/walker-la-flower-bed-after-black-mulch.webp', alt: 'After: curved flower bed in Walker, LA finished with fresh black mulch around a crape myrtle next to the front walk.', w: 1400, h: 772 },
+  { src: '/images/walker-la-front-bed-before-install.webp', alt: 'Before: front bed with small scattered shrubs along a brick-and-siding house in Walker, LA.', w: 1400, h: 786 },
+  { src: '/images/walker-la-front-bed-after-install.webp', alt: 'After: Walker, LA front bed installed with fresh mulch, clean edges, and a trimmed crape myrtle along a brick-and-siding house.', w: 1400, h: 646 },
 ];
 
 export const processSteps = [
