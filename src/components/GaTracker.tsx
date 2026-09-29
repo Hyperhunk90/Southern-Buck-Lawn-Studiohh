@@ -93,6 +93,9 @@ function ConversionTracking() {
  * Avoid next/script `src=` for gtag/js: App Router emits an early <link rel="preload"
  * as="script"> for that URL in <head>, which raced the old beforeInteractive (__next_s)
  * consent default. Load gtag by appending the script afterInteractive instead.
+ *
+ * gtag.js itself waits for the first interaction or 4s after `load` so it stays off
+ * the mobile critical path; events fired earlier queue in dataLayer and send on load.
  */
 export default function GaTracker() {
   return (
@@ -108,13 +111,22 @@ export default function GaTracker() {
             anonymize_ip: true,
             allow_google_signals: false
           });
-          if (!document.querySelector('script[data-sbl-gtag]')) {
-            var s = document.createElement('script');
-            s.async = true;
-            s.src = 'https://www.googletagmanager.com/gtag/js?id=${GA_ID}';
-            s.setAttribute('data-sbl-gtag', '1');
-            document.head.appendChild(s);
-          }
+          (function () {
+            var events = ['pointerdown', 'keydown', 'scroll', 'touchstart'];
+            function loadGtag() {
+              events.forEach(function (e) { window.removeEventListener(e, loadGtag); });
+              if (document.querySelector('script[data-sbl-gtag]')) return;
+              var s = document.createElement('script');
+              s.async = true;
+              s.src = 'https://www.googletagmanager.com/gtag/js?id=${GA_ID}';
+              s.setAttribute('data-sbl-gtag', '1');
+              document.head.appendChild(s);
+            }
+            events.forEach(function (e) { window.addEventListener(e, loadGtag, { once: true, passive: true }); });
+            function afterLoad() { setTimeout(loadGtag, 4000); }
+            if (document.readyState === 'complete') afterLoad();
+            else window.addEventListener('load', afterLoad, { once: true });
+          })();
         `}
       </Script>
       <Suspense fallback={null}>

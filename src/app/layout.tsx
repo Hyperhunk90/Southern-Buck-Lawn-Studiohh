@@ -31,7 +31,7 @@ const buttonFont = Anton({
   subsets: ['latin'],
   variable: '--font-anton-btn-src',
   display: 'swap',
-  preload: true,
+  preload: false,
   adjustFontFallback: true,
   fallback: ['Arial Narrow', 'Arial', 'sans-serif'],
 });
@@ -43,14 +43,13 @@ const accentFont = Rye({
   subsets: ['latin'],
   variable: '--font-rye-src',
   display: 'swap',
-  preload: true,
+  preload: false,
   fallback: ['Georgia', 'serif'],
 });
 
 // Body face: Cabin — the warm humanist sans paired with Amatic SC (Indie/Craft).
 // Reuses --font-archivo-src so all `font-archivo`/`font-barlow` utilities switch.
 const bodyFont = Cabin({
-  weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
   variable: '--font-archivo-src',
   display: 'swap',
