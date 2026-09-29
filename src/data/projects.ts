@@ -1,5 +1,6 @@
 import { Project } from '@/lib/types';
 import { KENNEDI_PROJECTS } from '@/data/kennedi-projects';
+import { SBL_FEATURED_PROJECTS, SBL_MORE_PROJECTS } from '@/data/sbl-2026-projects';
 
 export const GALLERY_CATEGORIES = [
   { id: 'all', label: 'All Projects' },
@@ -14,6 +15,7 @@ export const GALLERY_CATEGORIES = [
 // Kennedi = Denham Springs / Seigle Village (not Walker). Denham #2+#3 same earlier job. Azalea = true B&A.
 // Brick-house cleanup / soil / sidewalk = same job family. RKM name OK (on sign).
 export const PROJECTS: Project[] = [
+  ...SBL_FEATURED_PROJECTS,
   ...KENNEDI_PROJECTS,
   {
     id: 'azalea-bed-before',
@@ -394,6 +396,7 @@ export const PROJECTS: Project[] = [
     details: ['Path lights at dusk'],
     serviceSlug: 'landscape-design',
   },
+  ...SBL_MORE_PROJECTS,
 ];
 
 export function getProjectsByService(serviceType?: string) {

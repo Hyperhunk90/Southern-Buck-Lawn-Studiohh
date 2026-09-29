@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { ShieldCheck, Camera, Trash2 } from 'lucide-react';
 import ReoForm from './ReoForm';
 import ReoHeroContent from './ReoHeroContent';
+import FramedPhoto from '@/components/FramedPhoto';
 import { SITE, DEFAULT_OG_IMAGE } from '@/data/site';
 
 export const metadata: Metadata = {
@@ -53,13 +54,30 @@ export default function PropertyPreservationPage() {
 
         <section className="bg-white px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div className="mb-16 max-w-3xl">
-              <h2 className="mb-6 font-anton text-4xl uppercase tracking-wide text-midnight-moss sm:text-5xl">
-                What I Handle on Preserved Properties
-              </h2>
-              <p className="font-barlow text-lg text-gray-700 sm:text-xl">
-                Let&apos;s shoot straight: I have seen it all, and it takes a lot to scare me off a property. Whether the last tenants left it broom-clean or it looks like a bomb went off in the living room, I get it show-ready — with photos that prove the work.
-              </p>
+            <div className="mb-16 grid items-center gap-10 lg:grid-cols-[1.4fr_1fr]">
+              <div className="max-w-3xl">
+                <h2 className="mb-6 font-anton text-4xl uppercase tracking-wide text-midnight-moss sm:text-5xl">
+                  What I Handle on Preserved Properties
+                </h2>
+                <p className="font-barlow text-lg text-gray-700 sm:text-xl">
+                  Let&apos;s shoot straight: I have seen it all, and it takes a lot to scare me off a property. Whether the last tenants left it broom-clean or it looks like a bomb went off in the living room, I get it show-ready — with photos that prove the work.
+                </p>
+              </div>
+              <figure className="mx-auto w-full max-w-md">
+                <FramedPhoto
+                  src="/images/walker-la-yard-cleanup-shrub-trimming.webp"
+                  alt="Shrub trimming during a front-yard cleanup in Walker, LA, with a wheelbarrow of clippings and flower beds covered in plastic."
+                  aspect="aspect-[4/3]"
+                  sizes="(max-width: 1023px) 90vw, 30vw"
+                  corner="twig"
+                  cornerPos="tl"
+                  tape
+                  className="rotate-1"
+                />
+                <figcaption className="mt-4 text-center font-caveat text-xl font-bold text-midnight-moss">
+                  Yard cleanup in progress — Walker, LA
+                </figcaption>
+              </figure>
             </div>
 
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">

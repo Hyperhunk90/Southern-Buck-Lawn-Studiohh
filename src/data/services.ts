@@ -83,9 +83,9 @@ export const SERVICES: Service[] = [
           'Yes. Request a quote with your address or city. Michael will call you back within 24 hours.',
       },
     ],
-    image: '/images/residential-lawn-stripes-magnum.webp',
+    image: '/images/walker-la-lawn-mowing-stripes-white-house.webp',
     imageAlt:
-      'Freshly striped green residential lawn with an orange Bad Boy Magnum zero-turn parked by the driveway.',
+      'Weekly lawn mowing in Walker, LA: crisp light-and-dark stripes leading up to a white house with a metal roof.',
     relatedPostSlugs: ['how-tall-to-cut-grass-louisiana-summer'],
     schemaServiceType: 'Lawn mowing, edging, trimming, and blow-off',
     schemaDescription:
@@ -172,9 +172,9 @@ export const SERVICES: Service[] = [
           'Yes. Send the address or city and a short note about the weeds you are seeing. Michael will call within 24 hours.',
       },
     ],
-    image: '/images/baton-rouge-hedge-bed-during.webp',
+    image: '/images/satsuma-la-weeded-landscape-bed-pool-area.webp',
     imageAlt:
-      'Freshly trimmed green hedge around a front bed with soil and clippings during cleanup at a brick house (job location).',
+      'Weed-free commercial landscape bed with fresh soil and young plants beside the pool area at an RV resort in Satsuma, LA.',
     relatedPostSlugs: [
       'virginia-buttonweed-baton-rouge',
       'armyworms-denham-springs-overnight-damage',
@@ -268,9 +268,9 @@ export const SERVICES: Service[] = [
           'Yes. Request a site walk with the property address. Michael will follow up within 24 hours.',
       },
     ],
-    image: '/images/commercial-property-grounds.webp',
+    image: '/images/satsuma-la-rv-resort-lawn-maintenance.webp',
     imageAlt:
-      'Maintained commercial building lawn and beds with Southern Buck Lawn trailer and zero-turn in view.',
+      'Freshly mowed commercial lawn along the boardwalk and sidewalk by the amphitheater at an RV resort in Satsuma, LA.',
     relatedPostSlugs: [
       'how-tall-to-cut-grass-louisiana-summer',
       'best-time-to-mulch-flowerbeds-louisiana',

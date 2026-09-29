@@ -17,8 +17,8 @@ export const LOCATIONS: Location[] = [
     pestNote:
       'Chinch bugs are the headache on young Centipede around here. They leave dry brown patches that look like drought, often along hot sidewalk edges. I watch for them on weekly cuts and treat early so they do not take the whole lawn.',
     neighborhoods: ['Walker 70785'],
-    image: '/images/walker-lawn-stripes-after.webp',
-    imageAlt: 'Freshly mowed green lawn with diagonal stripes beside a white brick house in Walker, Louisiana.',
+    image: '/images/walker-la-weiss-rd-weekly-lawn-stripes.webp',
+    imageAlt: 'Weekly lawn service on Weiss Rd in Walker, LA: even mowing stripes across the front yard of a brick house.',
     reviews: [],
     relatedPostSlugs: [
       'virginia-buttonweed-baton-rouge',
@@ -112,8 +112,8 @@ export const LOCATIONS: Location[] = [
     pestNote:
       'Open ground around Watson is fire-ant country. Ticks and fleas set up in the warm sandy spots if the grass stays long. A tight weekly cut and targeted treatment leave them fewer places to live near the house.',
     neighborhoods: ['Watson 70786'],
-    image: '/images/sherwood-oaks-commercial-trim.webp',
-    imageAlt: 'Bad Boy Magnum zero-turn and string trimming around shrubs at a Sherwood Oaks property under a blue sky. Equipment photo, not a Watson yard.',
+    image: '/images/watson-la-weekly-lawn-stripes.webp',
+    imageAlt: 'Weekly lawn service in Watson, LA: fresh mowing stripes across a front lawn beside a stucco house.',
     reviews: [],
     relatedPostSlugs: [
       'fire-ants-ticks-fleas-livingston-parish-acreage',
@@ -159,8 +159,8 @@ export const LOCATIONS: Location[] = [
     pestNote:
       'Rural lots pick up fire ants, ticks, and fleas in undisturbed sandy spots. Keeping the yard cut on a schedule is the first control. Targeted treatment is the second. I do not promise to treat a whole timber tract.',
     neighborhoods: ['Walker', 'Denham Springs', 'Watson'],
-    image: '/images/southern-hills-bed-prep.webp',
-    imageAlt: 'Landscape fabric laid in a residential bed around a tree during mulch prep. Job photo, not a Livingston Parish house.',
+    image: '/images/livingston-la-commercial-lawn-mowing.webp',
+    imageAlt: 'Commercial lawn mowing result in Livingston, LA: trimmed turf islands and crape myrtles around a medical office parking lot.',
     reviews: [],
     relatedPostSlugs: [
       'virginia-buttonweed-baton-rouge',

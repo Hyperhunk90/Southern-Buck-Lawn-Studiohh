@@ -79,7 +79,7 @@ export default function GalleryPage() {
             </h1>
 
             <p className="mb-8 font-barlow text-lg text-white/80 leading-relaxed sm:text-xl">
-              Real jobs. Captions match the files: a Denham Springs mulch before-and-after (same house, two walls), Walker lawn stripes, Sherwood Oaks commercial trim, and Baton Rouge cleanup work shown as job location — not home turf. Filter by service type below.
+              Real jobs, captioned for what is in the frame: Walker and Watson weekly stripes, Walker and Denham Springs bed installs with before-and-afters, and commercial contracts in Livingston Parish. Off-route jobs in Clinton, Loranger, Port Allen, and Baton Rouge are labeled as job locations, not home turf. Filter by service type below.
             </p>
 
             <div className="grid grid-cols-2 gap-3 sm:flex sm:items-center sm:gap-6 font-barlow text-sm font-semibold text-white/90">

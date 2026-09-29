@@ -130,9 +130,9 @@ export const landscapeDesignService: Service = {
           'Yes. Request a quote with your property address or city and a short description of the beds. Michael will call you back within 24 hours to discuss the project and arrange the next step.',
       },
     ],
-    image: '/images/azalea-bed-after-black-mulch.webp',
+    image: '/images/loranger-la-curved-mulch-bed-install.webp',
     imageAlt:
-      'Fresh hardwood mulch installed in a landscaped flower bed with red azaleas and clean edging at a Walker-area home.',
+      'Finished curved bed install in Loranger, LA with fresh black mulch, a red mulch border, and rounded shrubs along a driveway.',
     relatedPostSlugs: ['best-time-to-mulch-flowerbeds-louisiana'],
     schemaServiceType:
       'Landscape design, flower bed installation, mulch, pine straw, and landscape edging',
