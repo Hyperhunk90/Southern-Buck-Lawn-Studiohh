@@ -99,7 +99,7 @@ export default function HomeMidRest() {
           <h2 className="font-anton text-4xl uppercase tracking-wide text-midnight-moss sm:text-5xl">Proudly Serving Walker, Denham Springs, and Watson</h2>
           <div className="h-1 w-24 rounded bg-safety-orange" />
           <p className="font-archivo text-lg text-bark">
-            Those three towns are the weekly route. Pick yours to see how I handle the soil and the grass where you live. If you are a little off the corridor, ask &mdash; I will confirm whether your location fits before promising.
+            Those three towns are the weekly route. Pick yours to see how I handle the soil and the grass where you live &mdash; for example, <Link href="/service-areas/denham-springs" className="font-bold text-midnight-moss underline decoration-safety-orange underline-offset-2 hover:text-safety-orange-deep">lawn care services in Denham Springs</Link> on the heavy 70726 clay. If you are a little off the corridor, ask &mdash; I will confirm whether your location fits before promising.
           </p>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             {AREA_NAV.map((a) => (

@@ -74,7 +74,7 @@ Real GBP reviews only (non-family) may be reproduced on-page. Keep the live GBP 
 3. **Canonical URLs** — set in `generateMetadata()` via `alternates.canonical`. og:url must match. Root layout must **not** set a sitewide canonical.
 4. **LocalBusiness JSON-LD** — `BusinessJsonLd` on the homepage only. Do not add first-party `review` or `aggregateRating` markup. Email in JSON-LD. City `areaServed` follows `SITE.serviceAreas` = Walker, Denham Springs, Watson only. Baton Rouge keeps its thin `/service-areas/baton-rouge` page + `AREA_NAV` (Livingston Parish pattern: page OK, not a City in `serviceAreas`). Gonzales stays out.
 5. **Sitemaps** — auto-generated in `src/app/sitemap.ts`. Include `/about`, `/privacy`, Watson. Drop doorway/zipper URLs.
-6. **Redirects** — permanent redirects for old URLs in `next.config.mjs` (do not remove them).
+6. **Redirects** — permanent redirects for old URLs live in `LEGACY_REDIRECTS` in `next.config.mjs` (do not remove them). Destinations must be live 200 canonical URLs (no chains); www variants are auto-generated to hop straight to the non-www destination. `/denham-springs-landscaping` → `/service-areas/denham-springs` (the canonical Denham lawn-care page).
 7. **Image alt text** — match the file. photo-02 dusk brick house + path lights; photo-04/05/06/07 commercial palm/pine-straw; photo-08/09/10 white ranch hedge daytime (one honest use, not three city labels); photo-11 owner branded shirt + shovel; photo-03 404; photo-01 work trailer.
 8. **Title template** is `'%s | Southern Buck Lawn'`. Page titles must not also include "Southern Buck Lawn" or the brand duplicates.
 9. **robots.ts** keeps `Disallow /api/`.
