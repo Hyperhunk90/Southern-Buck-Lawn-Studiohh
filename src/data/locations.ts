@@ -52,13 +52,13 @@ export const LOCATIONS: Location[] = [
     slug: 'denham-springs',
     name: 'Denham Springs, LA',
     navLabel: 'Denham Springs, LA',
-    keywords: ['lawn care Denham Springs', 'landscaping Denham Springs LA', 'lawn service 70726'],
-    metaTitle: 'Lawn Care in Denham Springs, LA 70726',
+    keywords: ['lawn care services Denham Springs', 'lawn care Denham Springs LA', 'lawn service 70726', 'landscaping Denham Springs LA'],
+    metaTitle: 'Lawn Care Services in Denham Springs, LA 70726',
     metaDescription:
-      'Weekly mowing, weed control, and mulch beds in Denham Springs, LA 70726. A Walker operator who knows the clay. Call (225) 369-4434.',
-    h1: 'Weekly Lawn Care in Denham Springs',
+      'Lawn care services in Denham Springs, LA 70726: weekly mowing, edging, weed control, and mulch beds from an owner-operator 10 minutes up the road in Walker. Free estimate — (225) 369-4434.',
+    h1: 'Lawn Care Services in Denham Springs, LA',
     intro:
-      'Denham Springs is a short hop from the shop. I run 70726 every week — homes and the commercial strips along the Range / Juban corridor when they sit on that pass. The clay here holds water after a rain, and the weeds that follow are predictable if you have been cutting here long enough. That is the point. I am not guessing at your soil from a map. I am already on the block.',
+      'Denham Springs is a short hop from the shop. I run 70726 every week — homes and the commercial strips along the Range / Juban corridor when they sit on that pass. The clay here holds water after a rain, and the weeds that follow are predictable if you have been cutting here long enough. That is the point. I am not guessing at your soil from a map. I am already on the block. Lawn care service here means a weekly cut set to the grass you actually have, hard edges on the drive and walks, string trimming, blow-off, and a feed-and-weed schedule timed for wet clay instead of a calendar from somewhere drier. Recent Denham Springs work is in the gallery, including a full front-bed cleanup in Seigle Village with black mulch and steel edging.',
     soilNote:
       'Denham Springs ground is heavy silt and clay. It packs tight, holds standing water after Gulf Coast storms, and starves roots of air if nobody aerates. Older lots and newer subdivisions drain differently, but the clay habit is the same. I feed on a schedule and keep the cut honest so the grass can breathe instead of sitting in mud.',
     pestNote:
@@ -93,6 +93,16 @@ export const LOCATIONS: Location[] = [
         question: 'What pests hit Denham Springs lawns the hardest?',
         answer:
           'Armyworms, mole crickets, and dollar spot. I watch for them during weekly service and tell you if I see an outbreak instead of spraying the whole parish on a calendar.',
+      },
+      {
+        question: 'What do your lawn care services in Denham Springs include?',
+        answer:
+          'Weekly mowing with the deck set for St. Augustine or Centipede, hard edging, string trimming, and blow-off. On top of that: weed control and fertilization, mulch and flowerbed work, and seasonal cleanups. Tell me what you need on the quote form and I will price only that.',
+      },
+      {
+        question: 'Do you have Denham Springs jobs I can look at?',
+        answer:
+          'Yes. The gallery has a Denham Springs front-bed job in Seigle Village — overgrown bed cleared, black mulch, steel edging, crape myrtle cleaned up — with before and after photos. Every photo there is my own work.',
       },
     ],
   },
