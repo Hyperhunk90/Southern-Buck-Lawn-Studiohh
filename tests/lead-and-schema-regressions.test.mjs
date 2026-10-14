@@ -127,3 +127,14 @@ test('prebuild never replaces a valid tracked WebP with an incomplete base64 pay
   assert.match(decoder, /kept valid tracked image/);
   assert.match(decoder, /Incomplete WebP source/);
 });
+
+test('www legacy URLs 301 straight to the final non-www page (no chain)', async () => {
+  const { default: cfg } = await import('../next.config.mjs');
+  const rules = await cfg.redirects();
+  const www = rules.find((r) => r.source === '/denham-springs-landscaping' && r.has);
+  assert.equal(www.destination, 'https://southernbucklawn.com/service-areas/denham-springs');
+  const sources = new Set(rules.filter((r) => !r.has).map((r) => r.source));
+  for (const r of rules) {
+    if (!r.has) assert.ok(!sources.has(r.destination), `redirect chain: ${r.source} -> ${r.destination}`);
+  }
+});

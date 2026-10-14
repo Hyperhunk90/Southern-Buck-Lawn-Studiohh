@@ -32,5 +32,5 @@ test('blog and business structured data share one stable owner entity', async ()
 test('sitemap records the author and entity content update date', async () => {
   const source = await read('src/app/sitemap.ts');
 
-  assert.match(source, /LAST_CONTENT_UPDATE = new Date\('2026-09-04'\)/);
+  assert.match(source, /LAST_CONTENT_UPDATE = new Date\('2026-10-13'\)/);
 });
